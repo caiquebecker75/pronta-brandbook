@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRONTA — Brand Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --roxo:#4A1E6B;
+  --roxo-2:#6A2C9B;
+  --roxo-soft:#8B5FBF;
+  --dourado:#C9A24B;
+  --dourado-2:#E4C878;
+  --blush:#F4E3E7;
+  --lilas:#EDE4F5;
+  --nude:#EFE6DC;
+  --marrom:#7A5C48;
+  --branco:#FCFAF7;
+  --tinta:#26172F;
+  --cinza:#8A8091;
+  --linha:rgba(74,30,107,.14);
+  --sombra:0 24px 60px -30px rgba(74,30,107,.4);
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Manrope',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--branco);
+  color:var(--tinta);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--dourado);color:var(--roxo)}
+
+/* progress */
+.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--roxo),var(--dourado));z-index:9999;width:0%;transition:width .1s}
+
+/* nav */
+nav.top{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;backdrop-filter:blur(14px);background:rgba(252,250,247,.72);border-bottom:1px solid var(--linha);transition:.4s}
+nav.top .brand{font-family:var(--sans);font-weight:800;letter-spacing:.42em;font-size:15px;color:var(--roxo)}
+nav.top .brand span{color:var(--dourado)}
+nav.top .menu{display:flex;gap:26px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+nav.top .menu a{color:var(--cinza);text-decoration:none;transition:.25s;position:relative}
+nav.top .menu a:hover{color:var(--roxo)}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px}
+.menu-btn span{width:24px;height:2px;background:var(--roxo);display:block}
+@media(max-width:900px){nav.top .menu{display:none}.menu-btn{display:flex}nav.top{padding:16px 22px}}
+
+/* layout */
+section{padding:120px 40px;position:relative;max-width:1200px;margin:0 auto}
+@media(max-width:700px){section{padding:80px 22px}}
+.reveal{opacity:0;transform:translateY(34px);transition:.9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dourado);margin-bottom:22px}
+.eyebrow .num{font-family:var(--serif);font-style:italic;color:var(--roxo-soft);font-size:15px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--dourado)}
+h2.title{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.05;letter-spacing:-.02em;color:var(--roxo);margin-bottom:26px}
+h2.title em{font-style:italic;color:var(--dourado)}
+.lead{font-size:clamp(1.05rem,2vw,1.28rem);color:#4b3a56;max-width:760px;font-weight:400}
+p{color:#4b3a56}
+.muted{color:var(--cinza)}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;max-width:none;padding:120px 22px 90px;position:relative;overflow:hidden;background:
+  radial-gradient(120% 90% at 50% -10%,var(--lilas),transparent 60%),
+  radial-gradient(90% 70% at 90% 110%,var(--blush),transparent 55%),
+  var(--branco);}
+.hero .kick{font-size:13px;letter-spacing:.4em;text-transform:uppercase;font-weight:700;color:var(--roxo-soft);margin-bottom:34px}
+.wordmark{font-family:var(--sans);font-weight:300;font-size:clamp(3.4rem,17vw,12rem);letter-spacing:.14em;line-height:.9;color:var(--roxo);position:relative}
+.wordmark b{font-weight:700}
+.hero .tag{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,3.4vw,2rem);color:var(--dourado);margin-top:26px;font-weight:400}
+.hero .sub{max-width:620px;margin:34px auto 0;color:#5b4a66;font-size:1.05rem}
+.spark{position:absolute;opacity:.5;animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-18px) rotate(12deg)}}
+.scrolldown{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--cinza);display:flex;flex-direction:column;align-items:center;gap:10px}
+.scrolldown .line{width:1px;height:44px;background:linear-gradient(var(--roxo),transparent);animation:drop 1.8s infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- MANIFESTO ---------- */
+.manifesto{background:linear-gradient(160deg,var(--roxo),var(--roxo-2));color:#fff;max-width:none;padding:150px 22px;text-align:center;position:relative;overflow:hidden}
+.manifesto::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 0%,rgba(201,162,75,.22),transparent 60%)}
+.manifesto .inner{max-width:900px;margin:0 auto;position:relative}
+.manifesto .eyebrow{color:var(--dourado-2)}
+.manifesto .eyebrow::before{background:var(--dourado-2)}
+.manifesto p.big{font-family:var(--serif);font-weight:300;font-size:clamp(1.4rem,3.4vw,2.35rem);line-height:1.4;color:#fff}
+.manifesto p.big b{color:var(--dourado-2);font-weight:500;font-style:italic}
+.quotemark{font-family:var(--serif);font-size:8rem;line-height:.4;color:var(--dourado);opacity:.35}
+
+/* cards grid */
+.grid{display:grid;gap:22px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+.card{background:#fff;border:1px solid var(--linha);border-radius:20px;padding:32px 28px;transition:.4s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);box-shadow:var(--sombra);border-color:transparent}
+.card .ico{width:52px;height:52px;border-radius:14px;background:var(--lilas);display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--roxo)}
+.card h3{font-family:var(--serif);font-weight:500;font-size:1.3rem;color:var(--roxo);margin-bottom:10px;line-height:1.2}
+.card p{font-size:.96rem}
+.card .n{position:absolute;top:20px;right:26px;font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--linha)}
+
+svg.icon{width:26px;height:26px;stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* index chapters */
+.chapters{display:flex;flex-direction:column;gap:2px;margin-top:40px}
+.chap{display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:24px;padding:26px 20px;border-top:1px solid var(--linha);text-decoration:none;color:inherit;transition:.35s;border-radius:12px}
+.chap:last-child{border-bottom:1px solid var(--linha)}
+.chap:hover{background:var(--lilas);padding-left:32px}
+.chap .cn{font-family:var(--serif);font-style:italic;font-size:1.9rem;color:var(--dourado)}
+.chap h4{font-weight:700;font-size:1.12rem;color:var(--roxo);letter-spacing:.01em}
+.chap p{font-size:.92rem;margin-top:3px}
+.chap .arrow{color:var(--roxo-soft);transition:.35s}
+.chap:hover .arrow{transform:translateX(8px)}
+@media(max-width:620px){.chap{grid-template-columns:44px 1fr;gap:14px}.chap .arrow{display:none}}
+
+/* section band */
+.band{background:linear-gradient(var(--nude),transparent);max-width:none;padding:110px 40px}
+.band-inner{max-width:1200px;margin:0 auto}
+@media(max-width:700px){.band{padding:70px 22px}}
+
+/* palette */
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+@media(max-width:820px){.swatches{grid-template-columns:repeat(2,1fr)}}
+.sw{border-radius:18px;overflow:hidden;border:1px solid var(--linha);transition:.4s}
+.sw:hover{transform:translateY(-6px);box-shadow:var(--sombra)}
+.sw .chip{height:130px;display:flex;align-items:flex-end;padding:16px}
+.sw .meta{padding:16px 18px;background:#fff}
+.sw .meta strong{display:block;color:var(--roxo);font-size:1rem}
+.sw .meta code{font-size:.78rem;color:var(--cinza);letter-spacing:.05em}
+.sw .role{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:#fff;font-weight:700}
+
+/* typography specimen */
+.type-spec{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:40px}
+@media(max-width:820px){.type-spec{grid-template-columns:1fr}}
+.spec{background:#fff;border:1px solid var(--linha);border-radius:20px;padding:38px}
+.spec .lab{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dourado);font-weight:700;margin-bottom:20px}
+.spec .aa{font-family:var(--serif);font-size:5rem;line-height:1;color:var(--roxo)}
+.spec .aa.sans{font-family:var(--sans);font-weight:800}
+.spec .name{font-family:var(--serif);font-size:1.4rem;color:var(--roxo);margin:14px 0 6px}
+.spec .set{font-size:.8rem;color:var(--cinza);letter-spacing:.08em}
+.spec .glyphs{margin-top:16px;font-size:1rem;color:#4b3a56;letter-spacing:.04em}
+
+/* hierarchy */
+.hier{margin-top:38px;border-left:2px solid var(--dourado);padding-left:0}
+.hier .row{display:flex;align-items:baseline;gap:20px;padding:14px 0 14px 26px;border-bottom:1px solid var(--linha)}
+.hier .row .k{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--dourado);font-weight:700;min-width:130px}
+.hier .row .v{color:var(--roxo)}
+
+/* tone meters */
+.tones{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:40px}
+@media(max-width:820px){.tones{grid-template-columns:repeat(2,1fr)}}
+.tone{text-align:center}
+.tone .ring{width:96px;height:96px;margin:0 auto 14px}
+.tone strong{display:block;color:var(--roxo);font-size:1.05rem}
+.tone span{font-size:.82rem;color:var(--cinza)}
+
+/* do dont */
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+@media(max-width:700px){.dd{grid-template-columns:1fr}}
+.dd .col{border-radius:20px;padding:30px;border:1px solid var(--linha)}
+.dd .do{background:linear-gradient(160deg,#f1ecf7,#fff)}
+.dd .dont{background:linear-gradient(160deg,#faf0f2,#fff)}
+.dd h4{display:flex;align-items:center;gap:10px;font-size:1.05rem;margin-bottom:18px;font-weight:800;letter-spacing:.02em}
+.dd .do h4{color:var(--roxo)}
+.dd .dont h4{color:#b0788a}
+.dd ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.dd li{font-size:.95rem;padding-left:26px;position:relative;color:#4b3a56}
+.dd .do li::before{content:"";position:absolute;left:0;top:1px;color:var(--roxo);font-weight:800}
+.dd .dont li::before{content:"";position:absolute;left:0;top:1px;color:#c98ea0;font-weight:800}
+.dd .quote{font-family:var(--serif);font-style:italic;font-size:1.05rem}
+
+/* claims chips */
+.chips{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.chip-c{background:#fff;border:1px solid var(--linha);border-radius:100px;padding:14px 26px;font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--roxo);transition:.35s;cursor:default}
+.chip-c:hover{background:var(--roxo);color:#fff;border-color:var(--roxo);transform:translateY(-4px)}
+.chip-c.gold:hover{background:var(--dourado)}
+
+/* pillars / stat */
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;border:1px solid var(--linha);border-radius:22px;overflow:hidden}
+@media(max-width:820px){.pillars{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.pillars{grid-template-columns:1fr}}
+.pillar{padding:38px 28px;border-right:1px solid var(--linha);border-bottom:1px solid var(--linha);text-align:center;transition:.4s;background:#fff}
+.pillar:hover{background:var(--lilas)}
+.pillar .p-ico{color:var(--dourado);margin-bottom:16px;display:flex;justify-content:center}
+.pillar strong{display:block;font-family:var(--serif);font-size:1.35rem;color:var(--roxo);margin-bottom:6px}
+.pillar span{font-size:.9rem;color:var(--cinza)}
+
+/* timeline */
+.timeline{margin-top:50px;position:relative}
+.timeline::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--dourado),var(--roxo-soft))}
+.tl{display:grid;grid-template-columns:40px 1fr;gap:26px;padding-bottom:34px;position:relative}
+.tl .dot{width:40px;height:40px;border-radius:50%;background:#fff;border:2px solid var(--dourado);display:flex;align-items:center;justify-content:center;color:var(--roxo);z-index:1}
+.tl .body h4{font-family:var(--serif);font-size:1.25rem;color:var(--roxo);margin-bottom:6px}
+.tl .body p{font-size:.95rem}
+
+/* persona cards */
+.persona{background:#fff;border:1px solid var(--linha);border-radius:22px;padding:30px;transition:.4s;position:relative;overflow:hidden}
+.persona:hover{transform:translateY(-6px);box-shadow:var(--sombra)}
+.persona .av{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.5rem;color:#fff;margin-bottom:18px}
+.persona h3{font-family:var(--serif);font-size:1.25rem;color:var(--roxo);margin-bottom:8px}
+.persona p{font-size:.93rem}
+.tag-mini{display:inline-block;margin-top:16px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--dourado);background:var(--lilas);padding:5px 12px;border-radius:100px}
+
+/* tension bars */
+.tension{margin-top:40px;display:flex;flex-direction:column;gap:26px}
+.tn{background:#fff;border:1px solid var(--linha);border-radius:16px;padding:24px 28px}
+.tn .lbls{display:flex;justify-content:space-between;font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:14px}
+.tn .lbls .a{color:var(--roxo-soft)}
+.tn .lbls .b{color:var(--dourado)}
+.tn .track{height:6px;border-radius:100px;background:linear-gradient(90deg,var(--roxo-soft),var(--nude),var(--dourado));position:relative}
+.tn .track::after{content:"";position:absolute;top:50%;left:50%;width:18px;height:18px;background:#fff;border:3px solid var(--roxo);border-radius:50%;transform:translate(-50%,-50%)}
+.tn p{margin-top:14px;font-size:.92rem}
+
+/* big statement */
+.statement{max-width:none;background:var(--tinta);color:#fff;padding:120px 22px;text-align:center}
+.statement p{font-family:var(--serif);font-weight:300;font-size:clamp(1.5rem,4vw,2.6rem);line-height:1.3;color:#fff;max-width:900px;margin:0 auto}
+.statement p b{color:var(--dourado-2);font-style:italic;font-weight:500}
+
+/* icon library */
+.iconlib{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:40px}
+@media(max-width:820px){.iconlib{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.iconlib{grid-template-columns:repeat(2,1fr)}}
+.il{background:#fff;border:1px solid var(--linha);border-radius:16px;padding:24px 10px;text-align:center;transition:.35s;color:var(--roxo)}
+.il:hover{background:var(--roxo);color:#fff;transform:translateY(-4px)}
+.il:hover svg{stroke:#fff}
+.il svg{width:32px;height:32px;stroke:var(--roxo);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:.35s}
+.il span{display:block;margin-top:12px;font-size:.78rem;font-weight:600;letter-spacing:.03em}
+
+/* checklist */
+.checklist{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.checklist{grid-template-columns:1fr}}
+.check{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--linha);border-radius:14px;padding:20px 22px;transition:.3s}
+.check:hover{border-color:var(--dourado)}
+.check .box{min-width:26px;height:26px;border-radius:8px;border:2px solid var(--dourado);display:flex;align-items:center;justify-content:center;color:var(--roxo)}
+.check p{font-size:.95rem;color:var(--roxo);font-weight:500}
+
+/* footer */
+footer{background:linear-gradient(160deg,var(--roxo),var(--roxo-2));color:#fff;text-align:center;padding:100px 22px 60px;max-width:none}
+footer .fm{font-family:var(--sans);font-weight:300;letter-spacing:.16em;font-size:clamp(2.5rem,10vw,6rem);color:#fff}
+footer .fm b{font-weight:700}
+footer .ft{font-family:var(--serif);font-style:italic;color:var(--dourado-2);font-size:1.3rem;margin-top:16px}
+footer .meta{margin-top:50px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
+footer .meta span{color:var(--dourado-2)}
+
+/* section intro spacing helper */
+.mt{margin-top:44px}
+.center{text-align:center}
+.narrow{max-width:820px;margin-left:auto;margin-right:auto}
+
+/* value list */
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+@media(max-width:820px){.values{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.values{grid-template-columns:1fr}}
+.val{border:1px solid var(--linha);border-radius:16px;padding:26px;background:#fff;transition:.35s}
+.val:hover{border-color:var(--dourado);transform:translateY(-4px)}
+.val .vi{color:var(--dourado);margin-bottom:14px}
+.val strong{display:block;color:var(--roxo);font-family:var(--serif);font-size:1.2rem;margin-bottom:6px}
+.val p{font-size:.9rem}
+
+/* two-col text */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;align-items:start}
+@media(max-width:820px){.duo{grid-template-columns:1fr}}
+.duo .k{font-family:var(--serif);font-style:italic;color:var(--dourado);font-size:1.1rem;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="top" id="nav">
+  <div class="brand">PRON<span>T</span>A</div>
+  <div class="menu">
+    <a href="#contexto">Contexto</a>
+    <a href="#estrategia">Estratégia</a>
+    <a href="#linguagem">Linguagem</a>
+    <a href="#identidade">Identidade</a>
+    <a href="#sistema">Sistema</a>
+    <a href="#foto">Fotografia</a>
+    <a href="#pdv">Produto & PDV</a>
+    <a href="#aplicacoes">Aplicações</a>
+    <a href="#governanca">Governança</a>
+  </div>
+  <button class="menu-btn" onclick="document.querySelector('.menu').style.display='flex'"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <svg class="spark" style="top:18%;left:14%" width="34" height="34" viewBox="0 0 24 24" fill="var(--dourado)"><path d="M12 0l2.5 9.5L24 12l-9.5 2.5L12 24l-2.5-9.5L0 12l9.5-2.5z"/></svg>
+  <svg class="spark" style="top:26%;right:16%;animation-delay:1.5s" width="20" height="20" viewBox="0 0 24 24" fill="var(--roxo-soft)"><path d="M12 0l2.5 9.5L24 12l-9.5 2.5L12 24l-2.5-9.5L0 12l9.5-2.5z"/></svg>
+  <svg class="spark" style="bottom:22%;left:20%;animation-delay:.8s" width="24" height="24" viewBox="0 0 24 24" fill="var(--dourado-2)"><path d="M12 0l2.5 9.5L24 12l-9.5 2.5L12 24l-2.5-9.5L0 12l9.5-2.5z"/></svg>
+  <div class="kick">Brand Guide · v0.3</div>
+  <h1 class="wordmark">PRON<b>T</b>A</h1>
+  <p class="tag">estar PRONTA para a vida real</p>
+  <p class="sub">Uma marca de acessórios de cabelo feita para a beleza que acontece no meio da vida — no espelho rápido, no cabelo preso com intenção, no detalhe que devolve presença.</p>
+  <div class="scrolldown"><div class="line"></div>role para explorar</div>
+</header>
+
+<!-- ============ MANIFESTO ============ -->
+<div class="manifesto">
+  <div class="inner reveal">
+    <div class="quotemark">“</div>
+    <div class="eyebrow" style="justify-content:center">Manifesto central</div>
+    <p class="big">Estar <b>PRONTA para a vida real</b> é entender que beleza não precisa de pausa, nem de ocasião marcada: ela acontece no caminho, no espelho rápido antes de sair, no cabelo preso com intenção, no detalhe que muda o humor e devolve presença. É sobre mulheres que atravessam dias cheios sem deixar de serem elas mesmas. Porque o cabelo também fala: revela atitude, traduz autoestima, acompanha fases e versões. <b>PRONTA existe para esse instante</b> em que a mulher se reconhece, se arruma do seu jeito e segue — autêntica, inteira e pronta para viver tudo o que a vida real pedir.</p>
+  </div>
+</div>
+
+<!-- ============ ÍNDICE ============ -->
+<section id="indice">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">00</span> Índice</div>
+    <h2 class="title">Onze capítulos, <em>uma marca inteira</em></h2>
+    <p class="lead">A leitura acompanha a construção natural da marca: primeiro entendemos o mundo onde a PRONTA vive, depois a estratégia, em seguida damos voz e forma, e por fim levamos tudo para produto, PDV, conteúdo e governança.</p>
+  </div>
+  <div class="chapters reveal">
+    <a class="chap" href="#abertura"><span class="cn">01</span><div><h4>Abertura</h4><p>O pacto do guia, a frase central e os princípios que mantêm a marca inteira.</p></div><span class="arrow">→</span></a>
+    <a class="chap" href="#contexto"><span class="cn">02</span><div><h4>Contexto da marca</h4><p>A categoria, a vida real, os públicos, as tensões e a oportunidade da PRONTA.</p></div><span class="arrow">→</span></a>
+    <a class="chap" href="#estrategia"><span class="cn">03</span><div><h4>Estratégia de marca</h4><p>A plataforma que transforma produto em marca e marca em escolha.</p></div><span class="arrow">→</span></a>
+    <a class="chap" href="#linguagem"><span class="cn">04</span><div><h4>Linguagem e relacionamento</h4><p>A voz que faz a PRONTA ser lembrada antes, durante e depois da compra.</p></div><span class="arrow">→</span></a>
+    <a class="chap" href="#identidade"><span class="cn">05</span><div><h4>Identidade visual</h4><p>Os códigos que tornam a PRONTA reconhecível em qualquer ponto de contato.</p></div><span class="arrow">→</span></a>
+    <a class="chap" href="#sistema"><span class="cn">06</span><div><h4>Sistema visual</h4><p>Cores, formas, tipos, ícones e acabamentos que sustentam o universo da marca.</p></div><span class="arrow">→</span></a>
+    <a class="chap" href="#foto"><span class="cn">07</span><div><h4>Fotografia e direção de arte</h4><p>A beleza real, em movimento, com produto visível e intenção.</p></div><span class="arrow">→</span></a>
+    <a class="chap" href="#pdv"><span class="cn">08</span><div><h4>Produto, embalagem e PDV</h4><p>A marca no lugar onde a escolha acontece rápido.</p></div><span class="arrow">→</span></a>
+    <a class="chap" href="#aplicacoes"><span class="cn">09</span><div><h4>Aplicações da marca</h4><p>A PRONTA viva em redes, e-commerce, campanhas, trade e relacionamento.</p></div><span class="arrow">→</span></a>
+    <a class="chap" href="#exemplos"><span class="cn">10</span><div><h4>Exemplos e exercícios</h4><p>Como transformar a estratégia em frases, peças e decisões concretas.</p></div><span class="arrow">→</span></a>
+    <a class="chap" href="#governanca"><span class="cn">11</span><div><h4>Fechamento e governança</h4><p>Como manter a PRONTA consistente enquanto a marca cresce.</p></div><span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ============ 01 ABERTURA ============ -->
+<section id="abertura">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">01</span> Abertura</div>
+    <h2 class="title">Uma ideia simples de lembrar, <em>profunda de decidir</em></h2>
+    <p class="lead">Para a PRONTA, essa ideia é estar pronta para a vida real. Uma marca feita para o espelho rápido, para o cabelo preso com intenção, para a mulher que segue mesmo quando o dia não está todo organizado.</p>
+  </div>
+
+  <div class="grid g3 mt reveal">
+    <div class="card"><span class="n">i</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h10l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 8h6M8 12h8M8 16h5"/></svg></div><h3>Sobre este documento</h3><p>A PRONTA não está sendo reinventada — está sendo estruturada. Um repertório de decisões: o que a marca acredita, como fala, como aparece e como se comporta.</p></div>
+    <div class="card"><span class="n">ii</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg></div><h3>Como usar o guia</h3><p>Antes de criar qualquer coisa com o nome PRONTA, volte à pergunta central: <em>isso deixa a mulher mais pronta para a vida real?</em></p></div>
+    <div class="card"><span class="n">iii</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Objetivo do projeto</h3><p>Fazer a PRONTA deixar de ser vista como mais uma opção e passar a ser reconhecida como marca: democrática, mas não genérica.</p></div>
+  </div>
+
+  <div class="band" style="border-radius:26px;margin-top:56px" >
+    <div class="band-inner reveal">
+      <div class="eyebrow"><span class="num">·</span> O teste PRONTA</div>
+      <h2 class="title" style="font-size:clamp(1.6rem,3.6vw,2.4rem)">Quatro perguntas antes de qualquer peça</h2>
+      <div class="dd" style="grid-template-columns:1fr 1fr">
+        <div class="col dont"><ul>
+          <li class="quote">Se parece distante demais da rotina, <b>não é PRONTA.</b></li>
+          <li class="quote">Se é funcional demais para gerar desejo, <b>ainda não é.</b></li>
+        </ul></div>
+        <div class="col do"><ul>
+          <li class="quote">Se poderia ser dito por qualquer marca, <b>precisa ser reescrito.</b></li>
+          <li class="quote">Se conecta nome, beleza, cabelo e vida real, <b>está no caminho.</b></li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal mt">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem;margin-bottom:8px">Princípios de consistência</h3>
+    <p class="muted" style="margin-bottom:10px">Consistência não é repetir a mesma frase. É sustentar a mesma atitude: vida real, beleza e ação.</p>
+  </div>
+  <div class="grid g4 reveal">
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><h3>Vida real antes</h3><p>A vida real vem antes da produção perfeita.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5"/><circle cx="12" cy="14" r="3"/></svg></div><h3>Presença, não cobrança</h3><p>A beleza aparece como presença, nunca como exigência.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Resolve e emociona</h3><p>O produto resolve, mas também muda a sensação do look.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 7V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2"/><path d="M9 20h6M12 3v17"/></svg></div><h3>Nome como ideia</h3><p>PRONTA deve ser usada como ideia, não apenas como logotipo.</p></div>
+  </div>
+</section>
+
+<!-- ============ 02 CONTEXTO ============ -->
+<div class="band" style="margin-top:40px">
+<section id="contexto" style="padding-top:20px;padding-bottom:20px">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">02</span> Contexto da marca</div>
+    <h2 class="title">Uma categoria pequena no objeto, <em>enorme no significado</em></h2>
+    <p class="lead">Acessórios de cabelo seguram fios, mas também seguram momentos, humores, rotinas, vínculos e versões de quem usa. A PRONTA vive nesse intervalo entre o espelho e a rua.</p>
+  </div>
+
+  <div class="statement" style="border-radius:26px;margin-top:50px;padding:80px 30px" >
+    <p class="reveal">Não vendemos apenas prendedores, elásticos ou kits.<br><b>Vendemos gestos rápidos de autoestima.</b></p>
+  </div>
+
+  <div class="reveal mt">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">Timeline da marca</h3>
+    <p class="muted">De portfólio para plataforma. De produto para narrativa. De presença de varejo para presença de marca.</p>
+  </div>
+  <div class="timeline reveal">
+    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M20 7L9 18l-5-5"/></svg></div><div class="body"><h4>Produto</h4><p>Variedade, praticidade, uso cotidiano e compra por impulso.</p></div></div>
+    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></div><div class="body"><h4>Canal</h4><p>Gôndola, catálogo, redes, varejo, marketplaces e contato comercial.</p></div></div>
+    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><div class="body"><h4>Marca</h4><p>Nome, narrativa, códigos visuais, linguagem e reconhecimento.</p></div></div>
+    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 21v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1"/></svg></div><div class="body"><h4>Comunidade</h4><p>Consumidoras, mães, filhas, lojistas, revendedoras e criadoras compartilhando usos.</p></div></div>
+  </div>
+</section>
+</div>
+
+<section id="publicos">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">·</span> Público-alvo & personas</div>
+    <h2 class="title">Um público amplo, <em>mas nunca indefinido</em></h2>
+    <p class="lead">A PRONTA fala com mulheres e meninas que vivem a beleza como parte da rotina, não como evento isolado. Quem valoriza praticidade, mas gosta de se sentir bonita.</p>
+  </div>
+  <div class="grid g4 mt reveal">
+    <div class="persona"><div class="av" style="background:linear-gradient(135deg,var(--roxo),var(--roxo-soft))">M</div><h3>A mulher em movimento</h3><p>Se arruma enquanto responde mensagem, prende o cabelo antes de sair e quer acessórios que funcionem sem esforço.</p><span class="tag-mini">Persona central</span></div>
+    <div class="persona"><div class="av" style="background:linear-gradient(135deg,var(--dourado),var(--dourado-2))">C</div><h3>A criadora do look</h3><p>Combina cores, formatos e tendências para dizer algo sobre o dia. O acessório é assinatura, não só solução.</p><span class="tag-mini">Expressão</span></div>
+    <div class="persona"><div class="av" style="background:linear-gradient(135deg,var(--marrom),#a9846b)">Mã</div><h3>A mãe dos penteados</h3><p>Procura produtos que não machucam, fáceis de usar e bonitos, que ajudem a filha a se ver no espelho com alegria.</p><span class="tag-mini">Cuidado & vínculo</span></div>
+    <div class="persona"><div class="av" style="background:linear-gradient(135deg,var(--roxo-soft),var(--blush))">G</div><h3>A compradora de gôndola</h3><p>Decide em segundos. Embalagem, cor, benefício e clareza são decisivos. A marca precisa aparecer rápido.</p><span class="tag-mini">Impulso</span></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:70px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem">Tensões, desejos e insights</h3>
+    <p class="muted">A mulher não compra só um acessório. Ela compra o instante em que se sente pronta para continuar.</p>
+  </div>
+  <div class="tension reveal">
+    <div class="tn"><div class="lbls"><span class="a">Praticidade</span><span class="b">Desejo</span></div><div class="track"></div><p>Quer algo rápido, mas não quer abrir mão de se sentir bonita. Resolver o cabelo também pode ser um gesto de presença.</p></div>
+    <div class="tn"><div class="lbls"><span class="a">Acessível</span><span class="b">Descartável</span></div><div class="track"></div><p>A categoria é vista como barata e sem marca. A PRONTA prova que acessível pode ter qualidade, cuidado e vontade de usar.</p></div>
+    <div class="tn"><div class="lbls"><span class="a">Tendência</span><span class="b">Vida real</span></div><div class="track"></div><p>A consumidora vê penteados e vídeos, mas precisa adaptar tudo à rotina. A PRONTA traduz tendência em uso possível.</p></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:70px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">Desafios da marca</h3>
+  </div>
+  <div class="grid g3 reveal">
+    <div class="card"><span class="n">01</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2h6c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg></div><h3>Lembrança de marca</h3><p>Transformar lembrança de categoria em lembrança de marca. Saber que precisa de um prendedor, mas também qual marca procurar.</p></div>
+    <div class="card"><span class="n">02</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Elevar sem elitizar</h3><p>Elevar a percepção sem perder democracia. Beleza de rotina também merece marca.</p></div>
+    <div class="card"><span class="n">03</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><h3>Códigos proprietários</h3><p>Nome, cor, embalagem, frase, selo e foto trabalhando juntos para reconhecer a marca antes da leitura completa.</p></div>
+  </div>
+</section>
+
+<!-- ============ 03 ESTRATÉGIA ============ -->
+<div class="manifesto" id="estrategia">
+  <div class="inner reveal" style="max-width:1100px">
+    <div class="eyebrow" style="justify-content:center"><span class="num" style="color:var(--dourado-2)">03</span> Estratégia de marca</div>
+    <h2 class="title" style="color:#fff">A estratégia nasce <em style="color:var(--dourado-2)">do próprio nome</em></h2>
+    <p style="color:rgba(255,255,255,.82);max-width:700px;margin:0 auto 10px">Estar pronta não é estar impecável. É estar presente, inteira e em movimento para viver o que a vida real pedir.</p>
+  </div>
+  <div class="inner reveal" style="max-width:1000px;margin-top:44px">
+    <div class="pillars" style="border-color:rgba(255,255,255,.15)">
+      <div class="pillar" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><strong style="color:#fff">Vida real</strong><span style="color:rgba(255,255,255,.6)">O território</span></div>
+      <div class="pillar" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M12 3l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 15 2 10.5h7.5z"/></svg></div><strong style="color:#fff">Beleza</strong><span style="color:rgba(255,255,255,.6)">A promessa emocional</span></div>
+      <div class="pillar" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><strong style="color:#fff">Praticidade</strong><span style="color:rgba(255,255,255,.6)">A entrega funcional</span></div>
+      <div class="pillar" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><strong style="color:#fff">Presença</strong><span style="color:rgba(255,255,255,.6)">O resultado</span></div>
+    </div>
+    <p style="text-align:center;color:var(--dourado-2);font-family:var(--serif);font-style:italic;font-size:1.2rem;margin-top:34px">Plataforma: acessórios de cabelo para a beleza que acompanha a vida real.</p>
+  </div>
+</div>
+
+<section id="essencia">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">·</span> Núcleo estratégico</div>
+    <h2 class="title">O que sustenta <em>cada decisão</em></h2>
+  </div>
+  <div class="grid g2 mt reveal">
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><h3>Essência</h3><p>Beleza em movimento para a vida real. O acessório prende, mas a marca acompanha.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div><h3>Crença central</h3><p>Beleza não precisa interromper a vida para existir. Beleza não é pausa — beleza é presença.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></div><h3>Propósito</h3><p>Fazer da beleza um gesto possível para quem vive em movimento.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 12l3 3 5-6"/></svg></div><h3>Missão</h3><p>Criar acessórios bonitos, acessíveis, confiáveis e fáceis de usar, que resolvam a rotina e ampliem a expressão.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Visão</h3><p>Ser a marca que transforma acessórios de cabelo em presença cotidiana no coração da categoria no Brasil.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Promessa</h3><p>Seu cabelo no ritmo da vida real. Não sobre perfeição — sobre presença.</p></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:70px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">Valores da marca</h3>
+  </div>
+  <div class="values reveal">
+    <div class="val"><div class="vi"><svg class="icon" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><strong>Praticidade</strong><p>A marca cabe no tempo real das pessoas. Resolve sem complicar.</p></div>
+    <div class="val"><div class="vi"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 15 2 10.5h7.5z"/></svg></div><strong>Beleza</strong><p>O produto aparece no cabelo, no rosto e na forma como a mulher se sente.</p></div>
+    <div class="val"><div class="vi"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg></div><strong>Democracia</strong><p>Diferentes rotinas, classes, idades, canais e tipos de cabelo.</p></div>
+    <div class="val"><div class="vi"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><strong>Confiança</strong><p>Acessório bom não machuca, não quebra na primeira vez e não falha no meio do dia.</p></div>
+    <div class="val"><div class="vi"><svg class="icon" viewBox="0 0 24 24"><path d="M12 19l7-7a4 4 0 0 0-6-5l-1 1-1-1a4 4 0 0 0-6 5z"/></svg></div><strong>Expressão</strong><p>Cada escolha de cabelo comunica uma versão de quem usa.</p></div>
+    <div class="val"><div class="vi"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 21v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1"/></svg></div><strong>Comunidade</strong><p>A marca cresce quando consumidoras, mães, filhas e criadoras compartilham.</p></div>
+  </div>
+
+  <div class="band reveal" style="border-radius:26px;margin-top:70px">
+    <div class="band-inner">
+      <div class="duo">
+        <div>
+          <div class="k">Posicionamento</div>
+          <p style="font-size:1.15rem;color:var(--roxo)">PRONTA é a marca de acessórios de cabelo para mulheres e meninas que vivem beleza no ritmo da vida real — entre o funcional e o emocional. O cabelo fica no lugar; a mulher entra em movimento.</p>
+        </div>
+        <div>
+          <div class="k">Personalidade & arquétipo</div>
+          <p style="font-size:1.05rem">Prática, mas não sem graça. Bonita, mas não distante. Feminina, mas não limitada. A energia da <b>Heroína do Cotidiano</b> com a sensibilidade da <b>Criadora</b>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 LINGUAGEM ============ -->
+<section id="linguagem">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">04</span> Linguagem e relacionamento</div>
+    <h2 class="title">A voz tem o ritmo de <em>quem vive o dia</em></h2>
+    <p class="lead">Numa categoria onde muitos produtos parecem semelhantes, linguagem vira marca. Sempre que possível, PRONTA deixa de ser assinatura e vira parte da ideia: pronta para sair, pronta para o corre, pronta para o agora.</p>
+  </div>
+
+  <div class="reveal mt">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem;margin-bottom:20px">Tom de voz</h3>
+  </div>
+  <div class="tones reveal">
+    <div class="tone"><div class="ring"><svg viewBox="0 0 36 36"><path d="M18 2a16 16 0 1 1 0 32 16 16 0 0 1 0-32" fill="none" stroke="var(--linha)" stroke-width="2"/><path d="M18 2a16 16 0 0 1 13 25" fill="none" stroke="var(--roxo)" stroke-width="2" stroke-linecap="round"/><text x="18" y="21" text-anchor="middle" font-size="9" fill="var(--roxo)" font-family="Fraunces" font-style="italic">01</text></svg></div><strong>Cúmplice</strong><span>entende a rotina</span></div>
+    <div class="tone"><div class="ring"><svg viewBox="0 0 36 36"><path d="M18 2a16 16 0 1 1 0 32 16 16 0 0 1 0-32" fill="none" stroke="var(--linha)" stroke-width="2"/><path d="M18 2a16 16 0 0 1 11 27" fill="none" stroke="var(--dourado)" stroke-width="2" stroke-linecap="round"/><text x="18" y="21" text-anchor="middle" font-size="9" fill="var(--roxo)" font-family="Fraunces" font-style="italic">02</text></svg></div><strong>Direto</strong><span>a escolha é rápida</span></div>
+    <div class="tone"><div class="ring"><svg viewBox="0 0 36 36"><path d="M18 2a16 16 0 1 1 0 32 16 16 0 0 1 0-32" fill="none" stroke="var(--linha)" stroke-width="2"/><path d="M18 2a16 16 0 0 1 15 20" fill="none" stroke="var(--roxo-soft)" stroke-width="2" stroke-linecap="round"/><text x="18" y="21" text-anchor="middle" font-size="9" fill="var(--roxo)" font-family="Fraunces" font-style="italic">03</text></svg></div><strong>Leve</strong><span>beleza não pesa</span></div>
+    <div class="tone"><div class="ring"><svg viewBox="0 0 36 36"><path d="M18 2a16 16 0 1 1 0 32 16 16 0 0 1 0-32" fill="none" stroke="var(--linha)" stroke-width="2"/><path d="M18 2a16 16 0 0 1 9 29" fill="none" stroke="var(--roxo)" stroke-width="2" stroke-linecap="round"/><text x="18" y="21" text-anchor="middle" font-size="9" fill="var(--roxo)" font-family="Fraunces" font-style="italic">04</text></svg></div><strong>Confiante</strong><span>tem presença</span></div>
+    <div class="tone"><div class="ring"><svg viewBox="0 0 36 36"><path d="M18 2a16 16 0 1 1 0 32 16 16 0 0 1 0-32" fill="none" stroke="var(--linha)" stroke-width="2"/><path d="M18 2a16 16 0 0 1 14 22" fill="none" stroke="var(--dourado)" stroke-width="2" stroke-linecap="round"/><text x="18" y="21" text-anchor="middle" font-size="9" fill="var(--roxo)" font-family="Fraunces" font-style="italic">05</text></svg></div><strong>Visual</strong><span>o produto aparece</span></div>
+  </div>
+
+  <div class="dd reveal">
+    <div class="col do">
+      <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Do's — troque abstração por cena</h4>
+      <ul>
+        <li class="quote">"O detalhe que deixa você PRONTA para sair"</li>
+        <li class="quote">"Beleza que não pede pausa"</li>
+        <li class="quote">"Prendeu. Sentiu. Foi."</li>
+      </ul>
+    </div>
+    <div class="col dont">
+      <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg> Don'ts — o clichê genérico</h4>
+      <ul>
+        <li class="quote">"Acessórios que completam seu visual"</li>
+        <li class="quote">"Praticidade com estilo para todos os momentos"</li>
+        <li class="quote">"Realce sua beleza natural"</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:60px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem;margin-bottom:6px">Frases & claims proprietários</h3>
+    <p class="muted">As melhores frases têm nome, gesto e consequência.</p>
+  </div>
+  <div class="chips reveal">
+    <span class="chip-c">estar PRONTA para a vida real</span>
+    <span class="chip-c gold">PRONTA para o agora</span>
+    <span class="chip-c">Beleza que não pede pausa</span>
+    <span class="chip-c gold">O detalhe que deixa você PRONTA</span>
+    <span class="chip-c">Cabelo no lugar, vida em movimento</span>
+    <span class="chip-c gold">Prendeu. Sentiu. Foi.</span>
+    <span class="chip-c">Seu cabelo no ritmo da vida real</span>
+    <span class="chip-c gold">PRONTA para prender e seguir</span>
+  </div>
+
+  <div class="reveal mt" style="margin-top:60px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem;margin-bottom:16px">Vocabulário da marca</h3>
+    <div class="duo" style="margin-top:0">
+      <div><div class="k">Palavras que usamos</div><p style="color:var(--roxo)">pronta · vida real · gesto · detalhe · cabelo · ritmo · movimento · agora · intenção · presença · versão · rotina · firmeza · leveza · conforto · prender · soltar · seguir</p></div>
+      <div><div class="k">Palavras a evitar</div><p class="muted">perfeita · diva · arrase · complete · lacre · empoderamento — jogam a marca no lugar comum da beleza genérica.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 IDENTIDADE ============ -->
+<div class="band" id="identidade">
+<section style="padding-top:20px;padding-bottom:20px">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">05</span> Identidade visual</div>
+    <h2 class="title">Vista antes de <em>ser explicada</em></h2>
+    <p class="lead">Presença de gôndola, beleza de catálogo e flexibilidade para o digital. O conceito nasce do encontro entre impacto e delicadeza: o roxo sustenta reconhecimento, o dourado acende o detalhe.</p>
+  </div>
+
+  <div class="center mt reveal" style="background:#fff;border:1px solid var(--linha);border-radius:26px;padding:70px 30px">
+    <div class="muted" style="font-size:11px;letter-spacing:.25em;text-transform:uppercase;margin-bottom:24px">Marca principal · logotipo</div>
+    <div class="wordmark" style="font-size:clamp(3rem,13vw,8rem);color:var(--roxo)">PRON<b>T</b>A</div>
+    <div style="font-family:var(--serif);font-style:italic;color:var(--dourado);font-size:1.2rem;margin-top:14px">estar PRONTA para a vida real</div>
+    <p class="muted narrow" style="margin-top:26px;font-size:.95rem">O nome é forte demais para ser tratado como rodapé. Quando a marca aparece, ela afirma presença — PRONTA não sussurra na gôndola. Construção com alongamento, elegância, curva e sensação de movimento.</p>
+  </div>
+
+  <div class="grid g3 mt reveal">
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></div><h3>Grid de construção</h3><p>Organiza proporções, espaçamentos e respiro sem engessar. Grid não é frieza — é cuidado para a marca continuar bonita na vida real.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><h3>Símbolo / ícone</h3><p>Um brilho, estrela ou curva como assinatura secundária — o instante em que o detalhe muda o humor e acende a presença.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/></svg></div><h3>Área de proteção</h3><p>Espaço mínimo para o nome respirar. Quanto menor a peça, mais importante é proteger a leitura. Respiro é sinal de valor.</p></div>
+  </div>
+
+  <div class="grid g4 mt reveal">
+    <div class="card center" style="padding:24px"><div style="font-weight:800;color:var(--roxo);letter-spacing:.1em">POSITIVA</div><p style="font-size:.85rem">Fundos claros, suaves e comerciais.</p></div>
+    <div class="card center" style="padding:24px;background:var(--roxo)"><div style="font-weight:800;color:#fff;letter-spacing:.1em">NEGATIVA</div><p style="font-size:.85rem;color:rgba(255,255,255,.8)">Roxo, fundos escuros e fotos com contraste.</p></div>
+    <div class="card center" style="padding:24px"><div style="font-weight:800;color:var(--tinta);letter-spacing:.1em">MONO / P&B</div><p style="font-size:.85rem">Usos técnicos, impressão e fornecedores.</p></div>
+    <div class="card center" style="padding:24px"><div style="font-weight:800;color:var(--roxo);letter-spacing:.1em">H + V</div><p style="font-size:.85rem">Assinatura horizontal e vertical por formato.</p></div>
+  </div>
+
+  <div class="dd reveal" style="margin-top:44px">
+    <div class="col do">
+      <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Aplicar com critério</h4>
+      <ul>
+        <li>Respiro e margens consistentes em toda peça</li>
+        <li>Leitura em 1 segundo — senão, não está pronta</li>
+        <li>Logo entra onde há silêncio visual sobre a imagem</li>
+      </ul>
+    </div>
+    <div class="col dont">
+      <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg> Usos incorretos</h4>
+      <ul>
+        <li>Não esticar, redesenhar ou trocar a fonte</li>
+        <li>Não aplicar efeitos, girar ou usar cor fora da paleta</li>
+        <li>Não comprimir por preço, código ou chamada promocional</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ 06 SISTEMA VISUAL ============ -->
+<section id="sistema">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">06</span> Sistema visual</div>
+    <h2 class="title">Reconhecível <em>mesmo sem o logo no centro</em></h2>
+    <p class="lead">O sistema cria memória por repetição inteligente. Cores, formas, tipos, ícones e acabamentos que sustentam o universo da marca.</p>
+  </div>
+
+  <div class="reveal mt"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Paleta primária</h3></div>
+  <div class="swatches reveal">
+    <div class="sw"><div class="chip" style="background:var(--roxo)"><span class="role">Reconhecimento</span></div><div class="meta"><strong>Roxo PRONTA</strong><code>#4A1E6B</code></div></div>
+    <div class="sw"><div class="chip" style="background:var(--dourado)"><span class="role">Brilho & desejo</span></div><div class="meta"><strong>Dourado</strong><code>#C9A24B</code></div></div>
+    <div class="sw"><div class="chip" style="background:var(--branco);border-bottom:1px solid var(--linha)"><span class="role" style="color:var(--cinza)">Respiro</span></div><div class="meta"><strong>Branco</strong><code>#FCFAF7</code></div></div>
+    <div class="sw"><div class="chip" style="background:var(--tinta)"><span class="role">Leitura</span></div><div class="meta"><strong>Texto escuro</strong><code>#26172F</code></div></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:50px"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Paleta auxiliar</h3><p class="muted">Orbitam a marca — nunca tomam o lugar do roxo.</p></div>
+  <div class="swatches reveal">
+    <div class="sw"><div class="chip" style="background:var(--blush)"><span class="role" style="color:var(--marrom)">Proximidade</span></div><div class="meta"><strong>Blush</strong><code>#F4E3E7</code></div></div>
+    <div class="sw"><div class="chip" style="background:var(--lilas)"><span class="role" style="color:var(--roxo)">Leveza</span></div><div class="meta"><strong>Lilás</strong><code>#EDE4F5</code></div></div>
+    <div class="sw"><div class="chip" style="background:var(--nude)"><span class="role" style="color:var(--marrom)">Naturalidade</span></div><div class="meta"><strong>Nude</strong><code>#EFE6DC</code></div></div>
+    <div class="sw"><div class="chip" style="background:var(--marrom)"><span class="role">Terra</span></div><div class="meta"><strong>Marrom</strong><code>#7A5C48</code></div></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:50px"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Tipografia</h3></div>
+  <div class="type-spec reveal">
+    <div class="spec">
+      <div class="lab">Tipografia principal · display</div>
+      <div class="aa">Aa</div>
+      <div class="name">Fraunces</div>
+      <div class="set">Serif editorial · títulos, capas e chamadas de impacto</div>
+      <div class="glyphs">A B C D E F G · a b c d e f g · 0 1 2 3 4 5</div>
+    </div>
+    <div class="spec">
+      <div class="lab">Tipografia secundária · texto</div>
+      <div class="aa sans">Aa</div>
+      <div class="name" style="font-family:var(--sans);font-weight:700">Manrope</div>
+      <div class="set">Sans limpa · descrições, fichas, e-commerce e textos corridos</div>
+      <div class="glyphs" style="font-family:var(--sans)">A B C D E F G · a b c d e f g · 0 1 2 3 4 5</div>
+    </div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:50px"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Hierarquia tipográfica</h3><p class="muted">Quando tudo grita, nada aparece.</p></div>
+  <div class="hier reveal">
+    <div class="row"><span class="k">Título</span><span class="v" style="font-family:var(--serif);font-size:1.8rem">Cria desejo</span></div>
+    <div class="row"><span class="k">Subtítulo</span><span class="v" style="font-family:var(--serif);font-size:1.3rem">Traduz o benefício</span></div>
+    <div class="row"><span class="k">Descrição</span><span class="v" style="font-size:1rem">Explica o uso com clareza</span></div>
+    <div class="row"><span class="k">Info técnica</span><span class="v" style="font-size:.85rem;letter-spacing:.05em">CONFIRMA A ESCOLHA · MEDIDA · PACK · COR</span></div>
+    <div class="row"><span class="k">Chamada (CTA)</span><span class="v" style="font-weight:800;color:var(--dourado)">Move para o próximo passo →</span></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:50px"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Biblioteca de ícones</h3><p class="muted">Traduzem benefícios em leitura rápida — traço simples, feminino sem excesso, espessura consistente.</p></div>
+  <div class="iconlib reveal">
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M6 3v12a3 3 0 0 0 6 0V5a2 2 0 0 1 4 0v12"/><circle cx="6" cy="18" r="3"/></svg><span>Firmeza</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Conforto</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg><span>Não machuca</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg><span>Resistente</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg><span>Kit</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Uso diário</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M4 6c4-3 12-3 16 0M4 12c4-3 12-3 16 0M4 18c4-3 12-3 16 0"/></svg><span>Todos os cabelos</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 15 2 10.5h7.5z"/></svg><span>Acabamento</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg><span>Leveza</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span>Brilho</span></div>
+  </div>
+
+  <div class="grid g3 mt reveal" style="margin-top:50px">
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/></svg></div><h3>Patterns & estampas</h3><p>Estrelas, curvas, repetições do símbolo e formas dos acessórios. Simples para não competir com o produto, fortes para criar memória.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><h3>Formas de apoio</h3><p>Círculos, selos, tarjas e molduras suaves organizam informação e criam linguagem proprietária.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Texturas & acabamentos</h3><p>Papel, pedra, tecido, acetato e brilho suave. Foscos, dourados e verniz pontual elevam linhas especiais — sensorial, não decorativo.</p></div>
+  </div>
+</section>
+
+<!-- ============ 07 FOTOGRAFIA ============ -->
+<div class="statement" id="foto" style="padding:100px 22px 60px">
+  <div class="reveal">
+    <div class="eyebrow" style="justify-content:center;color:var(--dourado-2)"><span class="num" style="color:var(--dourado-2)">07</span> Fotografia e direção de arte</div>
+    <p style="font-size:clamp(1.4rem,3.6vw,2.3rem)">A imagem da PRONTA é <b>real com intenção.</b><br>Cabelos reais, gestos reais, produto visível e sensação de movimento.</p>
+  </div>
+</div>
+<section style="padding-top:70px">
+  <div class="reveal">
+    <p class="lead narrow center">A fotografia deve fazer a consumidora imaginar: <em>eu usaria isso, eu consigo fazer isso, isso combina comigo.</em> Não uma perfeição intocável — uma beleza possível, reconhecível e desejável.</p>
+  </div>
+
+  <div class="grid g3 mt reveal">
+    <div class="card"><span class="n">01</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M8 6l1.5-2h5L16 6"/></svg></div><h3>Produto still</h3><p>Forma, cor, acabamento, tamanho e material com clareza. Técnico, mas nunca frio — luz, sombra e superfície tornam o produto desejável.</p></div>
+    <div class="card"><span class="n">02</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></div><h3>Produto ambientado</h3><p>Sobre pedra, tecido, penteadeira, bolsa ou espelho. A ambientação sugere uso sem roubar protagonismo.</p></div>
+    <div class="card"><span class="n">03</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h3>Produto em uso</h3><p>A imagem mais importante da marca. Escala, efeito, conforto e possibilidade de penteado, com luz e enquadramento que valorizam.</p></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:60px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem;margin-bottom:6px">Casting & diversidade</h3>
+    <p class="muted">Diversidade aqui não é discurso; é prova visual de que a marca funciona em diferentes vidas.</p>
+  </div>
+  <div class="chips reveal">
+    <span class="chip-c">Diferentes idades</span>
+    <span class="chip-c gold">Tons de pele</span>
+    <span class="chip-c">Lisos</span>
+    <span class="chip-c gold">Cacheados</span>
+    <span class="chip-c">Ondulados</span>
+    <span class="chip-c gold">Crespos</span>
+    <span class="chip-c">Curtos & longos</span>
+    <span class="chip-c gold">Meninas, mães, jovens, adultas</span>
+  </div>
+
+  <div class="reveal mt" style="margin-top:50px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem;margin-bottom:6px">Enquadramentos</h3>
+  </div>
+  <div class="grid g4 reveal">
+    <div class="card center" style="padding:24px"><div class="ico" style="margin:0 auto 12px"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/></svg></div><strong style="color:var(--roxo);font-family:var(--serif)">Close</strong><p style="font-size:.85rem">mostra o detalhe</p></div>
+    <div class="card center" style="padding:24px"><div class="ico" style="margin:0 auto 12px"><svg class="icon" viewBox="0 0 24 24"><path d="M9 21V9a5 5 0 0 1 10 0M9 12H5"/></svg></div><strong style="color:var(--roxo);font-family:var(--serif)">Meio perfil</strong><p style="font-size:.85rem">mostra beleza</p></div>
+    <div class="card center" style="padding:24px"><div class="ico" style="margin:0 auto 12px"><svg class="icon" viewBox="0 0 24 24"><path d="M6 12s2-6 6-6 6 6 6 6M8 12c0 2 8 2 8 0"/></svg></div><strong style="color:var(--roxo);font-family:var(--serif)">Mãos prendendo</strong><p style="font-size:.85rem">mostra o gesto</p></div>
+    <div class="card center" style="padding:24px"><div class="ico" style="margin:0 auto 12px"><svg class="icon" viewBox="0 0 24 24"><path d="M4 12h7M13 12h7M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></div><strong style="color:var(--roxo);font-family:var(--serif)">Antes / depois</strong><p style="font-size:.85rem">mostra transformação</p></div>
+  </div>
+
+  <div class="dd reveal" style="margin-top:50px">
+    <div class="col do">
+      <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Do's</h4>
+      <ul><li>Cabelo real, produto visível, gesto</li><li>Luz boa, diversidade e contexto</li><li>Intenção em cada quadro</li></ul>
+    </div>
+    <div class="col dont">
+      <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg> Don'ts</h4>
+      <ul><li>Produto escondido, filtro pesado</li><li>Cabelo perfeito demais, cenário frio</li><li>Excesso de props, imagem escura ou fundo confuso</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 PRODUTO & PDV ============ -->
+<div class="band" id="pdv">
+<section style="padding-top:20px;padding-bottom:20px">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">08</span> Produto, embalagem e PDV</div>
+    <h2 class="title">Poucos segundos para ser vista, <em>entendida e desejada</em></h2>
+    <p class="lead">É no produto, na embalagem e no PDV que a PRONTA precisa vencer a escolha rápida. A marca tem que aparecer, organizar e criar desejo de pegar.</p>
+  </div>
+
+  <div class="grid g3 mt reveal">
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h4"/></svg></div><h3>Arquitetura de linhas</h3><p>Prendedores, elásticos, minis, kits, metais, básicos, delicados e infantis como portfólio claro — escolha por tipo, ocasião, benefício ou cor.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 7V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2M4 7l8 5 8-5M4 7v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7"/></svg></div><h3>Naming de produtos</h3><p>Simples, comercial e desejável: <em>Prendedor Retangular Grande, Kit Elástico Colorido, Mini Prendedor Básico.</em></p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h10l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 9h6M8 13h8"/></svg></div><h3>Descrição de produtos</h3><p>Começa pelo que muda na vida: "Firme para o penteado. Leve para o dia." Depois, função e detalhe técnico.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M6 2l1.5 3h9L18 2M4 8h16l-1 12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/></svg></div><h3>Embalagens</h3><p>Uma pequena vitrine: logo forte, categoria clara, benefício curto, cor de linha, produto visível e acabamento limpo.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M20.6 3.4L12 12M20.6 3.4L15 21l-3-9-9-3z"/></svg></div><h3>Cartelas & displays</h3><p>Criam bloco de marca no meio do excesso. O roxo faz a PRONTA aparecer; a organização por linha ajuda a escolher.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M6 2h12l3 6H3zM3 8v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8M9 12h6"/></svg></div><h3>Unboxing</h3><p>Um papel, uma tag, uma frase, um QR de penteados. Não precisa ser luxuoso — precisa ser cuidado.</p></div>
+  </div>
+
+  <div class="statement reveal" style="border-radius:26px;margin-top:50px;padding:70px 30px">
+    <p style="font-size:clamp(1.3rem,3.2vw,2rem)">No PDV, a PRONTA precisa ser rápida:<br><b>"PRONTA para o agora."</b></p>
+  </div>
+</section>
+</div>
+
+<!-- ============ 09 APLICAÇÕES ============ -->
+<section id="aplicacoes">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">09</span> Aplicações da marca</div>
+    <h2 class="title">A mesma marca no post, na gôndola <em>e na conversa comercial</em></h2>
+    <p class="lead">Uma marca só existe de verdade quando vive em formatos diferentes sem perder personalidade. A régua é simples: se ensina, inspira ou dá vontade de usar, é conteúdo PRONTA.</p>
+  </div>
+  <div class="grid g4 mt reveal">
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div><h3>Redes sociais</h3><p>Penteados rápidos, usos por ocasião, trends traduzidas e conteúdo mãe e filha.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div><h3>Site / e-commerce</h3><p>Filtros por tipo, cor e ocasião. Fácil de comprar e gostoso de explorar.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M6 2h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/><path d="M9 13l2 2 4-4"/></svg></div><h3>Marketplaces</h3><p>Clareza extrema: título objetivo, imagem limpa, medidas, pack e benefícios.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><h3>E-mail marketing</h3><p>Convite com ritmo de campanha: "PRONTA para o calor?", "Seu kit de vida real chegou".</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 11l18-8-4 18-5-6-5 3z"/></svg></div><h3>Campanhas promo</h3><p>Verão prende cabelo, volta às aulas pede kits, festa pede detalhe. Ocasião antes de preço.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div><h3>Key visual</h3><p>Logo, frase central, mulher em movimento e universo roxo/dourado com respiro.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16v10H4zM8 20h8M12 15v5"/></svg></div><h3>Apresentações B2B</h3><p>Muito uso, pouca memória de marca. PRONTA não é só cartela — é marca com giro.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2 5 5 .5-4 3.5 1.5 5L12 13l-4.5 3 1.5-5-4-3.5 5-.5z"/></svg></div><h3>Creator kit</h3><p>Produtos por ocasião, desafios simples e espaço para a criadora mostrar seu jeito.</p></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:60px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem;margin-bottom:6px">Mensagens por público</h3>
+  </div>
+  <div class="grid g4 reveal">
+    <div class="card" style="background:var(--lilas)"><span class="tag-mini" style="background:#fff">Consumidoras</span><p style="font-family:var(--serif);font-style:italic;color:var(--roxo);font-size:1.05rem;margin-top:12px">"PRONTA para o corre, para o encontro, para o agora."</p></div>
+    <div class="card" style="background:var(--blush)"><span class="tag-mini" style="background:#fff">Mães</span><p style="font-family:var(--serif);font-style:italic;color:var(--roxo);font-size:1.05rem;margin-top:12px">"Penteados possíveis para dias cheios de imaginação."</p></div>
+    <div class="card" style="background:var(--nude)"><span class="tag-mini" style="background:#fff">Lojistas</span><p style="font-family:var(--serif);font-style:italic;color:var(--roxo);font-size:1.05rem;margin-top:12px">"Uma marca com giro, presença e história para contar."</p></div>
+    <div class="card" style="background:var(--lilas)"><span class="tag-mini" style="background:#fff">Influenciadoras</span><p style="font-family:var(--serif);font-style:italic;color:var(--roxo);font-size:1.05rem;margin-top:12px">"Mostre como você fica PRONTA para a vida real."</p></div>
+  </div>
+</section>
+
+<!-- ============ 10 EXEMPLOS ============ -->
+<div class="band" id="exemplos">
+<section style="padding-top:20px;padding-bottom:20px">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">10</span> Exemplos e exercícios</div>
+    <h2 class="title">Antes e depois: <em>o método PRONTA na prática</em></h2>
+    <p class="lead">O depois PRONTA é sempre mais específico, mais visual e mais conectado à vida real. Troca o clichê pelo gesto.</p>
+  </div>
+  <div class="grid g3 mt reveal">
+    <div class="card"><div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#b0788a;font-weight:700;margin-bottom:8px">Antes</div><p style="color:var(--cinza);font-family:var(--serif);font-style:italic">"Praticidade com estilo"</p><div style="height:1px;background:var(--linha);margin:16px 0"></div><div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--dourado);font-weight:700;margin-bottom:8px">Depois</div><p style="color:var(--roxo);font-family:var(--serif);font-style:italic;font-size:1.1rem">"Beleza que não pede pausa"</p></div>
+    <div class="card"><div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#b0788a;font-weight:700;margin-bottom:8px">Antes</div><p style="color:var(--cinza);font-family:var(--serif);font-style:italic">"Acessórios que completam você"</p><div style="height:1px;background:var(--linha);margin:16px 0"></div><div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--dourado);font-weight:700;margin-bottom:8px">Depois</div><p style="color:var(--roxo);font-family:var(--serif);font-style:italic;font-size:1.1rem">"O detalhe que deixa você PRONTA"</p></div>
+    <div class="card"><div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#b0788a;font-weight:700;margin-bottom:8px">Antes</div><p style="color:var(--cinza);font-family:var(--serif);font-style:italic">"Produto resistente e confortável"</p><div style="height:1px;background:var(--linha);margin:16px 0"></div><div style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--dourado);font-weight:700;margin-bottom:8px">Depois</div><p style="color:var(--roxo);font-family:var(--serif);font-style:italic;font-size:1.1rem">"Segura o penteado sem pesar no dia"</p></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem;margin-bottom:6px">Campanhas sazonais</h3>
+    <p class="muted">Toda campanha nasce de uma pergunta: para o que a consumidora precisa estar PRONTA agora?</p>
+  </div>
+  <div class="grid g4 reveal">
+    <div class="card center" style="padding:26px"><div class="ico" style="margin:0 auto 12px;background:var(--blush)"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2"/></svg></div><strong style="color:var(--roxo);font-family:var(--serif)">Verão</strong><p style="font-size:.85rem">cabelo preso, rotina em movimento</p></div>
+    <div class="card center" style="padding:26px"><div class="ico" style="margin:0 auto 12px;background:var(--lilas)"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3L2 8l10 5 10-5zM6 10v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></div><strong style="color:var(--roxo);font-family:var(--serif)">Volta às aulas</strong><p style="font-size:.85rem">mães, filhas e kits</p></div>
+    <div class="card center" style="padding:26px"><div class="ico" style="margin:0 auto 12px;background:var(--nude)"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div><strong style="color:var(--roxo);font-family:var(--serif)">Dia das mães</strong><p style="font-size:.85rem">cuidado compartilhado</p></div>
+    <div class="card center" style="padding:26px"><div class="ico" style="margin:0 auto 12px;background:var(--blush)"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><strong style="color:var(--roxo);font-family:var(--serif)">Festas</strong><p style="font-size:.85rem">o detalhe que muda o look</p></div>
+  </div>
+</section>
+</div>
+
+<!-- ============ 11 GOVERNANÇA ============ -->
+<section id="governanca">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">11</span> Fechamento e governança</div>
+    <h2 class="title">A PRONTA só é forte <em>se for repetida com cuidado</em></h2>
+    <p class="lead">Governança garante que a marca continue reconhecível quando muitas pessoas começam a criar por ela. Marca viva aceita evolução; marca forte não aceita improviso sem critério.</p>
+  </div>
+
+  <div class="reveal mt">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem;margin-bottom:6px">Checklist de uso rápido</h3>
+    <p class="muted">Se a peça poderia ser de qualquer marca, ainda não é PRONTA.</p>
+  </div>
+  <div class="checklist reveal">
+    <div class="check"><div class="box"><svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p>O nome PRONTA aparece com força?</p></div>
+    <div class="check"><div class="box"><svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p>A frase conecta beleza e vida real?</p></div>
+    <div class="check"><div class="box"><svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p>O produto está claro?</p></div>
+    <div class="check"><div class="box"><svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p>O benefício é concreto?</p></div>
+    <div class="check"><div class="box"><svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p>A imagem parece possível e desejável?</p></div>
+    <div class="check"><div class="box"><svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><p>A linguagem foge do genérico?</p></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:60px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem;margin-bottom:6px">Quatro filtros de aprovação</h3>
+  </div>
+  <div class="pillars reveal">
+    <div class="pillar"><div class="p-ico"><svg class="icon" style="width:28px;height:28px" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><strong>Estratégia</strong><span>reforça o posicionamento?</span></div>
+    <div class="pillar"><div class="p-ico"><svg class="icon" style="width:28px;height:28px" viewBox="0 0 24 24"><path d="M8 10h8M8 14h5M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><strong>Linguagem</strong><span>soa PRONTA?</span></div>
+    <div class="pillar"><div class="p-ico"><svg class="icon" style="width:28px;height:28px" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><strong>Visual</strong><span>parece PRONTA?</span></div>
+    <div class="pillar"><div class="p-ico"><svg class="icon" style="width:28px;height:28px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><strong>Uso real</strong><span>funciona no canal?</span></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:60px">
+    <div class="duo">
+      <div><div class="k">Biblioteca de ativos</div><p>Logotipo, variações, paleta, fontes, templates, grafismos, ícones, fotos aprovadas, textos-base, claims, apresentações, embalagens e materiais de PDV — reunidos para facilitar criação e proteger percepção.</p></div>
+      <div><div class="k">Versão do documento</div><p>Este é um documento vivo. A <b>v0.3</b> consolida textos e narrativa. As próximas versões incorporam logotipo final, especificações técnicas e peças aprovadas — cada atualização registra data, responsável e motivo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="reveal">
+    <svg class="spark" style="position:relative;opacity:.6;margin-bottom:20px" width="30" height="30" viewBox="0 0 24 24" fill="var(--dourado-2)"><path d="M12 0l2.5 9.5L24 12l-9.5 2.5L12 24l-2.5-9.5L0 12l9.5-2.5z"/></svg>
+    <div class="fm">PRON<b>T</b>A</div>
+    <div class="ft">estar PRONTA para a vida real</div>
+    <p style="max-width:560px;margin:30px auto 0;color:rgba(255,255,255,.7);font-size:1rem">O detalhe que acompanha a mulher quando a vida chama. Beleza não é pausa — beleza é presença.</p>
+    <div class="meta">
+      <div>Brand Guide <span>v0.3</span></div>
+      <div>Documento <span>vivo</span></div>
+      <div>Beleza para a <span>vida real</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// progress bar
+const prog=document.getElementById('progress');
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const scrolled=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;
+  prog.style.width=scrolled+'%';
+  const nav=document.getElementById('nav');
+  nav.style.boxShadow = h.scrollTop>40 ? '0 10px 30px -20px rgba(74,30,107,.4)' : 'none';
+});
+// reveal on scroll
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
