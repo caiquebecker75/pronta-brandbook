@@ -9,17 +9,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --roxo:#4A1E6B;
-  --roxo-2:#6A2C9B;
-  --roxo-soft:#8B5FBF;
-  --dourado:#C9A24B;
-  --dourado-2:#E4C878;
-  --blush:#F4E3E7;
-  --lilas:#EDE4F5;
-  --nude:#EFE6DC;
-  --marrom:#7A5C48;
-  --branco:#FCFAF7;
-  --tinta:#26172F;
+  --roxo:#7B3B77;
+  --roxo-2:#5E2C5B;
+  --roxo-soft:#C79EC3;
+  --dourado:#D9A63F;
+  --dourado-2:#EFC35E;
+  --blush:#F2E6EC;
+  --lilas:#EFE4F1;
+  --nude:#F6ECDD;
+  --marrom:#9A7A54;
+  --branco:#FCFAF8;
+  --tinta:#2C1B2B;
   --cinza:#8A8091;
   --linha:rgba(74,30,107,.14);
   --sombra:0 24px 60px -30px rgba(74,30,107,.4);
@@ -73,8 +73,8 @@ p{color:#4b3a56}
   radial-gradient(90% 70% at 90% 110%,var(--blush),transparent 55%),
   var(--branco);}
 .hero .kick{font-size:13px;letter-spacing:.4em;text-transform:uppercase;font-weight:700;color:var(--roxo-soft);margin-bottom:34px}
-.wordmark{font-family:var(--sans);font-weight:300;font-size:clamp(3.4rem,17vw,12rem);letter-spacing:.14em;line-height:.9;color:var(--roxo);position:relative}
-.wordmark b{font-weight:700}
+.wordmark{font-family:var(--serif);font-weight:400;font-size:clamp(3.6rem,17vw,12rem);letter-spacing:.03em;line-height:.9;color:var(--roxo);position:relative}
+.wordmark b{font-weight:500;font-style:italic;color:var(--dourado)}
 .hero .tag{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,3.4vw,2rem);color:var(--dourado);margin-top:26px;font-weight:400}
 .hero .sub{max-width:620px;margin:34px auto 0;color:#5b4a66;font-size:1.05rem}
 .spark{position:absolute;opacity:.5;animation:float 7s ease-in-out infinite}
@@ -135,7 +135,8 @@ svg.icon{width:26px;height:26px;stroke:currentColor;stroke-width:1.6;fill:none;s
 .sw .chip{height:130px;display:flex;align-items:flex-end;padding:16px}
 .sw .meta{padding:16px 18px;background:#fff}
 .sw .meta strong{display:block;color:var(--roxo);font-size:1rem}
-.sw .meta code{font-size:.78rem;color:var(--cinza);letter-spacing:.05em}
+.sw .meta code{display:block;font-size:.74rem;color:var(--cinza);letter-spacing:.03em;margin-top:3px}
+.sw .meta code:first-of-type{color:var(--roxo);font-weight:700;font-size:.82rem}
 .sw .role{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:#fff;font-weight:700}
 
 /* typography specimen */
@@ -245,8 +246,8 @@ svg.icon{width:26px;height:26px;stroke:currentColor;stroke-width:1.6;fill:none;s
 
 /* footer */
 footer{background:linear-gradient(160deg,var(--roxo),var(--roxo-2));color:#fff;text-align:center;padding:100px 22px 60px;max-width:none}
-footer .fm{font-family:var(--sans);font-weight:300;letter-spacing:.16em;font-size:clamp(2.5rem,10vw,6rem);color:#fff}
-footer .fm b{font-weight:700}
+footer .fm{font-family:var(--serif);font-weight:400;letter-spacing:.03em;font-size:clamp(2.6rem,10vw,6rem);color:#fff}
+footer .fm b{font-weight:500;font-style:italic;color:var(--dourado-2)}
 footer .ft{font-family:var(--serif);font-style:italic;color:var(--dourado-2);font-size:1.3rem;margin-top:16px}
 footer .meta{margin-top:50px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
 footer .meta span{color:var(--dourado-2)}
@@ -359,7 +360,41 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   .card:hover,.persona:hover,.sw:hover{transform:none!important;box-shadow:none!important}
   /* garante fundos coloridos no PDF */
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  .gallery img{max-height:none}
 }
+
+/* ===== Galeria de peças ===== */
+.gcats{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.gcat{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--roxo);background:#fff;border:1px solid var(--linha);border-radius:100px;padding:9px 18px;cursor:pointer;transition:.3s}
+.gcat:hover{border-color:var(--roxo)}
+.gcat.on{background:var(--roxo);color:#fff;border-color:var(--roxo)}
+.gallery{margin-top:34px;columns:3;column-gap:20px}
+@media(max-width:900px){.gallery{columns:2}}
+@media(max-width:560px){.gallery{columns:1}}
+.piece{break-inside:avoid;margin-bottom:20px;border-radius:18px;overflow:hidden;border:1px solid var(--linha);background:#fff;cursor:pointer;position:relative;transition:.4s;display:block}
+.piece.hide{display:none}
+.piece img{width:100%;display:block;transition:.6s}
+.piece:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
+.piece:hover img{transform:scale(1.04)}
+.piece .cap{position:absolute;left:0;right:0;bottom:0;padding:32px 18px 16px;background:linear-gradient(transparent,rgba(44,27,43,.82));color:#fff;opacity:0;transform:translateY(8px);transition:.4s}
+.piece:hover .cap{opacity:1;transform:none}
+.piece .cap strong{display:block;font-family:var(--serif);font-size:1.15rem}
+.piece .cap span{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dourado-2)}
+.piece .zoom{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:rgba(252,250,248,.9);display:flex;align-items:center;justify-content:center;color:var(--roxo);opacity:0;transition:.4s}
+.piece:hover .zoom{opacity:1}
+.piece .zoom svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none}
+/* lightbox */
+.lightbox{position:fixed;inset:0;z-index:1200;background:rgba(30,15,30,.92);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:40px;opacity:0;visibility:hidden;transition:.35s}
+.lightbox.open{opacity:1;visibility:visible}
+.lightbox img{max-width:92vw;max-height:82vh;border-radius:12px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7)}
+.lb-cap{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#fff;font-family:var(--serif);font-size:1.2rem;text-align:center}
+.lb-cap span{display:block;font-family:var(--sans);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dourado-2);margin-top:4px}
+.lb-close{position:absolute;top:24px;right:28px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:26px;cursor:pointer;transition:.3s;line-height:1}
+.lb-close:hover{background:rgba(255,255,255,.14);transform:rotate(90deg)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.2);color:#fff;font-size:22px;cursor:pointer;transition:.3s;display:flex;align-items:center;justify-content:center}
+.lb-nav:hover{background:rgba(255,255,255,.16)}
+.lb-prev{left:24px}.lb-next{right:24px}
+@media(max-width:560px){.lb-nav{width:42px;height:42px}.lb-prev{left:10px}.lb-next{right:10px}}
 </style>
 </head>
 <body>
@@ -400,6 +435,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <a href="#foto"><span class="oc">07</span><div><h5>Fotografia</h5><p>Beleza real, em movimento</p></div></a>
       <a href="#pdv"><span class="oc">08</span><div><h5>Produto & PDV</h5><p>A escolha que acontece rápido</p></div></a>
       <a href="#aplicacoes"><span class="oc">09</span><div><h5>Aplicações</h5><p>Redes, e-commerce, trade</p></div></a>
+      <a href="#pecas"><span class="oc">★</span><div><h5>Peças de comunicação</h5><p>As 11 peças reais do time</p></div></a>
       <a href="#exemplos"><span class="oc">10</span><div><h5>Exemplos & exercícios</h5><p>A estratégia virando peça</p></div></a>
       <a href="#governanca"><span class="oc">11</span><div><h5>Fechamento & governança</h5><p>Manter a marca consistente</p></div></a>
     </div>
@@ -420,6 +456,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <a href="#foto" data-sec="foto"><span>07 · Fotografia</span></a>
   <a href="#pdv" data-sec="pdv"><span>08 · Produto & PDV</span></a>
   <a href="#aplicacoes" data-sec="aplicacoes"><span>09 · Aplicações</span></a>
+  <a href="#pecas" data-sec="pecas"><span>★ · Peças de comunicação</span></a>
   <a href="#exemplos" data-sec="exemplos"><span>10 · Exemplos</span></a>
   <a href="#governanca" data-sec="governanca"><span>11 · Governança</span></a>
 </div>
@@ -755,20 +792,20 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <p class="lead">O sistema cria memória por repetição inteligente. Cores, formas, tipos, ícones e acabamentos que sustentam o universo da marca.</p>
   </div>
 
-  <div class="reveal mt"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Paleta primária</h3></div>
+  <div class="reveal mt"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Paleta oficial</h3><p class="muted">As seis cores definidas pelo time de criação — roxo e amarelo como assinatura, tons de apoio para respiro e proximidade.</p></div>
   <div class="swatches reveal">
-    <div class="sw"><div class="chip" style="background:var(--roxo)"><span class="role">Reconhecimento</span></div><div class="meta"><strong>Roxo PRONTA</strong><code>#4A1E6B</code></div></div>
-    <div class="sw"><div class="chip" style="background:var(--dourado)"><span class="role">Brilho & desejo</span></div><div class="meta"><strong>Dourado</strong><code>#C9A24B</code></div></div>
-    <div class="sw"><div class="chip" style="background:var(--branco);border-bottom:1px solid var(--linha)"><span class="role" style="color:var(--cinza)">Respiro</span></div><div class="meta"><strong>Branco</strong><code>#FCFAF7</code></div></div>
-    <div class="sw"><div class="chip" style="background:var(--tinta)"><span class="role">Leitura</span></div><div class="meta"><strong>Texto escuro</strong><code>#26172F</code></div></div>
+    <div class="sw"><div class="chip" style="background:#7B3B77"><span class="role">Reconhecimento</span></div><div class="meta"><strong>Roxo</strong><code>HEX #7B3B77</code><code>RGB 123·59·119 · CMYK 60·86·20·7</code></div></div>
+    <div class="sw"><div class="chip" style="background:#EFC35E"><span class="role" style="color:var(--marrom)">Brilho & desejo</span></div><div class="meta"><strong>Amarelo</strong><code>HEX #EFC35E</code><code>RGB 239·195·94 · CMYK 7·24·71·0</code></div></div>
+    <div class="sw"><div class="chip" style="background:#C79EC3"><span class="role">Proximidade</span></div><div class="meta"><strong>Lilás</strong><code>HEX #C79EC3</code><code>RGB 199·158·195 · CMYK 25·44·5·0</code></div></div>
+    <div class="sw"><div class="chip" style="background:#E3C293"><span class="role" style="color:var(--marrom)">Acento quente</span></div><div class="meta"><strong>Dourado</strong><code>HEX #E3C293</code><code>RGB 227·194·147 · CMYK 12·24·47·2</code></div></div>
+    <div class="sw"><div class="chip" style="background:#E1CFD7"><span class="role" style="color:var(--marrom)">Delicadeza</span></div><div class="meta"><strong>Rosa</strong><code>HEX #E1CFD7</code><code>RGB 225·207·215 · CMYK 13·21·11·0</code></div></div>
+    <div class="sw"><div class="chip" style="background:#F1E3D3"><span class="role" style="color:var(--marrom)">Respiro</span></div><div class="meta"><strong>Creme</strong><code>HEX #F1E3D3</code><code>RGB 241·227·211 · CMYK 6·11·19·0</code></div></div>
   </div>
 
-  <div class="reveal mt" style="margin-top:50px"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Paleta auxiliar</h3><p class="muted">Orbitam a marca — nunca tomam o lugar do roxo.</p></div>
-  <div class="swatches reveal">
-    <div class="sw"><div class="chip" style="background:var(--blush)"><span class="role" style="color:var(--marrom)">Proximidade</span></div><div class="meta"><strong>Blush</strong><code>#F4E3E7</code></div></div>
-    <div class="sw"><div class="chip" style="background:var(--lilas)"><span class="role" style="color:var(--roxo)">Leveza</span></div><div class="meta"><strong>Lilás</strong><code>#EDE4F5</code></div></div>
-    <div class="sw"><div class="chip" style="background:var(--nude)"><span class="role" style="color:var(--marrom)">Naturalidade</span></div><div class="meta"><strong>Nude</strong><code>#EFE6DC</code></div></div>
-    <div class="sw"><div class="chip" style="background:var(--marrom)"><span class="role">Terra</span></div><div class="meta"><strong>Marrom</strong><code>#7A5C48</code></div></div>
+  <div class="reveal mt" style="margin-top:50px"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Neutros de sistema</h3><p class="muted">Garantem leitura e respiro em telas e impressos.</p></div>
+  <div class="swatches reveal" style="grid-template-columns:repeat(2,1fr);max-width:560px">
+    <div class="sw"><div class="chip" style="background:#2C1B2B"><span class="role">Leitura</span></div><div class="meta"><strong>Texto escuro</strong><code>HEX #2C1B2B</code></div></div>
+    <div class="sw"><div class="chip" style="background:#FCFAF8;border-bottom:1px solid var(--linha)"><span class="role" style="color:var(--cinza)">Fundo</span></div><div class="meta"><strong>Branco quente</strong><code>HEX #FCFAF8</code></div></div>
   </div>
 
   <div class="reveal mt" style="margin-top:50px"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Tipografia</h3></div>
@@ -927,6 +964,46 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
 </section>
 
+<!-- ============ PEÇAS DE COMUNICAÇÃO ============ -->
+<section id="pecas">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">★</span> Peças de comunicação</div>
+    <h2 class="title">A marca <em>ganhou corpo</em></h2>
+    <p class="lead">Do papel para a vida real: as primeiras peças desenvolvidas pelo time de criação mostram a PRONTA aplicada em brindes, PDV e sistema visual — com o logotipo, o pattern e a paleta oficiais em ação.</p>
+  </div>
+
+  <div class="gcats reveal" id="gcats">
+    <button class="gcat on" data-f="all">Todas</button>
+    <button class="gcat" data-f="sistema">Sistema visual</button>
+    <button class="gcat" data-f="pdv">PDV & trade</button>
+    <button class="gcat" data-f="brindes">Brindes</button>
+  </div>
+
+  <div class="gallery reveal" id="gallery">
+    <div class="piece" data-cat="sistema" data-full="assets/pecas/paleta-cores.jpg" data-cap="Paleta de cores|Sistema visual"><img src="assets/pecas/paleta-cores.jpg" alt="Paleta de cores oficial" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Sistema visual</span><strong>Paleta de cores</strong></div></div>
+    <div class="piece" data-cat="sistema" data-full="assets/pecas/pattern.jpg" data-cap="Pattern / Grafismo|Sistema visual"><img src="assets/pecas/pattern.jpg" alt="Pattern geométrico" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Sistema visual</span><strong>Pattern / Grafismo</strong></div></div>
+    <div class="piece" data-cat="pdv" data-full="assets/pecas/display-gancheira.jpg" data-cap="Display gancheira|PDV & trade"><img src="assets/pecas/display-gancheira.jpg" alt="Display gancheira" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>PDV & trade</span><strong>Display gancheira</strong></div></div>
+    <div class="piece" data-cat="pdv" data-full="assets/pecas/banner-teto.jpg" data-cap="Banner de teto|PDV & trade"><img src="assets/pecas/banner-teto.jpg" alt="Banner de teto" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>PDV & trade</span><strong>Banner de teto</strong></div></div>
+    <div class="piece" data-cat="pdv" data-full="assets/pecas/tag.jpg" data-cap="Tag / Etiqueta|PDV & trade"><img src="assets/pecas/tag.jpg" alt="Tag etiqueta" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>PDV & trade</span><strong>Tag / Etiqueta</strong></div></div>
+    <div class="piece" data-cat="pdv" data-full="assets/pecas/adesivo.jpg" data-cap="Adesivos|PDV & trade"><img src="assets/pecas/adesivo.jpg" alt="Adesivos" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>PDV & trade</span><strong>Adesivos</strong></div></div>
+    <div class="piece" data-cat="brindes" data-full="assets/pecas/moleskine.jpg" data-cap="Caderno / Moleskine|Brindes"><img src="assets/pecas/moleskine.jpg" alt="Caderno moleskine" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Brindes</span><strong>Caderno / Moleskine</strong></div></div>
+    <div class="piece" data-cat="brindes" data-full="assets/pecas/caneca.jpg" data-cap="Caneca|Brindes"><img src="assets/pecas/caneca.jpg" alt="Caneca" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Brindes</span><strong>Caneca</strong></div></div>
+    <div class="piece" data-cat="brindes" data-full="assets/pecas/garrafa.jpg" data-cap="Garrafa|Brindes"><img src="assets/pecas/garrafa.jpg" alt="Garrafa" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Brindes</span><strong>Garrafa</strong></div></div>
+    <div class="piece" data-cat="brindes" data-full="assets/pecas/mousepad.jpg" data-cap="Mousepad|Brindes"><img src="assets/pecas/mousepad.jpg" alt="Mousepad" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Brindes</span><strong>Mousepad</strong></div></div>
+    <div class="piece" data-cat="brindes" data-full="assets/pecas/cartao-visitas.jpg" data-cap="Cartão de visitas|Brindes"><img src="assets/pecas/cartao-visitas.jpg" alt="Cartão de visitas" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Brindes</span><strong>Cartão de visitas</strong></div></div>
+  </div>
+  <p class="muted reveal" style="margin-top:24px;font-size:.9rem">Clique em qualquer peça para ver em tela cheia. Total de 11 peças desenvolvidas nesta primeira leva.</p>
+</section>
+
+<!-- Lightbox da galeria -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Fechar">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Anterior">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Próxima">&#8250;</button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
 <!-- ============ 10 EXEMPLOS ============ -->
 <div class="band" id="exemplos">
 <section style="padding-top:20px;padding-bottom:20px">
@@ -1029,7 +1106,7 @@ const io=new IntersectionObserver((entries)=>{
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // ===== scroll-spy: destaca capítulo ativo no menu e nos pontos =====
-const secs=['abertura','contexto','estrategia','linguagem','identidade','sistema','foto','pdv','aplicacoes','exemplos','governanca'];
+const secs=['abertura','contexto','estrategia','linguagem','identidade','sistema','foto','pdv','aplicacoes','pecas','exemplos','governanca'];
 const spy=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
@@ -1062,6 +1139,47 @@ function baixarPDF(){
 }
 document.getElementById('pdfBtn').addEventListener('click',baixarPDF);
 const pdf2=document.getElementById('pdfBtn2'); if(pdf2) pdf2.addEventListener('click',baixarPDF);
+
+// ===== galeria: filtros =====
+const pieces=[...document.querySelectorAll('.piece')];
+document.querySelectorAll('#gcats .gcat').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('#gcats .gcat').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    const f=btn.dataset.f;
+    pieces.forEach(p=>p.classList.toggle('hide', f!=='all' && p.dataset.cat!==f));
+  });
+});
+
+// ===== galeria: lightbox =====
+const lb=document.getElementById('lightbox');
+const lbImg=document.getElementById('lbImg');
+const lbCap=document.getElementById('lbCap');
+let lbList=[], lbI=0;
+function showLb(i){
+  const vis=pieces.filter(p=>!p.classList.contains('hide'));
+  lbList=vis; lbI=(i+vis.length)%vis.length;
+  const p=vis[lbI];
+  lbImg.src=p.dataset.full;
+  const parts=(p.dataset.cap||'|').split('|');
+  lbCap.innerHTML=parts[0]+'<span>'+(parts[1]||'')+'</span>';
+}
+pieces.forEach(p=>p.addEventListener('click',()=>{
+  const vis=pieces.filter(x=>!x.classList.contains('hide'));
+  showLb(vis.indexOf(p));
+  lb.classList.add('open'); document.body.style.overflow='hidden';
+}));
+function closeLb(){lb.classList.remove('open');document.body.style.overflow='';}
+document.getElementById('lbClose').addEventListener('click',closeLb);
+document.getElementById('lbPrev').addEventListener('click',e=>{e.stopPropagation();showLb(lbI-1);});
+document.getElementById('lbNext').addEventListener('click',e=>{e.stopPropagation();showLb(lbI+1);});
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')closeLb();
+  if(e.key==='ArrowLeft')showLb(lbI-1);
+  if(e.key==='ArrowRight')showLb(lbI+1);
+});
 
 // ===== parallax suave nas faíscas do hero =====
 const sparks=document.querySelectorAll('.hero .spark');
