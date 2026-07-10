@@ -75,6 +75,11 @@ p{color:#4b3a56}
 .hero .kick{font-size:13px;letter-spacing:.4em;text-transform:uppercase;font-weight:700;color:var(--roxo-soft);margin-bottom:34px}
 .wordmark{font-family:var(--serif);font-weight:400;font-size:clamp(3.6rem,17vw,12rem);letter-spacing:.03em;line-height:.9;color:var(--roxo);position:relative}
 .wordmark b{font-weight:500;font-style:italic;color:var(--dourado)}
+/* logotipo oficial (imagens) */
+.wordmark-img{width:min(86vw,720px);height:auto;display:block;margin:0 auto}
+.brand-img{height:26px;width:auto;display:block}
+.fm-img{width:min(76vw,400px);height:auto;display:block;margin:0 auto}
+.logo-show{width:min(72vw,540px);height:auto;display:block;margin:0 auto}
 .hero .tag{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,3.4vw,2rem);color:var(--dourado);margin-top:26px;font-weight:400}
 .hero .sub{max-width:620px;margin:34px auto 0;color:#5b4a66;font-size:1.05rem}
 .spark{position:absolute;opacity:.5;animation:float 7s ease-in-out infinite}
@@ -273,7 +278,7 @@ footer .meta span{color:var(--dourado-2)}
 .duo .k{font-family:var(--serif);font-style:italic;color:var(--dourado);font-size:1.1rem;margin-bottom:10px}
 
 /* ===== NAV melhorado ===== */
-nav.top .brand{text-decoration:none}
+nav.top .brand{text-decoration:none;display:inline-flex;align-items:center}
 .nav-actions{display:flex;align-items:center;gap:14px}
 nav.top .menu a.active{color:var(--roxo)}
 nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--dourado);border-radius:2px}
@@ -385,30 +390,23 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .rule.no .rprev{background:#fbf3f4}
 .rule.ok .rprev{background:#f2f8f3}
 /* wordmark de demonstração */
-.wm{font-family:var(--serif);font-weight:400;font-size:1.9rem;letter-spacing:.03em;color:var(--roxo);line-height:1;white-space:nowrap}
-.wm b{font-weight:500;font-style:italic;color:var(--dourado)}
-.wm.sm{font-size:1.5rem}
+.wm{font-family:var(--sans);font-weight:800;font-size:1.7rem;letter-spacing:.02em;color:var(--roxo);line-height:1;white-space:nowrap}
+.wm b{color:var(--dourado)}
+/* logo oficial nas demonstrações */
+.wm-img{width:150px;max-width:76%;height:auto;display:block}
+.wm-img.sm{width:120px}
 /* corretas */
 .p-neg{background:var(--roxo)!important}
-.p-neg .wm{color:#fff}.p-neg .wm b{color:var(--dourado-2)}
-.p-mono .wm,.p-mono .wm b{color:var(--roxo);font-style:normal;font-weight:400}
-.p-protect .wm{position:relative}
-.p-protect .box{position:absolute;inset:26px 30px;border:1px dashed var(--roxo-soft);border-radius:6px;pointer-events:none}
-/* erradas */
-.w-stretch .wm{display:inline-block;transform:scaleX(1.7)}
-.w-rotate .wm{display:inline-block;transform:rotate(-13deg)}
-.w-color .wm,.w-color .wm b{color:#2f8f4e}
-.w-shadow .wm{text-shadow:3px 3px 0 rgba(44,27,43,.35)}
-.w-outline .wm{color:transparent;-webkit-text-stroke:1.4px var(--roxo)}
-.w-outline .wm b{color:transparent;-webkit-text-stroke:1.4px var(--dourado)}
-.w-squeeze .wm{letter-spacing:-.14em}
-.w-font .wm{font-family:var(--sans);font-weight:800;font-style:normal}
-.w-font .wm b{font-family:var(--sans);font-style:normal;color:var(--dourado)}
+.p-protect{position:relative}
+.p-protect .box{position:absolute;inset:24px 30px;border:1px dashed var(--roxo-soft);border-radius:6px;pointer-events:none}
+/* erradas (aplicadas ao logo oficial) */
+.w-stretch .wm-img{transform:scaleX(1.7)}
+.w-rotate .wm-img{transform:rotate(-13deg)}
+.w-color .wm-img{filter:hue-rotate(150deg) saturate(1.7)}
+.w-shadow .wm-img{filter:drop-shadow(4px 4px 0 rgba(44,27,43,.4))}
+.w-skew .wm-img{transform:skewX(-16deg)}
+.w-squeeze .wm-img{transform:scaleX(.5)}
 .w-lowcontrast{background:var(--roxo-soft)!important}
-.w-lowcontrast .wm{color:#b98fb4}.w-lowcontrast .wm b{color:#b98fb4}
-.w-crop{overflow:hidden}
-.w-crop .wm{transform:scale(2.1) translateY(4px)}
-.rule.no .wm b{opacity:1}
 
 /* ===== Galeria de peças ===== */
 .gcats{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
@@ -448,7 +446,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 <div class="progress" id="progress"></div>
 
 <nav class="top" id="nav">
-  <a href="#top" class="brand">PRON<span>T</span>A</a>
+  <a href="#top" class="brand"><img class="brand-img" src="assets/logo/pronta-roxo.png" alt="PRONTA"></a>
   <div class="menu" id="deskmenu">
     <a href="#contexto" data-sec="contexto">Contexto</a>
     <a href="#estrategia" data-sec="estrategia">Estratégia</a>
@@ -522,7 +520,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <svg class="spark" style="top:26%;right:16%;animation-delay:1.5s" width="20" height="20" viewBox="0 0 24 24" fill="var(--roxo-soft)"><path d="M12 0l2.5 9.5L24 12l-9.5 2.5L12 24l-2.5-9.5L0 12l9.5-2.5z"/></svg>
   <svg class="spark" style="bottom:22%;left:20%;animation-delay:.8s" width="24" height="24" viewBox="0 0 24 24" fill="var(--dourado-2)"><path d="M12 0l2.5 9.5L24 12l-9.5 2.5L12 24l-2.5-9.5L0 12l9.5-2.5z"/></svg>
   <div class="kick">Brand Guide · v0.3</div>
-  <h1 class="wordmark">PRON<b>T</b>A</h1>
+  <img class="wordmark-img" src="assets/logo/pronta-roxo.png" alt="PRONTA">
   <p class="tag">estar PRONTA para a vida real</p>
   <p class="sub">Uma marca de acessórios de cabelo feita para a beleza que acontece no meio da vida — no espelho rápido, no cabelo preso com intenção, no detalhe que devolve presença.</p>
   <div class="scrolldown"><div class="line"></div>role para explorar</div>
@@ -794,7 +792,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 
   <div class="center mt reveal" style="background:#fff;border:1px solid var(--linha);border-radius:26px;padding:70px 30px">
     <div class="muted" style="font-size:11px;letter-spacing:.25em;text-transform:uppercase;margin-bottom:24px">Marca principal · logotipo</div>
-    <div class="wordmark" style="font-size:clamp(3rem,13vw,8rem);color:var(--roxo)">PRON<b>T</b>A</div>
+    <img class="logo-show" src="assets/logo/pronta-roxo.png" alt="Logotipo PRONTA">
     <div style="font-family:var(--serif);font-style:italic;color:var(--dourado);font-size:1.2rem;margin-top:14px">estar PRONTA para a vida real</div>
     <p class="muted narrow" style="margin-top:26px;font-size:.95rem">O nome é forte demais para ser tratado como rodapé. Quando a marca aparece, ela afirma presença — PRONTA não sussurra na gôndola. Construção com alongamento, elegância, curva e sensação de movimento.</p>
   </div>
@@ -938,24 +936,24 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="rules-head"><span class="tick ok"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><h3>Aplicações corretas</h3></div>
   </div>
   <div class="rgrid ok reveal">
-    <div class="rule ok"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✓</span> Versão positiva</div></div>
-    <div class="rule ok"><div class="rprev p-neg"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✓</span> Versão negativa</div></div>
-    <div class="rule ok"><div class="rprev p-mono"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✓</span> Monocromática</div></div>
-    <div class="rule ok"><div class="rprev p-protect"><span class="wm sm">PRON<b>T</b>A</span><span class="box"></span></div><div class="rlabel"><span class="b">✓</span> Área de proteção</div></div>
+    <div class="rule ok"><div class="rprev"><img class="wm-img" src="assets/logo/pronta-roxo.png" alt="PRONTA positiva"></div><div class="rlabel"><span class="b">✓</span> Versão positiva</div></div>
+    <div class="rule ok"><div class="rprev p-neg"><img class="wm-img" src="assets/logo/pronta-branco.png" alt="PRONTA negativa"></div><div class="rlabel"><span class="b">✓</span> Versão negativa</div></div>
+    <div class="rule ok"><div class="rprev"><img class="wm-img" src="assets/logo/pronta-preto.png" alt="PRONTA monocromática"></div><div class="rlabel"><span class="b">✓</span> Monocromática</div></div>
+    <div class="rule ok"><div class="rprev p-protect"><img class="wm-img sm" src="assets/logo/pronta-roxo.png" alt="PRONTA área de proteção"><span class="box"></span></div><div class="rlabel"><span class="b">✓</span> Área de proteção</div></div>
   </div>
 
   <div class="reveal">
     <div class="rules-head"><span class="tick no"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h3>Aplicações erradas</h3></div>
   </div>
   <div class="rgrid no reveal">
-    <div class="rule no w-stretch"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não distorça</div></div>
-    <div class="rule no w-rotate"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não gire</div></div>
-    <div class="rule no w-color"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não troque as cores</div></div>
-    <div class="rule no w-shadow"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não aplique efeitos</div></div>
-    <div class="rule no w-font"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não troque a fonte</div></div>
-    <div class="rule no w-outline"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não contorne</div></div>
-    <div class="rule no w-squeeze"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não comprima</div></div>
-    <div class="rule no w-lowcontrast"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não use sem contraste</div></div>
+    <div class="rule no w-stretch"><div class="rprev"><img class="wm-img" src="assets/logo/pronta-roxo.png" alt=""></div><div class="rlabel"><span class="b">✕</span> Não distorça</div></div>
+    <div class="rule no w-rotate"><div class="rprev"><img class="wm-img" src="assets/logo/pronta-roxo.png" alt=""></div><div class="rlabel"><span class="b">✕</span> Não gire</div></div>
+    <div class="rule no w-color"><div class="rprev"><img class="wm-img" src="assets/logo/pronta-roxo.png" alt=""></div><div class="rlabel"><span class="b">✕</span> Não troque as cores</div></div>
+    <div class="rule no w-shadow"><div class="rprev"><img class="wm-img" src="assets/logo/pronta-roxo.png" alt=""></div><div class="rlabel"><span class="b">✕</span> Não aplique efeitos</div></div>
+    <div class="rule no w-font"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não recrie em outra fonte</div></div>
+    <div class="rule no w-skew"><div class="rprev"><img class="wm-img" src="assets/logo/pronta-roxo.png" alt=""></div><div class="rlabel"><span class="b">✕</span> Não incline</div></div>
+    <div class="rule no w-squeeze"><div class="rprev"><img class="wm-img" src="assets/logo/pronta-roxo.png" alt=""></div><div class="rlabel"><span class="b">✕</span> Não comprima</div></div>
+    <div class="rule no w-lowcontrast"><div class="rprev"><img class="wm-img" src="assets/logo/pronta-roxo.png" alt=""></div><div class="rlabel"><span class="b">✕</span> Não use sem contraste</div></div>
   </div>
 
   <div class="reveal mt" style="margin-top:56px">
@@ -1224,7 +1222,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 <footer>
   <div class="reveal">
     <svg class="spark" style="position:relative;opacity:.6;margin-bottom:20px" width="30" height="30" viewBox="0 0 24 24" fill="var(--dourado-2)"><path d="M12 0l2.5 9.5L24 12l-9.5 2.5L12 24l-2.5-9.5L0 12l9.5-2.5z"/></svg>
-    <div class="fm">PRON<b>T</b>A</div>
+    <img class="fm-img" src="assets/logo/pronta-branco.png" alt="PRONTA">
     <div class="ft">estar PRONTA para a vida real</div>
     <p style="max-width:560px;margin:30px auto 0;color:rgba(255,255,255,.7);font-size:1rem">O detalhe que acompanha a mulher quando a vida chama. Beleza não é pausa — beleza é presença.</p>
     <div class="meta">
