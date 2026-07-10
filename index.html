@@ -698,6 +698,129 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .shadow{background:linear-gradient(160deg,#faf0f2,#fff);border:1px solid var(--linha);border-radius:16px;padding:22px 24px}
 .shadow strong{display:block;color:#b0788a;font-family:var(--serif);font-size:1.05rem;margin-bottom:6px}
 .shadow p{font-size:.88rem}
+
+/* ===== Simulações / mockups ===== */
+.mgrid{display:grid;gap:22px;margin-top:30px;align-items:start}
+.mg3{grid-template-columns:repeat(3,1fr)}
+.mg2{grid-template-columns:1fr 1fr}
+@media(max-width:860px){.mg3{grid-template-columns:1fr}.mg2{grid-template-columns:1fr}}
+.mcap{text-align:center;font-size:.76rem;color:var(--cinza);margin-top:12px;font-weight:600}
+.mcap b{color:var(--roxo)}
+/* post feed */
+.igpost{max-width:330px;margin:0 auto;width:100%;background:#fff;border:1px solid var(--linha);border-radius:16px;overflow:hidden;box-shadow:var(--sombra)}
+.igtop{display:flex;align-items:center;gap:9px;padding:11px 13px}
+.igav{width:30px;height:30px;border-radius:50%;background:var(--lilas);display:flex;align-items:center;justify-content:center;overflow:hidden;flex:0 0 auto}
+.igav img{width:22px}
+.ighandle{font-weight:700;font-size:.82rem;color:var(--tinta);line-height:1.1}
+.ighandle small{display:block;color:var(--cinza);font-weight:500;font-size:.66rem}
+.igmore{margin-left:auto;color:var(--cinza);font-weight:800;letter-spacing:1px}
+.igimg{aspect-ratio:1;background-size:cover;background-position:center;position:relative}
+.igsticker{position:absolute;left:12px;bottom:12px;background:rgba(252,250,248,.94);color:var(--roxo);font-weight:800;font-size:.72rem;padding:6px 12px;border-radius:100px}
+.igact{display:flex;gap:15px;padding:11px 13px 5px;color:var(--tinta)}
+.igact svg{width:23px;height:23px;stroke:currentColor;stroke-width:1.7;fill:none}
+.igact .save{margin-left:auto}
+.iglikes{padding:0 13px;font-weight:700;font-size:.78rem;color:var(--tinta)}
+.igcap{padding:4px 13px 14px;font-size:.8rem;color:var(--tinta);line-height:1.45}
+.igcap b{font-weight:700}
+.igtags{color:var(--roxo-soft);font-weight:600}
+/* stories / reels — telefone */
+.story{position:relative;aspect-ratio:9/16;border-radius:26px;overflow:hidden;background-size:cover;background-position:center;max-width:250px;margin:0 auto;width:100%;border:5px solid #1c1120;box-shadow:var(--sombra)}
+.sgrad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(44,27,43,.55),transparent 26%,transparent 52%,rgba(44,27,43,.9))}
+.sbars{position:absolute;top:10px;left:12px;right:12px;display:flex;gap:4px;z-index:3}
+.sbars i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.4)}
+.sbars i.on{background:#fff}
+.stop{position:absolute;top:22px;left:12px;right:12px;display:flex;align-items:center;gap:7px;z-index:3;color:#fff}
+.stop img{width:26px;height:26px;border-radius:50%;border:2px solid #fff;background:#fff;padding:2px;flex:0 0 auto}
+.stop b{font-size:.76rem}.stop small{color:rgba(255,255,255,.8);font-size:.64rem;margin-left:3px}
+.sbody{position:absolute;left:16px;right:16px;bottom:70px;z-index:3;color:#fff;text-align:center}
+.sbody .sh{font-family:var(--serif);font-size:1.35rem;line-height:1.12}
+.sbody .ssub{font-size:.76rem;color:rgba(255,255,255,.85);margin-top:6px}
+.scta{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:5px;color:#fff}
+.scta .pill{background:#fff;color:var(--roxo);font-weight:800;font-size:.72rem;padding:8px 18px;border-radius:100px}
+.scta .up{font-size:.68rem;opacity:.9}
+.rrail{position:absolute;right:9px;bottom:66px;display:flex;flex-direction:column;gap:15px;z-index:4;color:#fff;align-items:center}
+.rrail .ri{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.58rem}
+.rrail svg{width:23px;height:23px;stroke:#fff;stroke-width:1.7;fill:none}
+.rcap{position:absolute;left:14px;right:52px;bottom:20px;z-index:4;color:#fff;font-size:.74rem;text-align:left}
+.rcap b{font-weight:800}
+/* google ads */
+.adlabel{font-size:.6rem;font-weight:800;letter-spacing:.04em;color:#5b6b3a;border:1px solid #b7c48a;border-radius:4px;padding:1px 5px;display:inline-block;background:#f3f7e8;margin-bottom:8px}
+.ad-lead{height:90px;width:100%;border:1px solid var(--linha);border-radius:10px;background:linear-gradient(120deg,var(--roxo),var(--roxo-2));display:flex;align-items:center;gap:16px;padding:0 22px;color:#fff;overflow:hidden;position:relative}
+.ad-lead::after{content:"";position:absolute;right:-30px;top:-30px;width:150px;height:150px;border-radius:50%;background:rgba(239,195,94,.2)}
+.ad-lead img{height:30px;position:relative;z-index:2}
+.ad-lead .h{font-family:var(--serif);font-size:1.15rem;flex:1;position:relative;z-index:2;line-height:1.05}
+.ad-lead .btn{background:var(--dourado-2);color:var(--roxo);font-weight:800;font-size:.78rem;padding:9px 18px;border-radius:100px;white-space:nowrap;position:relative;z-index:2}
+.ad-rect{width:250px;max-width:100%;border:1px solid var(--linha);border-radius:10px;overflow:hidden;background:var(--roxo);color:#fff;display:flex;flex-direction:column}
+.ad-rect .top{height:140px;background-size:cover;background-position:center}
+.ad-rect .bot{padding:13px 15px;display:flex;flex-direction:column;gap:8px}
+.ad-rect .bot img{height:20px;align-self:flex-start}
+.ad-rect .bot .h{font-family:var(--serif);font-size:1rem;line-height:1.1}
+.ad-rect .bot .btn{background:var(--dourado-2);color:var(--roxo);font-weight:800;font-size:.74rem;padding:8px 0;border-radius:100px;text-align:center}
+.adsize{font-size:.66rem;color:var(--cinza);font-weight:700;margin-top:8px;text-align:center}
+/* search ad */
+.searchad{border:1px solid var(--linha);border-radius:14px;padding:18px 20px;background:#fff}
+.searchad .u{display:flex;align-items:center;gap:8px;font-size:.76rem;color:#4b3a56}
+.searchad .u .adt{font-weight:800;color:var(--tinta)}
+.searchad .u img{height:15px}
+.searchad .t{color:#6a2c9b;font-size:1.12rem;margin:5px 0 3px;font-weight:600;line-height:1.15}
+.searchad .d{font-size:.85rem;color:#4b3a56;line-height:1.4}
+.searchad .sites{display:flex;flex-wrap:wrap;gap:16px;margin-top:9px}
+.searchad .sites a{color:#6a2c9b;font-size:.8rem;font-weight:600;text-decoration:none}
+/* browser / e-commerce */
+.browser{border:1px solid var(--linha);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--sombra)}
+.bbar{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--nude);border-bottom:1px solid var(--linha)}
+.bbar .dots{display:flex;gap:5px}
+.bbar .dots i{width:10px;height:10px;border-radius:50%;background:var(--roxo-soft);display:block}
+.bbar .url{flex:1;background:#fff;border:1px solid var(--linha);border-radius:100px;padding:5px 14px;font-size:.74rem;color:var(--cinza)}
+.ecom{display:grid;grid-template-columns:1fr 1fr;gap:0}
+@media(max-width:560px){.ecom{grid-template-columns:1fr}}
+.ecom .eimg{aspect-ratio:1;background-size:cover;background-position:center;border-right:1px solid var(--linha)}
+.ecom .einfo{padding:24px}
+.ecom .ebread{font-size:.72rem;color:var(--cinza);letter-spacing:.02em}
+.ecom h4{font-family:var(--serif);color:var(--roxo);font-size:1.4rem;margin:6px 0}
+.ecom .estars{color:var(--dourado);font-size:.85rem;margin-bottom:10px}
+.ecom .eprice{font-size:1.6rem;font-weight:800;color:var(--tinta)}
+.ecom .eprice small{font-size:.8rem;color:var(--cinza);font-weight:600}
+.ecom .ecolors{display:flex;gap:8px;margin:14px 0}
+.ecom .ecolors i{width:22px;height:22px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px var(--linha)}
+.ecom .ebtn{display:block;text-align:center;background:var(--roxo);color:#fff;font-weight:800;padding:12px;border-radius:100px;font-size:.88rem;margin-top:6px}
+.ecom .ebenef{display:flex;gap:14px;margin-top:16px}
+.ecom .ebenef div{text-align:center;flex:1;font-size:.66rem;color:var(--cinza);font-weight:600}
+.ecom .ebenef svg{width:22px;height:22px;stroke:var(--roxo);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round;margin-bottom:4px}
+/* marketplace */
+.mp{max-width:230px;margin:0 auto;width:100%;border:1px solid var(--linha);border-radius:12px;overflow:hidden;background:#fff;box-shadow:var(--sombra)}
+.mp .mpimg{aspect-ratio:1;background-size:cover;background-position:center}
+.mp .mpbody{padding:12px 14px}
+.mp .mpt{font-size:.82rem;color:var(--tinta);line-height:1.3;margin-bottom:6px}
+.mp .price{font-size:1.3rem;font-weight:800;color:var(--tinta)}
+.mp .price small{font-size:.72rem;color:var(--cinza);text-decoration:line-through;font-weight:600;margin-left:4px}
+.mp .off{color:#3f9d55;font-size:.74rem;font-weight:800}
+.mp .stars{color:var(--dourado);font-size:.78rem;margin:5px 0}
+.mp .stars small{color:var(--cinza)}
+.mp .free{color:#3f9d55;font-weight:800;font-size:.72rem}
+/* whatsapp */
+.chat{max-width:340px;margin:0 auto;width:100%;border:1px solid var(--linha);border-radius:16px;overflow:hidden;box-shadow:var(--sombra)}
+.chead{background:var(--roxo);color:#fff;padding:12px 14px;display:flex;align-items:center;gap:10px}
+.chead .cav{width:34px;height:34px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.chead .cav img{width:26px}
+.chead b{font-size:.86rem}.chead small{display:block;color:rgba(255,255,255,.8);font-size:.68rem}
+.cbody{padding:16px 14px;display:flex;flex-direction:column;gap:9px;background:var(--nude)}
+.bub{max-width:82%;padding:9px 12px;border-radius:14px;font-size:.82rem;line-height:1.4;position:relative}
+.bub.in{background:#fff;align-self:flex-start;border:1px solid var(--linha);border-bottom-left-radius:4px}
+.bub.out{background:var(--lilas);align-self:flex-end;border-bottom-right-radius:4px;color:var(--tinta)}
+.bub .time{display:block;font-size:.6rem;color:var(--cinza);text-align:right;margin-top:3px}
+.bub.promo{background:#fff;border:1px solid var(--linha);padding:0;overflow:hidden;width:82%}
+.bub.promo .pimg{height:96px;background-size:cover;background-position:center}
+.bub.promo .ptxt{padding:9px 12px}
+/* outdoor / OOH */
+.ooh{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:21/9;background-size:cover;background-position:center;box-shadow:var(--sombra)}
+@media(max-width:560px){.ooh{aspect-ratio:16/10}}
+.ooh .ograd{position:absolute;inset:0;background:linear-gradient(90deg,rgba(74,30,107,.94),rgba(74,30,107,.5) 52%,rgba(74,30,107,.05))}
+.ooh .obody{position:absolute;left:6%;top:50%;transform:translateY(-50%);color:#fff;max-width:56%;z-index:2}
+.ooh .obody img{height:38px;margin-bottom:14px}
+.ooh .obody .oh{font-family:var(--serif);font-size:clamp(1.3rem,3.6vw,2.4rem);line-height:1.05}
+.ooh .obody .osub{color:var(--dourado-2);font-style:italic;font-family:var(--serif);font-size:clamp(.9rem,2vw,1.2rem);margin-top:8px}
+.ooh .obadge{position:absolute;right:5%;bottom:8%;z-index:2;background:rgba(252,250,248,.9);color:var(--roxo);font-weight:800;font-size:.72rem;padding:7px 14px;border-radius:100px}
 </style>
 </head>
 <body>
@@ -742,6 +865,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <a href="#pdv"><span class="oc">08</span><div><h5>Produto & PDV</h5><p>A escolha que acontece rápido</p></div></a>
       <a href="#produto"><span class="oc">★</span><div><h5>Produto & sortimento</h5><p>Linhas, segmentação, planograma</p></div></a>
       <a href="#aplicacoes"><span class="oc">09</span><div><h5>Aplicações</h5><p>Redes, e-commerce, trade</p></div></a>
+      <a href="#mockups"><span class="oc">★</span><div><h5>Simulações visuais</h5><p>Post, stories, ads, e-commerce</p></div></a>
       <a href="#pecas"><span class="oc">★</span><div><h5>Peças de comunicação</h5><p>As 11 peças reais do time</p></div></a>
       <a href="#conteudo"><span class="oc">★</span><div><h5>Exemplos de conteúdo</h5><p>Legenda, e-mail, PDV, embalagem</p></div></a>
       <a href="#exemplos"><span class="oc">10</span><div><h5>Exemplos & exercícios</h5><p>A estratégia virando peça</p></div></a>
@@ -769,6 +893,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <a href="#pdv" data-sec="pdv"><span>08 · Produto & PDV</span></a>
   <a href="#produto" data-sec="produto"><span>★ · Produto & sortimento</span></a>
   <a href="#aplicacoes" data-sec="aplicacoes"><span>09 · Aplicações</span></a>
+  <a href="#mockups" data-sec="mockups"><span>★ · Simulações visuais</span></a>
   <a href="#pecas" data-sec="pecas"><span>★ · Peças de comunicação</span></a>
   <a href="#conteudo" data-sec="conteudo"><span>★ · Exemplos de conteúdo</span></a>
   <a href="#exemplos" data-sec="exemplos"><span>10 · Exemplos</span></a>
@@ -1816,6 +1941,168 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
 </section>
 
+<!-- ============ SIMULAÇÕES VISUAIS ============ -->
+<section id="mockups">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">★</span> Simulações visuais</div>
+    <h2 class="title">A marca em <em>contexto</em></h2>
+    <p class="lead">Mockups para tangibilizar cada aplicação — como a PRONTA aparece de verdade no feed, nos stories, na mídia paga, no e-commerce, no marketplace, no relacionamento e na rua.</p>
+  </div>
+
+  <!-- Redes sociais -->
+  <div class="content-block reveal">
+    <div class="clabel"><span class="cnum">1</span> Redes sociais</div>
+    <h3>Post, stories e reels</h3>
+    <p class="cdesc">Produto visível, gesto real e a marca reconhecível em qualquer formato.</p>
+    <div class="mgrid mg3">
+      <div>
+        <div class="igpost">
+          <div class="igtop"><span class="igav"><img src="assets/logo/pronta-roxo.png" alt=""></span><span class="ighandle">pronta.oficial<small>Publicação</small></span><span class="igmore">···</span></div>
+          <div class="igimg" style="background-image:url('assets/fotografia/acessorio-evidencia.jpg')"><span class="igsticker">PRONTA para o agora</span></div>
+          <div class="igact"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+          <div class="iglikes">1.284 curtidas</div>
+          <div class="igcap"><b>pronta.oficial</b> Prendeu. Sentiu. Foi. ✨ <span class="igtags">#PRONTA #vidareal</span></div>
+        </div>
+        <p class="mcap"><b>Feed</b> · 1080×1080</p>
+      </div>
+      <div>
+        <div class="story" style="background-image:url('assets/fotografia/prender-espelho.jpg')">
+          <div class="sgrad"></div>
+          <div class="sbars"><i class="on"></i><i></i><i></i></div>
+          <div class="stop"><img src="assets/logo/pronta-roxo.png" alt=""><b>pronta.oficial</b><small>2h</small></div>
+          <div class="sbody"><div class="sh">Beleza que não pede pausa</div><div class="ssub">O espelho rápido antes de sair</div></div>
+          <div class="scta"><span class="pill">Ver a coleção</span><span class="up">↑ arraste para cima</span></div>
+        </div>
+        <p class="mcap"><b>Stories</b> · 1080×1920</p>
+      </div>
+      <div>
+        <div class="story reel" style="background-image:url('assets/fotografia/expressao-cor.jpg')">
+          <div class="sgrad"></div>
+          <div class="stop"><img src="assets/logo/pronta-roxo.png" alt=""><b>pronta.oficial</b></div>
+          <div class="rrail">
+            <span class="ri"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>18k</span>
+            <span class="ri"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>342</span>
+            <span class="ri"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></span>
+          </div>
+          <div class="rcap"><b>pronta.oficial</b> · 3 jeitos de prender o cabelo quando a vida chama 💫 <br>♪ som original</div>
+        </div>
+        <p class="mcap"><b>Reels / TikTok</b> · 1080×1920</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Impulsionamento & mídia paga -->
+  <div class="content-block reveal">
+    <div class="clabel"><span class="cnum">2</span> Impulsionamento & mídia paga</div>
+    <h3>Google Ads & anúncios</h3>
+    <p class="cdesc">Do display ao search: sempre a situação real primeiro, depois a solução PRONTA e um único CTA.</p>
+    <div><span class="adlabel">Anúncio · display</span>
+      <div class="ad-lead"><img src="assets/logo/pronta-branco.png" alt="PRONTA"><span class="h">Beleza que não pede pausa</span><span class="btn">Comprar agora</span></div>
+      <div class="adsize">Leaderboard · 728×90</div>
+    </div>
+    <div class="mgrid mg2" style="margin-top:24px;align-items:start">
+      <div>
+        <span class="adlabel">Anúncio · display</span>
+        <div class="ad-rect">
+          <div class="top" style="background-image:url('assets/fotografia/still-produto.jpg')"></div>
+          <div class="bot"><img src="assets/logo/pronta-branco.png" alt="PRONTA"><span class="h">Kit PRONTA para o verão</span><span class="btn">Quero o meu</span></div>
+        </div>
+        <div class="adsize">Medium Rectangle · 300×250</div>
+      </div>
+      <div>
+        <span class="adlabel">Anúncio · rede de pesquisa</span>
+        <div class="searchad">
+          <div class="u"><img src="assets/logo/pronta-roxo.png" alt=""><span class="adt">Anúncio</span> · pronta.com.br/acessorios</div>
+          <div class="t">Acessórios de Cabelo PRONTA — Firme, Leve e no Seu Jeito</div>
+          <div class="d">Prendedores, elásticos e kits para a vida real. Beleza que não pede pausa. Frete para todo o Brasil.</div>
+          <div class="sites"><a>Kits</a><a>Prendedores</a><a>Infantil</a><a>Novidades</a></div>
+        </div>
+        <div class="adsize">Google Search · texto + sitelinks</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E-commerce & marketplace -->
+  <div class="content-block reveal">
+    <div class="clabel"><span class="cnum">3</span> E-commerce & marketplace</div>
+    <h3>Página de produto e listagem</h3>
+    <p class="cdesc">Clareza que reduz dúvida: foto em uso, benefício visível, cor, preço e um CTA que resolve.</p>
+    <div class="mgrid" style="grid-template-columns:1.6fr 1fr">
+      <div class="browser">
+        <div class="bbar"><span class="dots"><i></i><i></i><i></i></span><span class="url">pronta.com.br/prendedor-retangular</span></div>
+        <div class="ecom">
+          <div class="eimg" style="background-image:url('assets/fotografia/still-produto.jpg')"></div>
+          <div class="einfo">
+            <div class="ebread">Início › Prendedores › Retangular</div>
+            <h4>Prendedor Retangular Grande</h4>
+            <div class="estars">★★★★★ <span style="color:var(--cinza);font-weight:600;font-size:.75rem">(212)</span></div>
+            <div class="eprice">R$ 19,90 <small>ou 2x de R$ 9,95</small></div>
+            <div class="ecolors"><i style="background:#7B3B77"></i><i style="background:#EFC35E"></i><i style="background:#C79EC3"></i><i style="background:#E1CFD7"></i></div>
+            <a class="ebtn">Comprar agora</a>
+            <div class="ebenef">
+              <div><svg viewBox="0 0 24 24"><path d="M6 3v12a3 3 0 0 0 6 0V5a2 2 0 0 1 4 0v12"/><circle cx="6" cy="18" r="3"/></svg>Firme</div>
+              <div><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>Leve</div>
+              <div><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>Não machuca</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="mp">
+          <div class="mpimg" style="background-image:url('assets/fotografia/acessorio-evidencia.jpg')"></div>
+          <div class="mpbody">
+            <div class="mpt">Kit Elástico Colorido PRONTA — 12 un.</div>
+            <div class="price">R$ 14,90 <small>R$ 24,90</small></div>
+            <div class="off">40% OFF</div>
+            <div class="stars">★★★★★ <small>4,9 · 1.2 mil</small></div>
+            <div class="free">Frete grátis</div>
+          </div>
+        </div>
+        <p class="mcap"><b>Marketplace</b> · card de listagem</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Relacionamento & trade -->
+  <div class="content-block reveal">
+    <div class="clabel"><span class="cnum">4</span> Relacionamento & trade</div>
+    <h3>WhatsApp, revenda e creator</h3>
+    <p class="cdesc">Próxima e resolutiva: catálogo que circula, oferta por ocasião e conteúdo fácil de mostrar.</p>
+    <div class="mgrid mg2">
+      <div class="chat">
+        <div class="chead"><span class="cav"><img src="assets/logo/pronta-roxo.png" alt=""></span><span><b>PRONTA · Revenda</b><small>online</small></span></div>
+        <div class="cbody">
+          <div class="bub in">Oi! Chegou coleção nova? 😍<span class="time">09:41</span></div>
+          <div class="bub promo out"><div class="pimg" style="background-image:url('assets/pecas/display-gancheira.jpg')"></div><div class="ptxt"><b>Kit Volta às Aulas</b><br>Penteados possíveis para dias cheios.<span class="time">09:42</span></div></div>
+          <div class="bub out">A partir de R$ 14,90 · combo mãe e filha 💜<span class="time">09:42</span></div>
+          <div class="bub in">Quero 3 kits! 🙌<span class="time">09:43</span></div>
+        </div>
+      </div>
+      <div class="chat">
+        <div class="chead"><span class="cav"><img src="assets/logo/pronta-roxo.png" alt=""></span><span><b>Creator Kit PRONTA</b><small>briefing</small></span></div>
+        <div class="cbody">
+          <div class="bub out">Enviamos seu kit! 🎁 Desafio: mostre 3 penteados de 15s pra vida real.<span class="time">14:02</span></div>
+          <div class="bub out">Use a frase <b>"Prendeu. Sentiu. Foi."</b> e marque @pronta.oficial<span class="time">14:02</span></div>
+          <div class="bub in">Amei o kit! Gravando os reels hoje ✨<span class="time">14:20</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key visual & OOH -->
+  <div class="content-block reveal">
+    <div class="clabel"><span class="cnum">5</span> Key visual & OOH</div>
+    <h3>Campanha e mídia exterior</h3>
+    <p class="cdesc">A ideia em grande: mulher em movimento, cabelo com acessório visível e a marca com respiro.</p>
+    <div class="ooh" style="background-image:url('assets/fotografia/editorial-statement.jpg')">
+      <div class="ograd"></div>
+      <div class="obody"><img src="assets/logo/pronta-branco.png" alt="PRONTA"><div class="oh">Estar PRONTA para a vida real</div><div class="osub">beleza que acontece no meio da vida</div></div>
+      <div class="obadge">#PRONTAparaoAgora</div>
+    </div>
+    <p class="mcap"><b>Outdoor / busdoor / key visual</b> · formato panorâmico</p>
+  </div>
+</section>
+
 <!-- ============ PEÇAS DE COMUNICAÇÃO ============ -->
 <section id="pecas">
   <div class="reveal">
@@ -2127,7 +2414,7 @@ const io=new IntersectionObserver((entries)=>{
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // ===== scroll-spy: destaca capítulo ativo no menu e nos pontos =====
-const secs=['abertura','contexto','personas','estrategia','arquetipo','linguagem','identidade','sistema','regras','foto','pdv','produto','aplicacoes','pecas','conteudo','exemplos','downloads','governanca'];
+const secs=['abertura','contexto','personas','estrategia','arquetipo','linguagem','identidade','sistema','regras','foto','pdv','produto','aplicacoes','mockups','pecas','conteudo','exemplos','downloads','governanca'];
 const spy=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
