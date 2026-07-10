@@ -1042,6 +1042,23 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <ul><li>Produto escondido, filtro pesado</li><li>Cabelo perfeito demais, cenário frio</li><li>Excesso de props, imagem escura ou fundo confuso</li></ul>
     </div>
   </div>
+
+  <div class="reveal mt" style="margin-top:66px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">Referências de shooting</h3>
+    <p class="muted">O mood que o time deve buscar: beleza real, gesto, produto visível e diversidade. Clique para ampliar.</p>
+  </div>
+  <div class="gallery reveal" id="galfoto">
+    <div class="piece" data-full="assets/fotografia/acessorio-evidencia.jpg" data-cap="Acessório em evidência|Produto em uso"><img src="assets/fotografia/acessorio-evidencia.jpg" alt="Acessórios de cabelo em evidência" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Produto em uso</span><strong>Acessório em evidência</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/prender-espelho.jpg" data-cap="Prender no espelho|Gesto & rotina"><img src="assets/fotografia/prender-espelho.jpg" alt="Mulher prendendo o cabelo no espelho" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Gesto & rotina</span><strong>Prender no espelho</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/diversidade-idade.jpg" data-cap="Diversidade de idade|Casting plural"><img src="assets/fotografia/diversidade-idade.jpg" alt="Mulher madura com presilha" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Casting plural</span><strong>Diversidade de idade</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/mae-e-filha.jpg" data-cap="Mãe e filha|Vínculo & afeto"><img src="assets/fotografia/mae-e-filha.jpg" alt="Mãe e filha com acessórios" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Vínculo & afeto</span><strong>Mãe e filha</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/expressao-cor.jpg" data-cap="Expressão e cor|Criadora do look"><img src="assets/fotografia/expressao-cor.jpg" alt="Penteado com presilhas coloridas" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Criadora do look</span><strong>Expressão e cor</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/editorial-statement.jpg" data-cap="Editorial statement|Direção de arte"><img src="assets/fotografia/editorial-statement.jpg" alt="Retrato editorial com tiara" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Direção de arte</span><strong>Editorial statement</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/still-produto.jpg" data-cap="Still de produto|Flat-lay"><img src="assets/fotografia/still-produto.jpg" alt="Still de acessórios de cabelo" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Flat-lay</span><strong>Still de produto</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/rotina-espelho.jpg" data-cap="Rotina real|Espelho rápido"><img src="assets/fotografia/rotina-espelho.jpg" alt="Rotina real diante do espelho" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Espelho rápido</span><strong>Rotina real</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/close-gesto.jpg" data-cap="Close no gesto|Mãos que prendem"><img src="assets/fotografia/close-gesto.jpg" alt="Close nas mãos prendendo o cabelo" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Mãos que prendem</span><strong>Close no gesto</strong></div></div>
+  </div>
+  <p class="muted reveal" style="margin-top:22px;font-size:.86rem">Imagens de banco (Pexels, licença livre) usadas apenas como <strong>referência de direção de arte</strong> — não são shootings oficiais da PRONTA.</p>
 </section>
 
 <!-- ============ 08 PRODUTO & PDV ============ -->
@@ -1284,34 +1301,34 @@ document.querySelectorAll('#gcats .gcat').forEach(btn=>{
   });
 });
 
-// ===== galeria: lightbox =====
+// ===== lightbox (escopado por galeria) =====
 const lb=document.getElementById('lightbox');
 const lbImg=document.getElementById('lbImg');
 const lbCap=document.getElementById('lbCap');
 let lbList=[], lbI=0;
-function showLb(i){
-  const vis=pieces.filter(p=>!p.classList.contains('hide'));
-  lbList=vis; lbI=(i+vis.length)%vis.length;
-  const p=vis[lbI];
+function renderLb(){
+  lbI=(lbI+lbList.length)%lbList.length;
+  const p=lbList[lbI];
   lbImg.src=p.dataset.full;
   const parts=(p.dataset.cap||'|').split('|');
   lbCap.innerHTML=parts[0]+'<span>'+(parts[1]||'')+'</span>';
 }
-pieces.forEach(p=>p.addEventListener('click',()=>{
-  const vis=pieces.filter(x=>!x.classList.contains('hide'));
-  showLb(vis.indexOf(p));
+document.querySelectorAll('.piece').forEach(p=>p.addEventListener('click',()=>{
+  const gal=p.closest('.gallery');
+  lbList=[...gal.querySelectorAll('.piece')].filter(x=>!x.classList.contains('hide'));
+  lbI=lbList.indexOf(p); renderLb();
   lb.classList.add('open'); document.body.style.overflow='hidden';
 }));
 function closeLb(){lb.classList.remove('open');document.body.style.overflow='';}
 document.getElementById('lbClose').addEventListener('click',closeLb);
-document.getElementById('lbPrev').addEventListener('click',e=>{e.stopPropagation();showLb(lbI-1);});
-document.getElementById('lbNext').addEventListener('click',e=>{e.stopPropagation();showLb(lbI+1);});
+document.getElementById('lbPrev').addEventListener('click',e=>{e.stopPropagation();lbI--;renderLb();});
+document.getElementById('lbNext').addEventListener('click',e=>{e.stopPropagation();lbI++;renderLb();});
 lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
 document.addEventListener('keydown',e=>{
   if(!lb.classList.contains('open'))return;
   if(e.key==='Escape')closeLb();
-  if(e.key==='ArrowLeft')showLb(lbI-1);
-  if(e.key==='ArrowRight')showLb(lbI+1);
+  if(e.key==='ArrowLeft'){lbI--;renderLb();}
+  if(e.key==='ArrowRight'){lbI++;renderLb();}
 });
 
 // ===== parallax suave nas faíscas do hero =====
