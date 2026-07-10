@@ -6,7 +6,7 @@
 <title>PRONTA — Brand Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --roxo:#7B3B77;
@@ -25,6 +25,8 @@
   --sombra:0 24px 60px -30px rgba(74,30,107,.4);
   --serif:'Fraunces',Georgia,serif;
   --sans:'Manrope',system-ui,sans-serif;
+  --script:'Caveat',cursive;
+  --ouro:#C9A23C;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -821,6 +823,34 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .ooh .obody .oh{font-family:var(--serif);font-size:clamp(1.3rem,3.6vw,2.4rem);line-height:1.05}
 .ooh .obody .osub{color:var(--dourado-2);font-style:italic;font-family:var(--serif);font-size:clamp(.9rem,2vw,1.2rem);margin-top:8px}
 .ooh .obadge{position:absolute;right:5%;bottom:8%;z-index:2;background:rgba(252,250,248,.9);color:var(--roxo);font-weight:800;font-size:.72rem;padding:7px 14px;border-radius:100px}
+
+/* ===== Elementos da linha criativa (mockups fiéis) ===== */
+.pat{background-color:#EFE3EC;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23EFE3EC'/%3E%3Ccircle cx='30' cy='30' r='25' fill='%237B3B77'/%3E%3Ccircle cx='90' cy='90' r='25' fill='%237B3B77'/%3E%3Cg fill='%23C79EC3'%3E%3Cellipse cx='90' cy='30' rx='9' ry='25'/%3E%3Cellipse cx='90' cy='30' rx='25' ry='9'/%3E%3Cellipse cx='30' cy='90' rx='9' ry='25'/%3E%3Cellipse cx='30' cy='90' rx='25' ry='9'/%3E%3C/g%3E%3C/svg%3E");background-size:56px 56px}
+.patband{background-color:#EFE3EC;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23EFE3EC'/%3E%3Ccircle cx='30' cy='30' r='25' fill='%237B3B77'/%3E%3Ccircle cx='90' cy='90' r='25' fill='%237B3B77'/%3E%3Cg fill='%23C79EC3'%3E%3Cellipse cx='90' cy='30' rx='9' ry='25'/%3E%3Cellipse cx='90' cy='30' rx='25' ry='9'/%3E%3Cellipse cx='30' cy='90' rx='9' ry='25'/%3E%3Cellipse cx='30' cy='90' rx='25' ry='9'/%3E%3C/g%3E%3C/svg%3E");background-size:auto 100%}
+/* moldura dourada com brilhos */
+.gframe{position:absolute;inset:12px;border:1.4px solid var(--ouro);border-radius:12px;pointer-events:none;z-index:3}
+.gframe::before,.gframe::after{content:"";position:absolute;left:50%;width:9px;height:9px;background:var(--ouro);transform:translateX(-50%) rotate(45deg)}
+.gframe::before{top:-5px}.gframe::after{bottom:-5px}
+/* cartela com logo */
+.cart{display:inline-flex;align-items:center;gap:7px;background:var(--roxo);border:1.4px solid var(--ouro);border-radius:13px;padding:8px 16px;position:relative}
+.cart img{height:18px;display:block}
+/* swoosh dourado */
+.swoosh{position:absolute;pointer-events:none;z-index:1}
+.swoosh path{fill:var(--ouro)}
+/* brilho diamante */
+.dmd{display:inline-block;width:9px;height:9px;background:var(--ouro);transform:rotate(45deg);border-radius:1px}
+/* composição "creative" (post, story, ad, ooh) */
+.creative{position:relative;background:var(--roxo);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff}
+.creative .cpb{position:absolute;left:0;right:0;height:24px;z-index:2}
+.creative .cpb.top{top:0}.creative .cpb.bot{bottom:0}
+.creative .cin{position:relative;z-index:4;display:flex;flex-direction:column;align-items:center;gap:10px;padding:14px 26px}
+.creative .clogo{height:30px}
+.creative .chead{font-family:var(--serif);line-height:1.08;font-size:1.5rem}
+.creative .cscript{font-family:var(--script);color:var(--dourado-2);font-size:1.5rem;line-height:1;transform:rotate(-4deg)}
+.creative .cpill{background:var(--dourado-2);color:var(--roxo);font-weight:800;font-size:.74rem;padding:8px 18px;border-radius:100px;margin-top:2px}
+.creative .cphoto{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid var(--ouro)}
+.creative.photo{color:#fff}
+.creative .cshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(74,30,107,.35),rgba(74,30,107,.82));z-index:1}
 </style>
 </head>
 <body>
@@ -1946,19 +1976,27 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="reveal">
     <div class="eyebrow"><span class="num">★</span> Simulações visuais</div>
     <h2 class="title">A marca em <em>contexto</em></h2>
-    <p class="lead">Mockups para tangibilizar cada aplicação — como a PRONTA aparece de verdade no feed, nos stories, na mídia paga, no e-commerce, no marketplace, no relacionamento e na rua.</p>
+    <p class="lead">Mockups construídos com a linha criativa oficial — pattern, moldura dourada com brilhos, cartela do logo, grafismo em swoosh e a letra manuscrita — para tangibilizar cada aplicação.</p>
   </div>
 
   <!-- Redes sociais -->
   <div class="content-block reveal">
     <div class="clabel"><span class="cnum">1</span> Redes sociais</div>
     <h3>Post, stories e reels</h3>
-    <p class="cdesc">Produto visível, gesto real e a marca reconhecível em qualquer formato.</p>
+    <p class="cdesc">O sistema da marca no feed: pattern, cartela, swoosh e a frase que gruda.</p>
     <div class="mgrid mg3">
       <div>
         <div class="igpost">
-          <div class="igtop"><span class="igav"><img src="assets/logo/pronta-roxo.png" alt=""></span><span class="ighandle">pronta.oficial<small>Publicação</small></span><span class="igmore">···</span></div>
-          <div class="igimg" style="background-image:url('assets/fotografia/acessorio-evidencia.jpg')"><span class="igsticker">PRONTA para o agora</span></div>
+          <div class="igtop"><span class="cart" style="padding:5px 9px"><img src="assets/logo/pronta-dourado.png" alt=""></span><span class="ighandle" style="margin-left:2px">pronta.oficial<small>Publicação</small></span><span class="igmore">···</span></div>
+          <div class="creative" style="aspect-ratio:1">
+            <div class="cpb top patband"></div><div class="cpb bot patband"></div>
+            <svg class="swoosh" viewBox="0 0 200 200" style="width:150px;height:150px;right:-24px;bottom:12px;opacity:.85"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
+            <div class="cin">
+              <img class="clogo" src="assets/logo/pronta-dourado.png" alt="">
+              <div class="chead">Beleza que não<br>pede pausa</div>
+              <div class="cscript">prendeu, sentiu, foi</div>
+            </div>
+          </div>
           <div class="igact"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
           <div class="iglikes">1.284 curtidas</div>
           <div class="igcap"><b>pronta.oficial</b> Prendeu. Sentiu. Foi. ✨ <span class="igtags">#PRONTA #vidareal</span></div>
@@ -1967,24 +2005,26 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       </div>
       <div>
         <div class="story" style="background-image:url('assets/fotografia/prender-espelho.jpg')">
-          <div class="sgrad"></div>
+          <div class="cshade"></div>
+          <div class="gframe"></div>
           <div class="sbars"><i class="on"></i><i></i><i></i></div>
-          <div class="stop"><img src="assets/logo/pronta-roxo.png" alt=""><b>pronta.oficial</b><small>2h</small></div>
-          <div class="sbody"><div class="sh">Beleza que não pede pausa</div><div class="ssub">O espelho rápido antes de sair</div></div>
+          <div class="stop"><span class="cart" style="padding:4px 7px"><img src="assets/logo/pronta-dourado.png" alt="" style="height:14px"></span><b>pronta.oficial</b><small>2h</small></div>
+          <svg class="swoosh" viewBox="0 0 200 200" style="width:120px;height:120px;left:-30px;bottom:60px;opacity:.85"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
+          <div class="sbody"><div class="sh" style="font-family:var(--serif)">Beleza que não pede pausa</div><div class="cscript" style="color:var(--dourado-2);font-size:1.3rem;margin-top:6px">o espelho rápido antes de sair</div></div>
           <div class="scta"><span class="pill">Ver a coleção</span><span class="up">↑ arraste para cima</span></div>
         </div>
         <p class="mcap"><b>Stories</b> · 1080×1920</p>
       </div>
       <div>
         <div class="story reel" style="background-image:url('assets/fotografia/expressao-cor.jpg')">
-          <div class="sgrad"></div>
-          <div class="stop"><img src="assets/logo/pronta-roxo.png" alt=""><b>pronta.oficial</b></div>
+          <div class="cshade"></div>
+          <div class="stop"><span class="cart" style="padding:4px 7px"><img src="assets/logo/pronta-dourado.png" alt="" style="height:14px"></span><b>pronta.oficial</b></div>
           <div class="rrail">
             <span class="ri"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>18k</span>
             <span class="ri"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>342</span>
             <span class="ri"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></span>
           </div>
-          <div class="rcap"><b>pronta.oficial</b> · 3 jeitos de prender o cabelo quando a vida chama 💫 <br>♪ som original</div>
+          <div class="rcap"><span class="cscript" style="color:var(--dourado-2);font-size:1.25rem">prendeu, sentiu, foi</span><br><b>pronta.oficial</b> · 3 jeitos de prender o cabelo 💫 <br>♪ som original</div>
         </div>
         <p class="mcap"><b>Reels / TikTok</b> · 1080×1920</p>
       </div>
@@ -1995,17 +2035,32 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="content-block reveal">
     <div class="clabel"><span class="cnum">2</span> Impulsionamento & mídia paga</div>
     <h3>Google Ads & anúncios</h3>
-    <p class="cdesc">Do display ao search: sempre a situação real primeiro, depois a solução PRONTA e um único CTA.</p>
+    <p class="cdesc">Do display ao search, com a assinatura visual da marca e um único CTA.</p>
     <div><span class="adlabel">Anúncio · display</span>
-      <div class="ad-lead"><img src="assets/logo/pronta-branco.png" alt="PRONTA"><span class="h">Beleza que não pede pausa</span><span class="btn">Comprar agora</span></div>
+      <div class="creative" style="height:96px;flex-direction:row;justify-content:flex-start;gap:0;border:1px solid var(--linha);border-radius:10px">
+        <div class="patband" style="width:70px;height:100%;flex:0 0 auto"></div>
+        <div class="gframe" style="inset:8px 10px"></div>
+        <svg class="swoosh" viewBox="0 0 200 200" style="width:110px;height:110px;right:120px;bottom:-30px;opacity:.7"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
+        <div class="cin" style="flex-direction:row;gap:18px;flex:1;justify-content:space-between;padding:0 24px 0 20px">
+          <img src="assets/logo/pronta-dourado.png" alt="" style="height:26px">
+          <span style="font-family:var(--serif);font-size:1.15rem;flex:1;text-align:left">Beleza que não pede pausa</span>
+          <span class="cpill" style="margin-top:0">Comprar agora</span>
+        </div>
+      </div>
       <div class="adsize">Leaderboard · 728×90</div>
     </div>
     <div class="mgrid mg2" style="margin-top:24px;align-items:start">
       <div>
         <span class="adlabel">Anúncio · display</span>
-        <div class="ad-rect">
-          <div class="top" style="background-image:url('assets/fotografia/still-produto.jpg')"></div>
-          <div class="bot"><img src="assets/logo/pronta-branco.png" alt="PRONTA"><span class="h">Kit PRONTA para o verão</span><span class="btn">Quero o meu</span></div>
+        <div class="creative" style="width:250px;max-width:100%;aspect-ratio:6/5;border:1px solid var(--linha);border-radius:10px">
+          <div class="cpb top patband"></div>
+          <svg class="swoosh" viewBox="0 0 200 200" style="width:120px;height:120px;right:-28px;bottom:26px;opacity:.85"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
+          <div class="cin" style="gap:8px">
+            <img class="cphoto" src="assets/fotografia/still-produto.jpg" alt="">
+            <img class="clogo" src="assets/logo/pronta-dourado.png" alt="" style="height:22px">
+            <div class="chead" style="font-size:1.1rem">Kit PRONTA<br>para o verão</div>
+            <span class="cpill">Quero o meu</span>
+          </div>
         </div>
         <div class="adsize">Medium Rectangle · 300×250</div>
       </div>
@@ -2026,12 +2081,13 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="content-block reveal">
     <div class="clabel"><span class="cnum">3</span> E-commerce & marketplace</div>
     <h3>Página de produto e listagem</h3>
-    <p class="cdesc">Clareza que reduz dúvida: foto em uso, benefício visível, cor, preço e um CTA que resolve.</p>
+    <p class="cdesc">Clareza que reduz dúvida — com o cabeçalho em pattern, cartela e moldura da marca.</p>
     <div class="mgrid" style="grid-template-columns:1.6fr 1fr">
       <div class="browser">
         <div class="bbar"><span class="dots"><i></i><i></i><i></i></span><span class="url">pronta.com.br/prendedor-retangular</span></div>
+        <div class="patband" style="height:34px;display:flex;align-items:center;justify-content:center"><span class="cart" style="padding:5px 12px;background:var(--roxo)"><img src="assets/logo/pronta-dourado.png" alt="" style="height:15px"></span></div>
         <div class="ecom">
-          <div class="eimg" style="background-image:url('assets/fotografia/still-produto.jpg')"></div>
+          <div class="eimg" style="background-image:url('assets/fotografia/still-produto.jpg');position:relative"><span class="gframe" style="inset:12px"></span></div>
           <div class="einfo">
             <div class="ebread">Início › Prendedores › Retangular</div>
             <h4>Prendedor Retangular Grande</h4>
@@ -2049,7 +2105,8 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       </div>
       <div>
         <div class="mp">
-          <div class="mpimg" style="background-image:url('assets/fotografia/acessorio-evidencia.jpg')"></div>
+          <div class="mpimg" style="background-image:url('assets/fotografia/acessorio-evidencia.jpg');position:relative"><span class="cart" style="position:absolute;left:8px;top:8px;padding:4px 8px"><img src="assets/logo/pronta-dourado.png" alt="" style="height:12px"></span></div>
+          <div class="patband" style="height:8px"></div>
           <div class="mpbody">
             <div class="mpt">Kit Elástico Colorido PRONTA — 12 un.</div>
             <div class="price">R$ 14,90 <small>R$ 24,90</small></div>
@@ -2067,14 +2124,20 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="content-block reveal">
     <div class="clabel"><span class="cnum">4</span> Relacionamento & trade</div>
     <h3>WhatsApp, revenda e creator</h3>
-    <p class="cdesc">Próxima e resolutiva: catálogo que circula, oferta por ocasião e conteúdo fácil de mostrar.</p>
+    <p class="cdesc">Catálogo que circula e oferta por ocasião — sempre com a cara da marca.</p>
     <div class="mgrid mg2">
       <div class="chat">
         <div class="chead"><span class="cav"><img src="assets/logo/pronta-roxo.png" alt=""></span><span><b>PRONTA · Revenda</b><small>online</small></span></div>
         <div class="cbody">
           <div class="bub in">Oi! Chegou coleção nova? 😍<span class="time">09:41</span></div>
-          <div class="bub promo out"><div class="pimg" style="background-image:url('assets/pecas/display-gancheira.jpg')"></div><div class="ptxt"><b>Kit Volta às Aulas</b><br>Penteados possíveis para dias cheios.<span class="time">09:42</span></div></div>
-          <div class="bub out">A partir de R$ 14,90 · combo mãe e filha 💜<span class="time">09:42</span></div>
+          <div class="bub promo out" style="padding:0">
+            <div class="creative" style="aspect-ratio:16/9;border-radius:0">
+              <div class="cpb top patband" style="height:16px"></div><div class="cpb bot patband" style="height:16px"></div>
+              <svg class="swoosh" viewBox="0 0 200 200" style="width:90px;height:90px;right:-20px;bottom:6px;opacity:.85"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
+              <div class="cin" style="padding:8px"><img class="clogo" src="assets/logo/pronta-dourado.png" alt="" style="height:20px"><div class="chead" style="font-size:.95rem">Kit Volta às Aulas</div></div>
+            </div>
+            <div class="ptxt" style="padding:9px 12px">Penteados possíveis para dias cheios. A partir de <b>R$ 14,90</b> 💜<span class="time">09:42</span></div>
+          </div>
           <div class="bub in">Quero 3 kits! 🙌<span class="time">09:43</span></div>
         </div>
       </div>
@@ -2093,11 +2156,17 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="content-block reveal">
     <div class="clabel"><span class="cnum">5</span> Key visual & OOH</div>
     <h3>Campanha e mídia exterior</h3>
-    <p class="cdesc">A ideia em grande: mulher em movimento, cabelo com acessório visível e a marca com respiro.</p>
-    <div class="ooh" style="background-image:url('assets/fotografia/editorial-statement.jpg')">
-      <div class="ograd"></div>
-      <div class="obody"><img src="assets/logo/pronta-branco.png" alt="PRONTA"><div class="oh">Estar PRONTA para a vida real</div><div class="osub">beleza que acontece no meio da vida</div></div>
-      <div class="obadge">#PRONTAparaoAgora</div>
+    <p class="cdesc">A ideia em grande, com moldura dourada, cartela do logo e a letra manuscrita.</p>
+    <div class="creative photo ooh" style="background-image:url('assets/fotografia/editorial-statement.jpg')">
+      <div class="cshade" style="background:linear-gradient(90deg,rgba(74,30,107,.92),rgba(74,30,107,.45) 55%,transparent)"></div>
+      <div class="gframe"></div>
+      <svg class="swoosh" viewBox="0 0 200 200" style="width:200px;height:200px;right:-30px;bottom:-30px;opacity:.7"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
+      <div class="obody" style="position:absolute;left:7%;top:50%;transform:translateY(-50%);z-index:4;text-align:left;max-width:58%">
+        <span class="cart" style="padding:8px 16px"><img src="assets/logo/pronta-dourado.png" alt="" style="height:22px"></span>
+        <div style="font-family:var(--serif);font-size:clamp(1.3rem,3.6vw,2.4rem);line-height:1.05;margin-top:16px">Estar PRONTA para a vida real</div>
+        <div class="cscript" style="color:var(--dourado-2);font-size:clamp(1.2rem,2.6vw,1.8rem);margin-top:8px">beleza que acontece no meio da vida</div>
+      </div>
+      <div class="obadge" style="z-index:4">#PRONTAparaoAgora</div>
     </div>
     <p class="mcap"><b>Outdoor / busdoor / key visual</b> · formato panorâmico</p>
   </div>
