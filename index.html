@@ -540,6 +540,105 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .pack-back .specs span{font-size:.72rem;font-weight:700;letter-spacing:.04em;color:var(--roxo);background:var(--lilas);padding:6px 12px;border-radius:100px}
 .pack-icons{display:flex;gap:14px;margin:14px 0}
 .pack-icons svg{width:26px;height:26px;stroke:var(--roxo);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* ===== Personas ===== */
+.persona-explorer{margin-top:44px}
+.persona-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:30px}
+@media(max-width:760px){.persona-tabs{grid-template-columns:repeat(2,1fr)}}
+.ptab{display:flex;align-items:center;gap:13px;padding:13px 15px;border:1px solid var(--linha);border-radius:16px;background:#fff;cursor:pointer;transition:.3s;text-align:left;font-family:var(--sans)}
+.ptab:hover{border-color:var(--roxo-soft);transform:translateY(-2px)}
+.ptab.on{background:var(--roxo);border-color:var(--roxo);box-shadow:var(--sombra)}
+.ptab.on .pt-name{color:#fff}.ptab.on .pt-role{color:var(--dourado-2)}
+.ptab img{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+.pt-name{font-weight:800;color:var(--roxo);font-size:.96rem;line-height:1.1}
+.pt-role{font-size:.73rem;color:var(--cinza)}
+.ppanel{display:none}
+.ppanel.active{display:block;animation:pfade .5s both}
+@keyframes pfade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.pgrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:24px}
+@media(max-width:860px){.pgrid{grid-template-columns:1fr}}
+.pphoto{position:relative;border-radius:22px;overflow:hidden;min-height:440px;border:1px solid var(--linha)}
+.pphoto>img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.pphoto .pshade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(44,27,43,.9))}
+.pphoto .pcontent{position:absolute;left:0;right:0;bottom:0;padding:26px 24px;color:#fff}
+.pphoto .parche{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado-2);font-weight:700}
+.pphoto .pname{font-family:var(--serif);font-size:2rem;line-height:1;margin:6px 0 4px}
+.pphoto .ptitle{font-size:.94rem;color:rgba(255,255,255,.85)}
+.pphoto .pquote{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:1.05rem;border-left:2px solid var(--dourado);padding-left:14px;color:#fff}
+.pstats{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pstats span{font-size:.71rem;font-weight:700;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);padding:6px 12px;border-radius:100px}
+.pright{display:flex;flex-direction:column;gap:20px}
+.pbox{border:1px solid var(--linha);border-radius:18px;padding:22px 24px;background:#fff}
+.pbox h5{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado);font-weight:700;margin-bottom:15px;display:flex;align-items:center;gap:8px}
+.radar-wrap{display:grid;grid-template-columns:210px 1fr;gap:22px;align-items:center}
+@media(max-width:520px){.radar-wrap{grid-template-columns:1fr;justify-items:center}}
+.radar{width:100%;max-width:210px;overflow:visible}
+.meters{display:flex;flex-direction:column;gap:11px;width:100%}
+.meter .ml{display:flex;justify-content:space-between;font-size:.82rem;font-weight:600;color:var(--roxo);margin-bottom:5px}
+.meter .ml em{font-style:normal;color:var(--cinza);font-weight:700}
+.meter .mt{height:7px;border-radius:100px;background:var(--lilas);overflow:hidden}
+.meter .mf{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--roxo),var(--dourado));width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.pdd{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.pdd{grid-template-columns:1fr}}
+.pcol h5.want{color:var(--roxo)}.pcol h5.pain{color:#b0788a}
+.plist{list-style:none;display:flex;flex-direction:column;gap:9px}
+.plist li{font-size:.9rem;padding-left:24px;position:relative;color:#4b3a56;line-height:1.4}
+.plist.want li::before{content:"◆";position:absolute;left:0;top:1px;color:var(--dourado);font-size:.7rem}
+.plist.pain li::before{content:"—";position:absolute;left:0;top:0;color:#c98ea0;font-weight:800}
+.ptags2{display:flex;flex-wrap:wrap;gap:8px}
+.ptags2 span{font-size:.75rem;font-weight:700;color:var(--roxo);background:var(--lilas);padding:6px 12px;border-radius:100px}
+.pmoment{font-family:var(--serif);font-style:italic;color:var(--roxo);font-size:1rem}
+/* mapa de desejos (quadrante) */
+.quadrant{position:relative;border:1px solid var(--linha);border-radius:22px;background:radial-gradient(circle at 50% 50%,#fff,var(--branco));aspect-ratio:16/9;margin-top:30px;overflow:hidden}
+@media(max-width:640px){.quadrant{aspect-ratio:1/1}}
+.quadrant .qx{position:absolute;left:5%;right:5%;top:50%;height:1px;background:var(--linha)}
+.quadrant .qy{position:absolute;top:5%;bottom:5%;left:50%;width:1px;background:var(--linha)}
+.quadrant .qlab{position:absolute;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--roxo-soft)}
+.qdot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center;transition:.3s}
+.qdot:hover{z-index:5;transform:translate(-50%,-50%) scale(1.08)}
+.qdot img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 8px 20px -8px rgba(74,30,107,.6)}
+.qdot .qn{font-size:.74rem;font-weight:800;color:var(--roxo);background:#fff;padding:4px 10px;border-radius:100px;border:1px solid var(--linha);white-space:nowrap}
+.qdot .qn small{display:block;font-weight:500;color:var(--cinza);font-size:.66rem}
+/* ecossistema */
+.ecos{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.ecos .ec{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--linha);border-radius:100px;padding:9px 16px;font-size:.82rem;font-weight:700;color:var(--roxo);transition:.3s}
+.ecos .ec:hover{background:var(--roxo);color:#fff}
+.ecos .ec:hover svg{stroke:#fff}
+.ecos .ec svg{width:16px;height:16px;stroke:var(--dourado);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* ===== Produto / planograma ===== */
+.linecards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+@media(max-width:900px){.linecards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.linecards{grid-template-columns:1fr}}
+.lcard{border:1px solid var(--linha);border-radius:16px;padding:22px;background:#fff;transition:.35s}
+.lcard:hover{transform:translateY(-4px);box-shadow:var(--sombra);border-color:transparent}
+.lcard .lico{width:46px;height:46px;border-radius:12px;background:var(--lilas);display:flex;align-items:center;justify-content:center;color:var(--roxo);margin-bottom:14px}
+.lcard .lico svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.lcard strong{display:block;color:var(--roxo);font-family:var(--serif);font-size:1.18rem;margin-bottom:5px}
+.lcard p{font-size:.86rem}
+.lcard .ltag{display:inline-block;margin-top:10px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dourado);background:var(--nude);padding:4px 10px;border-radius:100px}
+/* segmentação lentes */
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+@media(max-width:820px){.seg{grid-template-columns:1fr}}
+.segc{border:1px solid var(--linha);border-radius:18px;padding:24px;background:#fff}
+.segc .sh{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.segc .sh .sn{width:30px;height:30px;border-radius:9px;background:var(--roxo);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem}
+.segc .sh strong{color:var(--roxo);font-family:var(--serif);font-size:1.15rem}
+.segc ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.segc li{font-size:.88rem;color:#4b3a56;padding-left:18px;position:relative}
+.segc li::before{content:"›";position:absolute;left:0;color:var(--dourado);font-weight:800}
+/* planograma */
+.gondola{margin-top:20px;border:1px solid var(--linha);border-radius:20px;padding:22px;background:linear-gradient(var(--nude),#fff)}
+.gshelf{position:relative;padding:0 0 16px;margin-bottom:16px;border-bottom:5px solid var(--roxo-soft);border-radius:0 0 4px 4px}
+.gshelf:last-child{border-bottom:none;margin-bottom:0}
+.gshelf .gslab{font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--roxo);margin-bottom:10px;display:flex;justify-content:space-between}
+.gshelf .gslab em{color:var(--cinza);font-weight:600;font-style:normal}
+.grow{display:flex;gap:8px}
+.pblk{flex:1;height:66px;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5px;font-size:.68rem;font-weight:700;line-height:1.15}
+.pblk small{font-weight:500;opacity:.75;font-size:.62rem}
+.plegend{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+.plegend span{display:flex;align-items:center;gap:7px;font-size:.78rem;font-weight:600;color:#4b3a56}
+.plegend i{width:14px;height:14px;border-radius:4px;display:block}
 </style>
 </head>
 <body>
@@ -573,6 +672,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="ov-list">
       <a href="#abertura"><span class="oc">01</span><div><h5>Abertura</h5><p>O pacto do guia e os princípios</p></div></a>
       <a href="#contexto"><span class="oc">02</span><div><h5>Contexto da marca</h5><p>Categoria, públicos e oportunidade</p></div></a>
+      <a href="#personas"><span class="oc">★</span><div><h5>Personas</h5><p>Desejos, dores e motivadores</p></div></a>
       <a href="#estrategia"><span class="oc">03</span><div><h5>Estratégia de marca</h5><p>A plataforma que vira escolha</p></div></a>
       <a href="#linguagem"><span class="oc">04</span><div><h5>Linguagem</h5><p>A voz e o relacionamento</p></div></a>
       <a href="#identidade"><span class="oc">05</span><div><h5>Identidade visual</h5><p>Logotipo e códigos da marca</p></div></a>
@@ -580,6 +680,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <a href="#regras"><span class="oc">★</span><div><h5>Regras de uso da marca</h5><p>Aplicações certas e erradas</p></div></a>
       <a href="#foto"><span class="oc">07</span><div><h5>Fotografia</h5><p>Beleza real, em movimento</p></div></a>
       <a href="#pdv"><span class="oc">08</span><div><h5>Produto & PDV</h5><p>A escolha que acontece rápido</p></div></a>
+      <a href="#produto"><span class="oc">★</span><div><h5>Produto & sortimento</h5><p>Linhas, segmentação, planograma</p></div></a>
       <a href="#aplicacoes"><span class="oc">09</span><div><h5>Aplicações</h5><p>Redes, e-commerce, trade</p></div></a>
       <a href="#pecas"><span class="oc">★</span><div><h5>Peças de comunicação</h5><p>As 11 peças reais do time</p></div></a>
       <a href="#conteudo"><span class="oc">★</span><div><h5>Exemplos de conteúdo</h5><p>Legenda, e-mail, PDV, embalagem</p></div></a>
@@ -597,6 +698,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 <div class="dotnav" id="dotnav">
   <a href="#abertura" data-sec="abertura"><span>01 · Abertura</span></a>
   <a href="#contexto" data-sec="contexto"><span>02 · Contexto</span></a>
+  <a href="#personas" data-sec="personas"><span>★ · Personas</span></a>
   <a href="#estrategia" data-sec="estrategia"><span>03 · Estratégia</span></a>
   <a href="#linguagem" data-sec="linguagem"><span>04 · Linguagem</span></a>
   <a href="#identidade" data-sec="identidade"><span>05 · Identidade</span></a>
@@ -604,6 +706,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <a href="#regras" data-sec="regras"><span>★ · Regras de uso</span></a>
   <a href="#foto" data-sec="foto"><span>07 · Fotografia</span></a>
   <a href="#pdv" data-sec="pdv"><span>08 · Produto & PDV</span></a>
+  <a href="#produto" data-sec="produto"><span>★ · Produto & sortimento</span></a>
   <a href="#aplicacoes" data-sec="aplicacoes"><span>09 · Aplicações</span></a>
   <a href="#pecas" data-sec="pecas"><span>★ · Peças de comunicação</span></a>
   <a href="#conteudo" data-sec="conteudo"><span>★ · Exemplos de conteúdo</span></a>
@@ -762,6 +865,218 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="card"><span class="n">03</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><h3>Códigos proprietários</h3><p>Nome, cor, embalagem, frase, selo e foto trabalhando juntos para reconhecer a marca antes da leitura completa.</p></div>
   </div>
 </section>
+
+<!-- ============ PERSONAS ============ -->
+<div class="band" id="personas">
+<section style="padding-top:20px;padding-bottom:20px">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">★</span> Personas</div>
+    <h2 class="title">Quem é a mulher <em>PRONTA</em></h2>
+    <p class="lead">Quatro retratos vivos do público — com desejos, dores, motivadores e momentos de uso. Navegue entre elas para entender por quem a marca fala.</p>
+  </div>
+
+  <div class="persona-explorer reveal">
+    <div class="persona-tabs" id="ptabs">
+      <button class="ptab on" data-p="0"><img src="assets/personas/persona-movimento.jpg" alt=""><span><span class="pt-name">Júlia</span><span class="pt-role">A mulher em movimento</span></span></button>
+      <button class="ptab" data-p="1"><img src="assets/personas/persona-criadora.jpg" alt=""><span><span class="pt-name">Manu</span><span class="pt-role">A criadora do look</span></span></button>
+      <button class="ptab" data-p="2"><img src="assets/personas/persona-mae.jpg" alt=""><span><span class="pt-name">Carla</span><span class="pt-role">A mãe dos penteados</span></span></button>
+      <button class="ptab" data-p="3"><img src="assets/personas/persona-gondola.jpg" alt=""><span><span class="pt-name">Rosa</span><span class="pt-role">A compradora de gôndola</span></span></button>
+    </div>
+
+    <!-- Painel 0: Júlia -->
+    <div class="ppanel active" data-panel="0">
+      <div class="pgrid">
+        <div class="pphoto"><img src="assets/personas/persona-movimento.jpg" alt="Júlia"><div class="pshade"></div>
+          <div class="pcontent">
+            <div class="parche">Heroína do cotidiano · persona central</div>
+            <div class="pname">Júlia</div>
+            <div class="ptitle">A mulher em movimento</div>
+            <div class="pquote">"Preciso prender o cabelo, mas ainda quero me sentir bonita."</div>
+            <div class="pstats"><span>29 anos</span><span>Analista / autônoma</span><span>Capital</span><span>Classe B/C</span></div>
+          </div>
+        </div>
+        <div class="pright">
+          <div class="pbox">
+            <h5>Mapa de motivadores</h5>
+            <div class="radar-wrap">
+              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,32.1 170.8,90.2 144.7,157.8 83.5,146.5 46.1,89.2" fill="rgba(123,59,119,.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="32.1" r="2.6" fill="#7B3B77"/><circle cx="170.8" cy="90.2" r="2.6" fill="#7B3B77"/><circle cx="144.7" cy="157.8" r="2.6" fill="#7B3B77"/><circle cx="83.5" cy="146.5" r="2.6" fill="#7B3B77"/><circle cx="46.1" cy="89.2" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
+              <div class="meters">
+                <div class="meter"><div class="ml"><span>Praticidade</span><em>95</em></div><div class="mt"><div class="mf" data-val="95"></div></div></div>
+                <div class="meter"><div class="ml"><span>Estética</span><em>78</em></div><div class="mt"><div class="mf" data-val="78"></div></div></div>
+                <div class="meter"><div class="ml"><span>Preço acessível</span><em>72</em></div><div class="mt"><div class="mf" data-val="72"></div></div></div>
+                <div class="meter"><div class="ml"><span>Tendência</span><em>55</em></div><div class="mt"><div class="mf" data-val="55"></div></div></div>
+                <div class="meter"><div class="ml"><span>Presença</span><em>82</em></div><div class="mt"><div class="mf" data-val="82"></div></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="pbox"><div class="pdd">
+            <div class="pcol"><h5 class="want">Mapa de desejos</h5><ul class="plist want"><li>Resolver o cabelo em segundos</li><li>Sentir-se apresentável no corre</li><li>Autoestima sem esforço</li><li>Conforto o dia inteiro</li></ul></div>
+            <div class="pcol"><h5 class="pain">Dores</h5><ul class="plist pain"><li>Falta de tempo</li><li>Acessório que machuca ou quebra</li><li>Cabelo que marca</li><li>Parecer "sem intenção"</li></ul></div>
+          </div></div>
+          <div class="pbox">
+            <h5>Comportamento & canais</h5>
+            <p style="font-size:.9rem;margin-bottom:12px">Compra por impulso e reposição, decide em segundos e usa no trabalho, na academia e nos imprevistos.</p>
+            <div class="ptags2"><span>Instagram</span><span>Farmácia & varejo</span><span>Marketplace</span></div>
+            <p class="pmoment" style="margin-top:14px">Momento: espelho rápido antes de sair · intervalo · chamada de vídeo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Painel 1: Manu -->
+    <div class="ppanel" data-panel="1">
+      <div class="pgrid">
+        <div class="pphoto"><img src="assets/personas/persona-criadora.jpg" alt="Manu"><div class="pshade"></div>
+          <div class="pcontent">
+            <div class="parche">Criadora</div>
+            <div class="pname">Manu</div>
+            <div class="ptitle">A criadora do próprio look</div>
+            <div class="pquote">"Meu cabelo diz algo sobre o meu dia."</div>
+            <div class="pstats"><span>19 anos</span><span>Estudante & creator</span><span>Classe B/C</span><span>Digital</span></div>
+          </div>
+        </div>
+        <div class="pright">
+          <div class="pbox">
+            <h5>Mapa de motivadores</h5>
+            <div class="radar-wrap">
+              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,60.8 184.1,85.9 138.0,148.5 65.7,171.0 41.4,87.7" fill="rgba(123,59,119,.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="60.8" r="2.6" fill="#7B3B77"/><circle cx="184.1" cy="85.9" r="2.6" fill="#7B3B77"/><circle cx="138.0" cy="148.5" r="2.6" fill="#7B3B77"/><circle cx="65.7" cy="171.0" r="2.6" fill="#7B3B77"/><circle cx="41.4" cy="87.7" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
+              <div class="meters">
+                <div class="meter"><div class="ml"><span>Praticidade</span><em>60</em></div><div class="mt"><div class="mf" data-val="60"></div></div></div>
+                <div class="meter"><div class="ml"><span>Estética</span><em>95</em></div><div class="mt"><div class="mf" data-val="95"></div></div></div>
+                <div class="meter"><div class="ml"><span>Preço acessível</span><em>58</em></div><div class="mt"><div class="mf" data-val="58"></div></div></div>
+                <div class="meter"><div class="ml"><span>Tendência</span><em>92</em></div><div class="mt"><div class="mf" data-val="92"></div></div></div>
+                <div class="meter"><div class="ml"><span>Presença</span><em>88</em></div><div class="mt"><div class="mf" data-val="88"></div></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="pbox"><div class="pdd">
+            <div class="pcol"><h5 class="want">Mapa de desejos</h5><ul class="plist want"><li>Expressar personalidade</li><li>Novidade e coleção</li><li>Combinar cores e formatos</li><li>Mostrar e compartilhar</li></ul></div>
+            <div class="pcol"><h5 class="pain">Dores</h5><ul class="plist pain"><li>Mesmice</li><li>Produto sem identidade</li><li>Tendência que não cabe na vida real</li><li>Qualidade que decepciona</li></ul></div>
+          </div></div>
+          <div class="pbox">
+            <h5>Comportamento & canais</h5>
+            <p style="font-size:.9rem;margin-bottom:12px">Descobre nas redes, compra por desejo e coleção, e transforma o acessório em conteúdo.</p>
+            <div class="ptags2"><span>TikTok / Reels</span><span>E-commerce</span><span>Lojas de shopping</span></div>
+            <p class="pmoment" style="margin-top:14px">Momento: antes de sair · produção de conteúdo · encontro com amigas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Painel 2: Carla -->
+    <div class="ppanel" data-panel="2">
+      <div class="pgrid">
+        <div class="pphoto"><img src="assets/personas/persona-mae.jpg" alt="Carla"><div class="pshade"></div>
+          <div class="pcontent">
+            <div class="parche">Cuidadora</div>
+            <div class="pname">Carla</div>
+            <div class="ptitle">A mãe dos penteados possíveis</div>
+            <div class="pquote">"Quero que minha filha se veja no espelho com alegria."</div>
+            <div class="pstats"><span>37 anos</span><span>Mãe · trabalha fora</span><span>Classe C</span><span>Bairro</span></div>
+          </div>
+        </div>
+        <div class="pright">
+          <div class="pbox">
+            <h5>Mapa de motivadores</h5>
+            <div class="radar-wrap">
+              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,37.8 164.6,92.3 149.5,164.4 88.3,139.9 50.7,90.7" fill="rgba(123,59,119,.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="37.8" r="2.6" fill="#7B3B77"/><circle cx="164.6" cy="92.3" r="2.6" fill="#7B3B77"/><circle cx="149.5" cy="164.4" r="2.6" fill="#7B3B77"/><circle cx="88.3" cy="139.9" r="2.6" fill="#7B3B77"/><circle cx="50.7" cy="90.7" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
+              <div class="meters">
+                <div class="meter"><div class="ml"><span>Praticidade</span><em>88</em></div><div class="mt"><div class="mf" data-val="88"></div></div></div>
+                <div class="meter"><div class="ml"><span>Estética</span><em>70</em></div><div class="mt"><div class="mf" data-val="70"></div></div></div>
+                <div class="meter"><div class="ml"><span>Preço acessível</span><em>82</em></div><div class="mt"><div class="mf" data-val="82"></div></div></div>
+                <div class="meter"><div class="ml"><span>Tendência</span><em>45</em></div><div class="mt"><div class="mf" data-val="45"></div></div></div>
+                <div class="meter"><div class="ml"><span>Presença</span><em>76</em></div><div class="mt"><div class="mf" data-val="76"></div></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="pbox"><div class="pdd">
+            <div class="pcol"><h5 class="want">Mapa de desejos</h5><ul class="plist want"><li>Cuidar sem complicar</li><li>Produto que não machuca</li><li>Vínculo com a filha</li><li>Durabilidade e preço justo</li></ul></div>
+            <div class="pcol"><h5 class="pain">Dores</h5><ul class="plist pain"><li>Acessório que machuca a criança</li><li>Quebra fácil</li><li>Pressa da escola</li><li>Filha que não quer usar</li></ul></div>
+          </div></div>
+          <div class="pbox">
+            <h5>Comportamento & canais</h5>
+            <p style="font-size:.9rem;margin-bottom:12px">Compra para a filha e para si, valoriza segurança e preço justo, e repõe com frequência.</p>
+            <div class="ptags2"><span>WhatsApp / bairro</span><span>Instagram</span><span>Atacado</span></div>
+            <p class="pmoment" style="margin-top:14px">Momento: manhã de escola · fim de semana · festas e datas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Painel 3: Rosa -->
+    <div class="ppanel" data-panel="3">
+      <div class="pgrid">
+        <div class="pphoto"><img src="assets/personas/persona-gondola.jpg" alt="Rosa"><div class="pshade"></div>
+          <div class="pcontent">
+            <div class="parche">Decisora rápida</div>
+            <div class="pname">Rosa</div>
+            <div class="ptitle">A compradora de gôndola</div>
+            <div class="pquote">"Passei, olhei, imaginei o uso e escolhi."</div>
+            <div class="pstats"><span>45 anos</span><span>Consumidora prática</span><span>Interior / periferia</span><span>Classe C/D</span></div>
+          </div>
+        </div>
+        <div class="pright">
+          <div class="pbox">
+            <h5>Mapa de motivadores</h5>
+            <div class="radar-wrap">
+              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,39.5 158.4,94.3 154.3,171.0 93.1,133.2 67.1,96.1" fill="rgba(123,59,119,.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="39.5" r="2.6" fill="#7B3B77"/><circle cx="158.4" cy="94.3" r="2.6" fill="#7B3B77"/><circle cx="154.3" cy="171.0" r="2.6" fill="#7B3B77"/><circle cx="93.1" cy="133.2" r="2.6" fill="#7B3B77"/><circle cx="67.1" cy="96.1" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
+              <div class="meters">
+                <div class="meter"><div class="ml"><span>Praticidade</span><em>86</em></div><div class="mt"><div class="mf" data-val="86"></div></div></div>
+                <div class="meter"><div class="ml"><span>Estética</span><em>62</em></div><div class="mt"><div class="mf" data-val="62"></div></div></div>
+                <div class="meter"><div class="ml"><span>Preço acessível</span><em>92</em></div><div class="mt"><div class="mf" data-val="92"></div></div></div>
+                <div class="meter"><div class="ml"><span>Tendência</span><em>35</em></div><div class="mt"><div class="mf" data-val="35"></div></div></div>
+                <div class="meter"><div class="ml"><span>Presença</span><em>55</em></div><div class="mt"><div class="mf" data-val="55"></div></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="pbox"><div class="pdd">
+            <div class="pcol"><h5 class="want">Mapa de desejos</h5><ul class="plist want"><li>Resolver rápido</li><li>Clareza no que leva</li><li>Bom preço</li><li>Confiança na marca</li></ul></div>
+            <div class="pcol"><h5 class="pain">Dores</h5><ul class="plist pain"><li>Gôndola confusa</li><li>Produto sem marca</li><li>Não saber o que escolher</li><li>Sentir que pagou caro</li></ul></div>
+          </div></div>
+          <div class="pbox">
+            <h5>Comportamento & canais</h5>
+            <p style="font-size:.9rem;margin-bottom:12px">Decide em segundos no PDV. Embalagem, cor e benefício são decisivos; envolvimento baixo, confiança alta.</p>
+            <div class="ptags2"><span>Varejo físico</span><span>Gôndola</span><span>Atacarejo</span></div>
+            <p class="pmoment" style="margin-top:14px">Momento: compra do mês · reposição · impulso no caixa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mapa de desejos: quadrante -->
+  <div class="reveal" style="margin-top:64px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">Mapa de desejos e tensões</h3>
+    <p class="muted">Onde cada persona se posiciona entre o funcional e o emocional, entre a rotina e a expressão.</p>
+    <div class="quadrant">
+      <div class="qx"></div><div class="qy"></div>
+      <span class="qlab" style="top:3%;left:50%;transform:translateX(-50%)">Expressão</span>
+      <span class="qlab" style="bottom:3%;left:50%;transform:translateX(-50%)">Rotina</span>
+      <span class="qlab" style="left:2%;top:50%;transform:translateY(-50%)">Praticidade</span>
+      <span class="qlab" style="right:2%;top:50%;transform:translateY(-50%)">Presença</span>
+      <div class="qdot" style="left:32%;top:56%"><img src="assets/personas/persona-movimento.jpg" alt=""><span class="qn">Júlia<small>movimento</small></span></div>
+      <div class="qdot" style="left:75%;top:25%"><img src="assets/personas/persona-criadora.jpg" alt=""><span class="qn">Manu<small>criadora</small></span></div>
+      <div class="qdot" style="left:53%;top:64%"><img src="assets/personas/persona-mae.jpg" alt=""><span class="qn">Carla<small>mãe</small></span></div>
+      <div class="qdot" style="left:23%;top:80%"><img src="assets/personas/persona-gondola.jpg" alt=""><span class="qn">Rosa<small>gôndola</small></span></div>
+    </div>
+  </div>
+
+  <!-- Ecossistema de públicos -->
+  <div class="reveal" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">Ecossistema de públicos</h3>
+    <p class="muted">A mesma marca em camadas diferentes — cada público recebe uma versão da mesma verdade.</p>
+    <div class="ecos">
+      <span class="ec"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Consumidora</span>
+      <span class="ec"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 20a5 5 0 0 1 10 0"/></svg>Mães & filhas</span>
+      <span class="ec"><svg viewBox="0 0 24 24"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>Lojistas</span>
+      <span class="ec"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.5"/></svg>Influenciadoras</span>
+      <span class="ec"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>Revendedoras</span>
+      <span class="ec"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 12l3 3 5-6"/></svg>Equipe</span>
+      <span class="ec"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .5-4.5 4L18 19l-6-3-6 3 1.5-6.5L3 8.5 9 8z"/></svg>Parceiros</span>
+    </div>
+  </div>
+</section>
+</div>
 
 <!-- ============ 03 ESTRATÉGIA ============ -->
 <div class="manifesto" id="estrategia">
@@ -1199,6 +1514,105 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 </section>
 </div>
 
+<!-- ============ PRODUTO & SORTIMENTO ============ -->
+<section id="produto">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">★</span> Produto, segmentação & planograma</div>
+    <h2 class="title">Do SKU à <em>gôndola</em></h2>
+    <p class="lead">Variedade organizada não é confusão — é escolha fácil. Aqui a PRONTA estrutura o portfólio em linhas claras, segmenta por necessidade, público e valor, e ocupa a gôndola como um bloco de marca.</p>
+  </div>
+
+  <!-- Arquitetura de linhas -->
+  <div class="reveal">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-top:6px">Arquitetura de linhas</h3>
+    <p class="muted">A consumidora deve conseguir escolher por tipo, ocasião, benefício, cor ou estilo.</p>
+  </div>
+  <div class="linecards reveal">
+    <div class="lcard"><div class="lico"><svg viewBox="0 0 24 24"><path d="M8 4v10a4 4 0 0 0 8 0V6a2 2 0 0 0-4 0v8"/></svg></div><strong>Prendedores</strong><p>O carro-chefe: firmeza com presença, o gesto que resolve.</p><span class="ltag">Core</span></div>
+    <div class="lcard"><div class="lico"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="8" ry="5"/><ellipse cx="12" cy="12" rx="3" ry="5"/></svg></div><strong>Elásticos</strong><p>Reposição constante e uso diário. Alto giro, baixa fricção.</p><span class="ltag">Alto giro</span></div>
+    <div class="lcard"><div class="lico"><svg viewBox="0 0 24 24"><circle cx="7" cy="9" r="2.5"/><circle cx="15" cy="9" r="2.5"/><circle cx="11" cy="15" r="2.5"/></svg></div><strong>Minis & básicos</strong><p>Compra por impulso, cabe na bolsa e na gôndola.</p><span class="ltag">Entrada</span></div>
+    <div class="lcard"><div class="lico"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div><strong>Kits & combos</strong><p>Desejo, presente e ocasião. Ticket maior por cena de uso.</p><span class="ltag">Ticket maior</span></div>
+    <div class="lcard"><div class="lico"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><strong>Metais & delicados</strong><p>Acabamento e percepção de valor. Eleva a marca sem elitizar.</p><span class="ltag">Premium</span></div>
+    <div class="lcard"><div class="lico"><svg viewBox="0 0 24 24"><circle cx="9.5" cy="10" r="4.5"/><circle cx="14.5" cy="10" r="4.5"/><circle cx="12" cy="15" r="4.5"/></svg></div><strong>Coloridos & tendência</strong><p>Expressão, coleção e conteúdo. O motor do digital.</p><span class="ltag">Giro digital</span></div>
+    <div class="lcard"><div class="lico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M12 13v6M10 21h4"/></svg></div><strong>Infantil</strong><p>Cuidado que não machuca. Mãe compra, filha escolhe.</p><span class="ltag">Recorrência</span></div>
+    <div class="lcard"><div class="lico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><strong>Sazonais & coleções</strong><p>Verão, volta às aulas, festas e datas. Novidade com calendário.</p><span class="ltag">Sazonal</span></div>
+  </div>
+
+  <!-- Segmentação -->
+  <div class="reveal" style="margin-top:64px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem">Segmentação em três lentes</h3>
+    <p class="muted">O mesmo portfólio, lido de três formas — para a consumidora, para o público e para o mix.</p>
+  </div>
+  <div class="seg reveal">
+    <div class="segc">
+      <div class="sh"><span class="sn">1</span><strong>Por necessidade</strong></div>
+      <ul><li>Tipo de cabelo (fino, grosso, cacheado, infantil)</li><li>Ocasião (trabalho, treino, festa, escola)</li><li>Benefício (firmeza, conforto, não marca)</li><li>Formato e tamanho</li><li>Cor e estilo</li></ul>
+    </div>
+    <div class="segc">
+      <div class="sh"><span class="sn">2</span><strong>Por público</strong></div>
+      <ul><li><b>Júlia</b> — prático e bonito, resolve no corre</li><li><b>Manu</b> — tendência, cor e coleção</li><li><b>Carla</b> — seguro, durável e justo</li><li><b>Rosa</b> — clareza, preço e confiança</li></ul>
+    </div>
+    <div class="segc">
+      <div class="sh"><span class="sn">3</span><strong>Por faixa de valor</strong></div>
+      <ul><li><b>Entrada</b> — minis e básicos, impulso</li><li><b>Core</b> — prendedores e elásticos, giro</li><li><b>Desejo</b> — kits, metais e coleções, margem</li><li>Democrática sem ser descartável</li></ul>
+    </div>
+  </div>
+
+  <!-- Planograma -->
+  <div class="reveal" style="margin-top:64px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem">Planograma da gôndola</h3>
+    <p class="muted">A marca ocupa a gôndola como um bloco. O olhar entra pelo desejo (nível dos olhos) e desce até o volume (base).</p>
+  </div>
+  <div class="pdv-hier reveal" style="grid-template-columns:1.35fr .65fr;margin-top:24px">
+    <div class="gondola">
+      <div class="gshelf">
+        <div class="gslab"><span>Nível dos olhos</span><em>desejo & margem</em></div>
+        <div class="grow">
+          <div class="pblk" style="flex:2;background:var(--roxo);color:#fff">Kits & Combos<small>desejo</small></div>
+          <div class="pblk" style="background:var(--roxo-2);color:#fff">Coleções<small>novidade</small></div>
+          <div class="pblk" style="flex:2;background:var(--roxo-soft);color:var(--roxo)">Coloridos<small>tendência</small></div>
+        </div>
+      </div>
+      <div class="gshelf">
+        <div class="gslab"><span>Nível das mãos</span><em>core & alto giro</em></div>
+        <div class="grow">
+          <div class="pblk" style="flex:2;background:var(--roxo-2);color:#fff">Prendedores<small>carro-chefe</small></div>
+          <div class="pblk" style="flex:2;background:var(--dourado);color:var(--roxo)">Elásticos<small>reposição</small></div>
+          <div class="pblk" style="background:var(--roxo);color:#fff">Metais<small>premium</small></div>
+        </div>
+      </div>
+      <div class="gshelf">
+        <div class="gslab"><span>Base</span><em>entrada & volume</em></div>
+        <div class="grow">
+          <div class="pblk" style="background:var(--blush);color:var(--roxo)">Básicos<small>entrada</small></div>
+          <div class="pblk" style="background:var(--blush);color:var(--roxo)">Minis<small>impulso</small></div>
+          <div class="pblk" style="flex:2;background:var(--dourado-2);color:var(--roxo)">Infantil<small>recorrência</small></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="pbox" style="background:#fff">
+        <h5>Princípios de exposição</h5>
+        <ul class="plist want" style="gap:12px">
+          <li><b>Bloco de marca:</b> o roxo cria presença no meio do excesso.</li>
+          <li><b>Organização por linha:</b> ajuda a escolher rápido.</li>
+          <li><b>Nível dos olhos</b> para desejo e maior margem.</li>
+          <li><b>Benefício visível</b> em cada faixa.</li>
+          <li><b>Leitura em segundos</b> — senão, não está pronta.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="plegend reveal">
+    <span><i style="background:var(--roxo)"></i>Desejo / premium</span>
+    <span><i style="background:var(--roxo-2)"></i>Core</span>
+    <span><i style="background:var(--dourado)"></i>Alto giro</span>
+    <span><i style="background:var(--roxo-soft)"></i>Tendência</span>
+    <span><i style="background:var(--blush)"></i>Entrada</span>
+    <span><i style="background:var(--dourado-2)"></i>Infantil</span>
+  </div>
+</section>
+
 <!-- ============ 09 APLICAÇÕES ============ -->
 <section id="aplicacoes">
   <div class="reveal">
@@ -1539,7 +1953,7 @@ const io=new IntersectionObserver((entries)=>{
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // ===== scroll-spy: destaca capítulo ativo no menu e nos pontos =====
-const secs=['abertura','contexto','estrategia','linguagem','identidade','sistema','regras','foto','pdv','aplicacoes','pecas','conteudo','exemplos','downloads','governanca'];
+const secs=['abertura','contexto','personas','estrategia','linguagem','identidade','sistema','regras','foto','pdv','produto','aplicacoes','pecas','conteudo','exemplos','downloads','governanca'];
 const spy=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
@@ -1622,6 +2036,30 @@ addEventListener('mousemove',e=>{
   const x=(e.clientX/window.innerWidth-.5), y=(e.clientY/window.innerHeight-.5);
   sparks.forEach((s,i)=>{ const d=(i+1)*10; s.style.marginLeft=(x*d)+'px'; s.style.marginTop=(y*d)+'px'; });
 },{passive:true});
+
+// ===== Personas: abas + medidores animados =====
+(function(){
+  const tabs=[...document.querySelectorAll('#ptabs .ptab')];
+  const panels=[...document.querySelectorAll('.ppanel')];
+  if(!tabs.length) return;
+  function fillMeters(panel){
+    if(!panel) return;
+    const bars=panel.querySelectorAll('.mf');
+    bars.forEach(m=>{ m.style.width='0'; });
+    setTimeout(()=>bars.forEach(m=>{ m.style.width=(m.dataset.val||0)+'%'; }),90);
+  }
+  function activate(i){
+    tabs.forEach((t,k)=>t.classList.toggle('on',k===i));
+    panels.forEach((p,k)=>p.classList.toggle('active',k===i));
+    fillMeters(panels[i]);
+  }
+  tabs.forEach((t,i)=>t.addEventListener('click',()=>activate(i)));
+  const pe=document.querySelector('.persona-explorer');
+  if(pe){
+    const io2=new IntersectionObserver((es)=>{es.forEach(e=>{ if(e.isIntersecting){ fillMeters(panels[0]); io2.disconnect(); } })},{threshold:.15});
+    io2.observe(pe);
+  }
+})();
 </script>
 </body>
 </html>
