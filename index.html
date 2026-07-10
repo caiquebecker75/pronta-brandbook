@@ -639,6 +639,65 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .plegend{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
 .plegend span{display:flex;align-items:center;gap:7px;font-size:.78rem;font-weight:600;color:#4b3a56}
 .plegend i{width:14px;height:14px;border-radius:4px;display:block}
+
+/* ===== Arquétipo ===== */
+.venn{position:relative;max-width:700px;margin:46px auto 10px;height:360px}
+.vc{position:absolute;top:30px;width:410px;height:300px;border-radius:50%;padding:44px 38px;display:flex;flex-direction:column;justify-content:center}
+.vc h4{font-family:var(--serif);color:var(--roxo);font-size:1.35rem;margin-bottom:6px;line-height:1.1}
+.vc p{font-size:.86rem;color:#4b3a56}
+.vc .vtr{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
+.vc .vtr span{font-size:.68rem;font-weight:700;color:var(--roxo);background:rgba(255,255,255,.75);padding:4px 9px;border-radius:100px}
+.vc-l{left:0;background:rgba(123,59,119,.16);border:2px solid var(--roxo);text-align:left;padding-right:170px}
+.vc-r{right:0;background:rgba(227,194,147,.42);border:2px solid var(--dourado);text-align:right;padding-left:170px;align-items:flex-end}
+.vc-r .vtr{justify-content:flex-end}
+.vcenter{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:170px;text-align:center;background:#fff;border:1px solid var(--linha);border-radius:20px;padding:18px 12px;box-shadow:var(--sombra)}
+.vcenter img{width:104px;height:auto;display:block;margin:0 auto 6px}
+.vcenter small{font-size:.68rem;color:var(--cinza);letter-spacing:.04em;display:block}
+@media(max-width:700px){
+  .venn{height:auto;display:flex;flex-direction:column;gap:14px;max-width:420px}
+  .vc{position:static;width:100%;height:auto;border-radius:22px;padding:26px 24px;text-align:left!important;align-items:flex-start!important}
+  .vc-l,.vc-r{padding:26px 24px}
+  .vc-r .vtr{justify-content:flex-start}
+  .vcenter{position:static;transform:none;width:auto;order:1}
+}
+.vx{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:5;width:40px;height:40px;border-radius:50%;background:var(--roxo);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.3rem;font-style:italic}
+@media(max-width:700px){.vx{display:none}}
+/* equilíbrio */
+.balance{margin-top:26px;background:#fff;border:1px solid var(--linha);border-radius:20px;padding:30px 28px}
+.balance .bends{display:flex;justify-content:space-between;font-size:.8rem;font-weight:700;color:var(--cinza);margin-bottom:14px}
+.balance .track{height:8px;border-radius:100px;background:linear-gradient(90deg,#b9b2c0,var(--lilas),var(--dourado));position:relative}
+.balance .mk{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
+.balance .mk .dot{width:20px;height:20px;border-radius:50%;background:var(--roxo);border:4px solid #fff;box-shadow:0 4px 12px -3px rgba(74,30,107,.6)}
+.balance .mk .lbl{font-family:var(--serif);font-style:italic;color:var(--roxo);font-size:.95rem;white-space:nowrap;background:#fff;padding:2px 10px;border-radius:100px;border:1px solid var(--linha)}
+/* sub-arquétipos */
+.archgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+@media(max-width:960px){.archgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.archgrid{grid-template-columns:1fr}}
+.arch{border:1px solid var(--linha);border-radius:18px;padding:24px;background:#fff;transition:.35s;display:flex;flex-direction:column}
+.arch:hover{transform:translateY(-5px);box-shadow:var(--sombra);border-color:transparent}
+.arch .aico{width:48px;height:48px;border-radius:13px;background:var(--lilas);display:flex;align-items:center;justify-content:center;color:var(--roxo);margin-bottom:16px}
+.arch .aico svg{width:25px;height:25px;stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.arch h4{font-family:var(--serif);color:var(--roxo);font-size:1.25rem;margin-bottom:4px}
+.arch .arole{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dourado);font-weight:700;margin-bottom:12px}
+.arch .arow{font-size:.85rem;margin-bottom:10px}
+.arch .arow b{color:var(--roxo);display:block;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
+.arch .aclaim{margin-top:auto;font-family:var(--serif);font-style:italic;color:var(--roxo);font-size:.95rem;border-left:2px solid var(--dourado);padding-left:12px;padding-top:2px;padding-bottom:2px}
+.arch .adose{margin-top:14px}
+.arch .adose .adl{display:flex;justify-content:space-between;font-size:.68rem;font-weight:700;color:var(--cinza);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
+.arch .adose .adt{height:6px;border-radius:100px;background:var(--lilas);overflow:hidden}
+.arch .adose .adf{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--roxo),var(--dourado))}
+/* dosagem mix */
+.mixbar{display:flex;height:44px;border-radius:12px;overflow:hidden;margin-top:30px;border:1px solid var(--linha)}
+.mixbar .seg{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.72rem;font-weight:700;text-align:center;padding:2px;overflow:hidden;white-space:nowrap}
+.mixleg{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px}
+.mixleg span{display:flex;align-items:center;gap:7px;font-size:.8rem;color:#4b3a56;font-weight:600}
+.mixleg i{width:12px;height:12px;border-radius:3px}
+/* sombras */
+.shadows{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+@media(max-width:640px){.shadows{grid-template-columns:1fr}}
+.shadow{background:linear-gradient(160deg,#faf0f2,#fff);border:1px solid var(--linha);border-radius:16px;padding:22px 24px}
+.shadow strong{display:block;color:#b0788a;font-family:var(--serif);font-size:1.05rem;margin-bottom:6px}
+.shadow p{font-size:.88rem}
 </style>
 </head>
 <body>
@@ -674,6 +733,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <a href="#contexto"><span class="oc">02</span><div><h5>Contexto da marca</h5><p>Categoria, públicos e oportunidade</p></div></a>
       <a href="#personas"><span class="oc">★</span><div><h5>Personas</h5><p>Desejos, dores e motivadores</p></div></a>
       <a href="#estrategia"><span class="oc">03</span><div><h5>Estratégia de marca</h5><p>A plataforma que vira escolha</p></div></a>
+      <a href="#arquetipo"><span class="oc">★</span><div><h5>Arquétipo da marca</h5><p>Heroína × Criadora + apoios</p></div></a>
       <a href="#linguagem"><span class="oc">04</span><div><h5>Linguagem</h5><p>A voz e o relacionamento</p></div></a>
       <a href="#identidade"><span class="oc">05</span><div><h5>Identidade visual</h5><p>Logotipo e códigos da marca</p></div></a>
       <a href="#sistema"><span class="oc">06</span><div><h5>Sistema visual</h5><p>Cores, tipos, ícones e formas</p></div></a>
@@ -700,6 +760,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <a href="#contexto" data-sec="contexto"><span>02 · Contexto</span></a>
   <a href="#personas" data-sec="personas"><span>★ · Personas</span></a>
   <a href="#estrategia" data-sec="estrategia"><span>03 · Estratégia</span></a>
+  <a href="#arquetipo" data-sec="arquetipo"><span>★ · Arquétipo da marca</span></a>
   <a href="#linguagem" data-sec="linguagem"><span>04 · Linguagem</span></a>
   <a href="#identidade" data-sec="identidade"><span>05 · Identidade</span></a>
   <a href="#sistema" data-sec="sistema"><span>06 · Sistema</span></a>
@@ -1137,6 +1198,119 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     </div>
   </div>
 </section>
+
+<!-- ============ ARQUÉTIPO ============ -->
+<div class="band" id="arquetipo">
+<section style="padding-top:20px;padding-bottom:20px">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">★</span> Arquétipo da marca</div>
+    <h2 class="title">Uma heroína que <em>também cria</em></h2>
+    <p class="lead">A PRONTA nasce do encontro de dois arquétipos. Essa fusão impede a marca de cair em dois extremos: o funcional frio e a beleza ornamental. Ao redor dela, sub-arquétipos de apoio dão nuance a cada ponto de contato.</p>
+  </div>
+
+  <!-- Venn primário -->
+  <div class="reveal">
+    <div class="venn">
+      <div class="vx">×</div>
+      <div class="vc vc-l">
+        <h4>Heroína do Cotidiano</h4>
+        <p>Atravessa dias cheios, encontra soluções e segue. Coragem prática, sem drama.</p>
+        <div class="vtr"><span>Ação</span><span>Resiliência leve</span><span>Resolve</span></div>
+      </div>
+      <div class="vc vc-r">
+        <h4>Criadora</h4>
+        <p>Transforma detalhes em expressão, combina formas e inventa novas versões de si.</p>
+        <div class="vtr"><span>Expressão</span><span>Estética</span><span>Autoria</span></div>
+      </div>
+      <div class="vcenter">
+        <img src="assets/logo/pronta-roxo.png" alt="PRONTA">
+        <small>resolve com estilo,<br>expressa com praticidade</small>
+      </div>
+    </div>
+    <p class="muted center narrow" style="margin-top:4px;font-size:.92rem">A PRONTA não é só ferramenta e não é só enfeite. É o acessório que resolve com estilo e expressa com praticidade.</p>
+  </div>
+
+  <!-- Equilíbrio -->
+  <div class="reveal">
+    <div class="balance">
+      <div class="bends"><span>Funcional frio</span><span>Beleza ornamental</span></div>
+      <div class="track"><div class="mk"><span class="lbl">PRONTA</span><span class="dot"></span></div></div>
+    </div>
+  </div>
+
+  <!-- Sub-arquétipos -->
+  <div class="reveal" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">Sub-arquétipos de apoio</h3>
+    <p class="muted">Reforços que a marca ativa conforme o canal e o momento — sempre em torno do eixo heroína–criadora.</p>
+  </div>
+  <div class="archgrid reveal">
+    <div class="arch">
+      <div class="aico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
+      <h4>A Cuidadora</h4><div class="arole">Cuidado & vínculo</div>
+      <div class="arow"><b>O que traz</b>Segurança, afeto e a relação mãe & filha. "Não machuca, não quebra."</div>
+      <div class="arow"><b>Quando ativar</b>Linha infantil, pós-venda, datas afetivas, conteúdo de cuidado.</div>
+      <div class="aclaim">"Penteados possíveis para dias cheios de imaginação."</div>
+      <div class="adose"><div class="adl"><span>Dosagem</span><span>Média</span></div><div class="adt"><div class="adf" style="width:60%"></div></div></div>
+    </div>
+    <div class="arch">
+      <div class="aico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M14 20a5 5 0 0 1 7-4"/></svg></div>
+      <h4>A Companheira</h4><div class="arole">Proximidade & democracia</div>
+      <div class="arow"><b>O que traz</b>Tom cúmplice, gente como a gente, pertencimento e acesso.</div>
+      <div class="arow"><b>Quando ativar</b>Redes, PDV popular, linguagem do dia a dia, comunidade.</div>
+      <div class="aclaim">"PRONTA para o corre, para o encontro, para o agora."</div>
+      <div class="adose"><div class="adl"><span>Dosagem</span><span>Alta</span></div><div class="adt"><div class="adf" style="width:85%"></div></div></div>
+    </div>
+    <div class="arch">
+      <div class="aico"><svg viewBox="0 0 24 24"><path d="M3 12l4-9 4 9M5.5 8h3M12 3v18M21 20l-3-8-3 8M15.5 16h3"/></svg></div>
+      <h4>A Exploradora</h4><div class="arole">Movimento & autonomia</div>
+      <div class="arow"><b>O que traz</b>Improviso, liberdade e a beleza que acontece no caminho.</div>
+      <div class="arow"><b>Quando ativar</b>Campanhas de vida real, verão e viagem, "segue".</div>
+      <div class="aclaim">"Prendeu. Sentiu. Foi."</div>
+      <div class="adose"><div class="adl"><span>Dosagem</span><span>Média</span></div><div class="adt"><div class="adf" style="width:55%"></div></div></div>
+    </div>
+    <div class="arch">
+      <div class="aico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div>
+      <h4>A Encantadora</h4><div class="arole">Beleza & presença</div>
+      <div class="arow"><b>O que traz</b>Desejo, autoestima e presença — beleza como gesto, nunca cobrança.</div>
+      <div class="arow"><b>Quando ativar</b>Linhas premium/metais, editorial e key visual.</div>
+      <div class="aclaim">"Beleza que não pede pausa."</div>
+      <div class="adose"><div class="adl"><span>Dosagem</span><span>Baixa</span></div><div class="adt"><div class="adf" style="width:38%"></div></div></div>
+    </div>
+  </div>
+
+  <!-- Dosagem do mix -->
+  <div class="reveal" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">A dosagem do mix</h3>
+    <p class="muted">Quanto cada arquétipo aparece na marca. Os dois primários comandam; os de apoio dão o tempero.</p>
+    <div class="mixbar">
+      <div class="seg" style="width:30%;background:var(--roxo)">Heroína 30%</div>
+      <div class="seg" style="width:26%;background:var(--roxo-2)">Criadora 26%</div>
+      <div class="seg" style="width:18%;background:var(--roxo-soft);color:var(--roxo)">Companheira 18%</div>
+      <div class="seg" style="width:12%;background:var(--dourado);color:var(--roxo)">Cuidadora 12%</div>
+      <div class="seg" style="width:8%;background:var(--dourado-2);color:var(--roxo)">Explor. 8%</div>
+      <div class="seg" style="width:6%;background:var(--blush);color:var(--roxo)">Encant. 6%</div>
+    </div>
+    <div class="mixleg">
+      <span><i style="background:var(--roxo)"></i>Heroína do Cotidiano</span>
+      <span><i style="background:var(--roxo-2)"></i>Criadora</span>
+      <span><i style="background:var(--roxo-soft)"></i>Companheira</span>
+      <span><i style="background:var(--dourado)"></i>Cuidadora</span>
+      <span><i style="background:var(--dourado-2)"></i>Exploradora</span>
+      <span><i style="background:var(--blush)"></i>Encantadora</span>
+    </div>
+  </div>
+
+  <!-- Sombras a evitar -->
+  <div class="reveal" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">Sombras a evitar</h3>
+    <p class="muted">Todo arquétipo tem um excesso. A PRONTA vigia esses dois para não trair a marca.</p>
+    <div class="shadows">
+      <div class="shadow"><strong>A heroína sobrecarregada</strong><p>Romantizar a correria e a exaustão. A PRONTA não promete dar conta de tudo — ela facilita o gesto e devolve presença.</p></div>
+      <div class="shadow"><strong>A criadora ornamental</strong><p>Virar enfeite sem função, beleza distante da rotina. O detalhe é pequeno só no tamanho; ele precisa resolver.</p></div>
+    </div>
+  </div>
+</section>
+</div>
 
 <!-- ============ 04 LINGUAGEM ============ -->
 <section id="linguagem">
@@ -1953,7 +2127,7 @@ const io=new IntersectionObserver((entries)=>{
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // ===== scroll-spy: destaca capítulo ativo no menu e nos pontos =====
-const secs=['abertura','contexto','personas','estrategia','linguagem','identidade','sistema','regras','foto','pdv','produto','aplicacoes','pecas','conteudo','exemplos','downloads','governanca'];
+const secs=['abertura','contexto','personas','estrategia','arquetipo','linguagem','identidade','sistema','regras','foto','pdv','produto','aplicacoes','pecas','conteudo','exemplos','downloads','governanca'];
 const spy=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
