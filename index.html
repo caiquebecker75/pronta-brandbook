@@ -363,6 +363,53 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   .gallery img{max-height:none}
 }
 
+/* ===== Regras de uso da marca ===== */
+.rules-head{display:flex;align-items:center;gap:12px;margin:44px 0 22px}
+.rules-head .tick{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;flex:0 0 auto}
+.rules-head .tick.ok{background:#3f9d55}
+.rules-head .tick.no{background:#cf5b6e}
+.rules-head h3{font-family:var(--serif);color:var(--roxo);font-size:1.5rem}
+.rules-head svg{width:18px;height:18px;stroke:#fff;stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.rgrid{display:grid;gap:18px}
+.rgrid.ok{grid-template-columns:repeat(4,1fr)}
+.rgrid.no{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.rgrid.ok,.rgrid.no{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.rgrid.ok,.rgrid.no{grid-template-columns:1fr}}
+.rule{border:1px solid var(--linha);border-radius:18px;overflow:hidden;background:#fff;transition:.35s}
+.rule:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
+.rprev{height:120px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--branco);border-bottom:1px solid var(--linha)}
+.rlabel{padding:14px 16px;display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:600;color:var(--roxo)}
+.rlabel .b{width:20px;height:20px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800}
+.rule.ok .rlabel .b{background:#3f9d55}
+.rule.no .rlabel .b{background:#cf5b6e}
+.rule.no .rprev{background:#fbf3f4}
+.rule.ok .rprev{background:#f2f8f3}
+/* wordmark de demonstração */
+.wm{font-family:var(--serif);font-weight:400;font-size:1.9rem;letter-spacing:.03em;color:var(--roxo);line-height:1;white-space:nowrap}
+.wm b{font-weight:500;font-style:italic;color:var(--dourado)}
+.wm.sm{font-size:1.5rem}
+/* corretas */
+.p-neg{background:var(--roxo)!important}
+.p-neg .wm{color:#fff}.p-neg .wm b{color:var(--dourado-2)}
+.p-mono .wm,.p-mono .wm b{color:var(--roxo);font-style:normal;font-weight:400}
+.p-protect .wm{position:relative}
+.p-protect .box{position:absolute;inset:26px 30px;border:1px dashed var(--roxo-soft);border-radius:6px;pointer-events:none}
+/* erradas */
+.w-stretch .wm{display:inline-block;transform:scaleX(1.7)}
+.w-rotate .wm{display:inline-block;transform:rotate(-13deg)}
+.w-color .wm,.w-color .wm b{color:#2f8f4e}
+.w-shadow .wm{text-shadow:3px 3px 0 rgba(44,27,43,.35)}
+.w-outline .wm{color:transparent;-webkit-text-stroke:1.4px var(--roxo)}
+.w-outline .wm b{color:transparent;-webkit-text-stroke:1.4px var(--dourado)}
+.w-squeeze .wm{letter-spacing:-.14em}
+.w-font .wm{font-family:var(--sans);font-weight:800;font-style:normal}
+.w-font .wm b{font-family:var(--sans);font-style:normal;color:var(--dourado)}
+.w-lowcontrast{background:var(--roxo-soft)!important}
+.w-lowcontrast .wm{color:#b98fb4}.w-lowcontrast .wm b{color:#b98fb4}
+.w-crop{overflow:hidden}
+.w-crop .wm{transform:scale(2.1) translateY(4px)}
+.rule.no .wm b{opacity:1}
+
 /* ===== Galeria de peças ===== */
 .gcats{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
 .gcat{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--roxo);background:#fff;border:1px solid var(--linha);border-radius:100px;padding:9px 18px;cursor:pointer;transition:.3s}
@@ -432,6 +479,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <a href="#linguagem"><span class="oc">04</span><div><h5>Linguagem</h5><p>A voz e o relacionamento</p></div></a>
       <a href="#identidade"><span class="oc">05</span><div><h5>Identidade visual</h5><p>Logotipo e códigos da marca</p></div></a>
       <a href="#sistema"><span class="oc">06</span><div><h5>Sistema visual</h5><p>Cores, tipos, ícones e formas</p></div></a>
+      <a href="#regras"><span class="oc">★</span><div><h5>Regras de uso da marca</h5><p>Aplicações certas e erradas</p></div></a>
       <a href="#foto"><span class="oc">07</span><div><h5>Fotografia</h5><p>Beleza real, em movimento</p></div></a>
       <a href="#pdv"><span class="oc">08</span><div><h5>Produto & PDV</h5><p>A escolha que acontece rápido</p></div></a>
       <a href="#aplicacoes"><span class="oc">09</span><div><h5>Aplicações</h5><p>Redes, e-commerce, trade</p></div></a>
@@ -453,6 +501,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <a href="#linguagem" data-sec="linguagem"><span>04 · Linguagem</span></a>
   <a href="#identidade" data-sec="identidade"><span>05 · Identidade</span></a>
   <a href="#sistema" data-sec="sistema"><span>06 · Sistema</span></a>
+  <a href="#regras" data-sec="regras"><span>★ · Regras de uso</span></a>
   <a href="#foto" data-sec="foto"><span>07 · Fotografia</span></a>
   <a href="#pdv" data-sec="pdv"><span>08 · Produto & PDV</span></a>
   <a href="#aplicacoes" data-sec="aplicacoes"><span>09 · Aplicações</span></a>
@@ -847,6 +896,26 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="il"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 15 2 10.5h7.5z"/></svg><span>Acabamento</span></div>
     <div class="il"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg><span>Leveza</span></div>
     <div class="il"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span>Brilho</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"/><path d="M9 12l2 2 4-4"/></svg><span>Hipoalergênico</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M4 7c2-2 4 2 6 0s4-2 6 0 4 2 4 2M4 13c2-2 4 2 6 0s4-2 6 0 4 2 4 2M4 19c2-2 4 2 6 0s4-2 6 0 4 2 4 2"/></svg><span>Não enrosca</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M5 3l15 8-7 2-2 7z"/></svg><span>Fácil de usar</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1 12H5z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg><span>Compacto</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M4 20c0-8 6-14 16-14 0 10-6 16-16 14z"/><path d="M5 19c4-6 8-8 12-9"/></svg><span>Sustentável</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M6 4v16M12 4v16M18 4v16"/></svg><span>Cabelos finos</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M7 4a3 3 0 0 1 0 6 3 3 0 0 0 0 6 3 3 0 0 1 0 4M17 4a3 3 0 0 0 0 6 3 3 0 0 1 0 6 3 3 0 0 0 0 4"/></svg><span>Cacheados & volume</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M12 13v6M10 21h4"/></svg><span>Infantil / kids</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 13V9M9 2h6M19 6l1-1"/></svg><span>Penteado rápido</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="8" ry="5"/><ellipse cx="12" cy="12" rx="3" ry="5"/></svg><span>Elástico</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M8 4v10a4 4 0 0 0 8 0V6a2 2 0 0 0-4 0v8"/></svg><span>Presilha</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><circle cx="9.5" cy="10" r="4.5"/><circle cx="14.5" cy="10" r="4.5"/><circle cx="12" cy="15" r="4.5"/></svg><span>Cores variadas</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M20 4C10 4 4 10 4 20M20 4c0 8-5 13-13 14M8 15h6"/></svg><span>Toque macio</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M8 5v14M16 5v14"/></svg><span>Antiderrapante</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="16" height="8" rx="2"/><path d="M21 11v2M6 12h8"/></svg><span>Longa duração</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7"/><path d="M9 9l2 2 4-4"/></svg><span>Qualidade</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M12 21c-6-4-8-8-8-11a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 3-2 7-8 11z"/><path d="M9 8c2 1 3 3 3 5"/></svg><span>Cruelty-free</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M12 1v2M4 8H2M22 8h-2M6 3l1 1M18 3l-1 1"/><path d="M3 17c2-1 3 1 5 0s3-1 5 0 3 1 5 0M3 21c2-1 3 1 5 0s3-1 5 0 3 1 5 0"/></svg><span>Resistente ao calor</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Fecho seguro</span></div>
+    <div class="il"><svg viewBox="0 0 24 24"><path d="M12 3s6 6 6 11a6 6 0 0 1-12 0c0-5 6-11 6-11z"/><path d="M4 4l16 16"/></svg><span>À prova d'água</span></div>
   </div>
 
   <div class="grid g3 mt reveal" style="margin-top:50px">
@@ -855,6 +924,70 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Texturas & acabamentos</h3><p>Papel, pedra, tecido, acetato e brilho suave. Foscos, dourados e verniz pontual elevam linhas especiais — sensorial, não decorativo.</p></div>
   </div>
 </section>
+
+<!-- ============ REGRAS DE USO DA MARCA ============ -->
+<div class="band" id="regras">
+<section style="padding-top:20px;padding-bottom:20px">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">★</span> Regras de uso da marca</div>
+    <h2 class="title">O logo é a assinatura. <em>Proteja-a.</em></h2>
+    <p class="lead">A PRONTA se constrói por repetição consistente. Estas regras mostram como aplicar o logotipo do jeito certo — e o que nunca fazer. Alterar a marca sem critério enfraquece tudo que ela está construindo.</p>
+  </div>
+
+  <div class="reveal">
+    <div class="rules-head"><span class="tick ok"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><h3>Aplicações corretas</h3></div>
+  </div>
+  <div class="rgrid ok reveal">
+    <div class="rule ok"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✓</span> Versão positiva</div></div>
+    <div class="rule ok"><div class="rprev p-neg"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✓</span> Versão negativa</div></div>
+    <div class="rule ok"><div class="rprev p-mono"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✓</span> Monocromática</div></div>
+    <div class="rule ok"><div class="rprev p-protect"><span class="wm sm">PRON<b>T</b>A</span><span class="box"></span></div><div class="rlabel"><span class="b">✓</span> Área de proteção</div></div>
+  </div>
+
+  <div class="reveal">
+    <div class="rules-head"><span class="tick no"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></span><h3>Aplicações erradas</h3></div>
+  </div>
+  <div class="rgrid no reveal">
+    <div class="rule no w-stretch"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não distorça</div></div>
+    <div class="rule no w-rotate"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não gire</div></div>
+    <div class="rule no w-color"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não troque as cores</div></div>
+    <div class="rule no w-shadow"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não aplique efeitos</div></div>
+    <div class="rule no w-font"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não troque a fonte</div></div>
+    <div class="rule no w-outline"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não contorne</div></div>
+    <div class="rule no w-squeeze"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não comprima</div></div>
+    <div class="rule no w-lowcontrast"><div class="rprev"><span class="wm">PRON<b>T</b>A</span></div><div class="rlabel"><span class="b">✕</span> Não use sem contraste</div></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:56px">
+    <div class="dd">
+      <div class="col do">
+        <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Sempre</h4>
+        <ul>
+          <li>Preserve a área de proteção e margens consistentes</li>
+          <li>Garanta que a marca leia em 1 segundo</li>
+          <li>Use apenas as cores da paleta oficial</li>
+          <li>Dê respiro ao logo sobre imagens (silêncio visual)</li>
+          <li>Mantenha a proporção original em qualquer tamanho</li>
+        </ul>
+      </div>
+      <div class="col dont">
+        <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg> Nunca</h4>
+        <ul>
+          <li>Esticar, comprimir, girar ou redesenhar o logo</li>
+          <li>Trocar a tipografia ou aplicar contorno</li>
+          <li>Usar cores fora da paleta ou efeitos e sombras</li>
+          <li>Colocar sobre fundos sem contraste suficiente</li>
+          <li>Reduzir até ficar ilegível ou espremer por preço/código</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal mt center" style="margin-top:40px;background:#fff;border:1px solid var(--linha);border-radius:20px;padding:36px 26px">
+    <p style="font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,3vw,1.7rem);color:var(--roxo);max-width:720px;margin:0 auto">"Se a marca não lê em um segundo, a aplicação não está pronta."</p>
+  </div>
+</section>
+</div>
 
 <!-- ============ 07 FOTOGRAFIA ============ -->
 <div class="statement" id="foto" style="padding:100px 22px 60px">
@@ -1106,7 +1239,7 @@ const io=new IntersectionObserver((entries)=>{
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // ===== scroll-spy: destaca capítulo ativo no menu e nos pontos =====
-const secs=['abertura','contexto','estrategia','linguagem','identidade','sistema','foto','pdv','aplicacoes','pecas','exemplos','governanca'];
+const secs=['abertura','contexto','estrategia','linguagem','identidade','sistema','regras','foto','pdv','aplicacoes','pecas','exemplos','governanca'];
 const spy=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
