@@ -678,6 +678,10 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .arch{border:1px solid var(--linha);border-radius:18px;padding:24px;background:#fff;transition:.35s;display:flex;flex-direction:column}
 .arch:hover{transform:translateY(-5px);box-shadow:var(--sombra);border-color:transparent}
 .arch .aico{width:48px;height:48px;border-radius:13px;background:var(--lilas);display:flex;align-items:center;justify-content:center;color:var(--roxo);margin-bottom:16px}
+.arch .aphoto{height:150px;border-radius:12px;background-size:cover;background-position:center top;margin-bottom:16px}
+.vc .vava{width:54px;height:54px;border-radius:50%;object-fit:cover;border:2px solid var(--ouro);display:block;margin-bottom:10px}
+.vc-r .vava{margin-left:auto}
+@media(max-width:700px){.vc-r .vava{margin-left:0}}
 .arch .aico svg{width:25px;height:25px;stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .arch h4{font-family:var(--serif);color:var(--roxo);font-size:1.25rem;margin-bottom:4px}
 .arch .arole{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dourado);font-weight:700;margin-bottom:12px}
@@ -912,8 +916,10 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <a href="#abertura"><span class="oc">01</span><div><h5>Abertura</h5><p>O pacto do guia e os princípios</p></div></a>
       <a href="#contexto"><span class="oc">02</span><div><h5>Contexto da marca</h5><p>Categoria, públicos e oportunidade</p></div></a>
       <a href="#personas"><span class="oc">★</span><div><h5>Personas</h5><p>Desejos, dores e motivadores</p></div></a>
+      <a href="#habitos"><span class="oc">★</span><div><h5>Hábitos & desejos</h5><p>Como ela compra e o que sente</p></div></a>
       <a href="#estrategia"><span class="oc">03</span><div><h5>Estratégia de marca</h5><p>A plataforma que vira escolha</p></div></a>
       <a href="#arquetipo"><span class="oc">★</span><div><h5>Arquétipo da marca</h5><p>Heroína × Criadora + apoios</p></div></a>
+      <a href="#jornada"><span class="oc">★</span><div><h5>Jornada do herói</h5><p>Essência, desafios e a guia PRONTA</p></div></a>
       <a href="#linguagem"><span class="oc">04</span><div><h5>Linguagem</h5><p>A voz e o relacionamento</p></div></a>
       <a href="#identidade"><span class="oc">05</span><div><h5>Identidade visual</h5><p>Logotipo e códigos da marca</p></div></a>
       <a href="#sistema"><span class="oc">06</span><div><h5>Sistema visual</h5><p>Cores, tipos, ícones e formas</p></div></a>
@@ -941,8 +947,10 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <a href="#abertura" data-sec="abertura"><span>01 · Abertura</span></a>
   <a href="#contexto" data-sec="contexto"><span>02 · Contexto</span></a>
   <a href="#personas" data-sec="personas"><span>★ · Personas</span></a>
+  <a href="#habitos" data-sec="habitos"><span>★ · Hábitos & desejos</span></a>
   <a href="#estrategia" data-sec="estrategia"><span>03 · Estratégia</span></a>
   <a href="#arquetipo" data-sec="arquetipo"><span>★ · Arquétipo da marca</span></a>
+  <a href="#jornada" data-sec="jornada"><span>★ · Jornada do herói</span></a>
   <a href="#linguagem" data-sec="linguagem"><span>04 · Linguagem</span></a>
   <a href="#identidade" data-sec="identidade"><span>05 · Identidade</span></a>
   <a href="#sistema" data-sec="sistema"><span>06 · Sistema</span></a>
@@ -1323,6 +1331,78 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 </section>
 </div>
 
+<!-- ============ HÁBITOS & DESEJOS ============ -->
+<section id="habitos">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">★</span> Hábitos & desejos</div>
+    <h2 class="title">Como ela compra e o que <em>quer sentir</em></h2>
+    <p class="lead">Acessório de cabelo é compra de baixo envolvimento e alta emoção: decide-se em segundos, mas carrega desejo. Entender o gesto de compra é entender por onde a PRONTA entra.</p>
+  </div>
+
+  <div class="reveal mt">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">Como ela compra</h3>
+  </div>
+  <div class="grid g4 reveal">
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Decide em segundos</h3><p>Passa, olha, imagina o uso e escolhe. Baixo envolvimento, escolha rápida.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M6 2l1.5 3h13L18 13H8L6 2zM6 2H3"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg></div><h3>Impulso + reposição</h3><p>Compra por vontade e para repor o que quebrou, perdeu ou já usou.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><h3>Cor, embalagem, benefício</h3><p>O olhar decide por estética, clareza e a promessa que aparece rápido.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></div><h3>Onde ela compra</h3><p>Gôndola e farmácia, marketplace, e o que vê nas redes e salva pra testar.</p></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">O que ela quer sentir</h3>
+    <p class="muted">Ela não compra só um acessório. Compra o instante em que se sente assim:</p>
+  </div>
+  <div class="chips reveal">
+    <span class="chip-c gold">Pronta</span>
+    <span class="chip-c">Bonita sem esforço</span>
+    <span class="chip-c gold">Presente</span>
+    <span class="chip-c">Cuidada</span>
+    <span class="chip-c gold">No controle</span>
+    <span class="chip-c">Autêntica</span>
+    <span class="chip-c gold">Confiante</span>
+    <span class="chip-c">Do meu jeito</span>
+  </div>
+
+  <div class="reveal mt" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">O que aciona e o que trava</h3>
+  </div>
+  <div class="dd reveal">
+    <div class="col do">
+      <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg> Gatilhos de compra</h4>
+      <ul>
+        <li>Ocasião: verão, volta às aulas, festa, viagem</li>
+        <li>Quebrou, perdeu ou marcou o cabelo</li>
+        <li>Viu nas redes e quis testar</li>
+        <li>Combinar com um look ou humor do dia</li>
+        <li>Presente e o momento mãe & filha</li>
+      </ul>
+    </div>
+    <div class="col dont">
+      <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg> Barreiras que travam</h4>
+      <ul>
+        <li>Medo de machucar ou quebrar na primeira vez</li>
+        <li>Gôndola confusa, sem saber o que levar</li>
+        <li>Produto sem marca e sem confiança</li>
+        <li>Sensação de "pagar caro por bobagem"</li>
+        <li>Tendência que não cabe na vida real dela</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">A jornada de compra</h3>
+    <p class="muted">Do gatilho à recompra — onde a marca precisa aparecer.</p>
+  </div>
+  <div class="pillars reveal">
+    <div class="pillar"><div class="p-ico"><svg class="icon" style="width:28px;height:28px" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><strong>Gatilho</strong><span>ocasião, quebra ou desejo</span></div>
+    <div class="pillar"><div class="p-ico"><svg class="icon" style="width:28px;height:28px" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></div><strong>Busca</strong><span>gôndola, redes, marketplace</span></div>
+    <div class="pillar"><div class="p-ico"><svg class="icon" style="width:28px;height:28px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><strong>Escolha</strong><span>em segundos, pelo visual</span></div>
+    <div class="pillar"><div class="p-ico"><svg class="icon" style="width:28px;height:28px" viewBox="0 0 24 24"><path d="M6 3v12a3 3 0 0 0 6 0V5a2 2 0 0 1 4 0v12"/><circle cx="6" cy="18" r="3"/></svg></div><strong>Uso</strong><span>prende, sente, segue</span></div>
+    <div class="pillar"><div class="p-ico"><svg class="icon" style="width:28px;height:28px" viewBox="0 0 24 24"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3"/></svg></div><strong>Recompra & indica</strong><span>repõe, coleciona, recomenda</span></div>
+  </div>
+</section>
+
 <!-- ============ 03 ESTRATÉGIA ============ -->
 <div class="manifesto" id="estrategia">
   <div class="inner reveal" style="max-width:1100px">
@@ -1397,11 +1477,13 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="venn">
       <div class="vx">×</div>
       <div class="vc vc-l">
+        <img class="vava" src="assets/fotografia/arq-heroina.jpg" alt="Heroína do Cotidiano">
         <h4>Heroína do Cotidiano</h4>
         <p>Atravessa dias cheios, encontra soluções e segue. Coragem prática, sem drama.</p>
         <div class="vtr"><span>Ação</span><span>Resiliência leve</span><span>Resolve</span></div>
       </div>
       <div class="vc vc-r">
+        <img class="vava" src="assets/fotografia/arq-criadora.jpg" alt="Criadora">
         <h4>Criadora</h4>
         <p>Transforma detalhes em expressão, combina formas e inventa novas versões de si.</p>
         <div class="vtr"><span>Expressão</span><span>Estética</span><span>Autoria</span></div>
@@ -1429,7 +1511,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
   <div class="archgrid reveal">
     <div class="arch">
-      <div class="aico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
+      <div class="aphoto" style="background-image:url('assets/fotografia/arq-cuidadora.jpg')"></div>
       <h4>A Cuidadora</h4><div class="arole">Cuidado & vínculo</div>
       <div class="arow"><b>O que traz</b>Segurança, afeto e a relação mãe & filha. "Não machuca, não quebra."</div>
       <div class="arow"><b>Quando ativar</b>Linha infantil, pós-venda, datas afetivas, conteúdo de cuidado.</div>
@@ -1437,7 +1519,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <div class="adose"><div class="adl"><span>Dosagem</span><span>Média</span></div><div class="adt"><div class="adf" style="width:60%"></div></div></div>
     </div>
     <div class="arch">
-      <div class="aico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M14 20a5 5 0 0 1 7-4"/></svg></div>
+      <div class="aphoto" style="background-image:url('assets/fotografia/arq-companheira.jpg')"></div>
       <h4>A Companheira</h4><div class="arole">Proximidade & democracia</div>
       <div class="arow"><b>O que traz</b>Tom cúmplice, gente como a gente, pertencimento e acesso.</div>
       <div class="arow"><b>Quando ativar</b>Redes, PDV popular, linguagem do dia a dia, comunidade.</div>
@@ -1445,7 +1527,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <div class="adose"><div class="adl"><span>Dosagem</span><span>Alta</span></div><div class="adt"><div class="adf" style="width:85%"></div></div></div>
     </div>
     <div class="arch">
-      <div class="aico"><svg viewBox="0 0 24 24"><path d="M3 12l4-9 4 9M5.5 8h3M12 3v18M21 20l-3-8-3 8M15.5 16h3"/></svg></div>
+      <div class="aphoto" style="background-image:url('assets/fotografia/arq-exploradora.jpg')"></div>
       <h4>A Exploradora</h4><div class="arole">Movimento & autonomia</div>
       <div class="arow"><b>O que traz</b>Improviso, liberdade e a beleza que acontece no caminho.</div>
       <div class="arow"><b>Quando ativar</b>Campanhas de vida real, verão e viagem, "segue".</div>
@@ -1453,7 +1535,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <div class="adose"><div class="adl"><span>Dosagem</span><span>Média</span></div><div class="adt"><div class="adf" style="width:55%"></div></div></div>
     </div>
     <div class="arch">
-      <div class="aico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div>
+      <div class="aphoto" style="background-image:url('assets/fotografia/arq-encantadora.jpg')"></div>
       <h4>A Encantadora</h4><div class="arole">Beleza & presença</div>
       <div class="arow"><b>O que traz</b>Desejo, autoestima e presença — beleza como gesto, nunca cobrança.</div>
       <div class="arow"><b>Quando ativar</b>Linhas premium/metais, editorial e key visual.</div>
@@ -1495,6 +1577,43 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
 </section>
 </div>
+
+<!-- ============ JORNADA DO HERÓI ============ -->
+<section id="jornada">
+  <div class="reveal">
+    <div class="eyebrow"><span class="num">★</span> Jornada do herói</div>
+    <h2 class="title">A protagonista é ela. A PRONTA é a <em>guia</em></h2>
+    <p class="lead">A essência da marca é <b>beleza em movimento</b>. Neste enredo, a heroína é a mulher real — a PRONTA não a salva, ela entrega o gesto simples que a deixa pronta para seguir. Do dia cheio à presença que ela reconquista.</p>
+  </div>
+
+  <div class="statement reveal" style="border-radius:26px;margin-top:40px;padding:70px 30px">
+    <p style="font-size:clamp(1.3rem,3.4vw,2.1rem)">Beleza não precisa interromper a vida para existir.<br><b>A PRONTA existe para o instante em que a mulher se reconhece e segue.</b></p>
+  </div>
+
+  <div class="reveal mt" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">O enredo, em seis atos</h3>
+    <p class="muted">Do mundo comum à vitória — e onde a marca entra como mentora.</p>
+  </div>
+  <div class="timeline reveal">
+    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20a5 5 0 0 1 10 0M13 20a5 5 0 0 1 8-4"/></svg></div><div class="body"><h4>1 · O mundo dela</h4><p>Trabalha, cuida, estuda, cria, corre. Muitos papéis num dia só — e o espelho quase sempre às pressas.</p></div></div>
+    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div><div class="body"><h4>2 · O chamado</h4><p>Ela quer se sentir bonita e presente. Mas a beleza parece pedir tempo, produção e ocasião que ela não tem.</p></div></div>
+    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div><div class="body"><h4>3 · Os obstáculos</h4><p>Cabelo no rosto, calor, pressa. Acessório que machuca, quebra ou some. E a sensação de que se arrumar é luxo, não direito.</p></div></div>
+    <div class="tl"><div class="dot" style="border-color:var(--roxo);background:var(--roxo)"><svg class="icon" style="width:18px;height:18px;stroke:#fff" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><div class="body"><h4>4 · A guia aparece — PRONTA</h4><p>Não uma transformação distante: um gesto simples. O acessório certo, que resolve o cabelo sem tirar a presença dela. A marca é mentora, não heroína.</p></div></div>
+    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><div class="body"><h4>5 · A virada</h4><p>Ela prende o cabelo, se olha e se reconhece. Ganha postura, humor e presença. <b>Prendeu. Sentiu. Foi.</b></p></div></div>
+    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M5 16l-2-9 6 4 3-6 3 6 6-4-2 9zM5 20h14"/></svg></div><div class="body"><h4>6 · A vitória</h4><p>Segue o dia inteira, autêntica. Volta, indica, compartilha — e vira comunidade. Pronta para a vida real.</p></div></div>
+  </div>
+
+  <div class="reveal mt" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">O desafio dela → como a PRONTA ajuda</h3>
+    <p class="muted">Cada dor da mulher real tem uma resposta concreta da marca.</p>
+  </div>
+  <div class="grid g2 reveal">
+    <div class="card"><span class="tag-mini">Falta de tempo</span><p style="margin-top:10px">Ela não tem 30 minutos de produção.<br><b style="color:var(--roxo)">PRONTA:</b> um gesto de 15 segundos que já muda a presença.</p></div>
+    <div class="card"><span class="tag-mini">Cabelo no rosto, no corre</span><p style="margin-top:10px">Calor, pressa, imprevisto.<br><b style="color:var(--roxo)">PRONTA:</b> prende, ajusta e segue — beleza que acompanha o ritmo.</p></div>
+    <div class="card"><span class="tag-mini">Medo de machucar/quebrar</span><p style="margin-top:10px">Acessório que dói ou dura um dia.<br><b style="color:var(--roxo)">PRONTA:</b> firme, confortável e confiável — não machuca, não falha.</p></div>
+    <div class="card"><span class="tag-mini">Beleza como cobrança</span><p style="margin-top:10px">Sentir que precisa estar impecável.<br><b style="color:var(--roxo)">PRONTA:</b> presença, não perfeição. Ela se arruma do próprio jeito.</p></div>
+  </div>
+</section>
 
 <!-- ============ 04 LINGUAGEM ============ -->
 <section id="linguagem">
@@ -1927,21 +2046,18 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
 
   <div class="reveal mt" style="margin-top:66px">
-    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">Referências de shooting</h3>
-    <p class="muted">Mulheres reais e plurais — brancas, negras e pardas — nas situações da vida real: reunião, date, cuidado dos filhos, trabalho, pausa e esporte. Beleza com presença, do jeito PRONTA. Clique para ampliar.</p>
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">Casting por arquétipo</h3>
+    <p class="muted">Mulheres bonitas e plurais — brancas, negras, pardas e asiáticas — cada uma encarnando um arquétipo da marca, e todas com o acessório de cabelo à mostra. É assim que a PRONTA aparece. Clique para ampliar.</p>
   </div>
   <div class="gallery reveal" id="galfoto">
-    <div class="piece" data-full="assets/fotografia/sit-reuniao.jpg" data-cap="Reunião|Trabalho & presença"><img src="assets/fotografia/sit-reuniao.jpg" alt="Mulher em reunião" loading="lazy"><a class="dl" href="assets/fotografia/sit-reuniao.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Trabalho & presença</span><strong>Reunião</strong></div></div>
-    <div class="piece" data-full="assets/fotografia/sit-trabalho.jpg" data-cap="Trabalhando|Vida real"><img src="assets/fotografia/sit-trabalho.jpg" alt="Mulher trabalhando" loading="lazy"><a class="dl" href="assets/fotografia/sit-trabalho.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Vida real</span><strong>Trabalhando</strong></div></div>
-    <div class="piece" data-full="assets/fotografia/sit-date.jpg" data-cap="Date|Se arrumar pra sair"><img src="assets/fotografia/sit-date.jpg" alt="Mulher em um date" loading="lazy"><a class="dl" href="assets/fotografia/sit-date.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Se arrumar pra sair</span><strong>Date</strong></div></div>
-    <div class="piece" data-full="assets/fotografia/sit-filhos.jpg" data-cap="Cuidado dos filhos|Vínculo & afeto"><img src="assets/fotografia/sit-filhos.jpg" alt="Mãe com o filho" loading="lazy"><a class="dl" href="assets/fotografia/sit-filhos.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Vínculo & afeto</span><strong>Cuidado dos filhos</strong></div></div>
-    <div class="piece" data-full="assets/fotografia/sit-pausa.jpg" data-cap="Fazendo uma pausa|Beleza sem pressa"><img src="assets/fotografia/sit-pausa.jpg" alt="Mulher fazendo uma pausa" loading="lazy"><a class="dl" href="assets/fotografia/sit-pausa.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Beleza sem pressa</span><strong>Fazendo uma pausa</strong></div></div>
-    <div class="piece" data-full="assets/fotografia/sit-esporte.jpg" data-cap="Praticando esporte|Movimento"><img src="assets/fotografia/sit-esporte.jpg" alt="Mulher praticando esporte" loading="lazy"><a class="dl" href="assets/fotografia/sit-esporte.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Movimento</span><strong>Praticando esporte</strong></div></div>
-    <div class="piece" data-full="assets/fotografia/retrato-negra.jpg" data-cap="Casting · negra|Beleza plural"><img src="assets/fotografia/retrato-negra.jpg" alt="Retrato de mulher negra" loading="lazy"><a class="dl" href="assets/fotografia/retrato-negra.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Beleza plural</span><strong>Casting · negra</strong></div></div>
-    <div class="piece" data-full="assets/fotografia/retrato-parda.jpg" data-cap="Casting · parda|Beleza plural"><img src="assets/fotografia/retrato-parda.jpg" alt="Retrato de mulher parda" loading="lazy"><a class="dl" href="assets/fotografia/retrato-parda.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Beleza plural</span><strong>Casting · parda</strong></div></div>
-    <div class="piece" data-full="assets/fotografia/retrato-branca.jpg" data-cap="Casting · branca|Beleza plural"><img src="assets/fotografia/retrato-branca.jpg" alt="Retrato de mulher branca" loading="lazy"><a class="dl" href="assets/fotografia/retrato-branca.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Beleza plural</span><strong>Casting · branca</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/arq-heroina.jpg" data-cap="Heroína do Cotidiano|O corre do dia"><img src="assets/fotografia/arq-heroina.jpg" alt="Heroína do Cotidiano com presilha" loading="lazy"><a class="dl" href="assets/fotografia/arq-heroina.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>O corre do dia</span><strong>Heroína do Cotidiano</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/arq-criadora.jpg" data-cap="Criadora|Expressão & cor"><img src="assets/fotografia/arq-criadora.jpg" alt="Criadora com presilhas coloridas" loading="lazy"><a class="dl" href="assets/fotografia/arq-criadora.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Expressão & cor</span><strong>Criadora</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/arq-cuidadora.jpg" data-cap="Cuidadora|Cuidado & afeto"><img src="assets/fotografia/arq-cuidadora.jpg" alt="Cuidadora com flor no cabelo" loading="lazy"><a class="dl" href="assets/fotografia/arq-cuidadora.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Cuidado & afeto</span><strong>Cuidadora</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/arq-companheira.jpg" data-cap="Companheira|O dia a dia"><img src="assets/fotografia/arq-companheira.jpg" alt="Companheira com flores no cabelo" loading="lazy"><a class="dl" href="assets/fotografia/arq-companheira.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>O dia a dia</span><strong>Companheira</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/arq-exploradora.jpg" data-cap="Exploradora|Movimento & liberdade"><img src="assets/fotografia/arq-exploradora.jpg" alt="Exploradora com acessório de cabelo" loading="lazy"><a class="dl" href="assets/fotografia/arq-exploradora.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Movimento & liberdade</span><strong>Exploradora</strong></div></div>
+    <div class="piece" data-full="assets/fotografia/arq-encantadora.jpg" data-cap="Encantadora|Beleza & presença"><img src="assets/fotografia/arq-encantadora.jpg" alt="Encantadora com tiara" loading="lazy"><a class="dl" href="assets/fotografia/arq-encantadora.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Beleza & presença</span><strong>Encantadora</strong></div></div>
   </div>
-  <p class="muted reveal" style="margin-top:22px;font-size:.86rem">Imagens de banco (Pexels, licença livre) usadas apenas como <strong>referência de direção de arte e casting</strong> — não são shootings oficiais da PRONTA.</p>
+  <p class="muted reveal" style="margin-top:22px;font-size:.86rem">Imagens de banco (Pexels, licença livre) usadas como <strong>referência de casting e direção de arte</strong> — cada mulher usando o acessório e ligada a um arquétipo. Não são shootings oficiais da PRONTA.</p>
 </section>
 
 <!-- ============ 08 PRODUTO & PDV ============ -->
@@ -2129,7 +2245,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
         <p class="mcap"><b>Feed</b> · 1080×1080</p>
       </div>
       <div>
-        <div class="story" style="background-image:url('assets/fotografia/sit-date.jpg')">
+        <div class="story" style="background-image:url('assets/fotografia/arq-heroina.jpg')">
           <div class="cshade"></div>
           <div class="gframe"></div>
           <div class="sbars"><i class="on"></i><i></i><i></i></div>
@@ -2141,7 +2257,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
         <p class="mcap"><b>Stories</b> · 1080×1920</p>
       </div>
       <div>
-        <div class="story reel" style="background-image:url('assets/fotografia/retrato-parda.jpg')">
+        <div class="story reel" style="background-image:url('assets/fotografia/arq-criadora.jpg')">
           <div class="cshade"></div>
           <div class="stop"><span class="cart" style="padding:4px 7px"><img src="assets/logo/pronta-dourado.png" alt="" style="height:14px"></span><b>pronta.oficial</b></div>
           <div class="rrail">
@@ -2282,7 +2398,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="clabel"><span class="cnum">5</span> Key visual & OOH</div>
     <h3>Campanha e mídia exterior</h3>
     <p class="cdesc">A ideia em grande, com moldura dourada, cartela do logo e a letra manuscrita.</p>
-    <div class="creative photo ooh" style="background-image:url('assets/fotografia/retrato-negra.jpg')">
+    <div class="creative photo ooh" style="background-image:url('assets/fotografia/arq-exploradora.jpg')">
       <div class="cshade" style="background:linear-gradient(90deg,rgba(74,30,107,.92),rgba(74,30,107,.45) 55%,transparent)"></div>
       <div class="gframe"></div>
       <svg class="swoosh" viewBox="0 0 200 200" style="width:200px;height:200px;right:-30px;bottom:-30px;opacity:.7"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
@@ -2616,7 +2732,7 @@ const io=new IntersectionObserver((entries)=>{
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // ===== scroll-spy: destaca capítulo ativo no menu e nos pontos =====
-const secs=['abertura','contexto','personas','estrategia','arquetipo','linguagem','identidade','sistema','grafismos','regras','foto','pdv','produto','aplicacoes','mockups','pecas','conteudo','exemplos','downloads','governanca'];
+const secs=['abertura','contexto','personas','habitos','estrategia','arquetipo','jornada','linguagem','identidade','sistema','grafismos','regras','foto','pdv','produto','aplicacoes','mockups','pecas','conteudo','exemplos','downloads','governanca'];
 const spy=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
