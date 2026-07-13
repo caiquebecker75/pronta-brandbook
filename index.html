@@ -693,11 +693,19 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .arch .adose .adt{height:6px;border-radius:100px;background:var(--lilas);overflow:hidden}
 .arch .adose .adf{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--roxo),var(--dourado))}
 /* dosagem mix */
-.mixbar{display:flex;height:44px;border-radius:12px;overflow:hidden;margin-top:30px;border:1px solid var(--linha)}
-.mixbar .seg{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.72rem;font-weight:700;text-align:center;padding:2px;overflow:hidden;white-space:nowrap}
-.mixleg{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px}
-.mixleg span{display:flex;align-items:center;gap:7px;font-size:.8rem;color:#4b3a56;font-weight:600}
-.mixleg i{width:12px;height:12px;border-radius:3px}
+.mixbar{display:flex;height:30px;border-radius:8px;overflow:hidden;margin-top:30px;border:1px solid var(--linha)}
+.mixbar .seg{display:block;height:100%}
+.mixrows{display:flex;flex-direction:column;gap:16px;margin-top:26px}
+.mixrow{display:grid;grid-template-columns:230px 1fr 46px;gap:18px;align-items:center}
+@media(max-width:640px){.mixrow{grid-template-columns:1fr auto;gap:6px 12px}.mixrow .rt{grid-column:1/-1}}
+.mixrow .rlab{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--roxo);font-size:.95rem}
+.mixrow .rlab i{width:13px;height:13px;border-radius:4px;flex:0 0 auto}
+.mixrow .rlab em{font-style:normal;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;font-weight:800;padding:3px 8px;border-radius:100px}
+.mixrow .rlab em.pri{background:var(--roxo)}
+.mixrow .rlab em.apo{background:var(--roxo-soft)}
+.mixrow .rt{height:12px;border-radius:100px;background:var(--lilas);overflow:hidden}
+.mixrow .rf{height:100%;border-radius:100px}
+.mixrow b{color:var(--roxo);font-weight:800;text-align:right;font-size:1rem}
 /* sombras */
 .shadows{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
 @media(max-width:640px){.shadows{grid-template-columns:1fr}}
@@ -1548,21 +1556,13 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="reveal" style="margin-top:56px">
     <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">A dosagem do mix</h3>
     <p class="muted">Quanto cada arquétipo aparece na marca. Os dois primários comandam; os de apoio dão o tempero.</p>
-    <div class="mixbar">
-      <div class="seg" style="width:30%;background:var(--roxo)">Heroína 30%</div>
-      <div class="seg" style="width:26%;background:var(--roxo-2)">Criadora 26%</div>
-      <div class="seg" style="width:18%;background:var(--roxo-soft);color:var(--roxo)">Companheira 18%</div>
-      <div class="seg" style="width:12%;background:var(--dourado);color:var(--roxo)">Cuidadora 12%</div>
-      <div class="seg" style="width:8%;background:var(--dourado-2);color:var(--roxo)">Explor. 8%</div>
-      <div class="seg" style="width:6%;background:var(--blush);color:var(--roxo)">Encant. 6%</div>
-    </div>
-    <div class="mixleg">
-      <span><i style="background:var(--roxo)"></i>Heroína do Cotidiano</span>
-      <span><i style="background:var(--roxo-2)"></i>Criadora</span>
-      <span><i style="background:var(--roxo-soft)"></i>Companheira</span>
-      <span><i style="background:var(--dourado)"></i>Cuidadora</span>
-      <span><i style="background:var(--dourado-2)"></i>Exploradora</span>
-      <span><i style="background:var(--blush)"></i>Encantadora</span>
+    <div class="mixrows">
+      <div class="mixrow"><span class="rlab"><i style="background:var(--roxo)"></i>Heroína do Cotidiano <em class="pri">primário</em></span><div class="rt"><div class="rf" style="width:30%;background:var(--roxo)"></div></div><b>30%</b></div>
+      <div class="mixrow"><span class="rlab"><i style="background:var(--roxo-2)"></i>Criadora <em class="pri">primário</em></span><div class="rt"><div class="rf" style="width:26%;background:var(--roxo-2)"></div></div><b>26%</b></div>
+      <div class="mixrow"><span class="rlab"><i style="background:var(--roxo-soft)"></i>Companheira <em class="apo">apoio</em></span><div class="rt"><div class="rf" style="width:18%;background:var(--roxo-soft)"></div></div><b>18%</b></div>
+      <div class="mixrow"><span class="rlab"><i style="background:var(--dourado)"></i>Cuidadora <em class="apo">apoio</em></span><div class="rt"><div class="rf" style="width:12%;background:var(--dourado)"></div></div><b>12%</b></div>
+      <div class="mixrow"><span class="rlab"><i style="background:var(--dourado-2)"></i>Exploradora <em class="apo">apoio</em></span><div class="rt"><div class="rf" style="width:8%;background:var(--dourado-2)"></div></div><b>8%</b></div>
+      <div class="mixrow"><span class="rlab"><i style="background:var(--blush)"></i>Encantadora <em class="apo">apoio</em></span><div class="rt"><div class="rf" style="width:6%;background:var(--blush)"></div></div><b>6%</b></div>
     </div>
   </div>
 
