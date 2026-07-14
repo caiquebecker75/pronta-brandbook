@@ -353,7 +353,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 @media print{
   @page{margin:14mm 12mm}
   html{scroll-behavior:auto}
-  nav.top,.progress,.dotnav,.totop,.overlay,.scrolldown,.pdf-hint,.menu-btn,.dl-row,.piece .dl,.il .il-dl,.lb-dl{display:none!important}
+  nav.top,.progress,.dotnav,.totop,.overlay,.scrolldown,.pdf-hint,.menu-btn,.dl-row,.piece .dl,.il .il-dl,.lb-dl,.sc-dl,.gcats{display:none!important}
   body{background:#fff}
   .reveal{opacity:1!important;transform:none!important;animation:none!important}
   .reveal.in *{animation:none!important}
@@ -706,6 +706,25 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .mixrow .rt{height:12px;border-radius:100px;background:var(--lilas);overflow:hidden}
 .mixrow .rf{height:100%;border-radius:100px}
 .mixrow b{color:var(--roxo);font-weight:800;text-align:right;font-size:1rem}
+
+/* ===== Direcionais de shooting ===== */
+.shoot{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+@media(max-width:1000px){.shoot{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.shoot{grid-template-columns:1fr}}
+.scard{border:1px solid var(--linha);border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column;transition:.35s}
+.scard.hide{display:none}
+.scard:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
+.sc-img{aspect-ratio:3/4;background-size:cover;background-position:center;position:relative;cursor:pointer}
+.sc-n{position:absolute;top:10px;left:10px;background:var(--roxo);color:#fff;font-weight:800;font-size:.72rem;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--ouro);z-index:2}
+.sc-dl{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:rgba(252,250,248,.92);color:var(--roxo);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s;z-index:2}
+.sc-img:hover .sc-dl{opacity:1}
+.sc-dl:hover{background:var(--roxo);color:#fff}
+.sc-dl svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.sc-body{padding:15px 16px 18px;display:flex;flex-direction:column;gap:7px}
+.sc-body .scat{font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--roxo);background:var(--lilas);padding:3px 9px;border-radius:100px;align-self:flex-start}
+.sc-body h4{font-family:var(--serif);color:var(--roxo);font-size:1.05rem;line-height:1.15;margin:2px 0 4px}
+.sc-body .dl-line{font-size:.78rem;color:#4b3a56;line-height:1.35;padding-left:58px;position:relative}
+.sc-body .dl-line b{position:absolute;left:0;top:1px;font-size:.58rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--dourado)}
 /* sombras */
 .shadows{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
 @media(max-width:640px){.shadows{grid-template-columns:1fr}}
@@ -2056,6 +2075,449 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="piece" data-full="assets/fotografia/arq-companheira.jpg" data-cap="Companheira|O dia a dia"><img src="assets/fotografia/arq-companheira.jpg" alt="Companheira com flores no cabelo" loading="lazy"><a class="dl" href="assets/fotografia/arq-companheira.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>O dia a dia</span><strong>Companheira</strong></div></div>
   </div>
   <p class="muted reveal" style="margin-top:22px;font-size:.86rem">Casting selecionado pela marca — cada foto ligada a um arquétipo (Júlia · Heroína, Manu · Criadora, Carla · Cuidadora, Rosa · Companheira). Exploradora e Encantadora aguardam definição de imagem.</p>
+
+  <div class="reveal mt" style="margin-top:66px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">Direcionais de shooting</h3>
+    <p class="muted">A biblioteca de referência selecionada pela marca — 53 imagens. Cada foto traz o <b>olhar</b> (enquadramento e pose), a <b>técnica</b> (luz, lente, cor) e a <b>essência</b> (o que comunicar), para orientar os próximos ensaios. Filtre por tipo de shot; clique para ampliar; baixe o que precisar.</p>
+  </div>
+  <div class="gcats reveal" id="shootcats">
+    <button class="gcat on" data-f="all">Todas</button>
+    <button class="gcat" data-f="retrato">Retrato</button>
+    <button class="gcat" data-f="penteado">Penteado & detalhe</button>
+    <button class="gcat" data-f="gesto">Gesto & movimento</button>
+    <button class="gcat" data-f="expressao">Expressão & cor</button>
+    <button class="gcat" data-f="editorial">Editorial</button>
+    <button class="gcat" data-f="lifestyle">Vida real</button>
+    <button class="gcat" data-f="cuidado">Cuidado & família</button>
+    <button class="gcat" data-f="still">Still</button>
+  </div>
+  <div class="shoot reveal" id="shootgrid">
+    <div class="scard" data-cat="retrato">
+      <div class="sc-img" data-full="assets/fotografia/shooting/01.jpg" data-cap="Retrato de outono|Retrato" style="background-image:url('assets/fotografia/shooting/01.jpg')"><span class="sc-n">01</span><a class="sc-dl" href="assets/fotografia/shooting/01.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Retrato</span><h4>Retrato de outono</h4>
+        <p class="dl-line"><b>Olhar</b>Meio-perfil, queixo baixo, olhar sereno na câmera.</p>
+        <p class="dl-line"><b>Técnica</b>Luz difusa de outono, fundo verde desfocado (f/1.8), tons terrosos.</p>
+        <p class="dl-line"><b>Essência</b>Beleza real e madura — o acessório natural integra à cena.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="gesto">
+      <div class="sc-img" data-full="assets/fotografia/shooting/02.jpg" data-cap="O gesto de se arrumar|Gesto" style="background-image:url('assets/fotografia/shooting/02.jpg')"><span class="sc-n">02</span><a class="sc-dl" href="assets/fotografia/shooting/02.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Gesto</span><h4>O gesto de se arrumar</h4>
+        <p class="dl-line"><b>Olhar</b>3/4, mão ajeitando o rabo de cavalo, olhar ao longe.</p>
+        <p class="dl-line"><b>Técnica</b>Luz de janela suave, branco sobre fundo urbano claro.</p>
+        <p class="dl-line"><b>Essência</b>A pressa boa do dia — prática e leve.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="expressao">
+      <div class="sc-img" data-full="assets/fotografia/shooting/03.jpg" data-cap="Coleção na lateral|Expressão" style="background-image:url('assets/fotografia/shooting/03.jpg')"><span class="sc-n">03</span><a class="sc-dl" href="assets/fotografia/shooting/03.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Expressão</span><h4>Coleção na lateral</h4>
+        <p class="dl-line"><b>Olhar</b>Close no rosto, perfil parcial, presilhas em fila.</p>
+        <p class="dl-line"><b>Técnica</b>Sol direto marcando a textura do cacho, cor saturada.</p>
+        <p class="dl-line"><b>Essência</b>Expressão e coleção — o acessório como assinatura.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="retrato">
+      <div class="sc-img" data-full="assets/fotografia/shooting/04.jpg" data-cap="Glam acessível|Retrato" style="background-image:url('assets/fotografia/shooting/04.jpg')"><span class="sc-n">04</span><a class="sc-dl" href="assets/fotografia/shooting/04.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Retrato</span><h4>Glam acessível</h4>
+        <p class="dl-line"><b>Olhar</b>Rosto na câmera, mão no coque, sobrancelha marcada.</p>
+        <p class="dl-line"><b>Técnica</b>Luz interna quente, make vinho, branco amplo.</p>
+        <p class="dl-line"><b>Essência</b>Presença sem esforço.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="lifestyle">
+      <div class="sc-img" data-full="assets/fotografia/shooting/05.jpg" data-cap="Beleza no caminho|Vida real" style="background-image:url('assets/fotografia/shooting/05.jpg')"><span class="sc-n">05</span><a class="sc-dl" href="assets/fotografia/shooting/05.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Vida real</span><h4>Beleza no caminho</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, meio-coque com scrunchie, paisagem à frente.</p>
+        <p class="dl-line"><b>Técnica</b>Plano aberto, luz de fim de tarde, cidade ao fundo.</p>
+        <p class="dl-line"><b>Essência</b>Vida real em movimento.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="retrato">
+      <div class="sc-img" data-full="assets/fotografia/shooting/06.jpg" data-cap="Confiança tranquila|Retrato" style="background-image:url('assets/fotografia/shooting/06.jpg')"><span class="sc-n">06</span><a class="sc-dl" href="assets/fotografia/shooting/06.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Retrato</span><h4>Confiança tranquila</h4>
+        <p class="dl-line"><b>Olhar</b>Frente, olhar direto, cabelo com meio-preso.</p>
+        <p class="dl-line"><b>Técnica</b>Luz suave frontal, gola alta, tons neutros.</p>
+        <p class="dl-line"><b>Essência</b>Presença cotidiana, sem cobrança.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/07.jpg" data-cap="O laço em foco|Penteado" style="background-image:url('assets/fotografia/shooting/07.jpg')"><span class="sc-n">07</span><a class="sc-dl" href="assets/fotografia/shooting/07.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>O laço em foco</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, foco total no laço creme sobre o cabelo.</p>
+        <p class="dl-line"><b>Técnica</b>Close, luz difusa, fundo natural desfocado.</p>
+        <p class="dl-line"><b>Essência</b>O detalhe que muda o look.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="retrato">
+      <div class="sc-img" data-full="assets/fotografia/shooting/08.jpg" data-cap="Gente como a gente|Retrato" style="background-image:url('assets/fotografia/shooting/08.jpg')"><span class="sc-n">08</span><a class="sc-dl" href="assets/fotografia/shooting/08.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Retrato</span><h4>Gente como a gente</h4>
+        <p class="dl-line"><b>Olhar</b>Frontal, braços cruzados, atitude leve, clip discreto.</p>
+        <p class="dl-line"><b>Técnica</b>Luz urbana suave, azul + terracota.</p>
+        <p class="dl-line"><b>Essência</b>Proximidade com estilo.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="gesto">
+      <div class="sc-img" data-full="assets/fotografia/shooting/09.jpg" data-cap="Espelho rápido|Gesto" style="background-image:url('assets/fotografia/shooting/09.jpg')"><span class="sc-n">09</span><a class="sc-dl" href="assets/fotografia/shooting/09.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Gesto</span><h4>Espelho rápido</h4>
+        <p class="dl-line"><b>Olhar</b>3/4, mão no cabelo, olhar lateral.</p>
+        <p class="dl-line"><b>Técnica</b>Luz natural, camisa branca, fundo de cidade.</p>
+        <p class="dl-line"><b>Essência</b>Antes de sair, no automático bonito.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/10.jpg" data-cap="Simples com presença|Penteado" style="background-image:url('assets/fotografia/shooting/10.jpg')"><span class="sc-n">10</span><a class="sc-dl" href="assets/fotografia/shooting/10.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>Simples com presença</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, rabo baixo, ombro à mostra.</p>
+        <p class="dl-line"><b>Técnica</b>Rua desfocada, verde vibrante, luz natural.</p>
+        <p class="dl-line"><b>Essência</b>Menos é mais.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="gesto">
+      <div class="sc-img" data-full="assets/fotografia/shooting/11.jpg" data-cap="Leveza e afeto|Gesto" style="background-image:url('assets/fotografia/shooting/11.jpg')"><span class="sc-n">11</span><a class="sc-dl" href="assets/fotografia/shooting/11.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Gesto</span><h4>Leveza e afeto</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, mãos formando um coração acima da cabeça.</p>
+        <p class="dl-line"><b>Técnica</b>Plano aberto, luz de rua, branco aconchegante.</p>
+        <p class="dl-line"><b>Essência</b>Beleza que sorri.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="gesto">
+      <div class="sc-img" data-full="assets/fotografia/shooting/12.jpg" data-cap="Contraluz e movimento|Gesto" style="background-image:url('assets/fotografia/shooting/12.jpg')"><span class="sc-n">12</span><a class="sc-dl" href="assets/fotografia/shooting/12.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Gesto</span><h4>Contraluz e movimento</h4>
+        <p class="dl-line"><b>Olhar</b>Perfil, ombro nu, top-knot com scrunchie colorido.</p>
+        <p class="dl-line"><b>Técnica</b>Contraluz de sol, brilho nas bordas dos fios.</p>
+        <p class="dl-line"><b>Essência</b>Sensualidade leve e viva.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/13.jpg" data-cap="Acessório autoral|Penteado" style="background-image:url('assets/fotografia/shooting/13.jpg')"><span class="sc-n">13</span><a class="sc-dl" href="assets/fotografia/shooting/13.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>Acessório autoral</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, foco no clip de pena e cordão sobre o ruivo.</p>
+        <p class="dl-line"><b>Técnica</b>Close, luz natural, textura de fios.</p>
+        <p class="dl-line"><b>Essência</b>O detalhe como arte.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="expressao">
+      <div class="sc-img" data-full="assets/fotografia/shooting/14.jpg" data-cap="Pausa florida|Expressão" style="background-image:url('assets/fotografia/shooting/14.jpg')"><span class="sc-n">14</span><a class="sc-dl" href="assets/fotografia/shooting/14.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Expressão</span><h4>Pausa florida</h4>
+        <p class="dl-line"><b>Olhar</b>Perfil, olhos fechados, flor amarela no cabelo.</p>
+        <p class="dl-line"><b>Técnica</b>Luz natural, fundo urbano quente, foco no rosto.</p>
+        <p class="dl-line"><b>Essência</b>Delicadeza e contemplação.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="gesto">
+      <div class="sc-img" data-full="assets/fotografia/shooting/15.jpg" data-cap="Vitalidade|Gesto" style="background-image:url('assets/fotografia/shooting/15.jpg')"><span class="sc-n">15</span><a class="sc-dl" href="assets/fotografia/shooting/15.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Gesto</span><h4>Vitalidade</h4>
+        <p class="dl-line"><b>Olhar</b>Rosto para cima, mão jogando o cabelo.</p>
+        <p class="dl-line"><b>Técnica</b>Luz suave, fundo claro, movimento congelado.</p>
+        <p class="dl-line"><b>Essência</b>Liberdade e energia.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/16.jpg" data-cap="O penteado possível|Penteado" style="background-image:url('assets/fotografia/shooting/16.jpg')"><span class="sc-n">16</span><a class="sc-dl" href="assets/fotografia/shooting/16.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>O penteado possível</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, coque desfeito no topo.</p>
+        <p class="dl-line"><b>Técnica</b>Fundo neutro claro, luz difusa.</p>
+        <p class="dl-line"><b>Essência</b>Real, sem perfeição.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/17.jpg" data-cap="Prender e seguir|Penteado" style="background-image:url('assets/fotografia/shooting/17.jpg')"><span class="sc-n">17</span><a class="sc-dl" href="assets/fotografia/shooting/17.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>Prender e seguir</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, mãos ajustando o scrunchie no rabo.</p>
+        <p class="dl-line"><b>Técnica</b>Fundo claro, tons pêssego, foco no gesto.</p>
+        <p class="dl-line"><b>Essência</b>O gesto que resolve.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/18.jpg" data-cap="Elegância mínima|Penteado" style="background-image:url('assets/fotografia/shooting/18.jpg')"><span class="sc-n">18</span><a class="sc-dl" href="assets/fotografia/shooting/18.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>Elegância mínima</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, rabo liso com laço rosa, ombro nu.</p>
+        <p class="dl-line"><b>Técnica</b>Minimal, fundo claro, luz limpa.</p>
+        <p class="dl-line"><b>Essência</b>O laço como foco.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/19.jpg" data-cap="Trança do dia a dia|Penteado" style="background-image:url('assets/fotografia/shooting/19.jpg')"><span class="sc-n">19</span><a class="sc-dl" href="assets/fotografia/shooting/19.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>Trança do dia a dia</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, meio-preso trançado, ondas.</p>
+        <p class="dl-line"><b>Técnica</b>Rua com bokeh, luz dourada.</p>
+        <p class="dl-line"><b>Essência</b>Elaborado, mas possível.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="retrato">
+      <div class="sc-img" data-full="assets/fotografia/shooting/20.jpg" data-cap="Alegria espontânea|Retrato" style="background-image:url('assets/fotografia/shooting/20.jpg')"><span class="sc-n">20</span><a class="sc-dl" href="assets/fotografia/shooting/20.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Retrato</span><h4>Alegria espontânea</h4>
+        <p class="dl-line"><b>Olhar</b>Perfil sorrindo, clip discreto.</p>
+        <p class="dl-line"><b>Técnica</b>Luz natural, fundo urbano, branco.</p>
+        <p class="dl-line"><b>Essência</b>Riso real.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="gesto">
+      <div class="sc-img" data-full="assets/fotografia/shooting/21.jpg" data-cap="Atitude urbana|Gesto" style="background-image:url('assets/fotografia/shooting/21.jpg')"><span class="sc-n">21</span><a class="sc-dl" href="assets/fotografia/shooting/21.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Gesto</span><h4>Atitude urbana</h4>
+        <p class="dl-line"><b>Olhar</b>Mão na cabeça, lenço teal, olhar na câmera.</p>
+        <p class="dl-line"><b>Técnica</b>Luz de parede, preto + teal, sombra suave.</p>
+        <p class="dl-line"><b>Essência</b>Estilo e presença.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/22.jpg" data-cap="Movimento na cidade|Penteado" style="background-image:url('assets/fotografia/shooting/22.jpg')"><span class="sc-n">22</span><a class="sc-dl" href="assets/fotografia/shooting/22.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>Movimento na cidade</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, meio-coque, ondas ruivas, rua.</p>
+        <p class="dl-line"><b>Técnica</b>Plano médio, luz natural, cidade.</p>
+        <p class="dl-line"><b>Essência</b>Beleza que atravessa o dia.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="expressao">
+      <div class="sc-img" data-full="assets/fotografia/shooting/23.jpg" data-cap="Editorial introspectivo|Expressão" style="background-image:url('assets/fotografia/shooting/23.jpg')"><span class="sc-n">23</span><a class="sc-dl" href="assets/fotografia/shooting/23.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Expressão</span><h4>Editorial introspectivo</h4>
+        <p class="dl-line"><b>Olhar</b>Rosto sério, luz recortada na janela.</p>
+        <p class="dl-line"><b>Técnica</b>Luz dramática lateral, sombras, brinco.</p>
+        <p class="dl-line"><b>Essência</b>Presença e profundidade.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="expressao">
+      <div class="sc-img" data-full="assets/fotografia/shooting/24.jpg" data-cap="Jovem e lúdica|Expressão" style="background-image:url('assets/fotografia/shooting/24.jpg')"><span class="sc-n">24</span><a class="sc-dl" href="assets/fotografia/shooting/24.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Expressão</span><h4>Jovem e lúdica</h4>
+        <p class="dl-line"><b>Olhar</b>Frente, sorriso, marias-chiquinhas com miçangas.</p>
+        <p class="dl-line"><b>Técnica</b>Luz clara, cores vivas, jeans.</p>
+        <p class="dl-line"><b>Essência</b>Coleção, cor e diversão.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="lifestyle">
+      <div class="sc-img" data-full="assets/fotografia/shooting/25.jpg" data-cap="Cuidado plural|Vida real" style="background-image:url('assets/fotografia/shooting/25.jpg')"><span class="sc-n">25</span><a class="sc-dl" href="assets/fotografia/shooting/25.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Vida real</span><h4>Cuidado plural</h4>
+        <p class="dl-line"><b>Olhar</b>Perfil, mão ajeitando a flor no coque.</p>
+        <p class="dl-line"><b>Técnica</b>Luz natural urbana, creme e verde.</p>
+        <p class="dl-line"><b>Essência</b>Beleza diversa e afetuosa.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="editorial">
+      <div class="sc-img" data-full="assets/fotografia/shooting/26.jpg" data-cap="Minimalismo|Editorial" style="background-image:url('assets/fotografia/shooting/26.jpg')"><span class="sc-n">26</span><a class="sc-dl" href="assets/fotografia/shooting/26.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Editorial</span><h4>Minimalismo</h4>
+        <p class="dl-line"><b>Olhar</b>Costas/perfil, cabelo liso longo, vitrine.</p>
+        <p class="dl-line"><b>Técnica</b>Luz de rua, preto, reflexos.</p>
+        <p class="dl-line"><b>Essência</b>Elegância silenciosa.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="editorial">
+      <div class="sc-img" data-full="assets/fotografia/shooting/27.jpg" data-cap="Mood editorial|Editorial" style="background-image:url('assets/fotografia/shooting/27.jpg')"><span class="sc-n">27</span><a class="sc-dl" href="assets/fotografia/shooting/27.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Editorial</span><h4>Mood editorial</h4>
+        <p class="dl-line"><b>Olhar</b>Perfil, top-knot, junto a superfície escura.</p>
+        <p class="dl-line"><b>Técnica</b>Contraste alto, mar ao fundo, luz fria.</p>
+        <p class="dl-line"><b>Essência</b>Silêncio e sofisticação.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="retrato">
+      <div class="sc-img" data-full="assets/fotografia/shooting/28.jpg" data-cap="Aproximável|Retrato" style="background-image:url('assets/fotografia/shooting/28.jpg')"><span class="sc-n">28</span><a class="sc-dl" href="assets/fotografia/shooting/28.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Retrato</span><h4>Aproximável</h4>
+        <p class="dl-line"><b>Olhar</b>Frente, sorriso aberto, coque alto solto.</p>
+        <p class="dl-line"><b>Técnica</b>Fundo branco clean, luz frontal.</p>
+        <p class="dl-line"><b>Essência</b>Companheira — do bem.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="gesto">
+      <div class="sc-img" data-full="assets/fotografia/shooting/29.jpg" data-cap="Arrumar no meio do dia|Gesto" style="background-image:url('assets/fotografia/shooting/29.jpg')"><span class="sc-n">29</span><a class="sc-dl" href="assets/fotografia/shooting/29.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Gesto</span><h4>Arrumar no meio do dia</h4>
+        <p class="dl-line"><b>Olhar</b>Perfil, mãos no coque, jeans, rooftop.</p>
+        <p class="dl-line"><b>Técnica</b>Luz natural, cidade ao fundo.</p>
+        <p class="dl-line"><b>Essência</b>O corre com beleza.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="gesto">
+      <div class="sc-img" data-full="assets/fotografia/shooting/30.jpg" data-cap="Passo a passo|Gesto" style="background-image:url('assets/fotografia/shooting/30.jpg')"><span class="sc-n">30</span><a class="sc-dl" href="assets/fotografia/shooting/30.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Gesto</span><h4>Passo a passo</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, mãos prendendo com scrunchie floral.</p>
+        <p class="dl-line"><b>Técnica</b>Fundo neutro, foco no gesto e no acessório.</p>
+        <p class="dl-line"><b>Essência</b>O como fazer — tutorial.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="editorial">
+      <div class="sc-img" data-full="assets/fotografia/shooting/31.jpg" data-cap="Chique urbano|Editorial" style="background-image:url('assets/fotografia/shooting/31.jpg')"><span class="sc-n">31</span><a class="sc-dl" href="assets/fotografia/shooting/31.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Editorial</span><h4>Chique urbano</h4>
+        <p class="dl-line"><b>Olhar</b>Perfil, óculos escuros, coque baixo.</p>
+        <p class="dl-line"><b>Técnica</b>Luz de sol, blazer preto, arquitetura.</p>
+        <p class="dl-line"><b>Essência</b>Poder e estilo.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="cuidado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/32.jpg" data-cap="Mãe e filha|Cuidado" style="background-image:url('assets/fotografia/shooting/32.jpg')"><span class="sc-n">32</span><a class="sc-dl" href="assets/fotografia/shooting/32.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Cuidado</span><h4>Mãe e filha</h4>
+        <p class="dl-line"><b>Olhar</b>Mãe prendendo o cabelo da filha (laço vermelho).</p>
+        <p class="dl-line"><b>Técnica</b>Luz suave, foco nas mãos e no laço.</p>
+        <p class="dl-line"><b>Essência</b>Cuidado e vínculo.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/33.jpg" data-cap="Elegância natural|Penteado" style="background-image:url('assets/fotografia/shooting/33.jpg')"><span class="sc-n">33</span><a class="sc-dl" href="assets/fotografia/shooting/33.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>Elegância natural</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, clip discreto, ombro nu, verde.</p>
+        <p class="dl-line"><b>Técnica</b>Fundo verde escuro, luz suave.</p>
+        <p class="dl-line"><b>Essência</b>Beleza sem esforço.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="editorial">
+      <div class="sc-img" data-full="assets/fotografia/shooting/34.jpg" data-cap="Ocasião especial|Editorial" style="background-image:url('assets/fotografia/shooting/34.jpg')"><span class="sc-n">34</span><a class="sc-dl" href="assets/fotografia/shooting/34.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Editorial</span><h4>Ocasião especial</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, penteado preso elaborado.</p>
+        <p class="dl-line"><b>Técnica</b>Luz de janela, cetim azul, margaridas.</p>
+        <p class="dl-line"><b>Essência</b>Premium e desejo.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/35.jpg" data-cap="Delicadeza|Penteado" style="background-image:url('assets/fotografia/shooting/35.jpg')"><span class="sc-n">35</span><a class="sc-dl" href="assets/fotografia/shooting/35.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>Delicadeza</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, coque desfeito, ombro nu.</p>
+        <p class="dl-line"><b>Técnica</b>Fundo claro, luz suave, branco.</p>
+        <p class="dl-line"><b>Essência</b>Naturalidade.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/36.jpg" data-cap="Textura ruiva|Penteado" style="background-image:url('assets/fotografia/shooting/36.jpg')"><span class="sc-n">36</span><a class="sc-dl" href="assets/fotografia/shooting/36.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>Textura ruiva</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, meio-preso trançado com scrunchie.</p>
+        <p class="dl-line"><b>Técnica</b>Close, textura de fios, luz quente.</p>
+        <p class="dl-line"><b>Essência</b>Detalhe e movimento.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="lifestyle">
+      <div class="sc-img" data-full="assets/fotografia/shooting/37.jpg" data-cap="Autonomia|Vida real" style="background-image:url('assets/fotografia/shooting/37.jpg')"><span class="sc-n">37</span><a class="sc-dl" href="assets/fotografia/shooting/37.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Vida real</span><h4>Autonomia</h4>
+        <p class="dl-line"><b>Olhar</b>Perfil, mochila, scrunchie, caminhando.</p>
+        <p class="dl-line"><b>Técnica</b>Luz natural, pedra e verde.</p>
+        <p class="dl-line"><b>Essência</b>Movimento e viagem.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="editorial">
+      <div class="sc-img" data-full="assets/fotografia/shooting/38.jpg" data-cap="Poético e íntimo|Editorial" style="background-image:url('assets/fotografia/shooting/38.jpg')"><span class="sc-n">38</span><a class="sc-dl" href="assets/fotografia/shooting/38.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Editorial</span><h4>Poético e íntimo</h4>
+        <p class="dl-line"><b>Olhar</b>Rosto baixo, coque, contraluz nos fios.</p>
+        <p class="dl-line"><b>Técnica</b>Contraluz forte, brilho e sombra.</p>
+        <p class="dl-line"><b>Essência</b>Beleza contemplativa.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="editorial">
+      <div class="sc-img" data-full="assets/fotografia/shooting/39.jpg" data-cap="Encantadora|Editorial" style="background-image:url('assets/fotografia/shooting/39.jpg')"><span class="sc-n">39</span><a class="sc-dl" href="assets/fotografia/shooting/39.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Editorial</span><h4>Encantadora</h4>
+        <p class="dl-line"><b>Olhar</b>Frente, olhar forte, ondas longas.</p>
+        <p class="dl-line"><b>Técnica</b>Fundo verde escuro, luz suave, batom marcado.</p>
+        <p class="dl-line"><b>Essência</b>Beleza e presença.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="gesto">
+      <div class="sc-img" data-full="assets/fotografia/shooting/40.jpg" data-cap="Tutorial do coque|Gesto" style="background-image:url('assets/fotografia/shooting/40.jpg')"><span class="sc-n">40</span><a class="sc-dl" href="assets/fotografia/shooting/40.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Gesto</span><h4>Tutorial do coque</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, mãos fazendo o coque/trança.</p>
+        <p class="dl-line"><b>Técnica</b>Fundo claro, foco no gesto.</p>
+        <p class="dl-line"><b>Essência</b>Mostrar o passo.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="gesto">
+      <div class="sc-img" data-full="assets/fotografia/shooting/41.jpg" data-cap="Produto em uso|Gesto" style="background-image:url('assets/fotografia/shooting/41.jpg')"><span class="sc-n">41</span><a class="sc-dl" href="assets/fotografia/shooting/41.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Gesto</span><h4>Produto em uso</h4>
+        <p class="dl-line"><b>Olhar</b>Mãos colocando a piranha no cabelo.</p>
+        <p class="dl-line"><b>Técnica</b>Fundo claro, close no acessório em uso.</p>
+        <p class="dl-line"><b>Essência</b>Demonstração clara.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="editorial">
+      <div class="sc-img" data-full="assets/fotografia/shooting/42.jpg" data-cap="Festivo|Editorial" style="background-image:url('assets/fotografia/shooting/42.jpg')"><span class="sc-n">42</span><a class="sc-dl" href="assets/fotografia/shooting/42.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Editorial</span><h4>Festivo</h4>
+        <p class="dl-line"><b>Olhar</b>Perfil, laço creme, luzes ao fundo.</p>
+        <p class="dl-line"><b>Técnica</b>Bokeh de luzes, luz quente.</p>
+        <p class="dl-line"><b>Essência</b>Ocasião e brilho.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="cuidado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/43.jpg" data-cap="Cumplicidade|Cuidado" style="background-image:url('assets/fotografia/shooting/43.jpg')"><span class="sc-n">43</span><a class="sc-dl" href="assets/fotografia/shooting/43.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Cuidado</span><h4>Cumplicidade</h4>
+        <p class="dl-line"><b>Olhar</b>Uma ajeita o clip da outra.</p>
+        <p class="dl-line"><b>Técnica</b>Luz natural, foco nas mãos.</p>
+        <p class="dl-line"><b>Essência</b>Comunidade e amizade.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/44.jpg" data-cap="Romântico|Penteado" style="background-image:url('assets/fotografia/shooting/44.jpg')"><span class="sc-n">44</span><a class="sc-dl" href="assets/fotografia/shooting/44.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>Romântico</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, meio-preso com laço branco.</p>
+        <p class="dl-line"><b>Técnica</b>Ambiente vintage, luz quente.</p>
+        <p class="dl-line"><b>Essência</b>Delicadeza afetiva.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="editorial">
+      <div class="sc-img" data-full="assets/fotografia/shooting/45.jpg" data-cap="Key visual|Editorial" style="background-image:url('assets/fotografia/shooting/45.jpg')"><span class="sc-n">45</span><a class="sc-dl" href="assets/fotografia/shooting/45.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Editorial</span><h4>Key visual</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, corredor ornamentado, cabelo longo.</p>
+        <p class="dl-line"><b>Técnica</b>Simetria, perspectiva, luz dramática.</p>
+        <p class="dl-line"><b>Essência</b>Grandeza e mistério.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="still">
+      <div class="sc-img" data-full="assets/fotografia/shooting/46.jpg" data-cap="Still de produto|Still" style="background-image:url('assets/fotografia/shooting/46.jpg')"><span class="sc-n">46</span><a class="sc-dl" href="assets/fotografia/shooting/46.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Still</span><h4>Still de produto</h4>
+        <p class="dl-line"><b>Olhar</b>Piranha dourada, quartzo e flor.</p>
+        <p class="dl-line"><b>Técnica</b>Luz suave, superfície clara, close.</p>
+        <p class="dl-line"><b>Essência</b>Objeto de desejo.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="cuidado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/47.jpg" data-cap="Infantil|Cuidado" style="background-image:url('assets/fotografia/shooting/47.jpg')"><span class="sc-n">47</span><a class="sc-dl" href="assets/fotografia/shooting/47.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Cuidado</span><h4>Infantil</h4>
+        <p class="dl-line"><b>Olhar</b>Criança tendo o cabelo preso.</p>
+        <p class="dl-line"><b>Técnica</b>Luz suave, foco no gesto de cuidado.</p>
+        <p class="dl-line"><b>Essência</b>Não machuca — afeto.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="lifestyle">
+      <div class="sc-img" data-full="assets/fotografia/shooting/48.jpg" data-cap="Conforto e rotina|Vida real" style="background-image:url('assets/fotografia/shooting/48.jpg')"><span class="sc-n">48</span><a class="sc-dl" href="assets/fotografia/shooting/48.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Vida real</span><h4>Conforto e rotina</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, coque baixo com clip azul, tricô.</p>
+        <p class="dl-line"><b>Técnica</b>Luz caseira, planta, aconchego.</p>
+        <p class="dl-line"><b>Essência</b>Beleza do dia comum.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="expressao">
+      <div class="sc-img" data-full="assets/fotografia/shooting/49.jpg" data-cap="Beleza florida|Expressão" style="background-image:url('assets/fotografia/shooting/49.jpg')"><span class="sc-n">49</span><a class="sc-dl" href="assets/fotografia/shooting/49.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Expressão</span><h4>Beleza florida</h4>
+        <p class="dl-line"><b>Olhar</b>Sentada, flor no cabelo, flores vermelhas.</p>
+        <p class="dl-line"><b>Técnica</b>Cor vibrante, luz natural.</p>
+        <p class="dl-line"><b>Essência</b>Vibrante e romântica.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="lifestyle">
+      <div class="sc-img" data-full="assets/fotografia/shooting/50.jpg" data-cap="Serenidade|Vida real" style="background-image:url('assets/fotografia/shooting/50.jpg')"><span class="sc-n">50</span><a class="sc-dl" href="assets/fotografia/shooting/50.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Vida real</span><h4>Serenidade</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, rabo com clip de pérola, mar.</p>
+        <p class="dl-line"><b>Técnica</b>Luz de fim de tarde, tons suaves.</p>
+        <p class="dl-line"><b>Essência</b>Frescor e calma.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="lifestyle">
+      <div class="sc-img" data-full="assets/fotografia/shooting/51.jpg" data-cap="Exploração|Vida real" style="background-image:url('assets/fotografia/shooting/51.jpg')"><span class="sc-n">51</span><a class="sc-dl" href="assets/fotografia/shooting/51.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Vida real</span><h4>Exploração</h4>
+        <p class="dl-line"><b>Olhar</b>Costas, braços erguidos, lenço no rabo, montanha.</p>
+        <p class="dl-line"><b>Técnica</b>Plano aberto, natureza, luz fria.</p>
+        <p class="dl-line"><b>Essência</b>Liberdade e caminho.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="penteado">
+      <div class="sc-img" data-full="assets/fotografia/shooting/52.jpg" data-cap="Detalhe do acessório|Penteado" style="background-image:url('assets/fotografia/shooting/52.jpg')"><span class="sc-n">52</span><a class="sc-dl" href="assets/fotografia/shooting/52.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Penteado</span><h4>Detalhe do acessório</h4>
+        <p class="dl-line"><b>Olhar</b>Perfil/nuca, piranha no coque, ombro nu.</p>
+        <p class="dl-line"><b>Técnica</b>Fundo neutro, luz suave, minimal.</p>
+        <p class="dl-line"><b>Essência</b>O acabamento em foco.</p>
+      </div>
+    </div>
+    <div class="scard" data-cat="expressao">
+      <div class="sc-img" data-full="assets/fotografia/shooting/53.jpg" data-cap="Cor e vento|Expressão" style="background-image:url('assets/fotografia/shooting/53.jpg')"><span class="sc-n">53</span><a class="sc-dl" href="assets/fotografia/shooting/53.jpg" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a></div>
+      <div class="sc-body"><span class="scat">Expressão</span><h4>Cor e vento</h4>
+        <p class="dl-line"><b>Olhar</b>Nuca/rabo com scrunchie rosa, vento.</p>
+        <p class="dl-line"><b>Técnica</b>Luz natural, água ao fundo, movimento.</p>
+        <p class="dl-line"><b>Essência</b>Textura e vida real.</p>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <!-- ============ 08 PRODUTO & PDV ============ -->
@@ -2836,6 +3298,24 @@ addEventListener('mousemove',e=>{
     const io2=new IntersectionObserver((es)=>{es.forEach(e=>{ if(e.isIntersecting){ fillMeters(panels[0]); io2.disconnect(); } })},{threshold:.15});
     io2.observe(pe);
   }
+})();
+// ===== Direcionais de shooting: filtro + lightbox =====
+(function(){
+  const cards=[...document.querySelectorAll('#shootgrid .scard')];
+  if(!cards.length) return;
+  document.querySelectorAll('#shootcats .gcat').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('#shootcats .gcat').forEach(b=>b.classList.remove('on'));
+      btn.classList.add('on');
+      const f=btn.dataset.f;
+      cards.forEach(c=>c.classList.toggle('hide', f!=='all' && c.dataset.cat!==f));
+    });
+  });
+  document.querySelectorAll('#shootgrid .sc-img').forEach(el=>el.addEventListener('click',()=>{
+    lbList=[...document.querySelectorAll('#shootgrid .scard:not(.hide) .sc-img')];
+    lbI=lbList.indexOf(el); renderLb();
+    lb.classList.add('open'); document.body.style.overflow='hidden';
+  }));
 })();
 </script>
 </body>
