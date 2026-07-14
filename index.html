@@ -21,8 +21,8 @@
   --branco:#FCFAF8;
   --tinta:#2C1B2B;
   --cinza:#8A8091;
-  --linha:rgba(74,30,107.14);
-  --sombra:0 24px 60px -30px rgba(74,30,107.4);
+  --linha:rgba(74,30,107,.14);
+  --sombra:0 24px 60px -30px rgba(74,30,107,.4);
   --serif:'Marcellus',Georgia,serif;
   --sans:'Poppins',system-ui,sans-serif;
   --script:'Dancing Script',cursive;
@@ -44,7 +44,7 @@ body{
 .progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--roxo),var(--dourado));z-index:9999;width:0%;transition:width .1s}
 
 /* nav */
-nav.top{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;backdrop-filter:blur(14px);background:rgba(252,250,247.72);border-bottom:1px solid var(--linha);transition:.4s}
+nav.top{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;backdrop-filter:blur(14px);background:rgba(252,250,247,.72);border-bottom:1px solid var(--linha);transition:.4s}
 nav.top .brand{font-family:var(--sans);font-weight:800;letter-spacing:.42em;font-size:15px;color:var(--roxo)}
 nav.top .brand span{color:var(--dourado)}
 nav.top .menu{display:flex;gap:26px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
@@ -57,7 +57,7 @@ nav.top .menu a:hover{color:var(--roxo)}
 /* layout */
 section{padding:120px 40px;position:relative;max-width:1200px;margin:0 auto}
 @media(max-width:700px){section{padding:80px 22px}}
-.reveal{opacity:0;transform:translateY(34px);transition:.9s cubic-bezier(.2.7.2,1)}
+.reveal{opacity:0;transform:translateY(34px);transition:.9s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dourado);margin-bottom:22px}
@@ -92,7 +92,7 @@ p{color:#4b3a56}
 
 /* ---------- MANIFESTO ---------- */
 .manifesto{background:linear-gradient(160deg,var(--roxo),var(--roxo-2));color:#fff;max-width:none;padding:150px 22px;text-align:center;position:relative;overflow:hidden}
-.manifesto::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 0%,rgba(201,162,75.22),transparent 60%)}
+.manifesto::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 0%,rgba(201,162,75,.22),transparent 60%)}
 .manifesto .inner{max-width:900px;margin:0 auto;position:relative}
 .manifesto .eyebrow{color:var(--dourado-2)}
 .manifesto .eyebrow::before{background:var(--dourado-2)}
@@ -105,8 +105,8 @@ p{color:#4b3a56}
 .g2{grid-template-columns:repeat(2,1fr)}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g4{grid-template-columns:repeat(4,1fr)}
-@media(max-width:900px){.g3.g4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.g2.g3.g4{grid-template-columns:1fr}}
+@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.g2,.g3,.g4{grid-template-columns:1fr}}
 
 .card{background:#fff;border:1px solid var(--linha);border-radius:20px;padding:32px 28px;transition:.4s;position:relative;overflow:hidden}
 .card:hover{transform:translateY(-6px);box-shadow:var(--sombra);border-color:transparent}
@@ -256,7 +256,7 @@ footer{background:linear-gradient(160deg,var(--roxo),var(--roxo-2));color:#fff;t
 footer .fm{font-family:var(--serif);font-weight:400;letter-spacing:.03em;font-size:clamp(2.6rem,10vw,6rem);color:#fff}
 footer .fm b{font-weight:500;font-style:italic;color:var(--dourado-2)}
 footer .ft{font-family:var(--serif);font-style:italic;color:var(--dourado-2);font-size:1.3rem;margin-top:16px}
-footer .meta{margin-top:50px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255.55);display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
+footer .meta{margin-top:50px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
 footer .meta span{color:var(--dourado-2)}
 
 /* section intro spacing helper */
@@ -285,7 +285,7 @@ nav.top .brand{text-decoration:none;display:inline-flex;align-items:center}
 nav.top .menu a.active{color:var(--roxo)}
 nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--dourado);border-radius:2px}
 .pdf-btn{display:inline-flex;align-items:center;gap:8px;background:var(--roxo);color:#fff;border:none;border-radius:100px;padding:11px 20px;font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:.3s;white-space:nowrap}
-.pdf-btn:hover{background:var(--dourado);color:var(--roxo);transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(74,30,107.6)}
+.pdf-btn:hover{background:var(--dourado);color:var(--roxo);transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(74,30,107,.6)}
 .pdf-btn svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .idx-btn{display:inline-flex;align-items:center;gap:9px;background:transparent;border:1px solid var(--linha);border-radius:100px;padding:10px 18px;font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--roxo);cursor:pointer;transition:.3s}
 .idx-btn:hover{border-color:var(--roxo);background:var(--lilas)}
@@ -297,8 +297,8 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 /* ===== Overlay menu (índice claro) ===== */
 .overlay{position:fixed;inset:0;z-index:1000;background:linear-gradient(160deg,var(--roxo),#2e1145);color:#fff;opacity:0;visibility:hidden;transition:.45s;overflow-y:auto;padding:80px 30px 50px}
 .overlay.open{opacity:1;visibility:visible}
-.ov-close{position:absolute;top:26px;right:30px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255.3);background:transparent;color:#fff;font-size:26px;cursor:pointer;transition:.3s;line-height:1}
-.ov-close:hover{background:rgba(255,255,255.12);transform:rotate(90deg)}
+.ov-close{position:absolute;top:26px;right:30px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:26px;cursor:pointer;transition:.3s;line-height:1}
+.ov-close:hover{background:rgba(255,255,255,.12);transform:rotate(90deg)}
 .ov-inner{max-width:900px;margin:0 auto}
 .ov-head{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--dourado-2);font-weight:700;margin-bottom:8px}
 .ov-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3rem);font-weight:300;margin-bottom:34px}
@@ -306,10 +306,10 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .ov-list{display:grid;grid-template-columns:1fr 1fr;gap:4px}
 @media(max-width:640px){.ov-list{grid-template-columns:1fr}}
 .ov-list a{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:center;padding:16px 16px;border-radius:14px;text-decoration:none;color:#fff;transition:.3s;border:1px solid transparent}
-.ov-list a:hover{background:rgba(255,255,255.07);border-color:rgba(255,255,255.14);transform:translateX(6px)}
+.ov-list a:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);transform:translateX(6px)}
 .ov-list a .oc{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--dourado-2)}
 .ov-list a h5{font-size:1.08rem;font-weight:700;letter-spacing:.01em}
-.ov-list a p{font-size:.82rem;color:rgba(255,255,255.55);margin-top:2px}
+.ov-list a p{font-size:.82rem;color:rgba(255,255,255,.55);margin-top:2px}
 .ov-foot{margin-top:34px;text-align:center}
 
 /* ===== Dot nav lateral ===== */
@@ -322,7 +322,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 @media(max-width:1080px){.dotnav{display:none}}
 
 /* ===== Back to top ===== */
-.totop{position:fixed;bottom:26px;right:26px;z-index:800;width:50px;height:50px;border-radius:50%;background:var(--roxo);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(14px);transition:.35s;box-shadow:0 14px 30px -14px rgba(74,30,107.7)}
+.totop{position:fixed;bottom:26px;right:26px;z-index:800;width:50px;height:50px;border-radius:50%;background:var(--roxo);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(14px);transition:.35s;box-shadow:0 14px 30px -14px rgba(74,30,107,.7)}
 .totop.show{opacity:1;visibility:visible;transform:none}
 .totop:hover{background:var(--dourado);color:var(--roxo)}
 .totop svg{width:20px;height:20px;stroke:currentColor;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -330,9 +330,9 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 
 /* ===== Animações escalonadas (mais dinâmico) ===== */
 @keyframes pop{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-.reveal.in .card.reveal.in .persona.reveal.in .val.reveal.in .il.reveal.in .sw,
-.reveal.in .check.reveal.in .tn.reveal.in .chip-c.reveal.in .tone.reveal.in .pillar,
-.reveal.in .spec.reveal.in .chap{animation:pop .6s both}
+.reveal.in .card,.reveal.in .persona,.reveal.in .val,.reveal.in .il,.reveal.in .sw,
+.reveal.in .check,.reveal.in .tn,.reveal.in .chip-c,.reveal.in .tone,.reveal.in .pillar,
+.reveal.in .spec,.reveal.in .chap{animation:pop .6s both}
 .reveal.in :nth-child(1){animation-delay:.02s}
 .reveal.in :nth-child(2){animation-delay:.09s}
 .reveal.in :nth-child(3){animation-delay:.16s}
@@ -353,18 +353,18 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 @media print{
   @page{margin:14mm 12mm}
   html{scroll-behavior:auto}
-  nav.top.progress.dotnav.totop.overlay.scrolldown.pdf-hint.menu-btn.dl-row.piece .dl.il .il-dl.lb-dl.sc-dl.gcats{display:none!important}
+  nav.top,.progress,.dotnav,.totop,.overlay,.scrolldown,.pdf-hint,.menu-btn,.dl-row,.piece .dl,.il .il-dl,.lb-dl,.sc-dl,.gcats{display:none!important}
   body{background:#fff}
   .reveal{opacity:1!important;transform:none!important;animation:none!important}
   .reveal.in *{animation:none!important}
-  section.band.manifesto.statement,footer{padding-top:26px!important;padding-bottom:26px!important;max-width:100%!important}
+  section,.band,.manifesto,.statement,footer{padding-top:26px!important;padding-bottom:26px!important;max-width:100%!important}
   section{page-break-before:always;break-before:page}
   header.hero{page-break-before:avoid;min-height:auto;padding-top:10px}
-  .manifesto.statement.band{page-break-before:always;break-before:page}
-  .card.persona.val.sw.spec.tn.tl.check.il.chap{break-inside:avoid;page-break-inside:avoid}
-  .grid.swatches.type-spec.pillars.values.iconlib.checklist.tension{break-inside:avoid}
+  .manifesto,.statement,.band{page-break-before:always;break-before:page}
+  .card,.persona,.val,.sw,.spec,.tn,.tl,.check,.il,.chap{break-inside:avoid;page-break-inside:avoid}
+  .grid,.swatches,.type-spec,.pillars,.values,.iconlib,.checklist,.tension{break-inside:avoid}
   h2.title{break-after:avoid}
-  .card:hover.persona:hover.sw:hover{transform:none!important;box-shadow:none!important}
+  .card:hover,.persona:hover,.sw:hover{transform:none!important;box-shadow:none!important}
   /* garante fundos coloridos no PDF */
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
   .gallery img{max-height:none}
@@ -380,8 +380,8 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .rgrid{display:grid;gap:18px}
 .rgrid.ok{grid-template-columns:repeat(4,1fr)}
 .rgrid.no{grid-template-columns:repeat(4,1fr)}
-@media(max-width:900px){.rgrid.ok.rgrid.no{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.rgrid.ok.rgrid.no{grid-template-columns:1fr}}
+@media(max-width:900px){.rgrid.ok,.rgrid.no{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.rgrid.ok,.rgrid.no{grid-template-columns:1fr}}
 .rule{border:1px solid var(--linha);border-radius:18px;overflow:hidden;background:#fff;transition:.35s}
 .rule:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
 .rprev{height:120px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--branco);border-bottom:1px solid var(--linha)}
@@ -405,7 +405,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .w-stretch .wm-img{transform:scaleX(1.7)}
 .w-rotate .wm-img{transform:rotate(-13deg)}
 .w-color .wm-img{filter:hue-rotate(150deg) saturate(1.7)}
-.w-shadow .wm-img{filter:drop-shadow(4px 4px 0 rgba(44,27,43.4))}
+.w-shadow .wm-img{filter:drop-shadow(4px 4px 0 rgba(44,27,43,.4))}
 .w-skew .wm-img{transform:skewX(-16deg)}
 .w-squeeze .wm-img{transform:scaleX(.5)}
 .w-lowcontrast{background:var(--roxo-soft)!important}
@@ -423,44 +423,44 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .piece img{width:100%;display:block;transition:.6s}
 .piece:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
 .piece:hover img{transform:scale(1.04)}
-.piece .cap{position:absolute;left:0;right:0;bottom:0;padding:32px 18px 16px;background:linear-gradient(transparent,rgba(44,27,43.82));color:#fff;opacity:0;transform:translateY(8px);transition:.4s}
+.piece .cap{position:absolute;left:0;right:0;bottom:0;padding:32px 18px 16px;background:linear-gradient(transparent,rgba(44,27,43,.82));color:#fff;opacity:0;transform:translateY(8px);transition:.4s}
 .piece:hover .cap{opacity:1;transform:none}
 .piece .cap strong{display:block;font-family:var(--serif);font-size:1.15rem}
 .piece .cap span{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dourado-2)}
-.piece .zoom{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:rgba(252,250,248.9);display:flex;align-items:center;justify-content:center;color:var(--roxo);opacity:0;transition:.4s}
+.piece .zoom{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:rgba(252,250,248,.9);display:flex;align-items:center;justify-content:center;color:var(--roxo);opacity:0;transition:.4s}
 .piece:hover .zoom{opacity:1}
 .piece .zoom svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none}
 /* lightbox */
-.lightbox{position:fixed;inset:0;z-index:1200;background:rgba(30,15,30.92);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:40px;opacity:0;visibility:hidden;transition:.35s}
+.lightbox{position:fixed;inset:0;z-index:1200;background:rgba(30,15,30,.92);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:40px;opacity:0;visibility:hidden;transition:.35s}
 .lightbox.open{opacity:1;visibility:visible}
-.lightbox img{max-width:92vw;max-height:82vh;border-radius:12px;box-shadow:0 30px 80px -20px rgba(0,0,0.7)}
+.lightbox img{max-width:92vw;max-height:82vh;border-radius:12px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7)}
 .lb-cap{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#fff;font-family:var(--serif);font-size:1.2rem;text-align:center}
 .lb-cap span{display:block;font-family:var(--sans);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dourado-2);margin-top:4px}
-.lb-close{position:absolute;top:24px;right:28px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255.3);background:transparent;color:#fff;font-size:26px;cursor:pointer;transition:.3s;line-height:1}
-.lb-close:hover{background:rgba(255,255,255.14);transform:rotate(90deg)}
-.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255.3);background:rgba(0,0,0.2);color:#fff;font-size:22px;cursor:pointer;transition:.3s;display:flex;align-items:center;justify-content:center}
-.lb-nav:hover{background:rgba(255,255,255.16)}
+.lb-close{position:absolute;top:24px;right:28px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:26px;cursor:pointer;transition:.3s;line-height:1}
+.lb-close:hover{background:rgba(255,255,255,.14);transform:rotate(90deg)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.2);color:#fff;font-size:22px;cursor:pointer;transition:.3s;display:flex;align-items:center;justify-content:center}
+.lb-nav:hover{background:rgba(255,255,255,.16)}
 .lb-prev{left:24px}.lb-next{right:24px}
 @media(max-width:560px){.lb-nav{width:42px;height:42px}.lb-prev{left:10px}.lb-next{right:10px}}
-.lb-dl{position:absolute;top:24px;right:86px;height:48px;padding:0 20px;border-radius:100px;border:1px solid rgba(255,255,255.3);background:transparent;color:#fff;display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:700;text-decoration:none;transition:.3s;letter-spacing:.02em}
-.lb-dl:hover{background:rgba(255,255,255.14)}
+.lb-dl{position:absolute;top:24px;right:86px;height:48px;padding:0 20px;border-radius:100px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:700;text-decoration:none;transition:.3s;letter-spacing:.02em}
+.lb-dl:hover{background:rgba(255,255,255,.14)}
 .lb-dl svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 @media(max-width:560px){.lb-dl span{display:none}.lb-dl{padding:0 14px;right:80px}}
 
 /* ===== Downloads ===== */
 .dl-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .dl-btn{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--linha);border-radius:100px;padding:12px 20px;font-family:var(--sans);font-weight:700;font-size:.82rem;letter-spacing:.02em;color:var(--roxo);text-decoration:none;cursor:pointer;transition:.3s}
-.dl-btn:hover{background:var(--roxo);color:#fff;border-color:var(--roxo);transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(74,30,107.55)}
+.dl-btn:hover{background:var(--roxo);color:#fff;border-color:var(--roxo);transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(74,30,107,.55)}
 .dl-btn.solid{background:var(--roxo);color:#fff;border-color:var(--roxo)}
 .dl-btn.solid:hover{background:var(--dourado);color:var(--roxo);border-color:var(--dourado)}
 .dl-btn svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
 .dl-btn .ext{font-weight:500;opacity:.6;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
-.piece .dl{position:absolute;top:14px;left:14px;width:34px;height:34px;border-radius:50%;background:rgba(252,250,248.92);display:flex;align-items:center;justify-content:center;color:var(--roxo);opacity:0;transition:.35s;z-index:3}
+.piece .dl{position:absolute;top:14px;left:14px;width:34px;height:34px;border-radius:50%;background:rgba(252,250,248,.92);display:flex;align-items:center;justify-content:center;color:var(--roxo);opacity:0;transition:.35s;z-index:3}
 .piece:hover .dl{opacity:1}
 .piece .dl:hover{background:var(--roxo);color:#fff}
 .piece .dl svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .il{position:relative}
-.il .il-dl{position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:7px;background:rgba(255,255,255.92);color:var(--roxo);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s;z-index:2}
+.il .il-dl{position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:7px;background:rgba(255,255,255,.92);color:var(--roxo);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s;z-index:2}
 .il:hover .il-dl{opacity:1}
 .il .il-dl:hover{background:var(--dourado);color:var(--roxo)}
 .il .il-dl svg{width:12px;height:12px;stroke:currentColor;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -475,7 +475,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .dcard p{font-size:.92rem;margin-bottom:6px}
 .kit-band{margin-top:26px;background:linear-gradient(160deg,var(--roxo),var(--roxo-2));border-radius:24px;padding:44px 34px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .kit-band h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,3.4vw,2rem);color:#fff}
-.kit-band p{color:rgba(255,255,255.8);margin-top:6px;font-size:.95rem}
+.kit-band p{color:rgba(255,255,255,.8);margin-top:6px;font-size:.95rem}
 .kit-band .dl-btn{background:var(--dourado-2);border-color:var(--dourado-2);color:var(--roxo);font-size:.92rem;padding:15px 26px}
 .kit-band .dl-btn:hover{background:#fff;border-color:#fff}
 
@@ -525,7 +525,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .pdv-demo{background:linear-gradient(165deg,var(--roxo),var(--roxo-2));border-radius:20px;padding:38px 30px;text-align:center;color:#fff}
 .pdv-demo .d1{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.1}
 .pdv-demo .d2{color:var(--dourado-2);font-size:1.05rem;margin-top:10px;font-weight:600}
-.pdv-demo .d3{color:rgba(255,255,255.7);font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;margin-top:14px}
+.pdv-demo .d3{color:rgba(255,255,255,.7);font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;margin-top:14px}
 .pdv-demo .d4{display:inline-block;margin-top:18px;background:var(--dourado-2);color:var(--roxo);padding:11px 24px;border-radius:100px;font-weight:800;font-size:.85rem}
 /* embalagem */
 .pack{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
@@ -561,14 +561,14 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 @media(max-width:860px){.pgrid{grid-template-columns:1fr}}
 .pphoto{position:relative;border-radius:22px;overflow:hidden;min-height:440px;border:1px solid var(--linha)}
 .pphoto>img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.pphoto .pshade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(44,27,43.9))}
+.pphoto .pshade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(44,27,43,.9))}
 .pphoto .pcontent{position:absolute;left:0;right:0;bottom:0;padding:26px 24px;color:#fff}
 .pphoto .parche{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado-2);font-weight:700}
 .pphoto .pname{font-family:var(--serif);font-size:2rem;line-height:1;margin:6px 0 4px}
-.pphoto .ptitle{font-size:.94rem;color:rgba(255,255,255.85)}
+.pphoto .ptitle{font-size:.94rem;color:rgba(255,255,255,.85)}
 .pphoto .pquote{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:1.05rem;border-left:2px solid var(--dourado);padding-left:14px;color:#fff}
 .pstats{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.pstats span{font-size:.71rem;font-weight:700;color:#fff;background:rgba(255,255,255.14);border:1px solid rgba(255,255,255.22);padding:6px 12px;border-radius:100px}
+.pstats span{font-size:.71rem;font-weight:700;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);padding:6px 12px;border-radius:100px}
 .pright{display:flex;flex-direction:column;gap:20px}
 .pbox{border:1px solid var(--linha);border-radius:18px;padding:22px 24px;background:#fff}
 .pbox h5{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado);font-weight:700;margin-bottom:15px;display:flex;align-items:center;gap:8px}
@@ -579,7 +579,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .meter .ml{display:flex;justify-content:space-between;font-size:.82rem;font-weight:600;color:var(--roxo);margin-bottom:5px}
 .meter .ml em{font-style:normal;color:var(--cinza);font-weight:700}
 .meter .mt{height:7px;border-radius:100px;background:var(--lilas);overflow:hidden}
-.meter .mf{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--roxo),var(--dourado));width:0;transition:width 1.1s cubic-bezier(.2.7.2,1)}
+.meter .mf{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--roxo),var(--dourado));width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
 .pdd{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:520px){.pdd{grid-template-columns:1fr}}
 .pcol h5.want{color:var(--roxo)}.pcol h5.pain{color:#b0788a}
@@ -598,7 +598,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .quadrant .qlab{position:absolute;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--roxo-soft)}
 .qdot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center;transition:.3s}
 .qdot:hover{z-index:5;transform:translate(-50%,-50%) scale(1.08)}
-.qdot img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 8px 20px -8px rgba(74,30,107.6)}
+.qdot img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 8px 20px -8px rgba(74,30,107,.6)}
 .qdot .qn{font-size:.74rem;font-weight:800;color:var(--roxo);background:#fff;padding:4px 10px;border-radius:100px;border:1px solid var(--linha);white-space:nowrap}
 .qdot .qn small{display:block;font-weight:500;color:var(--cinza);font-size:.66rem}
 /* ecossistema */
@@ -648,9 +648,9 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .vc h4{font-family:var(--serif);color:var(--roxo);font-size:1.35rem;margin-bottom:6px;line-height:1.1}
 .vc p{font-size:.86rem;color:#4b3a56}
 .vc .vtr{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
-.vc .vtr span{font-size:.68rem;font-weight:700;color:var(--roxo);background:rgba(255,255,255.75);padding:4px 9px;border-radius:100px}
-.vc-l{left:0;background:rgba(123,59,119.16);border:2px solid var(--roxo);text-align:left;padding-right:170px}
-.vc-r{right:0;background:rgba(227,194,147.42);border:2px solid var(--dourado);text-align:right;padding-left:170px;align-items:flex-end}
+.vc .vtr span{font-size:.68rem;font-weight:700;color:var(--roxo);background:rgba(255,255,255,.75);padding:4px 9px;border-radius:100px}
+.vc-l{left:0;background:rgba(123,59,119,.16);border:2px solid var(--roxo);text-align:left;padding-right:170px}
+.vc-r{right:0;background:rgba(227,194,147,.42);border:2px solid var(--dourado);text-align:right;padding-left:170px;align-items:flex-end}
 .vc-r .vtr{justify-content:flex-end}
 .vcenter{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:170px;text-align:center;background:#fff;border:1px solid var(--linha);border-radius:20px;padding:18px 12px;box-shadow:var(--sombra)}
 .vcenter img{width:104px;height:auto;display:block;margin:0 auto 6px}
@@ -658,7 +658,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 @media(max-width:700px){
   .venn{height:auto;display:flex;flex-direction:column;gap:14px;max-width:420px}
   .vc{position:static;width:100%;height:auto;border-radius:22px;padding:26px 24px;text-align:left!important;align-items:flex-start!important}
-  .vc-l.vc-r{padding:26px 24px}
+  .vc-l,.vc-r{padding:26px 24px}
   .vc-r .vtr{justify-content:flex-start}
   .vcenter{position:static;transform:none;width:auto;order:1}
 }
@@ -669,7 +669,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .balance .bends{display:flex;justify-content:space-between;font-size:.8rem;font-weight:700;color:var(--cinza);margin-bottom:14px}
 .balance .track{height:8px;border-radius:100px;background:linear-gradient(90deg,#b9b2c0,var(--lilas),var(--dourado));position:relative}
 .balance .mk{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
-.balance .mk .dot{width:20px;height:20px;border-radius:50%;background:var(--roxo);border:4px solid #fff;box-shadow:0 4px 12px -3px rgba(74,30,107.6)}
+.balance .mk .dot{width:20px;height:20px;border-radius:50%;background:var(--roxo);border:4px solid #fff;box-shadow:0 4px 12px -3px rgba(74,30,107,.6)}
 .balance .mk .lbl{font-family:var(--serif);font-style:italic;color:var(--roxo);font-size:.95rem;white-space:nowrap;background:#fff;padding:2px 10px;border-radius:100px;border:1px solid var(--linha)}
 /* sub-arquétipos */
 .archgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
@@ -716,7 +716,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .scard:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
 .sc-img{aspect-ratio:3/4;background-size:cover;background-position:center;position:relative;cursor:pointer}
 .sc-n{position:absolute;top:10px;left:10px;background:var(--roxo);color:#fff;font-weight:800;font-size:.72rem;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--ouro);z-index:2}
-.sc-dl{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:rgba(252,250,248.92);color:var(--roxo);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s;z-index:2}
+.sc-dl{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:rgba(252,250,248,.92);color:var(--roxo);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s;z-index:2}
 .sc-img:hover .sc-dl{opacity:1}
 .sc-dl:hover{background:var(--roxo);color:#fff}
 .sc-dl svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -748,7 +748,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .ighandle small{display:block;color:var(--cinza);font-weight:500;font-size:.66rem}
 .igmore{margin-left:auto;color:var(--cinza);font-weight:800;letter-spacing:1px}
 .igimg{aspect-ratio:1;background-size:cover;background-position:center;position:relative}
-.igsticker{position:absolute;left:12px;bottom:12px;background:rgba(252,250,248.94);color:var(--roxo);font-weight:800;font-size:.72rem;padding:6px 12px;border-radius:100px}
+.igsticker{position:absolute;left:12px;bottom:12px;background:rgba(252,250,248,.94);color:var(--roxo);font-weight:800;font-size:.72rem;padding:6px 12px;border-radius:100px}
 .igact{display:flex;gap:15px;padding:11px 13px 5px;color:var(--tinta)}
 .igact svg{width:23px;height:23px;stroke:currentColor;stroke-width:1.7;fill:none}
 .igact .save{margin-left:auto}
@@ -758,16 +758,16 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .igtags{color:var(--roxo-soft);font-weight:600}
 /* stories / reels, telefone */
 .story{position:relative;aspect-ratio:9/16;border-radius:26px;overflow:hidden;background-size:cover;background-position:center;max-width:250px;margin:0 auto;width:100%;border:5px solid #1c1120;box-shadow:var(--sombra)}
-.sgrad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(44,27,43.55),transparent 26%,transparent 52%,rgba(44,27,43.9))}
+.sgrad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(44,27,43,.55),transparent 26%,transparent 52%,rgba(44,27,43,.9))}
 .sbars{position:absolute;top:10px;left:12px;right:12px;display:flex;gap:4px;z-index:3}
-.sbars i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255.4)}
+.sbars i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.4)}
 .sbars i.on{background:#fff}
 .stop{position:absolute;top:22px;left:12px;right:12px;display:flex;align-items:center;gap:7px;z-index:3;color:#fff}
 .stop img{width:26px;height:26px;border-radius:50%;border:2px solid #fff;background:#fff;padding:2px;flex:0 0 auto}
-.stop b{font-size:.76rem}.stop small{color:rgba(255,255,255.8);font-size:.64rem;margin-left:3px}
+.stop b{font-size:.76rem}.stop small{color:rgba(255,255,255,.8);font-size:.64rem;margin-left:3px}
 .sbody{position:absolute;left:16px;right:16px;bottom:70px;z-index:3;color:#fff;text-align:center}
 .sbody .sh{font-family:var(--serif);font-size:1.35rem;line-height:1.12}
-.sbody .ssub{font-size:.76rem;color:rgba(255,255,255.85);margin-top:6px}
+.sbody .ssub{font-size:.76rem;color:rgba(255,255,255,.85);margin-top:6px}
 .scta{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:5px;color:#fff}
 .scta .pill{background:#fff;color:var(--roxo);font-weight:800;font-size:.72rem;padding:8px 18px;border-radius:100px}
 .scta .up{font-size:.68rem;opacity:.9}
@@ -779,7 +779,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 /* google ads */
 .adlabel{font-size:.6rem;font-weight:800;letter-spacing:.04em;color:#5b6b3a;border:1px solid #b7c48a;border-radius:4px;padding:1px 5px;display:inline-block;background:#f3f7e8;margin-bottom:8px}
 .ad-lead{height:90px;width:100%;border:1px solid var(--linha);border-radius:10px;background:linear-gradient(120deg,var(--roxo),var(--roxo-2));display:flex;align-items:center;gap:16px;padding:0 22px;color:#fff;overflow:hidden;position:relative}
-.ad-lead::after{content:"";position:absolute;right:-30px;top:-30px;width:150px;height:150px;border-radius:50%;background:rgba(239,195,94.2)}
+.ad-lead::after{content:"";position:absolute;right:-30px;top:-30px;width:150px;height:150px;border-radius:50%;background:rgba(239,195,94,.2)}
 .ad-lead img{height:30px;position:relative;z-index:2}
 .ad-lead .h{font-family:var(--serif);font-size:1.15rem;flex:1;position:relative;z-index:2;line-height:1.05}
 .ad-lead .btn{background:var(--dourado-2);color:var(--roxo);font-weight:800;font-size:.78rem;padding:9px 18px;border-radius:100px;white-space:nowrap;position:relative;z-index:2}
@@ -836,7 +836,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .chead{background:var(--roxo);color:#fff;padding:12px 14px;display:flex;align-items:center;gap:10px}
 .chead .cav{width:34px;height:34px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .chead .cav img{width:26px}
-.chead b{font-size:.86rem}.chead small{display:block;color:rgba(255,255,255.8);font-size:.68rem}
+.chead b{font-size:.86rem}.chead small{display:block;color:rgba(255,255,255,.8);font-size:.68rem}
 .cbody{padding:16px 14px;display:flex;flex-direction:column;gap:9px;background:var(--nude)}
 .bub{max-width:82%;padding:9px 12px;border-radius:14px;font-size:.82rem;line-height:1.4;position:relative}
 .bub.in{background:#fff;align-self:flex-start;border:1px solid var(--linha);border-bottom-left-radius:4px}
@@ -848,12 +848,12 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 /* outdoor / OOH */
 .ooh{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:21/9;background-size:cover;background-position:center;box-shadow:var(--sombra)}
 @media(max-width:560px){.ooh{aspect-ratio:16/10}}
-.ooh .ograd{position:absolute;inset:0;background:linear-gradient(90deg,rgba(74,30,107.94),rgba(74,30,107.5) 52%,rgba(74,30,107.05))}
+.ooh .ograd{position:absolute;inset:0;background:linear-gradient(90deg,rgba(74,30,107,.94),rgba(74,30,107,.5) 52%,rgba(74,30,107,.05))}
 .ooh .obody{position:absolute;left:6%;top:50%;transform:translateY(-50%);color:#fff;max-width:56%;z-index:2}
 .ooh .obody img{height:38px;margin-bottom:14px}
 .ooh .obody .oh{font-family:var(--serif);font-size:clamp(1.3rem,3.6vw,2.4rem);line-height:1.05}
 .ooh .obody .osub{color:var(--dourado-2);font-style:italic;font-family:var(--serif);font-size:clamp(.9rem,2vw,1.2rem);margin-top:8px}
-.ooh .obadge{position:absolute;right:5%;bottom:8%;z-index:2;background:rgba(252,250,248.9);color:var(--roxo);font-weight:800;font-size:.72rem;padding:7px 14px;border-radius:100px}
+.ooh .obadge{position:absolute;right:5%;bottom:8%;z-index:2;background:rgba(252,250,248,.9);color:var(--roxo);font-weight:800;font-size:.72rem;padding:7px 14px;border-radius:100px}
 
 /* ===== Elementos da linha criativa (mockups fiéis) ===== */
 .pat{background-color:#EFE3EC;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23EFE3EC'/%3E%3Ccircle cx='30' cy='30' r='25' fill='%237B3B77'/%3E%3Ccircle cx='90' cy='90' r='25' fill='%237B3B77'/%3E%3Cg fill='%23C79EC3'%3E%3Cellipse cx='90' cy='30' rx='9' ry='25'/%3E%3Cellipse cx='90' cy='30' rx='25' ry='9'/%3E%3Cellipse cx='30' cy='90' rx='9' ry='25'/%3E%3Cellipse cx='30' cy='90' rx='25' ry='9'/%3E%3C/g%3E%3C/svg%3E");background-size:56px 56px}
@@ -880,7 +880,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .creative .cpill{background:var(--dourado-2);color:var(--roxo);font-weight:800;font-size:.74rem;padding:8px 18px;border-radius:100px;margin-top:2px}
 .creative .cphoto{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid var(--ouro)}
 .creative.photo{color:#fff}
-.creative .cshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(74,30,107.35),rgba(74,30,107.82));z-index:1}
+.creative .cshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(74,30,107,.35),rgba(74,30,107,.82));z-index:1}
 
 /* ===== Tamanho mínimo do logo ===== */
 .minsize{display:flex;flex-wrap:wrap;gap:44px;align-items:flex-end;justify-content:center;margin-top:24px;background:#fff;border:1px solid var(--linha);border-radius:20px;padding:40px 30px}
@@ -1275,7 +1275,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
           <div class="pbox">
             <h5>Mapa de motivadores</h5>
             <div class="radar-wrap">
-              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,32.1 170.8,90.2 144.7,157.8 83.5,146.5 46.1,89.2" fill="rgba(123,59,119.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="32.1" r="2.6" fill="#7B3B77"/><circle cx="170.8" cy="90.2" r="2.6" fill="#7B3B77"/><circle cx="144.7" cy="157.8" r="2.6" fill="#7B3B77"/><circle cx="83.5" cy="146.5" r="2.6" fill="#7B3B77"/><circle cx="46.1" cy="89.2" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
+              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,32.1 170.8,90.2 144.7,157.8 83.5,146.5 46.1,89.2" fill="rgba(123,59,119,.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="32.1" r="2.6" fill="#7B3B77"/><circle cx="170.8" cy="90.2" r="2.6" fill="#7B3B77"/><circle cx="144.7" cy="157.8" r="2.6" fill="#7B3B77"/><circle cx="83.5" cy="146.5" r="2.6" fill="#7B3B77"/><circle cx="46.1" cy="89.2" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
               <div class="meters">
                 <div class="meter"><div class="ml"><span>Praticidade</span><em>95</em></div><div class="mt"><div class="mf" data-val="95"></div></div></div>
                 <div class="meter"><div class="ml"><span>Estética</span><em>78</em></div><div class="mt"><div class="mf" data-val="78"></div></div></div>
@@ -1315,7 +1315,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
           <div class="pbox">
             <h5>Mapa de motivadores</h5>
             <div class="radar-wrap">
-              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,60.8 184.1,85.9 138.0,148.5 65.7,171.0 41.4,87.7" fill="rgba(123,59,119.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="60.8" r="2.6" fill="#7B3B77"/><circle cx="184.1" cy="85.9" r="2.6" fill="#7B3B77"/><circle cx="138.0" cy="148.5" r="2.6" fill="#7B3B77"/><circle cx="65.7" cy="171.0" r="2.6" fill="#7B3B77"/><circle cx="41.4" cy="87.7" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
+              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,60.8 184.1,85.9 138.0,148.5 65.7,171.0 41.4,87.7" fill="rgba(123,59,119,.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="60.8" r="2.6" fill="#7B3B77"/><circle cx="184.1" cy="85.9" r="2.6" fill="#7B3B77"/><circle cx="138.0" cy="148.5" r="2.6" fill="#7B3B77"/><circle cx="65.7" cy="171.0" r="2.6" fill="#7B3B77"/><circle cx="41.4" cy="87.7" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
               <div class="meters">
                 <div class="meter"><div class="ml"><span>Praticidade</span><em>60</em></div><div class="mt"><div class="mf" data-val="60"></div></div></div>
                 <div class="meter"><div class="ml"><span>Estética</span><em>95</em></div><div class="mt"><div class="mf" data-val="95"></div></div></div>
@@ -1355,7 +1355,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
           <div class="pbox">
             <h5>Mapa de motivadores</h5>
             <div class="radar-wrap">
-              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,37.8 164.6,92.3 149.5,164.4 88.3,139.9 50.7,90.7" fill="rgba(123,59,119.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="37.8" r="2.6" fill="#7B3B77"/><circle cx="164.6" cy="92.3" r="2.6" fill="#7B3B77"/><circle cx="149.5" cy="164.4" r="2.6" fill="#7B3B77"/><circle cx="88.3" cy="139.9" r="2.6" fill="#7B3B77"/><circle cx="50.7" cy="90.7" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
+              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,37.8 164.6,92.3 149.5,164.4 88.3,139.9 50.7,90.7" fill="rgba(123,59,119,.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="37.8" r="2.6" fill="#7B3B77"/><circle cx="164.6" cy="92.3" r="2.6" fill="#7B3B77"/><circle cx="149.5" cy="164.4" r="2.6" fill="#7B3B77"/><circle cx="88.3" cy="139.9" r="2.6" fill="#7B3B77"/><circle cx="50.7" cy="90.7" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
               <div class="meters">
                 <div class="meter"><div class="ml"><span>Praticidade</span><em>88</em></div><div class="mt"><div class="mf" data-val="88"></div></div></div>
                 <div class="meter"><div class="ml"><span>Estética</span><em>70</em></div><div class="mt"><div class="mf" data-val="70"></div></div></div>
@@ -1395,7 +1395,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
           <div class="pbox">
             <h5>Mapa de motivadores</h5>
             <div class="radar-wrap">
-              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,39.5 158.4,94.3 154.3,171.0 93.1,133.2 67.1,96.1" fill="rgba(123,59,119.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="39.5" r="2.6" fill="#7B3B77"/><circle cx="158.4" cy="94.3" r="2.6" fill="#7B3B77"/><circle cx="154.3" cy="171.0" r="2.6" fill="#7B3B77"/><circle cx="93.1" cy="133.2" r="2.6" fill="#7B3B77"/><circle cx="67.1" cy="96.1" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
+              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,39.5 158.4,94.3 154.3,171.0 93.1,133.2 67.1,96.1" fill="rgba(123,59,119,.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="39.5" r="2.6" fill="#7B3B77"/><circle cx="158.4" cy="94.3" r="2.6" fill="#7B3B77"/><circle cx="154.3" cy="171.0" r="2.6" fill="#7B3B77"/><circle cx="93.1" cy="133.2" r="2.6" fill="#7B3B77"/><circle cx="67.1" cy="96.1" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
               <div class="meters">
                 <div class="meter"><div class="ml"><span>Praticidade</span><em>86</em></div><div class="mt"><div class="mf" data-val="86"></div></div></div>
                 <div class="meter"><div class="ml"><span>Estética</span><em>62</em></div><div class="mt"><div class="mf" data-val="62"></div></div></div>
@@ -1531,14 +1531,14 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="inner reveal" style="max-width:1100px">
     <div class="eyebrow" style="justify-content:center"><span class="num" style="color:var(--dourado-2)">03</span> Estratégia de marca</div>
     <h2 class="title" style="color:#fff">A estratégia nasce <em style="color:var(--dourado-2)">do próprio nome</em></h2>
-    <p style="color:rgba(255,255,255.82);max-width:700px;margin:0 auto 10px">Estar pronta não é estar impecável. É estar presente, inteira e em movimento para viver o que a vida real pedir.</p>
+    <p style="color:rgba(255,255,255,.82);max-width:700px;margin:0 auto 10px">Estar pronta não é estar impecável. É estar presente, inteira e em movimento para viver o que a vida real pedir.</p>
   </div>
   <div class="inner reveal" style="max-width:1000px;margin-top:44px">
-    <div class="pillars" style="border-color:rgba(255,255,255.15)">
-      <div class="pillar" style="background:rgba(255,255,255.04);border-color:rgba(255,255,255.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><strong style="color:#fff">Vida real</strong><span style="color:rgba(255,255,255.6)">O território</span></div>
-      <div class="pillar" style="background:rgba(255,255,255.04);border-color:rgba(255,255,255.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M12 3l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 15 2 10.5h7.5z"/></svg></div><strong style="color:#fff">Beleza</strong><span style="color:rgba(255,255,255.6)">A promessa emocional</span></div>
-      <div class="pillar" style="background:rgba(255,255,255.04);border-color:rgba(255,255,255.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><strong style="color:#fff">Praticidade</strong><span style="color:rgba(255,255,255.6)">A entrega funcional</span></div>
-      <div class="pillar" style="background:rgba(255,255,255.04);border-color:rgba(255,255,255.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><strong style="color:#fff">Presença</strong><span style="color:rgba(255,255,255.6)">O resultado</span></div>
+    <div class="pillars" style="border-color:rgba(255,255,255,.15)">
+      <div class="pillar" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><strong style="color:#fff">Vida real</strong><span style="color:rgba(255,255,255,.6)">O território</span></div>
+      <div class="pillar" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M12 3l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 15 2 10.5h7.5z"/></svg></div><strong style="color:#fff">Beleza</strong><span style="color:rgba(255,255,255,.6)">A promessa emocional</span></div>
+      <div class="pillar" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><strong style="color:#fff">Praticidade</strong><span style="color:rgba(255,255,255,.6)">A entrega funcional</span></div>
+      <div class="pillar" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><strong style="color:#fff">Presença</strong><span style="color:rgba(255,255,255,.6)">O resultado</span></div>
     </div>
     <p style="text-align:center;color:var(--dourado-2);font-family:var(--serif);font-style:italic;font-size:1.2rem;margin-top:34px">Plataforma: acessórios de cabelo para a beleza que acompanha a vida real.</p>
   </div>
@@ -1844,7 +1844,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 
   <div class="grid g4 mt reveal">
     <div class="card center" style="padding:24px"><div style="font-weight:800;color:var(--roxo);letter-spacing:.1em">POSITIVA</div><p style="font-size:.85rem">Fundos claros, suaves e comerciais.</p></div>
-    <div class="card center" style="padding:24px;background:var(--roxo)"><div style="font-weight:800;color:#fff;letter-spacing:.1em">NEGATIVA</div><p style="font-size:.85rem;color:rgba(255,255,255.8)">Roxo, fundos escuros e fotos com contraste.</p></div>
+    <div class="card center" style="padding:24px;background:var(--roxo)"><div style="font-weight:800;color:#fff;letter-spacing:.1em">NEGATIVA</div><p style="font-size:.85rem;color:rgba(255,255,255,.8)">Roxo, fundos escuros e fotos com contraste.</p></div>
     <div class="card center" style="padding:24px"><div style="font-weight:800;color:var(--tinta);letter-spacing:.1em">MONO / P&B</div><p style="font-size:.85rem">Usos técnicos, impressão e fornecedores.</p></div>
     <div class="card center" style="padding:24px"><div style="font-weight:800;color:var(--roxo);letter-spacing:.1em">H + V</div><p style="font-size:.85rem">Assinatura horizontal e vertical por formato.</p></div>
   </div>
@@ -2969,7 +2969,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <h3>Campanha e mídia exterior</h3>
     <p class="cdesc">A ideia em grande, com moldura dourada, cartela do logo e a letra manuscrita.</p>
     <div class="creative photo ooh" style="background-image:url('assets/fotografia/arq-cuidadora.jpg')">
-      <div class="cshade" style="background:linear-gradient(90deg,rgba(74,30,107.92),rgba(74,30,107.45) 55%,transparent)"></div>
+      <div class="cshade" style="background:linear-gradient(90deg,rgba(74,30,107,.92),rgba(74,30,107,.45) 55%,transparent)"></div>
       <div class="gframe"></div>
       
       <div class="obody" style="position:absolute;left:7%;top:50%;transform:translateY(-50%);z-index:4;text-align:left;max-width:58%">
@@ -3272,7 +3272,7 @@ Penteados possíveis pra dias cheios de imaginação, feitos pra durar até o re
     <svg class="spark" style="position:relative;opacity:.6;margin-bottom:20px" width="30" height="30" viewBox="0 0 24 24" fill="var(--dourado-2)"><path d="M12 0l2.5 9.5L24 12l-9.5 2.5L12 24l-2.5-9.5L0 12l9.5-2.5z"/></svg>
     <img class="fm-img" src="assets/logo/pronta-branco.png" alt="PRONTA">
     <div class="ft">estar PRONTA para a vida real</div>
-    <p style="max-width:560px;margin:30px auto 0;color:rgba(255,255,255.7);font-size:1rem">O detalhe que acompanha a mulher quando a vida chama. Beleza não é pausa, beleza é presença.</p>
+    <p style="max-width:560px;margin:30px auto 0;color:rgba(255,255,255,.7);font-size:1rem">O detalhe que acompanha a mulher quando a vida chama. Beleza não é pausa, beleza é presença.</p>
     <div class="meta">
       <div>Brand Guide <span>v0.3</span></div>
       <div>Documento <span>vivo</span></div>
@@ -3291,7 +3291,7 @@ const totop=document.getElementById('totop');
 addEventListener('scroll',()=>{
   const scrolled=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;
   prog.style.width=scrolled+'%';
-  nav.style.boxShadow = h.scrollTop>40 ? '0 10px 30px -20px rgba(74,30,107.4)' : 'none';
+  nav.style.boxShadow = h.scrollTop>40 ? '0 10px 30px -20px rgba(74,30,107,.4)' : 'none';
   totop.classList.toggle('show', h.scrollTop>600);
 },{passive:true});
 
