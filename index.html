@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PRONTA — Brand Guide</title>
+<title>PRONTA · Brand Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Marcellus&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
@@ -21,8 +21,8 @@
   --branco:#FCFAF8;
   --tinta:#2C1B2B;
   --cinza:#8A8091;
-  --linha:rgba(74,30,107,.14);
-  --sombra:0 24px 60px -30px rgba(74,30,107,.4);
+  --linha:rgba(74,30,107.14);
+  --sombra:0 24px 60px -30px rgba(74,30,107.4);
   --serif:'Marcellus',Georgia,serif;
   --sans:'Poppins',system-ui,sans-serif;
   --script:'Dancing Script',cursive;
@@ -44,7 +44,7 @@ body{
 .progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--roxo),var(--dourado));z-index:9999;width:0%;transition:width .1s}
 
 /* nav */
-nav.top{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;backdrop-filter:blur(14px);background:rgba(252,250,247,.72);border-bottom:1px solid var(--linha);transition:.4s}
+nav.top{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;backdrop-filter:blur(14px);background:rgba(252,250,247.72);border-bottom:1px solid var(--linha);transition:.4s}
 nav.top .brand{font-family:var(--sans);font-weight:800;letter-spacing:.42em;font-size:15px;color:var(--roxo)}
 nav.top .brand span{color:var(--dourado)}
 nav.top .menu{display:flex;gap:26px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
@@ -57,7 +57,7 @@ nav.top .menu a:hover{color:var(--roxo)}
 /* layout */
 section{padding:120px 40px;position:relative;max-width:1200px;margin:0 auto}
 @media(max-width:700px){section{padding:80px 22px}}
-.reveal{opacity:0;transform:translateY(34px);transition:.9s cubic-bezier(.2,.7,.2,1)}
+.reveal{opacity:0;transform:translateY(34px);transition:.9s cubic-bezier(.2.7.2,1)}
 .reveal.in{opacity:1;transform:none}
 
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dourado);margin-bottom:22px}
@@ -92,7 +92,7 @@ p{color:#4b3a56}
 
 /* ---------- MANIFESTO ---------- */
 .manifesto{background:linear-gradient(160deg,var(--roxo),var(--roxo-2));color:#fff;max-width:none;padding:150px 22px;text-align:center;position:relative;overflow:hidden}
-.manifesto::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 0%,rgba(201,162,75,.22),transparent 60%)}
+.manifesto::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 0%,rgba(201,162,75.22),transparent 60%)}
 .manifesto .inner{max-width:900px;margin:0 auto;position:relative}
 .manifesto .eyebrow{color:var(--dourado-2)}
 .manifesto .eyebrow::before{background:var(--dourado-2)}
@@ -105,8 +105,8 @@ p{color:#4b3a56}
 .g2{grid-template-columns:repeat(2,1fr)}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g4{grid-template-columns:repeat(4,1fr)}
-@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.g2,.g3,.g4{grid-template-columns:1fr}}
+@media(max-width:900px){.g3.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.g2.g3.g4{grid-template-columns:1fr}}
 
 .card{background:#fff;border:1px solid var(--linha);border-radius:20px;padding:32px 28px;transition:.4s;position:relative;overflow:hidden}
 .card:hover{transform:translateY(-6px);box-shadow:var(--sombra);border-color:transparent}
@@ -256,7 +256,7 @@ footer{background:linear-gradient(160deg,var(--roxo),var(--roxo-2));color:#fff;t
 footer .fm{font-family:var(--serif);font-weight:400;letter-spacing:.03em;font-size:clamp(2.6rem,10vw,6rem);color:#fff}
 footer .fm b{font-weight:500;font-style:italic;color:var(--dourado-2)}
 footer .ft{font-family:var(--serif);font-style:italic;color:var(--dourado-2);font-size:1.3rem;margin-top:16px}
-footer .meta{margin-top:50px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
+footer .meta{margin-top:50px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255.55);display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
 footer .meta span{color:var(--dourado-2)}
 
 /* section intro spacing helper */
@@ -285,7 +285,7 @@ nav.top .brand{text-decoration:none;display:inline-flex;align-items:center}
 nav.top .menu a.active{color:var(--roxo)}
 nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--dourado);border-radius:2px}
 .pdf-btn{display:inline-flex;align-items:center;gap:8px;background:var(--roxo);color:#fff;border:none;border-radius:100px;padding:11px 20px;font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:.3s;white-space:nowrap}
-.pdf-btn:hover{background:var(--dourado);color:var(--roxo);transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(74,30,107,.6)}
+.pdf-btn:hover{background:var(--dourado);color:var(--roxo);transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(74,30,107.6)}
 .pdf-btn svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .idx-btn{display:inline-flex;align-items:center;gap:9px;background:transparent;border:1px solid var(--linha);border-radius:100px;padding:10px 18px;font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--roxo);cursor:pointer;transition:.3s}
 .idx-btn:hover{border-color:var(--roxo);background:var(--lilas)}
@@ -297,8 +297,8 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 /* ===== Overlay menu (índice claro) ===== */
 .overlay{position:fixed;inset:0;z-index:1000;background:linear-gradient(160deg,var(--roxo),#2e1145);color:#fff;opacity:0;visibility:hidden;transition:.45s;overflow-y:auto;padding:80px 30px 50px}
 .overlay.open{opacity:1;visibility:visible}
-.ov-close{position:absolute;top:26px;right:30px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:26px;cursor:pointer;transition:.3s;line-height:1}
-.ov-close:hover{background:rgba(255,255,255,.12);transform:rotate(90deg)}
+.ov-close{position:absolute;top:26px;right:30px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255.3);background:transparent;color:#fff;font-size:26px;cursor:pointer;transition:.3s;line-height:1}
+.ov-close:hover{background:rgba(255,255,255.12);transform:rotate(90deg)}
 .ov-inner{max-width:900px;margin:0 auto}
 .ov-head{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--dourado-2);font-weight:700;margin-bottom:8px}
 .ov-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3rem);font-weight:300;margin-bottom:34px}
@@ -306,10 +306,10 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .ov-list{display:grid;grid-template-columns:1fr 1fr;gap:4px}
 @media(max-width:640px){.ov-list{grid-template-columns:1fr}}
 .ov-list a{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:center;padding:16px 16px;border-radius:14px;text-decoration:none;color:#fff;transition:.3s;border:1px solid transparent}
-.ov-list a:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);transform:translateX(6px)}
+.ov-list a:hover{background:rgba(255,255,255.07);border-color:rgba(255,255,255.14);transform:translateX(6px)}
 .ov-list a .oc{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--dourado-2)}
 .ov-list a h5{font-size:1.08rem;font-weight:700;letter-spacing:.01em}
-.ov-list a p{font-size:.82rem;color:rgba(255,255,255,.55);margin-top:2px}
+.ov-list a p{font-size:.82rem;color:rgba(255,255,255.55);margin-top:2px}
 .ov-foot{margin-top:34px;text-align:center}
 
 /* ===== Dot nav lateral ===== */
@@ -322,7 +322,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 @media(max-width:1080px){.dotnav{display:none}}
 
 /* ===== Back to top ===== */
-.totop{position:fixed;bottom:26px;right:26px;z-index:800;width:50px;height:50px;border-radius:50%;background:var(--roxo);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(14px);transition:.35s;box-shadow:0 14px 30px -14px rgba(74,30,107,.7)}
+.totop{position:fixed;bottom:26px;right:26px;z-index:800;width:50px;height:50px;border-radius:50%;background:var(--roxo);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(14px);transition:.35s;box-shadow:0 14px 30px -14px rgba(74,30,107.7)}
 .totop.show{opacity:1;visibility:visible;transform:none}
 .totop:hover{background:var(--dourado);color:var(--roxo)}
 .totop svg{width:20px;height:20px;stroke:currentColor;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -330,9 +330,9 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 
 /* ===== Animações escalonadas (mais dinâmico) ===== */
 @keyframes pop{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-.reveal.in .card,.reveal.in .persona,.reveal.in .val,.reveal.in .il,.reveal.in .sw,
-.reveal.in .check,.reveal.in .tn,.reveal.in .chip-c,.reveal.in .tone,.reveal.in .pillar,
-.reveal.in .spec,.reveal.in .chap{animation:pop .6s both}
+.reveal.in .card.reveal.in .persona.reveal.in .val.reveal.in .il.reveal.in .sw,
+.reveal.in .check.reveal.in .tn.reveal.in .chip-c.reveal.in .tone.reveal.in .pillar,
+.reveal.in .spec.reveal.in .chap{animation:pop .6s both}
 .reveal.in :nth-child(1){animation-delay:.02s}
 .reveal.in :nth-child(2){animation-delay:.09s}
 .reveal.in :nth-child(3){animation-delay:.16s}
@@ -353,18 +353,18 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 @media print{
   @page{margin:14mm 12mm}
   html{scroll-behavior:auto}
-  nav.top,.progress,.dotnav,.totop,.overlay,.scrolldown,.pdf-hint,.menu-btn,.dl-row,.piece .dl,.il .il-dl,.lb-dl,.sc-dl,.gcats{display:none!important}
+  nav.top.progress.dotnav.totop.overlay.scrolldown.pdf-hint.menu-btn.dl-row.piece .dl.il .il-dl.lb-dl.sc-dl.gcats{display:none!important}
   body{background:#fff}
   .reveal{opacity:1!important;transform:none!important;animation:none!important}
   .reveal.in *{animation:none!important}
-  section,.band,.manifesto,.statement,footer{padding-top:26px!important;padding-bottom:26px!important;max-width:100%!important}
+  section.band.manifesto.statement,footer{padding-top:26px!important;padding-bottom:26px!important;max-width:100%!important}
   section{page-break-before:always;break-before:page}
   header.hero{page-break-before:avoid;min-height:auto;padding-top:10px}
-  .manifesto,.statement,.band{page-break-before:always;break-before:page}
-  .card,.persona,.val,.sw,.spec,.tn,.tl,.check,.il,.chap{break-inside:avoid;page-break-inside:avoid}
-  .grid,.swatches,.type-spec,.pillars,.values,.iconlib,.checklist,.tension{break-inside:avoid}
+  .manifesto.statement.band{page-break-before:always;break-before:page}
+  .card.persona.val.sw.spec.tn.tl.check.il.chap{break-inside:avoid;page-break-inside:avoid}
+  .grid.swatches.type-spec.pillars.values.iconlib.checklist.tension{break-inside:avoid}
   h2.title{break-after:avoid}
-  .card:hover,.persona:hover,.sw:hover{transform:none!important;box-shadow:none!important}
+  .card:hover.persona:hover.sw:hover{transform:none!important;box-shadow:none!important}
   /* garante fundos coloridos no PDF */
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
   .gallery img{max-height:none}
@@ -380,8 +380,8 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .rgrid{display:grid;gap:18px}
 .rgrid.ok{grid-template-columns:repeat(4,1fr)}
 .rgrid.no{grid-template-columns:repeat(4,1fr)}
-@media(max-width:900px){.rgrid.ok,.rgrid.no{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.rgrid.ok,.rgrid.no{grid-template-columns:1fr}}
+@media(max-width:900px){.rgrid.ok.rgrid.no{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.rgrid.ok.rgrid.no{grid-template-columns:1fr}}
 .rule{border:1px solid var(--linha);border-radius:18px;overflow:hidden;background:#fff;transition:.35s}
 .rule:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
 .rprev{height:120px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--branco);border-bottom:1px solid var(--linha)}
@@ -405,7 +405,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .w-stretch .wm-img{transform:scaleX(1.7)}
 .w-rotate .wm-img{transform:rotate(-13deg)}
 .w-color .wm-img{filter:hue-rotate(150deg) saturate(1.7)}
-.w-shadow .wm-img{filter:drop-shadow(4px 4px 0 rgba(44,27,43,.4))}
+.w-shadow .wm-img{filter:drop-shadow(4px 4px 0 rgba(44,27,43.4))}
 .w-skew .wm-img{transform:skewX(-16deg)}
 .w-squeeze .wm-img{transform:scaleX(.5)}
 .w-lowcontrast{background:var(--roxo-soft)!important}
@@ -423,44 +423,44 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .piece img{width:100%;display:block;transition:.6s}
 .piece:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
 .piece:hover img{transform:scale(1.04)}
-.piece .cap{position:absolute;left:0;right:0;bottom:0;padding:32px 18px 16px;background:linear-gradient(transparent,rgba(44,27,43,.82));color:#fff;opacity:0;transform:translateY(8px);transition:.4s}
+.piece .cap{position:absolute;left:0;right:0;bottom:0;padding:32px 18px 16px;background:linear-gradient(transparent,rgba(44,27,43.82));color:#fff;opacity:0;transform:translateY(8px);transition:.4s}
 .piece:hover .cap{opacity:1;transform:none}
 .piece .cap strong{display:block;font-family:var(--serif);font-size:1.15rem}
 .piece .cap span{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dourado-2)}
-.piece .zoom{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:rgba(252,250,248,.9);display:flex;align-items:center;justify-content:center;color:var(--roxo);opacity:0;transition:.4s}
+.piece .zoom{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:rgba(252,250,248.9);display:flex;align-items:center;justify-content:center;color:var(--roxo);opacity:0;transition:.4s}
 .piece:hover .zoom{opacity:1}
 .piece .zoom svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none}
 /* lightbox */
-.lightbox{position:fixed;inset:0;z-index:1200;background:rgba(30,15,30,.92);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:40px;opacity:0;visibility:hidden;transition:.35s}
+.lightbox{position:fixed;inset:0;z-index:1200;background:rgba(30,15,30.92);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:40px;opacity:0;visibility:hidden;transition:.35s}
 .lightbox.open{opacity:1;visibility:visible}
-.lightbox img{max-width:92vw;max-height:82vh;border-radius:12px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7)}
+.lightbox img{max-width:92vw;max-height:82vh;border-radius:12px;box-shadow:0 30px 80px -20px rgba(0,0,0.7)}
 .lb-cap{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#fff;font-family:var(--serif);font-size:1.2rem;text-align:center}
 .lb-cap span{display:block;font-family:var(--sans);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dourado-2);margin-top:4px}
-.lb-close{position:absolute;top:24px;right:28px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:26px;cursor:pointer;transition:.3s;line-height:1}
-.lb-close:hover{background:rgba(255,255,255,.14);transform:rotate(90deg)}
-.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.2);color:#fff;font-size:22px;cursor:pointer;transition:.3s;display:flex;align-items:center;justify-content:center}
-.lb-nav:hover{background:rgba(255,255,255,.16)}
+.lb-close{position:absolute;top:24px;right:28px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255.3);background:transparent;color:#fff;font-size:26px;cursor:pointer;transition:.3s;line-height:1}
+.lb-close:hover{background:rgba(255,255,255.14);transform:rotate(90deg)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255.3);background:rgba(0,0,0.2);color:#fff;font-size:22px;cursor:pointer;transition:.3s;display:flex;align-items:center;justify-content:center}
+.lb-nav:hover{background:rgba(255,255,255.16)}
 .lb-prev{left:24px}.lb-next{right:24px}
 @media(max-width:560px){.lb-nav{width:42px;height:42px}.lb-prev{left:10px}.lb-next{right:10px}}
-.lb-dl{position:absolute;top:24px;right:86px;height:48px;padding:0 20px;border-radius:100px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:700;text-decoration:none;transition:.3s;letter-spacing:.02em}
-.lb-dl:hover{background:rgba(255,255,255,.14)}
+.lb-dl{position:absolute;top:24px;right:86px;height:48px;padding:0 20px;border-radius:100px;border:1px solid rgba(255,255,255.3);background:transparent;color:#fff;display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:700;text-decoration:none;transition:.3s;letter-spacing:.02em}
+.lb-dl:hover{background:rgba(255,255,255.14)}
 .lb-dl svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 @media(max-width:560px){.lb-dl span{display:none}.lb-dl{padding:0 14px;right:80px}}
 
 /* ===== Downloads ===== */
 .dl-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .dl-btn{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--linha);border-radius:100px;padding:12px 20px;font-family:var(--sans);font-weight:700;font-size:.82rem;letter-spacing:.02em;color:var(--roxo);text-decoration:none;cursor:pointer;transition:.3s}
-.dl-btn:hover{background:var(--roxo);color:#fff;border-color:var(--roxo);transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(74,30,107,.55)}
+.dl-btn:hover{background:var(--roxo);color:#fff;border-color:var(--roxo);transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(74,30,107.55)}
 .dl-btn.solid{background:var(--roxo);color:#fff;border-color:var(--roxo)}
 .dl-btn.solid:hover{background:var(--dourado);color:var(--roxo);border-color:var(--dourado)}
 .dl-btn svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
 .dl-btn .ext{font-weight:500;opacity:.6;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
-.piece .dl{position:absolute;top:14px;left:14px;width:34px;height:34px;border-radius:50%;background:rgba(252,250,248,.92);display:flex;align-items:center;justify-content:center;color:var(--roxo);opacity:0;transition:.35s;z-index:3}
+.piece .dl{position:absolute;top:14px;left:14px;width:34px;height:34px;border-radius:50%;background:rgba(252,250,248.92);display:flex;align-items:center;justify-content:center;color:var(--roxo);opacity:0;transition:.35s;z-index:3}
 .piece:hover .dl{opacity:1}
 .piece .dl:hover{background:var(--roxo);color:#fff}
 .piece .dl svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .il{position:relative}
-.il .il-dl{position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:7px;background:rgba(255,255,255,.92);color:var(--roxo);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s;z-index:2}
+.il .il-dl{position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:7px;background:rgba(255,255,255.92);color:var(--roxo);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s;z-index:2}
 .il:hover .il-dl{opacity:1}
 .il .il-dl:hover{background:var(--dourado);color:var(--roxo)}
 .il .il-dl svg{width:12px;height:12px;stroke:currentColor;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -475,7 +475,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .dcard p{font-size:.92rem;margin-bottom:6px}
 .kit-band{margin-top:26px;background:linear-gradient(160deg,var(--roxo),var(--roxo-2));border-radius:24px;padding:44px 34px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .kit-band h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,3.4vw,2rem);color:#fff}
-.kit-band p{color:rgba(255,255,255,.8);margin-top:6px;font-size:.95rem}
+.kit-band p{color:rgba(255,255,255.8);margin-top:6px;font-size:.95rem}
 .kit-band .dl-btn{background:var(--dourado-2);border-color:var(--dourado-2);color:var(--roxo);font-size:.92rem;padding:15px 26px}
 .kit-band .dl-btn:hover{background:#fff;border-color:#fff}
 
@@ -525,7 +525,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .pdv-demo{background:linear-gradient(165deg,var(--roxo),var(--roxo-2));border-radius:20px;padding:38px 30px;text-align:center;color:#fff}
 .pdv-demo .d1{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.1}
 .pdv-demo .d2{color:var(--dourado-2);font-size:1.05rem;margin-top:10px;font-weight:600}
-.pdv-demo .d3{color:rgba(255,255,255,.7);font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;margin-top:14px}
+.pdv-demo .d3{color:rgba(255,255,255.7);font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;margin-top:14px}
 .pdv-demo .d4{display:inline-block;margin-top:18px;background:var(--dourado-2);color:var(--roxo);padding:11px 24px;border-radius:100px;font-weight:800;font-size:.85rem}
 /* embalagem */
 .pack{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
@@ -561,14 +561,14 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 @media(max-width:860px){.pgrid{grid-template-columns:1fr}}
 .pphoto{position:relative;border-radius:22px;overflow:hidden;min-height:440px;border:1px solid var(--linha)}
 .pphoto>img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.pphoto .pshade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(44,27,43,.9))}
+.pphoto .pshade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(44,27,43.9))}
 .pphoto .pcontent{position:absolute;left:0;right:0;bottom:0;padding:26px 24px;color:#fff}
 .pphoto .parche{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado-2);font-weight:700}
 .pphoto .pname{font-family:var(--serif);font-size:2rem;line-height:1;margin:6px 0 4px}
-.pphoto .ptitle{font-size:.94rem;color:rgba(255,255,255,.85)}
+.pphoto .ptitle{font-size:.94rem;color:rgba(255,255,255.85)}
 .pphoto .pquote{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:1.05rem;border-left:2px solid var(--dourado);padding-left:14px;color:#fff}
 .pstats{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.pstats span{font-size:.71rem;font-weight:700;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);padding:6px 12px;border-radius:100px}
+.pstats span{font-size:.71rem;font-weight:700;color:#fff;background:rgba(255,255,255.14);border:1px solid rgba(255,255,255.22);padding:6px 12px;border-radius:100px}
 .pright{display:flex;flex-direction:column;gap:20px}
 .pbox{border:1px solid var(--linha);border-radius:18px;padding:22px 24px;background:#fff}
 .pbox h5{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado);font-weight:700;margin-bottom:15px;display:flex;align-items:center;gap:8px}
@@ -579,14 +579,14 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .meter .ml{display:flex;justify-content:space-between;font-size:.82rem;font-weight:600;color:var(--roxo);margin-bottom:5px}
 .meter .ml em{font-style:normal;color:var(--cinza);font-weight:700}
 .meter .mt{height:7px;border-radius:100px;background:var(--lilas);overflow:hidden}
-.meter .mf{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--roxo),var(--dourado));width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.meter .mf{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--roxo),var(--dourado));width:0;transition:width 1.1s cubic-bezier(.2.7.2,1)}
 .pdd{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:520px){.pdd{grid-template-columns:1fr}}
 .pcol h5.want{color:var(--roxo)}.pcol h5.pain{color:#b0788a}
 .plist{list-style:none;display:flex;flex-direction:column;gap:9px}
 .plist li{font-size:.9rem;padding-left:24px;position:relative;color:#4b3a56;line-height:1.4}
 .plist.want li::before{content:"◆";position:absolute;left:0;top:1px;color:var(--dourado);font-size:.7rem}
-.plist.pain li::before{content:"—";position:absolute;left:0;top:0;color:#c98ea0;font-weight:800}
+.plist.pain li::before{content:"·";position:absolute;left:0;top:0;color:#c98ea0;font-weight:800}
 .ptags2{display:flex;flex-wrap:wrap;gap:8px}
 .ptags2 span{font-size:.75rem;font-weight:700;color:var(--roxo);background:var(--lilas);padding:6px 12px;border-radius:100px}
 .pmoment{font-family:var(--serif);font-style:italic;color:var(--roxo);font-size:1rem}
@@ -598,7 +598,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .quadrant .qlab{position:absolute;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--roxo-soft)}
 .qdot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center;transition:.3s}
 .qdot:hover{z-index:5;transform:translate(-50%,-50%) scale(1.08)}
-.qdot img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 8px 20px -8px rgba(74,30,107,.6)}
+.qdot img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 8px 20px -8px rgba(74,30,107.6)}
 .qdot .qn{font-size:.74rem;font-weight:800;color:var(--roxo);background:#fff;padding:4px 10px;border-radius:100px;border:1px solid var(--linha);white-space:nowrap}
 .qdot .qn small{display:block;font-weight:500;color:var(--cinza);font-size:.66rem}
 /* ecossistema */
@@ -648,9 +648,9 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .vc h4{font-family:var(--serif);color:var(--roxo);font-size:1.35rem;margin-bottom:6px;line-height:1.1}
 .vc p{font-size:.86rem;color:#4b3a56}
 .vc .vtr{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
-.vc .vtr span{font-size:.68rem;font-weight:700;color:var(--roxo);background:rgba(255,255,255,.75);padding:4px 9px;border-radius:100px}
-.vc-l{left:0;background:rgba(123,59,119,.16);border:2px solid var(--roxo);text-align:left;padding-right:170px}
-.vc-r{right:0;background:rgba(227,194,147,.42);border:2px solid var(--dourado);text-align:right;padding-left:170px;align-items:flex-end}
+.vc .vtr span{font-size:.68rem;font-weight:700;color:var(--roxo);background:rgba(255,255,255.75);padding:4px 9px;border-radius:100px}
+.vc-l{left:0;background:rgba(123,59,119.16);border:2px solid var(--roxo);text-align:left;padding-right:170px}
+.vc-r{right:0;background:rgba(227,194,147.42);border:2px solid var(--dourado);text-align:right;padding-left:170px;align-items:flex-end}
 .vc-r .vtr{justify-content:flex-end}
 .vcenter{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:170px;text-align:center;background:#fff;border:1px solid var(--linha);border-radius:20px;padding:18px 12px;box-shadow:var(--sombra)}
 .vcenter img{width:104px;height:auto;display:block;margin:0 auto 6px}
@@ -658,7 +658,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 @media(max-width:700px){
   .venn{height:auto;display:flex;flex-direction:column;gap:14px;max-width:420px}
   .vc{position:static;width:100%;height:auto;border-radius:22px;padding:26px 24px;text-align:left!important;align-items:flex-start!important}
-  .vc-l,.vc-r{padding:26px 24px}
+  .vc-l.vc-r{padding:26px 24px}
   .vc-r .vtr{justify-content:flex-start}
   .vcenter{position:static;transform:none;width:auto;order:1}
 }
@@ -669,7 +669,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .balance .bends{display:flex;justify-content:space-between;font-size:.8rem;font-weight:700;color:var(--cinza);margin-bottom:14px}
 .balance .track{height:8px;border-radius:100px;background:linear-gradient(90deg,#b9b2c0,var(--lilas),var(--dourado));position:relative}
 .balance .mk{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
-.balance .mk .dot{width:20px;height:20px;border-radius:50%;background:var(--roxo);border:4px solid #fff;box-shadow:0 4px 12px -3px rgba(74,30,107,.6)}
+.balance .mk .dot{width:20px;height:20px;border-radius:50%;background:var(--roxo);border:4px solid #fff;box-shadow:0 4px 12px -3px rgba(74,30,107.6)}
 .balance .mk .lbl{font-family:var(--serif);font-style:italic;color:var(--roxo);font-size:.95rem;white-space:nowrap;background:#fff;padding:2px 10px;border-radius:100px;border:1px solid var(--linha)}
 /* sub-arquétipos */
 .archgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
@@ -716,7 +716,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .scard:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
 .sc-img{aspect-ratio:3/4;background-size:cover;background-position:center;position:relative;cursor:pointer}
 .sc-n{position:absolute;top:10px;left:10px;background:var(--roxo);color:#fff;font-weight:800;font-size:.72rem;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--ouro);z-index:2}
-.sc-dl{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:rgba(252,250,248,.92);color:var(--roxo);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s;z-index:2}
+.sc-dl{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:rgba(252,250,248.92);color:var(--roxo);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s;z-index:2}
 .sc-img:hover .sc-dl{opacity:1}
 .sc-dl:hover{background:var(--roxo);color:#fff}
 .sc-dl svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -748,7 +748,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .ighandle small{display:block;color:var(--cinza);font-weight:500;font-size:.66rem}
 .igmore{margin-left:auto;color:var(--cinza);font-weight:800;letter-spacing:1px}
 .igimg{aspect-ratio:1;background-size:cover;background-position:center;position:relative}
-.igsticker{position:absolute;left:12px;bottom:12px;background:rgba(252,250,248,.94);color:var(--roxo);font-weight:800;font-size:.72rem;padding:6px 12px;border-radius:100px}
+.igsticker{position:absolute;left:12px;bottom:12px;background:rgba(252,250,248.94);color:var(--roxo);font-weight:800;font-size:.72rem;padding:6px 12px;border-radius:100px}
 .igact{display:flex;gap:15px;padding:11px 13px 5px;color:var(--tinta)}
 .igact svg{width:23px;height:23px;stroke:currentColor;stroke-width:1.7;fill:none}
 .igact .save{margin-left:auto}
@@ -756,18 +756,18 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .igcap{padding:4px 13px 14px;font-size:.8rem;color:var(--tinta);line-height:1.45}
 .igcap b{font-weight:700}
 .igtags{color:var(--roxo-soft);font-weight:600}
-/* stories / reels — telefone */
+/* stories / reels, telefone */
 .story{position:relative;aspect-ratio:9/16;border-radius:26px;overflow:hidden;background-size:cover;background-position:center;max-width:250px;margin:0 auto;width:100%;border:5px solid #1c1120;box-shadow:var(--sombra)}
-.sgrad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(44,27,43,.55),transparent 26%,transparent 52%,rgba(44,27,43,.9))}
+.sgrad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(44,27,43.55),transparent 26%,transparent 52%,rgba(44,27,43.9))}
 .sbars{position:absolute;top:10px;left:12px;right:12px;display:flex;gap:4px;z-index:3}
-.sbars i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.4)}
+.sbars i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255.4)}
 .sbars i.on{background:#fff}
 .stop{position:absolute;top:22px;left:12px;right:12px;display:flex;align-items:center;gap:7px;z-index:3;color:#fff}
 .stop img{width:26px;height:26px;border-radius:50%;border:2px solid #fff;background:#fff;padding:2px;flex:0 0 auto}
-.stop b{font-size:.76rem}.stop small{color:rgba(255,255,255,.8);font-size:.64rem;margin-left:3px}
+.stop b{font-size:.76rem}.stop small{color:rgba(255,255,255.8);font-size:.64rem;margin-left:3px}
 .sbody{position:absolute;left:16px;right:16px;bottom:70px;z-index:3;color:#fff;text-align:center}
 .sbody .sh{font-family:var(--serif);font-size:1.35rem;line-height:1.12}
-.sbody .ssub{font-size:.76rem;color:rgba(255,255,255,.85);margin-top:6px}
+.sbody .ssub{font-size:.76rem;color:rgba(255,255,255.85);margin-top:6px}
 .scta{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:5px;color:#fff}
 .scta .pill{background:#fff;color:var(--roxo);font-weight:800;font-size:.72rem;padding:8px 18px;border-radius:100px}
 .scta .up{font-size:.68rem;opacity:.9}
@@ -779,7 +779,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 /* google ads */
 .adlabel{font-size:.6rem;font-weight:800;letter-spacing:.04em;color:#5b6b3a;border:1px solid #b7c48a;border-radius:4px;padding:1px 5px;display:inline-block;background:#f3f7e8;margin-bottom:8px}
 .ad-lead{height:90px;width:100%;border:1px solid var(--linha);border-radius:10px;background:linear-gradient(120deg,var(--roxo),var(--roxo-2));display:flex;align-items:center;gap:16px;padding:0 22px;color:#fff;overflow:hidden;position:relative}
-.ad-lead::after{content:"";position:absolute;right:-30px;top:-30px;width:150px;height:150px;border-radius:50%;background:rgba(239,195,94,.2)}
+.ad-lead::after{content:"";position:absolute;right:-30px;top:-30px;width:150px;height:150px;border-radius:50%;background:rgba(239,195,94.2)}
 .ad-lead img{height:30px;position:relative;z-index:2}
 .ad-lead .h{font-family:var(--serif);font-size:1.15rem;flex:1;position:relative;z-index:2;line-height:1.05}
 .ad-lead .btn{background:var(--dourado-2);color:var(--roxo);font-weight:800;font-size:.78rem;padding:9px 18px;border-radius:100px;white-space:nowrap;position:relative;z-index:2}
@@ -836,7 +836,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .chead{background:var(--roxo);color:#fff;padding:12px 14px;display:flex;align-items:center;gap:10px}
 .chead .cav{width:34px;height:34px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .chead .cav img{width:26px}
-.chead b{font-size:.86rem}.chead small{display:block;color:rgba(255,255,255,.8);font-size:.68rem}
+.chead b{font-size:.86rem}.chead small{display:block;color:rgba(255,255,255.8);font-size:.68rem}
 .cbody{padding:16px 14px;display:flex;flex-direction:column;gap:9px;background:var(--nude)}
 .bub{max-width:82%;padding:9px 12px;border-radius:14px;font-size:.82rem;line-height:1.4;position:relative}
 .bub.in{background:#fff;align-self:flex-start;border:1px solid var(--linha);border-bottom-left-radius:4px}
@@ -848,12 +848,12 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 /* outdoor / OOH */
 .ooh{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:21/9;background-size:cover;background-position:center;box-shadow:var(--sombra)}
 @media(max-width:560px){.ooh{aspect-ratio:16/10}}
-.ooh .ograd{position:absolute;inset:0;background:linear-gradient(90deg,rgba(74,30,107,.94),rgba(74,30,107,.5) 52%,rgba(74,30,107,.05))}
+.ooh .ograd{position:absolute;inset:0;background:linear-gradient(90deg,rgba(74,30,107.94),rgba(74,30,107.5) 52%,rgba(74,30,107.05))}
 .ooh .obody{position:absolute;left:6%;top:50%;transform:translateY(-50%);color:#fff;max-width:56%;z-index:2}
 .ooh .obody img{height:38px;margin-bottom:14px}
 .ooh .obody .oh{font-family:var(--serif);font-size:clamp(1.3rem,3.6vw,2.4rem);line-height:1.05}
 .ooh .obody .osub{color:var(--dourado-2);font-style:italic;font-family:var(--serif);font-size:clamp(.9rem,2vw,1.2rem);margin-top:8px}
-.ooh .obadge{position:absolute;right:5%;bottom:8%;z-index:2;background:rgba(252,250,248,.9);color:var(--roxo);font-weight:800;font-size:.72rem;padding:7px 14px;border-radius:100px}
+.ooh .obadge{position:absolute;right:5%;bottom:8%;z-index:2;background:rgba(252,250,248.9);color:var(--roxo);font-weight:800;font-size:.72rem;padding:7px 14px;border-radius:100px}
 
 /* ===== Elementos da linha criativa (mockups fiéis) ===== */
 .pat{background-color:#EFE3EC;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23EFE3EC'/%3E%3Ccircle cx='30' cy='30' r='25' fill='%237B3B77'/%3E%3Ccircle cx='90' cy='90' r='25' fill='%237B3B77'/%3E%3Cg fill='%23C79EC3'%3E%3Cellipse cx='90' cy='30' rx='9' ry='25'/%3E%3Cellipse cx='90' cy='30' rx='25' ry='9'/%3E%3Cellipse cx='30' cy='90' rx='9' ry='25'/%3E%3Cellipse cx='30' cy='90' rx='25' ry='9'/%3E%3C/g%3E%3C/svg%3E");background-size:56px 56px}
@@ -880,7 +880,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .creative .cpill{background:var(--dourado-2);color:var(--roxo);font-weight:800;font-size:.74rem;padding:8px 18px;border-radius:100px;margin-top:2px}
 .creative .cphoto{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid var(--ouro)}
 .creative.photo{color:#fff}
-.creative .cshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(74,30,107,.35),rgba(74,30,107,.82));z-index:1}
+.creative .cshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(74,30,107.35),rgba(74,30,107.82));z-index:1}
 
 /* ===== Tamanho mínimo do logo ===== */
 .minsize{display:flex;flex-wrap:wrap;gap:44px;align-items:flex-end;justify-content:center;margin-top:24px;background:#fff;border:1px solid var(--linha);border-radius:20px;padding:40px 30px}
@@ -1042,7 +1042,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="kick">Brand Guide · v0.3</div>
   <img class="wordmark-img" src="assets/logo/pronta-roxo.png" alt="PRONTA">
   <p class="tag">estar PRONTA para a vida real</p>
-  <p class="sub">Uma marca de acessórios de cabelo feita para a beleza que acontece no meio da vida — no espelho rápido, no cabelo preso com intenção, no detalhe que devolve presença.</p>
+  <p class="sub">Uma marca de acessórios de cabelo feita para a beleza que acontece no meio da vida, no espelho rápido, no cabelo preso com intenção, no detalhe que devolve presença.</p>
   <div class="scrolldown"><div class="line"></div>role para explorar</div>
 </header>
 
@@ -1051,7 +1051,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="inner reveal">
     <div class="quotemark">“</div>
     <div class="eyebrow" style="justify-content:center">Manifesto central</div>
-    <p class="big">Estar <b>PRONTA para a vida real</b> é entender que beleza não precisa de pausa, nem de ocasião marcada: ela acontece no caminho, no espelho rápido antes de sair, no cabelo preso com intenção, no detalhe que muda o humor e devolve presença. É sobre mulheres que atravessam dias cheios sem deixar de serem elas mesmas. Porque o cabelo também fala: revela atitude, traduz autoestima, acompanha fases e versões. <b>PRONTA existe para esse instante</b> em que a mulher se reconhece, se arruma do seu jeito e segue — autêntica, inteira e pronta para viver tudo o que a vida real pedir.</p>
+    <p class="big">Estar <b>PRONTA para a vida real</b> é entender que beleza não precisa de pausa, nem de ocasião marcada: ela acontece no caminho, no espelho rápido antes de sair, no cabelo preso com intenção, no detalhe que muda o humor e devolve presença. É sobre mulheres que atravessam dias cheios sem deixar de serem elas mesmas. Porque o cabelo também fala: revela atitude, traduz autoestima, acompanha fases e versões. <b>PRONTA existe para esse instante</b> em que a mulher se reconhece, se arruma do seu jeito e segue, autêntica, inteira e pronta para viver tudo o que a vida real pedir.</p>
   </div>
 </div>
 
@@ -1060,20 +1060,20 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="reveal">
     <div class="eyebrow"><span class="num">00</span> A história</div>
     <h2 class="title">Toda pressa boa começa com um <em>gesto</em></h2>
-    <p class="lead">Toda mulher tem uma gaveta. Nela, misturados, moram elásticos, presilhas, prendedores e aquele scrunchie que sobreviveu a mil corridas. Estão sempre ali, sempre à mão — e quase nunca têm nome. A história da PRONTA começa exatamente aí: no detalhe que todo mundo usa e ninguém percebe.</p>
+    <p class="lead">Toda mulher tem uma gaveta. Nela, misturados, moram elásticos, presilhas, prendedores e aquele scrunchie que sobreviveu a mil corridas. Estão sempre ali, sempre à mão, e quase nunca têm nome. A história da PRONTA começa exatamente aí: no detalhe que todo mundo usa e ninguém percebe.</p>
   </div>
 
   <div class="hist-act reveal">
     <div class="han">I</div>
     <div><h3>O detalhe sem nome</h3>
-      <p>Por muito tempo, o acessório de cabelo foi tratado como pequeno demais para merecer uma marca. Vivia solto na gôndola, sem história, escolhido no impulso e esquecido no fundo da bolsa. Cumpria a função, prendia o cabelo — mas ninguém falava dele. Presilhas, elásticos e prendedores estavam em toda parte e, ao mesmo tempo, em lugar nenhum.</p>
+      <p>Por muito tempo, o acessório de cabelo foi tratado como pequeno demais para merecer uma marca. Vivia solto na gôndola, sem história, escolhido no impulso e esquecido no fundo da bolsa. Cumpria a função, prendia o cabelo, mas ninguém falava dele. Presilhas, elásticos e prendedores estavam em toda parte e, ao mesmo tempo, em lugar nenhum.</p>
     </div>
   </div>
 
   <div class="hist-act reveal">
     <div class="han">II</div>
     <div><h3>O gesto que muda tudo</h3>
-      <p>Mas quem observa de perto percebe uma coisa: no meio da pressa, quando a mulher prende o cabelo, algo se ajusta por dentro. O rosto aparece, a postura sobe, o dia recomeça. Não é vaidade — é presença. O acessório é pequeno só no tamanho; o gesto é enorme. Foi olhando para esse instante — o espelho rápido antes de sair — que a marca encontrou o seu lugar.</p>
+      <p>Mas quem observa de perto percebe uma coisa: no meio da pressa, quando a mulher prende o cabelo, algo se ajusta por dentro. O rosto aparece, a postura sobe, o dia recomeça. Não é vaidade, é presença. O acessório é pequeno só no tamanho; o gesto é enorme. Foi olhando para esse instante, o espelho rápido antes de sair, que a marca encontrou o seu lugar.</p>
     </div>
   </div>
 
@@ -1084,7 +1084,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="hist-act reveal">
     <div class="han">III</div>
     <div><h3>Uma ideia vira marca</h3>
-      <p>Foi desse gesto que nasceu a PRONTA. Não para reinventar o produto, mas para dar a ele o que sempre faltou: nome, intenção e forma. Para transformar um item de gôndola em um detalhe de beleza — e a beleza possível em uma marca que a mulher reconhece e procura.</p>
+      <p>Foi desse gesto que nasceu a PRONTA. Não para reinventar o produto, mas para dar a ele o que sempre faltou: nome, intenção e forma. Para transformar um item de gôndola em um detalhe de beleza, e a beleza possível em uma marca que a mulher reconhece e procura.</p>
       <p>E o nome já dizia tudo. PRONTA não é só assinatura: é uma palavra pronta para virar atitude.</p>
       <div class="namebd">
         <div class="nb"><b>Prontidão</b><span>resolver rápido</span></div>
@@ -1098,7 +1098,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="hist-act reveal">
     <div class="han">IV</div>
     <div><h3>A virada</h3>
-      <p>A PRONTA não está sendo reinventada — está sendo estruturada. O que antes aparecia disperso (produto, preço, cartela, gôndola) passa a vir do mesmo lugar: beleza para a vida real. É a mudança de eixo que define este momento — <b>de portfólio para plataforma, de produto para narrativa, de presença de varejo para presença de marca.</b></p>
+      <p>A PRONTA não está sendo reinventada, está sendo estruturada. O que antes aparecia disperso (produto, preço, cartela, gôndola) passa a vir do mesmo lugar: beleza para a vida real. É a mudança de eixo que define este momento: <b>de portfólio para plataforma, de produto para narrativa, de presença de varejo para presença de marca.</b></p>
     </div>
   </div>
 
@@ -1113,7 +1113,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
 
   <div class="reveal narrow center" style="margin-top:52px">
-    <p style="font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,3vw,1.7rem);color:var(--roxo);line-height:1.4">A PRONTA quer ser a marca que a mulher lembra quando pensa: "preciso prender o cabelo, mas ainda quero me sentir bonita". Uma marca feita para acompanhar mulheres reais — do seu jeito, prontas para viver tudo o que a vida real pedir.</p>
+    <p style="font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,3vw,1.7rem);color:var(--roxo);line-height:1.4">A PRONTA quer ser a marca que a mulher lembra quando pensa: "preciso prender o cabelo, mas ainda quero me sentir bonita". Uma marca feita para acompanhar mulheres reais, do seu jeito, prontas para viver tudo o que a vida real pedir.</p>
   </div>
 </section>
 
@@ -1149,7 +1149,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
 
   <div class="grid g3 mt reveal">
-    <div class="card"><span class="n">i</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h10l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 8h6M8 12h8M8 16h5"/></svg></div><h3>Sobre este documento</h3><p>A PRONTA não está sendo reinventada — está sendo estruturada. Um repertório de decisões: o que a marca acredita, como fala, como aparece e como se comporta.</p></div>
+    <div class="card"><span class="n">i</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h10l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 8h6M8 12h8M8 16h5"/></svg></div><h3>Sobre este documento</h3><p>A PRONTA não está sendo reinventada, está sendo estruturada. Um repertório de decisões: o que a marca acredita, como fala, como aparece e como se comporta.</p></div>
     <div class="card"><span class="n">ii</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg></div><h3>Como usar o guia</h3><p>Antes de criar qualquer coisa com o nome PRONTA, volte à pergunta central: <em>isso deixa a mulher mais pronta para a vida real?</em></p></div>
     <div class="card"><span class="n">iii</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Objetivo do projeto</h3><p>Fazer a PRONTA deixar de ser vista como mais uma opção e passar a ser reconhecida como marca: democrática, mas não genérica.</p></div>
   </div>
@@ -1248,7 +1248,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="reveal">
     <div class="eyebrow"><span class="num">★</span> Personas</div>
     <h2 class="title">Quem é a mulher <em>PRONTA</em></h2>
-    <p class="lead">Quatro retratos vivos do público — com desejos, dores, motivadores e momentos de uso. Navegue entre elas para entender por quem a marca fala.</p>
+    <p class="lead">Quatro retratos vivos do público, com desejos, dores, motivadores e momentos de uso. Navegue entre elas para entender por quem a marca fala.</p>
   </div>
 
   <div class="persona-explorer reveal">
@@ -1275,7 +1275,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
           <div class="pbox">
             <h5>Mapa de motivadores</h5>
             <div class="radar-wrap">
-              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,32.1 170.8,90.2 144.7,157.8 83.5,146.5 46.1,89.2" fill="rgba(123,59,119,.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="32.1" r="2.6" fill="#7B3B77"/><circle cx="170.8" cy="90.2" r="2.6" fill="#7B3B77"/><circle cx="144.7" cy="157.8" r="2.6" fill="#7B3B77"/><circle cx="83.5" cy="146.5" r="2.6" fill="#7B3B77"/><circle cx="46.1" cy="89.2" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
+              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,32.1 170.8,90.2 144.7,157.8 83.5,146.5 46.1,89.2" fill="rgba(123,59,119.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="32.1" r="2.6" fill="#7B3B77"/><circle cx="170.8" cy="90.2" r="2.6" fill="#7B3B77"/><circle cx="144.7" cy="157.8" r="2.6" fill="#7B3B77"/><circle cx="83.5" cy="146.5" r="2.6" fill="#7B3B77"/><circle cx="46.1" cy="89.2" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
               <div class="meters">
                 <div class="meter"><div class="ml"><span>Praticidade</span><em>95</em></div><div class="mt"><div class="mf" data-val="95"></div></div></div>
                 <div class="meter"><div class="ml"><span>Estética</span><em>78</em></div><div class="mt"><div class="mf" data-val="78"></div></div></div>
@@ -1315,7 +1315,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
           <div class="pbox">
             <h5>Mapa de motivadores</h5>
             <div class="radar-wrap">
-              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,60.8 184.1,85.9 138.0,148.5 65.7,171.0 41.4,87.7" fill="rgba(123,59,119,.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="60.8" r="2.6" fill="#7B3B77"/><circle cx="184.1" cy="85.9" r="2.6" fill="#7B3B77"/><circle cx="138.0" cy="148.5" r="2.6" fill="#7B3B77"/><circle cx="65.7" cy="171.0" r="2.6" fill="#7B3B77"/><circle cx="41.4" cy="87.7" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
+              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,60.8 184.1,85.9 138.0,148.5 65.7,171.0 41.4,87.7" fill="rgba(123,59,119.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="60.8" r="2.6" fill="#7B3B77"/><circle cx="184.1" cy="85.9" r="2.6" fill="#7B3B77"/><circle cx="138.0" cy="148.5" r="2.6" fill="#7B3B77"/><circle cx="65.7" cy="171.0" r="2.6" fill="#7B3B77"/><circle cx="41.4" cy="87.7" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
               <div class="meters">
                 <div class="meter"><div class="ml"><span>Praticidade</span><em>60</em></div><div class="mt"><div class="mf" data-val="60"></div></div></div>
                 <div class="meter"><div class="ml"><span>Estética</span><em>95</em></div><div class="mt"><div class="mf" data-val="95"></div></div></div>
@@ -1355,7 +1355,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
           <div class="pbox">
             <h5>Mapa de motivadores</h5>
             <div class="radar-wrap">
-              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,37.8 164.6,92.3 149.5,164.4 88.3,139.9 50.7,90.7" fill="rgba(123,59,119,.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="37.8" r="2.6" fill="#7B3B77"/><circle cx="164.6" cy="92.3" r="2.6" fill="#7B3B77"/><circle cx="149.5" cy="164.4" r="2.6" fill="#7B3B77"/><circle cx="88.3" cy="139.9" r="2.6" fill="#7B3B77"/><circle cx="50.7" cy="90.7" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
+              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,37.8 164.6,92.3 149.5,164.4 88.3,139.9 50.7,90.7" fill="rgba(123,59,119.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="37.8" r="2.6" fill="#7B3B77"/><circle cx="164.6" cy="92.3" r="2.6" fill="#7B3B77"/><circle cx="149.5" cy="164.4" r="2.6" fill="#7B3B77"/><circle cx="88.3" cy="139.9" r="2.6" fill="#7B3B77"/><circle cx="50.7" cy="90.7" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
               <div class="meters">
                 <div class="meter"><div class="ml"><span>Praticidade</span><em>88</em></div><div class="mt"><div class="mf" data-val="88"></div></div></div>
                 <div class="meter"><div class="ml"><span>Estética</span><em>70</em></div><div class="mt"><div class="mf" data-val="70"></div></div></div>
@@ -1395,7 +1395,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
           <div class="pbox">
             <h5>Mapa de motivadores</h5>
             <div class="radar-wrap">
-              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,39.5 158.4,94.3 154.3,171.0 93.1,133.2 67.1,96.1" fill="rgba(123,59,119,.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="39.5" r="2.6" fill="#7B3B77"/><circle cx="158.4" cy="94.3" r="2.6" fill="#7B3B77"/><circle cx="154.3" cy="171.0" r="2.6" fill="#7B3B77"/><circle cx="93.1" cy="133.2" r="2.6" fill="#7B3B77"/><circle cx="67.1" cy="96.1" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
+              <svg viewBox="0 0 220 220" class="radar"><polygon points="110.0,89.5 129.5,103.7 122.0,126.6 98.0,126.6 90.5,103.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,69.0 149.0,97.3 134.1,143.2 85.9,143.2 71.0,97.3" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,48.5 168.5,91.0 146.1,159.8 73.9,159.8 51.5,91.0" fill="none" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,28.0 188.0,84.7 158.2,176.3 61.8,176.3 32.0,84.7" fill="none" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="110.0" y2="28.0" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="188.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="158.2" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="61.8" y2="176.3" stroke="#E7DBE9" stroke-width="1"/><line x1="110" y1="110" x2="32.0" y2="84.7" stroke="#E7DBE9" stroke-width="1"/><polygon points="110.0,39.5 158.4,94.3 154.3,171.0 93.1,133.2 67.1,96.1" fill="rgba(123,59,119.16)" stroke="#7B3B77" stroke-width="2" stroke-linejoin="round"/><circle cx="110.0" cy="39.5" r="2.6" fill="#7B3B77"/><circle cx="158.4" cy="94.3" r="2.6" fill="#7B3B77"/><circle cx="154.3" cy="171.0" r="2.6" fill="#7B3B77"/><circle cx="93.1" cy="133.2" r="2.6" fill="#7B3B77"/><circle cx="67.1" cy="96.1" r="2.6" fill="#7B3B77"/><text x="110.0" y="15.0" text-anchor="middle" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Praticidade</text><text x="203.2" y="82.7" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Estética</text><text x="167.6" y="192.3" text-anchor="start" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Preço</text><text x="52.4" y="192.3" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Tendência</text><text x="16.8" y="82.7" text-anchor="end" font-size="9" font-weight="700" fill="#8A8091" font-family="Manrope">Presença</text></svg>
               <div class="meters">
                 <div class="meter"><div class="ml"><span>Praticidade</span><em>86</em></div><div class="mt"><div class="mf" data-val="86"></div></div></div>
                 <div class="meter"><div class="ml"><span>Estética</span><em>62</em></div><div class="mt"><div class="mf" data-val="62"></div></div></div>
@@ -1440,7 +1440,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <!-- Ecossistema de públicos -->
   <div class="reveal" style="margin-top:56px">
     <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">Ecossistema de públicos</h3>
-    <p class="muted">A mesma marca em camadas diferentes — cada público recebe uma versão da mesma verdade.</p>
+    <p class="muted">A mesma marca em camadas diferentes, cada público recebe uma versão da mesma verdade.</p>
     <div class="ecos">
       <span class="ec"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Consumidora</span>
       <span class="ec"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 20a5 5 0 0 1 10 0"/></svg>Mães & filhas</span>
@@ -1515,7 +1515,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 
   <div class="reveal mt" style="margin-top:56px">
     <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">A jornada de compra</h3>
-    <p class="muted">Do gatilho à recompra — onde a marca precisa aparecer.</p>
+    <p class="muted">Do gatilho à recompra, onde a marca precisa aparecer.</p>
   </div>
   <div class="pillars reveal">
     <div class="pillar"><div class="p-ico"><svg class="icon" style="width:28px;height:28px" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><strong>Gatilho</strong><span>ocasião, quebra ou desejo</span></div>
@@ -1531,14 +1531,14 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="inner reveal" style="max-width:1100px">
     <div class="eyebrow" style="justify-content:center"><span class="num" style="color:var(--dourado-2)">03</span> Estratégia de marca</div>
     <h2 class="title" style="color:#fff">A estratégia nasce <em style="color:var(--dourado-2)">do próprio nome</em></h2>
-    <p style="color:rgba(255,255,255,.82);max-width:700px;margin:0 auto 10px">Estar pronta não é estar impecável. É estar presente, inteira e em movimento para viver o que a vida real pedir.</p>
+    <p style="color:rgba(255,255,255.82);max-width:700px;margin:0 auto 10px">Estar pronta não é estar impecável. É estar presente, inteira e em movimento para viver o que a vida real pedir.</p>
   </div>
   <div class="inner reveal" style="max-width:1000px;margin-top:44px">
-    <div class="pillars" style="border-color:rgba(255,255,255,.15)">
-      <div class="pillar" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><strong style="color:#fff">Vida real</strong><span style="color:rgba(255,255,255,.6)">O território</span></div>
-      <div class="pillar" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M12 3l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 15 2 10.5h7.5z"/></svg></div><strong style="color:#fff">Beleza</strong><span style="color:rgba(255,255,255,.6)">A promessa emocional</span></div>
-      <div class="pillar" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><strong style="color:#fff">Praticidade</strong><span style="color:rgba(255,255,255,.6)">A entrega funcional</span></div>
-      <div class="pillar" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><strong style="color:#fff">Presença</strong><span style="color:rgba(255,255,255,.6)">O resultado</span></div>
+    <div class="pillars" style="border-color:rgba(255,255,255.15)">
+      <div class="pillar" style="background:rgba(255,255,255.04);border-color:rgba(255,255,255.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><strong style="color:#fff">Vida real</strong><span style="color:rgba(255,255,255.6)">O território</span></div>
+      <div class="pillar" style="background:rgba(255,255,255.04);border-color:rgba(255,255,255.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M12 3l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 15 2 10.5h7.5z"/></svg></div><strong style="color:#fff">Beleza</strong><span style="color:rgba(255,255,255.6)">A promessa emocional</span></div>
+      <div class="pillar" style="background:rgba(255,255,255.04);border-color:rgba(255,255,255.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><strong style="color:#fff">Praticidade</strong><span style="color:rgba(255,255,255.6)">A entrega funcional</span></div>
+      <div class="pillar" style="background:rgba(255,255,255.04);border-color:rgba(255,255,255.12)"><div class="p-ico"><svg class="icon" style="width:30px;height:30px;stroke:var(--dourado-2)" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><strong style="color:#fff">Presença</strong><span style="color:rgba(255,255,255.6)">O resultado</span></div>
     </div>
     <p style="text-align:center;color:var(--dourado-2);font-family:var(--serif);font-style:italic;font-size:1.2rem;margin-top:34px">Plataforma: acessórios de cabelo para a beleza que acompanha a vida real.</p>
   </div>
@@ -1551,11 +1551,11 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
   <div class="grid g2 mt reveal">
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><h3>Essência</h3><p>Beleza em movimento para a vida real. O acessório prende, mas a marca acompanha.</p></div>
-    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div><h3>Crença central</h3><p>Beleza não precisa interromper a vida para existir. Beleza não é pausa — beleza é presença.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div><h3>Crença central</h3><p>Beleza não precisa interromper a vida para existir. Beleza não é pausa, beleza é presença.</p></div>
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></div><h3>Propósito</h3><p>Fazer da beleza um gesto possível para quem vive em movimento.</p></div>
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 12l3 3 5-6"/></svg></div><h3>Missão</h3><p>Criar acessórios bonitos, acessíveis, confiáveis e fáceis de usar, que resolvam a rotina e ampliem a expressão.</p></div>
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Visão</h3><p>Ser a marca que transforma acessórios de cabelo em presença cotidiana no coração da categoria no Brasil.</p></div>
-    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Promessa</h3><p>Seu cabelo no ritmo da vida real. Não sobre perfeição — sobre presença.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Promessa</h3><p>Seu cabelo no ritmo da vida real. Não sobre perfeição, sobre presença.</p></div>
   </div>
 
   <div class="reveal mt" style="margin-top:70px">
@@ -1575,7 +1575,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <div class="duo">
         <div>
           <div class="k">Posicionamento</div>
-          <p style="font-size:1.15rem;color:var(--roxo)">PRONTA é a marca de acessórios de cabelo para mulheres e meninas que vivem beleza no ritmo da vida real — entre o funcional e o emocional. O cabelo fica no lugar; a mulher entra em movimento.</p>
+          <p style="font-size:1.15rem;color:var(--roxo)">PRONTA é a marca de acessórios de cabelo para mulheres e meninas que vivem beleza no ritmo da vida real, entre o funcional e o emocional. O cabelo fica no lugar; a mulher entra em movimento.</p>
         </div>
         <div>
           <div class="k">Personalidade & arquétipo</div>
@@ -1630,7 +1630,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <!-- Sub-arquétipos -->
   <div class="reveal" style="margin-top:56px">
     <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">Sub-arquétipos de apoio</h3>
-    <p class="muted">Reforços que a marca ativa conforme o canal e o momento — sempre em torno do eixo heroína–criadora.</p>
+    <p class="muted">Reforços que a marca ativa conforme o canal e o momento, sempre em torno do eixo heroína, criadora.</p>
   </div>
   <div class="archgrid reveal">
     <div class="arch">
@@ -1660,7 +1660,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="arch">
       <div class="aico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div>
       <h4>A Encantadora</h4><div class="arole">Beleza & presença</div>
-      <div class="arow"><b>O que traz</b>Desejo, autoestima e presença — beleza como gesto, nunca cobrança.</div>
+      <div class="arow"><b>O que traz</b>Desejo, autoestima e presença, beleza como gesto, nunca cobrança.</div>
       <div class="arow"><b>Quando ativar</b>Linhas premium/metais, editorial e key visual.</div>
       <div class="aclaim">"Beleza que não pede pausa."</div>
       <div class="adose"><div class="adl"><span>Dosagem</span><span>Baixa</span></div><div class="adt"><div class="adf" style="width:38%"></div></div></div>
@@ -1686,7 +1686,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">Sombras a evitar</h3>
     <p class="muted">Todo arquétipo tem um excesso. A PRONTA vigia esses dois para não trair a marca.</p>
     <div class="shadows">
-      <div class="shadow"><strong>A heroína sobrecarregada</strong><p>Romantizar a correria e a exaustão. A PRONTA não promete dar conta de tudo — ela facilita o gesto e devolve presença.</p></div>
+      <div class="shadow"><strong>A heroína sobrecarregada</strong><p>Romantizar a correria e a exaustão. A PRONTA não promete dar conta de tudo, ela facilita o gesto e devolve presença.</p></div>
       <div class="shadow"><strong>A criadora ornamental</strong><p>Virar enfeite sem função, beleza distante da rotina. O detalhe é pequeno só no tamanho; ele precisa resolver.</p></div>
     </div>
   </div>
@@ -1698,7 +1698,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="reveal">
     <div class="eyebrow"><span class="num">★</span> Jornada do herói</div>
     <h2 class="title">A protagonista é ela. A PRONTA é a <em>guia</em></h2>
-    <p class="lead">A essência da marca é <b>beleza em movimento</b>. Neste enredo, a heroína é a mulher real — a PRONTA não a salva, ela entrega o gesto simples que a deixa pronta para seguir. Do dia cheio à presença que ela reconquista.</p>
+    <p class="lead">A essência da marca é <b>beleza em movimento</b>. Neste enredo, a heroína é a mulher real, a PRONTA não a salva, ela entrega o gesto simples que a deixa pronta para seguir. Do dia cheio à presença que ela reconquista.</p>
   </div>
 
   <div class="statement reveal" style="border-radius:26px;margin-top:40px;padding:70px 30px">
@@ -1707,15 +1707,15 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 
   <div class="reveal mt" style="margin-top:56px">
     <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">O enredo, em seis atos</h3>
-    <p class="muted">Do mundo comum à vitória — e onde a marca entra como mentora.</p>
+    <p class="muted">Do mundo comum à vitória, e onde a marca entra como mentora.</p>
   </div>
   <div class="timeline reveal">
-    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20a5 5 0 0 1 10 0M13 20a5 5 0 0 1 8-4"/></svg></div><div class="body"><h4>1 · O mundo dela</h4><p>Trabalha, cuida, estuda, cria, corre. Muitos papéis num dia só — e o espelho quase sempre às pressas.</p></div></div>
+    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20a5 5 0 0 1 10 0M13 20a5 5 0 0 1 8-4"/></svg></div><div class="body"><h4>1 · O mundo dela</h4><p>Trabalha, cuida, estuda, cria, corre. Muitos papéis num dia só, e o espelho quase sempre às pressas.</p></div></div>
     <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div><div class="body"><h4>2 · O chamado</h4><p>Ela quer se sentir bonita e presente. Mas a beleza parece pedir tempo, produção e ocasião que ela não tem.</p></div></div>
     <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div><div class="body"><h4>3 · Os obstáculos</h4><p>Cabelo no rosto, calor, pressa. Acessório que machuca, quebra ou some. E a sensação de que se arrumar é luxo, não direito.</p></div></div>
-    <div class="tl"><div class="dot" style="border-color:var(--roxo);background:var(--roxo)"><svg class="icon" style="width:18px;height:18px;stroke:#fff" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><div class="body"><h4>4 · A guia aparece — PRONTA</h4><p>Não uma transformação distante: um gesto simples. O acessório certo, que resolve o cabelo sem tirar a presença dela. A marca é mentora, não heroína.</p></div></div>
+    <div class="tl"><div class="dot" style="border-color:var(--roxo);background:var(--roxo)"><svg class="icon" style="width:18px;height:18px;stroke:#fff" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><div class="body"><h4>4 · A guia aparece: PRONTA</h4><p>Não uma transformação distante: um gesto simples. O acessório certo, que resolve o cabelo sem tirar a presença dela. A marca é mentora, não heroína.</p></div></div>
     <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><div class="body"><h4>5 · A virada</h4><p>Ela prende o cabelo, se olha e se reconhece. Ganha postura, humor e presença. <b>Prendeu. Sentiu. Foi.</b></p></div></div>
-    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M5 16l-2-9 6 4 3-6 3 6 6-4-2 9zM5 20h14"/></svg></div><div class="body"><h4>6 · A vitória</h4><p>Segue o dia inteira, autêntica. Volta, indica, compartilha — e vira comunidade. Pronta para a vida real.</p></div></div>
+    <div class="tl"><div class="dot"><svg class="icon" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M5 16l-2-9 6 4 3-6 3 6 6-4-2 9zM5 20h14"/></svg></div><div class="body"><h4>6 · A vitória</h4><p>Segue o dia inteira, autêntica. Volta, indica, compartilha, e vira comunidade. Pronta para a vida real.</p></div></div>
   </div>
 
   <div class="reveal mt" style="margin-top:56px">
@@ -1724,8 +1724,8 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
   <div class="grid g2 reveal">
     <div class="card"><span class="tag-mini">Falta de tempo</span><p style="margin-top:10px">Ela não tem 30 minutos de produção.<br><b style="color:var(--roxo)">PRONTA:</b> um gesto de 15 segundos que já muda a presença.</p></div>
-    <div class="card"><span class="tag-mini">Cabelo no rosto, no corre</span><p style="margin-top:10px">Calor, pressa, imprevisto.<br><b style="color:var(--roxo)">PRONTA:</b> prende, ajusta e segue — beleza que acompanha o ritmo.</p></div>
-    <div class="card"><span class="tag-mini">Medo de machucar/quebrar</span><p style="margin-top:10px">Acessório que dói ou dura um dia.<br><b style="color:var(--roxo)">PRONTA:</b> firme, confortável e confiável — não machuca, não falha.</p></div>
+    <div class="card"><span class="tag-mini">Cabelo no rosto, no corre</span><p style="margin-top:10px">Calor, pressa, imprevisto.<br><b style="color:var(--roxo)">PRONTA:</b> prende, ajusta e segue, beleza que acompanha o ritmo.</p></div>
+    <div class="card"><span class="tag-mini">Medo de machucar/quebrar</span><p style="margin-top:10px">Acessório que dói ou dura um dia.<br><b style="color:var(--roxo)">PRONTA:</b> firme, confortável e confiável, não machuca, não falha.</p></div>
     <div class="card"><span class="tag-mini">Beleza como cobrança</span><p style="margin-top:10px">Sentir que precisa estar impecável.<br><b style="color:var(--roxo)">PRONTA:</b> presença, não perfeição. Ela se arruma do próprio jeito.</p></div>
   </div>
 </section>
@@ -1751,7 +1751,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 
   <div class="dd reveal">
     <div class="col do">
-      <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Do's — troque abstração por cena</h4>
+      <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Do's, troque abstração por cena</h4>
       <ul>
         <li class="quote">"O detalhe que deixa você PRONTA para sair"</li>
         <li class="quote">"Beleza que não pede pausa"</li>
@@ -1759,7 +1759,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       </ul>
     </div>
     <div class="col dont">
-      <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg> Don'ts — o clichê genérico</h4>
+      <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg> Don'ts, o clichê genérico</h4>
       <ul>
         <li class="quote">"Acessórios que completam seu visual"</li>
         <li class="quote">"Praticidade com estilo para todos os momentos"</li>
@@ -1787,7 +1787,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem;margin-bottom:16px">Vocabulário da marca</h3>
     <div class="duo" style="margin-top:0">
       <div><div class="k">Palavras que usamos</div><p style="color:var(--roxo)">pronta · vida real · gesto · detalhe · cabelo · ritmo · movimento · agora · intenção · presença · versão · rotina · firmeza · leveza · conforto · prender · soltar · seguir</p></div>
-      <div><div class="k">Palavras a evitar</div><p class="muted">perfeita · diva · arrase · complete · lacre · empoderamento — jogam a marca no lugar comum da beleza genérica.</p></div>
+      <div><div class="k">Palavras a evitar</div><p class="muted">perfeita · diva · arrase · complete · lacre · empoderamento, jogam a marca no lugar comum da beleza genérica.</p></div>
     </div>
   </div>
 </section>
@@ -1805,7 +1805,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="muted" style="font-size:11px;letter-spacing:.25em;text-transform:uppercase;margin-bottom:24px">Marca principal · logotipo</div>
     <img class="logo-show" src="assets/logo/pronta-roxo.png" alt="Logotipo PRONTA">
     <div style="font-family:var(--serif);font-style:italic;color:var(--dourado);font-size:1.2rem;margin-top:14px">estar PRONTA para a vida real</div>
-    <p class="muted narrow" style="margin-top:26px;font-size:.95rem">O nome é forte demais para ser tratado como rodapé. Quando a marca aparece, ela afirma presença — PRONTA não sussurra na gôndola. Construção com alongamento, elegância, curva e sensação de movimento.</p>
+    <p class="muted narrow" style="margin-top:26px;font-size:.95rem">O nome é forte demais para ser tratado como rodapé. Quando a marca aparece, ela afirma presença, PRONTA não sussurra na gôndola. Construção com alongamento, elegância, curva e sensação de movimento.</p>
     <div class="dl-row" style="justify-content:center">
       <a class="dl-btn solid" href="assets/downloads/pronta-logos.zip" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Baixar logo em alta <span class="ext">.zip</span></a>
       <a class="dl-btn" href="assets/logo/pronta-roxo.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Roxo <span class="ext">png</span></a>
@@ -1837,14 +1837,14 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
 
   <div class="grid g3 mt reveal">
-    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></div><h3>Grid de construção</h3><p>Organiza proporções, espaçamentos e respiro sem engessar. Grid não é frieza — é cuidado para a marca continuar bonita na vida real.</p></div>
-    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><h3>Símbolo / ícone</h3><p>Um brilho, estrela ou curva como assinatura secundária — o instante em que o detalhe muda o humor e acende a presença.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></div><h3>Grid de construção</h3><p>Organiza proporções, espaçamentos e respiro sem engessar. Grid não é frieza, é cuidado para a marca continuar bonita na vida real.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.5 7.5H22l-6 4.5 2.3 7.5L12 17l-6.3 4.5L8 14 2 9.5h7.5z"/></svg></div><h3>Símbolo / ícone</h3><p>Um brilho, estrela ou curva como assinatura secundária, o instante em que o detalhe muda o humor e acende a presença.</p></div>
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/></svg></div><h3>Área de proteção</h3><p>Espaço mínimo para o nome respirar. Quanto menor a peça, mais importante é proteger a leitura. Respiro é sinal de valor.</p></div>
   </div>
 
   <div class="grid g4 mt reveal">
     <div class="card center" style="padding:24px"><div style="font-weight:800;color:var(--roxo);letter-spacing:.1em">POSITIVA</div><p style="font-size:.85rem">Fundos claros, suaves e comerciais.</p></div>
-    <div class="card center" style="padding:24px;background:var(--roxo)"><div style="font-weight:800;color:#fff;letter-spacing:.1em">NEGATIVA</div><p style="font-size:.85rem;color:rgba(255,255,255,.8)">Roxo, fundos escuros e fotos com contraste.</p></div>
+    <div class="card center" style="padding:24px;background:var(--roxo)"><div style="font-weight:800;color:#fff;letter-spacing:.1em">NEGATIVA</div><p style="font-size:.85rem;color:rgba(255,255,255.8)">Roxo, fundos escuros e fotos com contraste.</p></div>
     <div class="card center" style="padding:24px"><div style="font-weight:800;color:var(--tinta);letter-spacing:.1em">MONO / P&B</div><p style="font-size:.85rem">Usos técnicos, impressão e fornecedores.</p></div>
     <div class="card center" style="padding:24px"><div style="font-weight:800;color:var(--roxo);letter-spacing:.1em">H + V</div><p style="font-size:.85rem">Assinatura horizontal e vertical por formato.</p></div>
   </div>
@@ -1854,7 +1854,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <h4><svg class="icon" style="width:20px;height:20px" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Aplicar com critério</h4>
       <ul>
         <li>Respiro e margens consistentes em toda peça</li>
-        <li>Leitura em 1 segundo — senão, não está pronta</li>
+        <li>Leitura em 1 segundo, senão, não está pronta</li>
         <li>Logo entra onde há silêncio visual sobre a imagem</li>
       </ul>
     </div>
@@ -1878,7 +1878,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <p class="lead">O sistema cria memória por repetição inteligente. Cores, formas, tipos, ícones e acabamentos que sustentam o universo da marca.</p>
   </div>
 
-  <div class="reveal mt"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Paleta oficial</h3><p class="muted">As seis cores definidas pelo time de criação — roxo e amarelo como assinatura, tons de apoio para respiro e proximidade.</p></div>
+  <div class="reveal mt"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Paleta oficial</h3><p class="muted">As seis cores definidas pelo time de criação, roxo e amarelo como assinatura, tons de apoio para respiro e proximidade.</p></div>
   <div class="swatches reveal">
     <div class="sw"><div class="chip" style="background:#7B3B77"><span class="role">Reconhecimento</span></div><div class="meta"><strong>Roxo</strong><code>HEX #7B3B77</code><code>RGB 123·59·119 · CMYK 60·86·20·7</code></div></div>
     <div class="sw"><div class="chip" style="background:#EFC35E"><span class="role" style="color:var(--marrom)">Brilho & desejo</span></div><div class="meta"><strong>Amarelo</strong><code>HEX #EFC35E</code><code>RGB 239·195·94 · CMYK 7·24·71·0</code></div></div>
@@ -1921,7 +1921,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="row"><span class="k">Chamada (CTA)</span><span class="v" style="font-weight:800;color:var(--dourado)">Move para o próximo passo →</span></div>
   </div>
 
-  <div class="reveal mt" style="margin-top:50px"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Biblioteca de ícones</h3><p class="muted">Traduzem benefícios em leitura rápida — traço simples, feminino sem excesso, espessura consistente.</p></div>
+  <div class="reveal mt" style="margin-top:50px"><h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.5rem">Biblioteca de ícones</h3><p class="muted">Traduzem benefícios em leitura rápida, traço simples, feminino sem excesso, espessura consistente.</p></div>
   <div class="iconlib reveal">
     <div class="il"><a class="il-dl" href="assets/icones/firmeza.svg" download title="Baixar SVG"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><svg viewBox="0 0 24 24"><path d="M6 3v12a3 3 0 0 0 6 0V5a2 2 0 0 1 4 0v12"/><circle cx="6" cy="18" r="3"/></svg><span>Firmeza</span></div>
     <div class="il"><a class="il-dl" href="assets/icones/conforto.svg" download title="Baixar SVG"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Conforto</span></div>
@@ -1962,7 +1962,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="grid g3 mt reveal" style="margin-top:50px">
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/></svg></div><h3>Patterns & estampas</h3><p>Estrelas, curvas, repetições do símbolo e formas dos acessórios. Simples para não competir com o produto, fortes para criar memória.</p></div>
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><h3>Formas de apoio</h3><p>Círculos, selos, tarjas e molduras suaves organizam informação e criam linguagem proprietária.</p></div>
-    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Texturas & acabamentos</h3><p>Papel, pedra, tecido, acetato e brilho suave. Foscos, dourados e verniz pontual elevam linhas especiais — sensorial, não decorativo.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Texturas & acabamentos</h3><p>Papel, pedra, tecido, acetato e brilho suave. Foscos, dourados e verniz pontual elevam linhas especiais, sensorial, não decorativo.</p></div>
   </div>
 </section>
 
@@ -1978,8 +1978,8 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <!-- Defesa (do brandbook oficial) -->
   <div class="defesa reveal">
     <p>A <b>forma-base</b> parte da <b>estrela</b> presente no logotipo. A partir dela, foram desenvolvidas variações de peso, contorno e preenchimento.</p>
-    <p>Essa geometria foi combinada a <b>círculos</b> e a formas que remetem ao <b>prendedor borboleta</b> — um dos produtos da marca — dando origem aos elementos gráficos e ao <b>pattern</b>.</p>
-    <p>Já a <b>moldura</b> se inspira no universo das penteadeiras, espelhos, bandejas, porta-joias e antigas etiquetas de produtos de beleza. Esses elementos fazem parte de um imaginário ligado ao <b>cuidado, ao ritual de se arrumar e à valorização dos detalhes</b> — aspectos que compõem o universo narrativo da PRONTA.</p>
+    <p>Essa geometria foi combinada a <b>círculos</b> e a formas que remetem ao <b>prendedor borboleta</b>, um dos produtos da marca, dando origem aos elementos gráficos e ao <b>pattern</b>.</p>
+    <p>Já a <b>moldura</b> se inspira no universo das penteadeiras, espelhos, bandejas, porta-joias e antigas etiquetas de produtos de beleza. Esses elementos fazem parte de um imaginário ligado ao <b>cuidado, ao ritual de se arrumar e à valorização dos detalhes</b>, aspectos que compõem o universo narrativo da PRONTA.</p>
   </div>
 
   <!-- 1. Universo de formas -->
@@ -1997,7 +1997,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <!-- 2. Variações da forma-base -->
   <div class="reveal" style="margin-top:56px">
     <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">2 · Variações da forma-base</h3>
-    <p class="muted">Peso, contorno e cor — a mesma estrela em muitas presenças.</p>
+    <p class="muted">Peso, contorno e cor, a mesma estrela em muitas presenças.</p>
   </div>
   <div class="formrow reveal">
     <div class="formcard"><div class="fsvg"><svg viewBox="0 0 100 100"><path d="M50 3 C54 47 53 47 97 50 C53 53 54 53 50 97 C46 53 47 53 3 50 C47 47 46 47 50 3 Z" fill="#7B3B77"/></svg></div><strong>Preenchida</strong><span>roxo</span></div>
@@ -2007,29 +2007,29 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
   <div class="reveal" style="text-align:center;margin-top:20px">
     <img src="assets/grafismos/elementos-selos.png" alt="Selos da marca" style="max-width:min(680px,100%);height:auto">
-    <p class="muted" style="font-size:.84rem;margin-top:8px">Os selos oficiais — estrela e prendedor borboleta em círculo, nas combinações de cor da marca.</p>
+    <p class="muted" style="font-size:.84rem;margin-top:8px">Os selos oficiais, estrela e prendedor borboleta em círculo, nas combinações de cor da marca.</p>
   </div>
 
   <!-- 3. Moldura -->
   <div class="reveal" style="margin-top:56px">
     <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">3 · Moldura</h3>
-    <p class="muted">O fio duplo dourado com cantos côncavos — do universo das penteadeiras e etiquetas de beleza.</p>
+    <p class="muted">O fio duplo dourado com cantos côncavos, do universo das penteadeiras e etiquetas de beleza.</p>
   </div>
   <div class="molshow reveal"><img src="assets/grafismos/moldura-oficial.png" alt="Moldura oficial PRONTA"></div>
 
   <!-- Downloads dos elementos -->
   <div class="reveal" style="margin-top:56px">
     <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">Baixar os elementos</h3>
-    <p class="muted">Arquivos oficiais — PNG para uso rápido e vetor (.ai) para edição.</p>
+    <p class="muted">Arquivos oficiais, PNG para uso rápido e vetor (.ai) para edição.</p>
   </div>
   <div class="gfx reveal">
     <div class="gfxc">
       <div class="gprev" style="background:var(--roxo)"><svg viewBox="0 0 100 100" style="width:70px"><path d="M50 3 C54 47 53 47 97 50 C53 53 54 53 50 97 C46 53 47 53 3 50 C47 47 46 47 50 3 Z" fill="#C9A23C"/></svg></div>
-      <div class="gbody"><h4>Estrela / brilho</h4><div class="grole">forma-base</div><p>O brilho do logo — acento pontual que acende a presença.</p><div class="guse"><b>Como usar</b>Pontuação sutil em cantos e ao lado de frases. Com moderação.</div><div class="gdl"><a class="dl-btn solid" href="assets/grafismos/estrela-alta.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a></div></div>
+      <div class="gbody"><h4>Estrela / brilho</h4><div class="grole">forma-base</div><p>O brilho do logo, acento pontual que acende a presença.</p><div class="guse"><b>Como usar</b>Pontuação sutil em cantos e ao lado de frases. Com moderação.</div><div class="gdl"><a class="dl-btn solid" href="assets/grafismos/estrela-alta.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a></div></div>
     </div>
     <div class="gfxc">
       <div class="gprev" style="background:var(--nude);padding:16px"><img src="assets/grafismos/moldura-oficial.png" alt="" style="max-width:100%;max-height:100%"></div>
-      <div class="gbody"><h4>Moldura</h4><div class="grole">cartela oficial</div><p>Fio duplo dourado com cantos côncavos — o acabamento premium da marca.</p><div class="guse"><b>Como usar</b>Enquadra logo, frases e destaques. Preserve o respiro interno.</div><div class="gdl"><a class="dl-btn solid" href="assets/grafismos/moldura-oficial.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a><a class="dl-btn" href="assets/grafismos/moldura.ai" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>.ai</a></div></div>
+      <div class="gbody"><h4>Moldura</h4><div class="grole">cartela oficial</div><p>Fio duplo dourado com cantos côncavos, o acabamento premium da marca.</p><div class="guse"><b>Como usar</b>Enquadra logo, frases e destaques. Preserve o respiro interno.</div><div class="gdl"><a class="dl-btn solid" href="assets/grafismos/moldura-oficial.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a><a class="dl-btn" href="assets/grafismos/moldura.ai" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>.ai</a></div></div>
     </div>
     <div class="gfxc">
       <div class="gprev" style="padding:14px"><img src="assets/grafismos/elementos-selos.png" alt="" style="max-width:100%;max-height:100%"></div>
@@ -2037,11 +2037,11 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     </div>
     <div class="gfxc">
       <div class="gprev pat" style="background-size:56px 56px"></div>
-      <div class="gbody"><h4>Pattern geométrico</h4><div class="grole">estrela + borboleta + círculo</div><p>O mosaico que diz "PRONTA" sem o logo — nascido das formas-base.</p><div class="guse"><b>Como usar</b>Faixas, fundos de apoio, molduras e laterais.</div><div class="gdl"><a class="dl-btn solid" href="assets/grafismos/pattern-original.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a><a class="dl-btn" href="assets/grafismos/pattern-pronta.svg" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>SVG</a></div></div>
+      <div class="gbody"><h4>Pattern geométrico</h4><div class="grole">estrela + borboleta + círculo</div><p>O mosaico que diz "PRONTA" sem o logo, nascido das formas-base.</p><div class="guse"><b>Como usar</b>Faixas, fundos de apoio, molduras e laterais.</div><div class="gdl"><a class="dl-btn solid" href="assets/grafismos/pattern-original.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a><a class="dl-btn" href="assets/grafismos/pattern-pronta.svg" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>SVG</a></div></div>
     </div>
     <div class="gfxc">
       <div class="gprev pat" style="background-size:56px 56px"><span class="cart" style="padding:9px 18px"><img src="assets/logo/pronta-dourado.png" alt="" style="height:20px"></span></div>
-      <div class="gbody"><h4>Cartela do logo</h4><div class="grole">lockup</div><p>O logo dourado no pill roxo com borda dourada — sobre pattern ou foto.</p><div class="guse"><b>Como usar</b>Para pousar o logo em fundos movimentados.</div><div class="gdl"><a class="dl-btn" href="assets/downloads/pronta-logos.zip" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Logos .zip</a></div></div>
+      <div class="gbody"><h4>Cartela do logo</h4><div class="grole">lockup</div><p>O logo dourado no pill roxo com borda dourada, sobre pattern ou foto.</p><div class="guse"><b>Como usar</b>Para pousar o logo em fundos movimentados.</div><div class="gdl"><a class="dl-btn" href="assets/downloads/pronta-logos.zip" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Logos .zip</a></div></div>
     </div>
     <div class="gfxc">
       <div class="gprev" style="padding:0"><div style="display:flex;width:100%;height:100%"><span style="flex:1;background:#7B3B77"></span><span style="flex:1;background:#EFC35E"></span><span style="flex:1;background:#C79EC3"></span><span style="flex:1;background:#E3C293"></span><span style="flex:1;background:#E1CFD7"></span><span style="flex:1;background:#F1E3D3"></span></div></div>
@@ -2050,7 +2050,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
 
   <div class="kit-band reveal">
-    <div><h3>Todos os grafismos</h3><p>Estrela, moldura, selos, pattern e paleta — em um único arquivo.</p></div>
+    <div><h3>Todos os grafismos</h3><p>Estrela, moldura, selos, pattern e paleta, em um único arquivo.</p></div>
     <a class="dl-btn" href="assets/downloads/pronta-grafismos.zip" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Baixar grafismos <span class="ext">.zip</span></a>
   </div>
 </section>
@@ -2062,7 +2062,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="reveal">
     <div class="eyebrow"><span class="num">★</span> Regras de uso da marca</div>
     <h2 class="title">O logo é a assinatura. <em>Proteja-a.</em></h2>
-    <p class="lead">A PRONTA se constrói por repetição consistente. Estas regras mostram como aplicar o logotipo do jeito certo — e o que nunca fazer. Alterar a marca sem critério enfraquece tudo que ela está construindo.</p>
+    <p class="lead">A PRONTA se constrói por repetição consistente. Estas regras mostram como aplicar o logotipo do jeito certo, e o que nunca fazer. Alterar a marca sem critério enfraquece tudo que ela está construindo.</p>
   </div>
 
   <div class="reveal">
@@ -2129,11 +2129,11 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 </div>
 <section style="padding-top:70px">
   <div class="reveal">
-    <p class="lead narrow center">A fotografia deve fazer a consumidora imaginar: <em>eu usaria isso, eu consigo fazer isso, isso combina comigo.</em> Não uma perfeição intocável — uma beleza possível, reconhecível e desejável.</p>
+    <p class="lead narrow center">A fotografia deve fazer a consumidora imaginar: <em>eu usaria isso, eu consigo fazer isso, isso combina comigo.</em> Não uma perfeição intocável, uma beleza possível, reconhecível e desejável.</p>
   </div>
 
   <div class="grid g3 mt reveal">
-    <div class="card"><span class="n">01</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M8 6l1.5-2h5L16 6"/></svg></div><h3>Produto still</h3><p>Forma, cor, acabamento, tamanho e material com clareza. Técnico, mas nunca frio — luz, sombra e superfície tornam o produto desejável.</p></div>
+    <div class="card"><span class="n">01</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M8 6l1.5-2h5L16 6"/></svg></div><h3>Produto still</h3><p>Forma, cor, acabamento, tamanho e material com clareza. Técnico, mas nunca frio, luz, sombra e superfície tornam o produto desejável.</p></div>
     <div class="card"><span class="n">02</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></div><h3>Produto ambientado</h3><p>Sobre pedra, tecido, penteadeira, bolsa ou espelho. A ambientação sugere uso sem roubar protagonismo.</p></div>
     <div class="card"><span class="n">03</span><div class="ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h3>Produto em uso</h3><p>A imagem mais importante da marca. Escala, efeito, conforto e possibilidade de penteado, com luz e enquadramento que valorizam.</p></div>
   </div>
@@ -2184,11 +2184,11 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="piece" data-full="assets/fotografia/arq-cuidadora.jpg" data-cap="Cuidadora|Cuidado & afeto"><img src="assets/fotografia/arq-cuidadora.jpg" alt="Cuidadora com flor no cabelo" loading="lazy"><a class="dl" href="assets/fotografia/arq-cuidadora.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>Cuidado & afeto</span><strong>Cuidadora</strong></div></div>
     <div class="piece" data-full="assets/fotografia/arq-companheira.jpg" data-cap="Companheira|O dia a dia"><img src="assets/fotografia/arq-companheira.jpg" alt="Companheira com flores no cabelo" loading="lazy"><a class="dl" href="assets/fotografia/arq-companheira.jpg" download title="Baixar imagem" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0l-3.5-3.5M12 14l3.5-3.5M5 20h14"/></svg></a><span class="zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span><div class="cap"><span>O dia a dia</span><strong>Companheira</strong></div></div>
   </div>
-  <p class="muted reveal" style="margin-top:22px;font-size:.86rem">Casting selecionado pela marca — cada foto ligada a um arquétipo (Júlia · Heroína, Manu · Criadora, Carla · Cuidadora, Rosa · Companheira). Exploradora e Encantadora aguardam definição de imagem.</p>
+  <p class="muted reveal" style="margin-top:22px;font-size:.86rem">Casting selecionado pela marca, cada foto ligada a um arquétipo (Júlia · Heroína, Manu · Criadora, Carla · Cuidadora, Rosa · Companheira). Exploradora e Encantadora aguardam definição de imagem.</p>
 
   <div class="reveal mt" style="margin-top:66px">
     <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:6px">Direcionais de shooting</h3>
-    <p class="muted">A biblioteca de referência selecionada pela marca — 53 imagens. Cada foto traz o <b>olhar</b> (enquadramento e pose), a <b>técnica</b> (luz, lente, cor) e a <b>essência</b> (o que comunicar), para orientar os próximos ensaios. Filtre por tipo de shot; clique para ampliar; baixe o que precisar.</p>
+    <p class="muted">A biblioteca de referência selecionada pela marca, 53 imagens. Cada foto traz o <b>olhar</b> (enquadramento e pose), a <b>técnica</b> (luz, lente, cor) e a <b>essência</b> (o que comunicar), para orientar os próximos ensaios. Filtre por tipo de shot; clique para ampliar; baixe o que precisar.</p>
   </div>
   <div class="gcats reveal" id="shootcats">
     <button class="gcat on" data-f="all">Todas</button>
@@ -2207,7 +2207,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <div class="sc-body"><span class="scat">Retrato</span><h4>Retrato de outono</h4>
         <p class="dl-line"><b>Olhar</b>Meio-perfil, queixo baixo, olhar sereno na câmera.</p>
         <p class="dl-line"><b>Técnica</b>Luz difusa de outono, fundo verde desfocado (f/1.8), tons terrosos.</p>
-        <p class="dl-line"><b>Essência</b>Beleza real e madura — o acessório natural integra à cena.</p>
+        <p class="dl-line"><b>Essência</b>Beleza real e madura, o acessório natural integra à cena.</p>
       </div>
     </div>
     <div class="scard" data-cat="gesto">
@@ -2215,7 +2215,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <div class="sc-body"><span class="scat">Gesto</span><h4>O gesto de se arrumar</h4>
         <p class="dl-line"><b>Olhar</b>3/4, mão ajeitando o rabo de cavalo, olhar ao longe.</p>
         <p class="dl-line"><b>Técnica</b>Luz de janela suave, branco sobre fundo urbano claro.</p>
-        <p class="dl-line"><b>Essência</b>A pressa boa do dia — prática e leve.</p>
+        <p class="dl-line"><b>Essência</b>A pressa boa do dia, prática e leve.</p>
       </div>
     </div>
     <div class="scard" data-cat="expressao">
@@ -2223,7 +2223,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <div class="sc-body"><span class="scat">Expressão</span><h4>Coleção na lateral</h4>
         <p class="dl-line"><b>Olhar</b>Close no rosto, perfil parcial, presilhas em fila.</p>
         <p class="dl-line"><b>Técnica</b>Sol direto marcando a textura do cacho, cor saturada.</p>
-        <p class="dl-line"><b>Essência</b>Expressão e coleção — o acessório como assinatura.</p>
+        <p class="dl-line"><b>Essência</b>Expressão e coleção, o acessório como assinatura.</p>
       </div>
     </div>
     <div class="scard" data-cat="retrato">
@@ -2423,7 +2423,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <div class="sc-body"><span class="scat">Retrato</span><h4>Aproximável</h4>
         <p class="dl-line"><b>Olhar</b>Frente, sorriso aberto, coque alto solto.</p>
         <p class="dl-line"><b>Técnica</b>Fundo branco clean, luz frontal.</p>
-        <p class="dl-line"><b>Essência</b>Companheira — do bem.</p>
+        <p class="dl-line"><b>Essência</b>Companheira, do bem.</p>
       </div>
     </div>
     <div class="scard" data-cat="gesto">
@@ -2439,7 +2439,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <div class="sc-body"><span class="scat">Gesto</span><h4>Passo a passo</h4>
         <p class="dl-line"><b>Olhar</b>Costas, mãos prendendo com scrunchie floral.</p>
         <p class="dl-line"><b>Técnica</b>Fundo neutro, foco no gesto e no acessório.</p>
-        <p class="dl-line"><b>Essência</b>O como fazer — tutorial.</p>
+        <p class="dl-line"><b>Essência</b>O como fazer, tutorial.</p>
       </div>
     </div>
     <div class="scard" data-cat="editorial">
@@ -2575,7 +2575,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <div class="sc-body"><span class="scat">Cuidado</span><h4>Infantil</h4>
         <p class="dl-line"><b>Olhar</b>Criança tendo o cabelo preso.</p>
         <p class="dl-line"><b>Técnica</b>Luz suave, foco no gesto de cuidado.</p>
-        <p class="dl-line"><b>Essência</b>Não machuca — afeto.</p>
+        <p class="dl-line"><b>Essência</b>Não machuca, afeto.</p>
       </div>
     </div>
     <div class="scard" data-cat="lifestyle">
@@ -2640,12 +2640,12 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   </div>
 
   <div class="grid g3 mt reveal">
-    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h4"/></svg></div><h3>Arquitetura de linhas</h3><p>Prendedores, elásticos, minis, kits, metais, básicos, delicados e infantis como portfólio claro — escolha por tipo, ocasião, benefício ou cor.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h4"/></svg></div><h3>Arquitetura de linhas</h3><p>Prendedores, elásticos, minis, kits, metais, básicos, delicados e infantis como portfólio claro, escolha por tipo, ocasião, benefício ou cor.</p></div>
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 7V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2M4 7l8 5 8-5M4 7v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7"/></svg></div><h3>Naming de produtos</h3><p>Simples, comercial e desejável: <em>Prendedor Retangular Grande, Kit Elástico Colorido, Mini Prendedor Básico.</em></p></div>
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h10l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 9h6M8 13h8"/></svg></div><h3>Descrição de produtos</h3><p>Começa pelo que muda na vida: "Firme para o penteado. Leve para o dia." Depois, função e detalhe técnico.</p></div>
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M6 2l1.5 3h9L18 2M4 8h16l-1 12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/></svg></div><h3>Embalagens</h3><p>Uma pequena vitrine: logo forte, categoria clara, benefício curto, cor de linha, produto visível e acabamento limpo.</p></div>
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M20.6 3.4L12 12M20.6 3.4L15 21l-3-9-9-3z"/></svg></div><h3>Cartelas & displays</h3><p>Criam bloco de marca no meio do excesso. O roxo faz a PRONTA aparecer; a organização por linha ajuda a escolher.</p></div>
-    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M6 2h12l3 6H3zM3 8v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8M9 12h6"/></svg></div><h3>Unboxing</h3><p>Um papel, uma tag, uma frase, um QR de penteados. Não precisa ser luxuoso — precisa ser cuidado.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M6 2h12l3 6H3zM3 8v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8M9 12h6"/></svg></div><h3>Unboxing</h3><p>Um papel, uma tag, uma frase, um QR de penteados. Não precisa ser luxuoso, precisa ser cuidado.</p></div>
   </div>
 
   <div class="statement reveal" style="border-radius:26px;margin-top:50px;padding:70px 30px">
@@ -2659,7 +2659,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="reveal">
     <div class="eyebrow"><span class="num">★</span> Produto, segmentação & planograma</div>
     <h2 class="title">Do SKU à <em>gôndola</em></h2>
-    <p class="lead">Variedade organizada não é confusão — é escolha fácil. Aqui a PRONTA estrutura o portfólio em linhas claras, segmenta por necessidade, público e valor, e ocupa a gôndola como um bloco de marca.</p>
+    <p class="lead">Variedade organizada não é confusão, é escolha fácil. Aqui a PRONTA estrutura o portfólio em linhas claras, segmenta por necessidade, público e valor, e ocupa a gôndola como um bloco de marca.</p>
   </div>
 
   <!-- Arquitetura de linhas -->
@@ -2681,7 +2681,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <!-- Segmentação -->
   <div class="reveal" style="margin-top:64px">
     <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem">Segmentação em três lentes</h3>
-    <p class="muted">O mesmo portfólio, lido de três formas — para a consumidora, para o público e para o mix.</p>
+    <p class="muted">O mesmo portfólio, lido de três formas, para a consumidora, para o público e para o mix.</p>
   </div>
   <div class="seg reveal">
     <div class="segc">
@@ -2690,11 +2690,11 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     </div>
     <div class="segc">
       <div class="sh"><span class="sn">2</span><strong>Por público</strong></div>
-      <ul><li><b>Júlia</b> — prático e bonito, resolve no corre</li><li><b>Manu</b> — tendência, cor e coleção</li><li><b>Carla</b> — seguro, durável e justo</li><li><b>Rosa</b> — clareza, preço e confiança</li></ul>
+      <ul><li><b>Júlia</b>, prático e bonito, resolve no corre</li><li><b>Manu</b>, tendência, cor e coleção</li><li><b>Carla</b>, seguro, durável e justo</li><li><b>Rosa</b>, clareza, preço e confiança</li></ul>
     </div>
     <div class="segc">
       <div class="sh"><span class="sn">3</span><strong>Por faixa de valor</strong></div>
-      <ul><li><b>Entrada</b> — minis e básicos, impulso</li><li><b>Core</b> — prendedores e elásticos, giro</li><li><b>Desejo</b> — kits, metais e coleções, margem</li><li>Democrática sem ser descartável</li></ul>
+      <ul><li><b>Entrada</b>, minis e básicos, impulso</li><li><b>Core</b>, prendedores e elásticos, giro</li><li><b>Desejo</b>, kits, metais e coleções, margem</li><li>Democrática sem ser descartável</li></ul>
     </div>
   </div>
 
@@ -2738,7 +2738,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
           <li><b>Organização por linha:</b> ajuda a escolher rápido.</li>
           <li><b>Nível dos olhos</b> para desejo e maior margem.</li>
           <li><b>Benefício visível</b> em cada faixa.</li>
-          <li><b>Leitura em segundos</b> — senão, não está pronta.</li>
+          <li><b>Leitura em segundos</b>, senão, não está pronta.</li>
         </ul>
       </div>
     </div>
@@ -2767,7 +2767,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><h3>E-mail marketing</h3><p>Convite com ritmo de campanha: "PRONTA para o calor?", "Seu kit de vida real chegou".</p></div>
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M3 11l18-8-4 18-5-6-5 3z"/></svg></div><h3>Campanhas promo</h3><p>Verão prende cabelo, volta às aulas pede kits, festa pede detalhe. Ocasião antes de preço.</p></div>
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div><h3>Key visual</h3><p>Logo, frase central, mulher em movimento e universo roxo/dourado com respiro.</p></div>
-    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16v10H4zM8 20h8M12 15v5"/></svg></div><h3>Apresentações B2B</h3><p>Muito uso, pouca memória de marca. PRONTA não é só cartela — é marca com giro.</p></div>
+    <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16v10H4zM8 20h8M12 15v5"/></svg></div><h3>Apresentações B2B</h3><p>Muito uso, pouca memória de marca. PRONTA não é só cartela, é marca com giro.</p></div>
     <div class="card"><div class="ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2 5 5 .5-4 3.5 1.5 5L12 13l-4.5 3 1.5-5-4-3.5 5-.5z"/></svg></div><h3>Creator kit</h3><p>Produtos por ocasião, desafios simples e espaço para a criadora mostrar seu jeito.</p></div>
   </div>
 
@@ -2787,7 +2787,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="reveal">
     <div class="eyebrow"><span class="num">★</span> Simulações visuais</div>
     <h2 class="title">A marca em <em>contexto</em></h2>
-    <p class="lead">Mockups construídos com a linha criativa oficial — pattern, moldura dourada, cartela do logo, a estrela e a letra manuscrita — para tangibilizar cada aplicação.</p>
+    <p class="lead">Mockups construídos com a linha criativa oficial, pattern, moldura dourada, cartela do logo, a estrela e a letra manuscrita, para tangibilizar cada aplicação.</p>
   </div>
 
   <!-- Redes sociais -->
@@ -2879,7 +2879,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
         <span class="adlabel">Anúncio · rede de pesquisa</span>
         <div class="searchad">
           <div class="u"><img src="assets/logo/pronta-roxo.png" alt=""><span class="adt">Anúncio</span> · pronta.com.br/acessorios</div>
-          <div class="t">Acessórios de Cabelo PRONTA — Firme, Leve e no Seu Jeito</div>
+          <div class="t">Acessórios de Cabelo PRONTA, Firme, Leve e no Seu Jeito</div>
           <div class="d">Prendedores, elásticos e kits para a vida real. Beleza que não pede pausa. Frete para todo o Brasil.</div>
           <div class="sites"><a>Kits</a><a>Prendedores</a><a>Infantil</a><a>Novidades</a></div>
         </div>
@@ -2892,7 +2892,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="content-block reveal">
     <div class="clabel"><span class="cnum">3</span> E-commerce & marketplace</div>
     <h3>Página de produto e listagem</h3>
-    <p class="cdesc">Clareza que reduz dúvida — com o cabeçalho em pattern, cartela e moldura da marca.</p>
+    <p class="cdesc">Clareza que reduz dúvida, com o cabeçalho em pattern, cartela e moldura da marca.</p>
     <div class="mgrid" style="grid-template-columns:1.6fr 1fr">
       <div class="browser">
         <div class="bbar"><span class="dots"><i></i><i></i><i></i></span><span class="url">pronta.com.br/prendedor-retangular</span></div>
@@ -2919,7 +2919,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
           <div class="mpimg" style="background-image:url('assets/fotografia/acessorio-evidencia.jpg');position:relative"><span class="cart" style="position:absolute;left:8px;top:8px;padding:4px 8px"><img src="assets/logo/pronta-dourado.png" alt="" style="height:12px"></span></div>
           <div class="patband" style="height:8px"></div>
           <div class="mpbody">
-            <div class="mpt">Kit Elástico Colorido PRONTA — 12 un.</div>
+            <div class="mpt">Kit Elástico Colorido PRONTA, 12 un.</div>
             <div class="price">R$ 14,90 <small>R$ 24,90</small></div>
             <div class="off">40% OFF</div>
             <div class="stars">★★★★★ <small>4,9 · 1.2 mil</small></div>
@@ -2935,7 +2935,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="content-block reveal">
     <div class="clabel"><span class="cnum">4</span> Relacionamento & trade</div>
     <h3>WhatsApp, revenda e creator</h3>
-    <p class="cdesc">Catálogo que circula e oferta por ocasião — sempre com a cara da marca.</p>
+    <p class="cdesc">Catálogo que circula e oferta por ocasião, sempre com a cara da marca.</p>
     <div class="mgrid mg2">
       <div class="chat">
         <div class="chead"><span class="cav"><img src="assets/logo/pronta-roxo.png" alt=""></span><span><b>PRONTA · Revenda</b><small>online</small></span></div>
@@ -2969,7 +2969,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <h3>Campanha e mídia exterior</h3>
     <p class="cdesc">A ideia em grande, com moldura dourada, cartela do logo e a letra manuscrita.</p>
     <div class="creative photo ooh" style="background-image:url('assets/fotografia/arq-cuidadora.jpg')">
-      <div class="cshade" style="background:linear-gradient(90deg,rgba(74,30,107,.92),rgba(74,30,107,.45) 55%,transparent)"></div>
+      <div class="cshade" style="background:linear-gradient(90deg,rgba(74,30,107.92),rgba(74,30,107.45) 55%,transparent)"></div>
       <div class="gframe"></div>
       
       <div class="obody" style="position:absolute;left:7%;top:50%;transform:translateY(-50%);z-index:4;text-align:left;max-width:58%">
@@ -2988,7 +2988,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="reveal">
     <div class="eyebrow"><span class="num">★</span> Peças de comunicação</div>
     <h2 class="title">A marca <em>ganhou corpo</em></h2>
-    <p class="lead">Do papel para a vida real: as primeiras peças desenvolvidas pelo time de criação mostram a PRONTA aplicada em brindes, PDV e sistema visual — com o logotipo, o pattern e a paleta oficiais em ação.</p>
+    <p class="lead">Do papel para a vida real: as primeiras peças desenvolvidas pelo time de criação mostram a PRONTA aplicada em brindes, PDV e sistema visual, com o logotipo, o pattern e a paleta oficiais em ação.</p>
   </div>
 
   <div class="gcats reveal" id="gcats">
@@ -3029,7 +3029,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="reveal">
     <div class="eyebrow"><span class="num">★</span> Exemplos de conteúdo</div>
     <h2 class="title">Da estratégia à <em>peça pronta</em></h2>
-    <p class="lead">Modelos prontos para copiar e adaptar — sempre começando pelo momento real, mostrando o gesto e entregando a sensação. Aqui a voz da PRONTA vira legenda, e-mail, PDV e embalagem.</p>
+    <p class="lead">Modelos prontos para copiar e adaptar, sempre começando pelo momento real, mostrando o gesto e entregando a sensação. Aqui a voz da PRONTA vira legenda, e-mail, PDV e embalagem.</p>
   </div>
 
   <!-- 1. Legenda de post -->
@@ -3053,7 +3053,7 @@ Aquele penteado de 15 segundos pra quando o dia não dá pausa. Qual é o seu je
         <div class="pimg"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3"/><circle cx="16" cy="10" r="2.5"/><path d="M3 20v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1"/></svg></div>
         <div class="pbody">
           <p class="pcap">Manhã de escola, cabelo no lugar e um sorriso a mais. 🎀
-Penteados possíveis pra dias cheios de imaginação — feitos pra durar até o recreio.</p>
+Penteados possíveis pra dias cheios de imaginação, feitos pra durar até o recreio.</p>
           <p class="ptags">#PRONTA #maeefilha #voltaasaulas</p>
           <p class="pnote"><b>Dica:</b> fale com quem compra (a mãe) e quem usa (a filha).</p>
         </div>
@@ -3077,8 +3077,8 @@ Penteados possíveis pra dias cheios de imaginação — feitos pra durar até o
     <p class="cdesc">O assunto precisa ter energia de convite. O corpo abre mundo com uma frase-marca e leva a um único CTA.</p>
     <div class="email-mock">
       <div class="email-subjs">
-        <div class="es"><span class="dot"></span><span class="txt">PRONTA para o calor? ☀️</span><span class="prev">— 3 detalhes pra prender o cabelo e seguir…</span></div>
-        <div class="es"><span class="dot"></span><span class="txt">Seu kit de vida real chegou</span><span class="prev">— combos pra deixar na bolsa e nunca ser pega de surpresa…</span></div>
+        <div class="es"><span class="dot"></span><span class="txt">PRONTA para o calor? ☀️</span><span class="prev">, 3 detalhes pra prender o cabelo e seguir…</span></div>
+        <div class="es"><span class="dot"></span><span class="txt">Seu kit de vida real chegou</span><span class="prev">, combos pra deixar na bolsa e nunca ser pega de surpresa…</span></div>
       </div>
       <div class="email-body">
         <img class="el" src="assets/logo/pronta-roxo.png" alt="PRONTA">
@@ -3093,10 +3093,10 @@ Penteados possíveis pra dias cheios de imaginação — feitos pra durar até o
   <div class="content-block reveal">
     <div class="clabel"><span class="cnum">3</span> Hierarquia para PDV</div>
     <h3>Material de ponto de venda</h3>
-    <p class="cdesc">No PDV a escolha é rápida. A informação entra do desejo à ação — do título ao CTA — em segundos.</p>
+    <p class="cdesc">No PDV a escolha é rápida. A informação entra do desejo à ação, do título ao CTA, em segundos.</p>
     <div class="pdv-hier">
       <div class="pdv-levels">
-        <div class="plv"><span class="pn">1</span><span class="pt"><strong>Chamada</strong><span>Gancho grande — conecta nome e momento</span></span></div>
+        <div class="plv"><span class="pn">1</span><span class="pt"><strong>Chamada</strong><span>Gancho grande, conecta nome e momento</span></span></div>
         <div class="plv"><span class="pn">2</span><span class="pt"><strong>Benefício</strong><span>O que muda para a consumidora</span></span></div>
         <div class="plv"><span class="pn">3</span><span class="pt"><strong>Linha / produto</strong><span>O que é, com clareza</span></span></div>
         <div class="plv"><span class="pn">4</span><span class="pt"><strong>Preço / CTA</strong><span>O empurrão para a ação</span></span></div>
@@ -3128,7 +3128,7 @@ Penteados possíveis pra dias cheios de imaginação — feitos pra durar até o
       <div class="pack-face">
         <div class="ptit">Verso · convence</div>
         <div class="pack-back">
-          <p>Aquele básico com presença para deixar o cabelo pronto em poucos segundos. Não marca os fios, não machuca e acompanha o dia inteiro — do corre ao encontro.</p>
+          <p>Aquele básico com presença para deixar o cabelo pronto em poucos segundos. Não marca os fios, não machuca e acompanha o dia inteiro, do corre ao encontro.</p>
           <div class="pack-icons">
             <svg viewBox="0 0 24 24"><path d="M6 3v12a3 3 0 0 0 6 0V5a2 2 0 0 1 4 0v12"/><circle cx="6" cy="18" r="3"/></svg>
             <svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
@@ -3193,7 +3193,7 @@ Penteados possíveis pra dias cheios de imaginação — feitos pra durar até o
     <div class="dcard">
       <div class="di"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
       <h3>Ícones</h3>
-      <p class="muted">30 ícones de benefício em SVG, traço #7B3B77 — escaláveis e editáveis.</p>
+      <p class="muted">30 ícones de benefício em SVG, traço #7B3B77, escaláveis e editáveis.</p>
       <div class="dl-row" style="margin-top:16px">
         <a class="dl-btn solid" href="assets/downloads/pronta-icones.zip" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Baixar ícones <span class="ext">.zip</span></a>
       </div>
@@ -3209,7 +3209,7 @@ Penteados possíveis pra dias cheios de imaginação — feitos pra durar até o
     <div class="dcard">
       <div class="di"><svg viewBox="0 0 24 24"><circle cx="7" cy="7" r="4"/><path d="M21 7c-4 0-6 6-10 6s-4 4-4 4"/><path d="M13 4l1.5 1.5"/></svg></div>
       <h3>Grafismos</h3>
-      <p class="muted">Estrela, moldura, selos, pattern e paleta — os elementos oficiais da marca em PNG/vetor.</p>
+      <p class="muted">Estrela, moldura, selos, pattern e paleta, os elementos oficiais da marca em PNG/vetor.</p>
       <div class="dl-row" style="margin-top:16px">
         <a class="dl-btn solid" href="assets/downloads/pronta-grafismos.zip" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Baixar grafismos <span class="ext">.zip</span></a>
       </div>
@@ -3260,8 +3260,8 @@ Penteados possíveis pra dias cheios de imaginação — feitos pra durar até o
 
   <div class="reveal mt" style="margin-top:60px">
     <div class="duo">
-      <div><div class="k">Biblioteca de ativos</div><p>Logotipo, variações, paleta, fontes, templates, grafismos, ícones, fotos aprovadas, textos-base, claims, apresentações, embalagens e materiais de PDV — reunidos para facilitar criação e proteger percepção.</p></div>
-      <div><div class="k">Versão do documento</div><p>Este é um documento vivo. A <b>v0.3</b> consolida textos e narrativa. As próximas versões incorporam logotipo final, especificações técnicas e peças aprovadas — cada atualização registra data, responsável e motivo.</p></div>
+      <div><div class="k">Biblioteca de ativos</div><p>Logotipo, variações, paleta, fontes, templates, grafismos, ícones, fotos aprovadas, textos-base, claims, apresentações, embalagens e materiais de PDV, reunidos para facilitar criação e proteger percepção.</p></div>
+      <div><div class="k">Versão do documento</div><p>Este é um documento vivo. A <b>v0.3</b> consolida textos e narrativa. As próximas versões incorporam logotipo final, especificações técnicas e peças aprovadas, cada atualização registra data, responsável e motivo.</p></div>
     </div>
   </div>
 </section>
@@ -3272,7 +3272,7 @@ Penteados possíveis pra dias cheios de imaginação — feitos pra durar até o
     <svg class="spark" style="position:relative;opacity:.6;margin-bottom:20px" width="30" height="30" viewBox="0 0 24 24" fill="var(--dourado-2)"><path d="M12 0l2.5 9.5L24 12l-9.5 2.5L12 24l-2.5-9.5L0 12l9.5-2.5z"/></svg>
     <img class="fm-img" src="assets/logo/pronta-branco.png" alt="PRONTA">
     <div class="ft">estar PRONTA para a vida real</div>
-    <p style="max-width:560px;margin:30px auto 0;color:rgba(255,255,255,.7);font-size:1rem">O detalhe que acompanha a mulher quando a vida chama. Beleza não é pausa — beleza é presença.</p>
+    <p style="max-width:560px;margin:30px auto 0;color:rgba(255,255,255.7);font-size:1rem">O detalhe que acompanha a mulher quando a vida chama. Beleza não é pausa, beleza é presença.</p>
     <div class="meta">
       <div>Brand Guide <span>v0.3</span></div>
       <div>Documento <span>vivo</span></div>
@@ -3291,7 +3291,7 @@ const totop=document.getElementById('totop');
 addEventListener('scroll',()=>{
   const scrolled=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;
   prog.style.width=scrolled+'%';
-  nav.style.boxShadow = h.scrollTop>40 ? '0 10px 30px -20px rgba(74,30,107,.4)' : 'none';
+  nav.style.boxShadow = h.scrollTop>40 ? '0 10px 30px -20px rgba(74,30,107.4)' : 'none';
   totop.classList.toggle('show', h.scrollTop>600);
 },{passive:true});
 
