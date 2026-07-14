@@ -351,23 +351,58 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .pdf-hint.show{opacity:1;visibility:visible;transform:translateX(-50%)}
 .pdf-hint b{color:var(--dourado-2)}
 @media print{
-  @page{margin:14mm 12mm}
-  html{scroll-behavior:auto}
-  nav.top,.progress,.dotnav,.totop,.overlay,.scrolldown,.pdf-hint,.menu-btn,.dl-row,.piece .dl,.il .il-dl,.lb-dl,.sc-dl,.gcats{display:none!important}
+  @page{margin:13mm 11mm}
+  :root{--sombra:none}
+  html{scroll-behavior:auto;font-size:11.4px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  *,*::before,*::after{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;box-shadow:none!important;text-shadow:none!important;transition:none!important;animation:none!important}
   body{background:#fff}
-  .reveal{opacity:1!important;transform:none!important;animation:none!important}
-  .reveal.in *{animation:none!important}
-  section,.band,.manifesto,.statement,footer{padding-top:26px!important;padding-bottom:26px!important;max-width:100%!important}
-  section{page-break-before:always;break-before:page}
-  header.hero{page-break-before:avoid;min-height:auto;padding-top:10px}
-  .manifesto,.statement,.band{page-break-before:always;break-before:page}
-  .card,.persona,.val,.sw,.spec,.tn,.tl,.check,.il,.chap{break-inside:avoid;page-break-inside:avoid}
-  .grid,.swatches,.type-spec,.pillars,.values,.iconlib,.checklist,.tension{break-inside:avoid}
-  h2.title{break-after:avoid}
-  .card:hover,.persona:hover,.sw:hover{transform:none!important;box-shadow:none!important}
-  /* garante fundos coloridos no PDF */
-  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
-  .gallery img{max-height:none}
+
+  /* --- elementos só-de-tela, fora do PDF --- */
+  nav.top,.progress,.dotnav,.totop,.overlay,.scrolldown,.pdf-hint,.menu-btn,
+  .dl-row,.dl-btn,.piece .dl,.il .il-dl,.lb-dl,.sc-dl,.gcats,.gdl,.gfxc .gdl,
+  .lightbox,.lb,.filter,.chipbar,.zoom{display:none!important}
+  .reveal{opacity:1!important;transform:none!important;filter:none!important}
+
+  /* --- quebra de página apenas nos capítulos (filhos diretos do body) --- */
+  body>section,body>.band,body>.manifesto,body>.statement{
+    break-before:page;page-break-before:always;break-inside:auto}
+  body>header.hero,body>section:first-of-type{break-before:avoid!important;page-break-before:avoid!important}
+  header.hero{min-height:auto!important;padding:8mm 0 6mm!important}
+
+  /* --- respiro compacto e largura cheia --- */
+  section,.band,.manifesto,.statement,footer{
+    padding:8mm 0 6mm!important;max-width:186mm!important;min-height:0!important;margin:0 auto!important}
+  .wrap,.inner,.container{max-width:186mm!important}
+
+  /* --- tipografia sem viúvas/órfãs --- */
+  h2.title,.eyebrow,.kicker,.eye,h3,h4{break-after:avoid;page-break-after:avoid}
+  p,li{orphans:3;widows:3}
+
+  /* --- blocos que não podem ser cortados no meio --- */
+  .card,.persona,.ppanel,.pgrid,.val,.sw,.spec,.tn,.tl,.check,.il,.chap,.arch,.subarch,
+  .lcard,.segc,.dcard,.gfxc,.formcard,.post,.scard,.piece,.mixrow,.rule,.rulecard,
+  .hist-act,.namebd,.histquote,.tone,.pillar,.plv,.step,.desire,.qbox,.emailcard,
+  .igpost,.story,.reels,.adcard,.creative,.mock,figure,.gitem,.radar,.quad{
+    break-inside:avoid;page-break-inside:avoid}
+
+  /* --- grids largos reflow para caber na página (2 colunas máx.) --- */
+  .grid,.g4,.g3,.g2,.iconlib,.linecards,.archgrid,.subgrid,.dcards,.gfx,.formrow,
+  .posts,.seg,.segments,.desires,.steps,.tones,.pillars,.values,.pecas{
+    display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:6mm!important}
+  .iconlib{grid-template-columns:repeat(4,1fr)!important;gap:4mm!important}
+  .shoot{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:4mm!important}
+  .gallery{columns:2!important;column-gap:5mm}
+  .mockrow,.mockups .row,.mocks{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:6mm!important}
+
+  /* --- imagens contidas --- */
+  img{max-width:100%!important;height:auto}
+  .scard img,.gitem img,figure img,.piece img{max-height:70mm;object-fit:cover}
+  .pphoto{min-height:0!important;height:auto!important}
+  .pphoto img{position:static!important;height:auto!important;max-height:90mm}
+
+  /* --- personas: imprimir TODOS os painéis, não só o ativo --- */
+  .ppanel{display:block!important}
+  .persona-tabs,.ptabs,.tabs{display:none!important}
 }
 
 /* ===== Regras de uso da marca ===== */
