@@ -859,9 +859,8 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .pat{background-color:#EFE3EC;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23EFE3EC'/%3E%3Ccircle cx='30' cy='30' r='25' fill='%237B3B77'/%3E%3Ccircle cx='90' cy='90' r='25' fill='%237B3B77'/%3E%3Cg fill='%23C79EC3'%3E%3Cellipse cx='90' cy='30' rx='9' ry='25'/%3E%3Cellipse cx='90' cy='30' rx='25' ry='9'/%3E%3Cellipse cx='30' cy='90' rx='9' ry='25'/%3E%3Cellipse cx='30' cy='90' rx='25' ry='9'/%3E%3C/g%3E%3C/svg%3E");background-size:56px 56px}
 .patband{background-color:#EFE3EC;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23EFE3EC'/%3E%3Ccircle cx='30' cy='30' r='25' fill='%237B3B77'/%3E%3Ccircle cx='90' cy='90' r='25' fill='%237B3B77'/%3E%3Cg fill='%23C79EC3'%3E%3Cellipse cx='90' cy='30' rx='9' ry='25'/%3E%3Cellipse cx='90' cy='30' rx='25' ry='9'/%3E%3Cellipse cx='30' cy='90' rx='9' ry='25'/%3E%3Cellipse cx='30' cy='90' rx='25' ry='9'/%3E%3C/g%3E%3C/svg%3E");background-size:auto 100%}
 /* moldura dourada com brilhos */
-.gframe{position:absolute;inset:12px;border:1.4px solid var(--ouro);border-radius:12px;pointer-events:none;z-index:3}
-.gframe::before,.gframe::after{content:"";position:absolute;left:50%;width:9px;height:9px;background:var(--ouro);transform:translateX(-50%) rotate(45deg)}
-.gframe::before{top:-5px}.gframe::after{bottom:-5px}
+.gframe{position:absolute;inset:12px;border:1.4px solid var(--ouro);border-radius:10px;pointer-events:none;z-index:3}
+.gframe::before{content:"";position:absolute;inset:4px;border:1px solid var(--ouro);border-radius:7px}
 /* cartela com logo */
 .cart{display:inline-flex;align-items:center;gap:7px;background:var(--roxo);border:1.4px solid var(--ouro);border-radius:13px;padding:8px 16px;position:relative}
 .cart img{height:18px;display:block}
@@ -909,6 +908,21 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 .gfxc .guse{font-size:.8rem;color:#4b3a56;background:var(--lilas);border-radius:10px;padding:9px 12px;margin-bottom:14px}
 .gfxc .guse b{color:var(--roxo);display:block;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
 .gfxc .gdl{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px}
+/* construção dos elementos */
+.defesa{background:#fff;border:1px solid var(--linha);border-radius:20px;padding:32px 32px;margin-top:24px;border-left:4px solid var(--dourado)}
+.defesa p{font-size:1rem;color:#4b3a56;margin-bottom:12px;line-height:1.62}
+.defesa p:last-child{margin-bottom:0}
+.defesa p b{color:var(--roxo)}
+.formrow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+@media(max-width:640px){.formrow{grid-template-columns:repeat(2,1fr)}}
+.formcard{background:#fff;border:1px solid var(--linha);border-radius:16px;padding:26px 16px;text-align:center;transition:.3s}
+.formcard:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
+.formcard .fsvg{width:76px;height:76px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center}
+.formcard .fsvg svg{width:100%;height:100%}
+.formcard strong{display:block;color:var(--roxo);font-weight:700;font-size:.94rem}
+.formcard span{font-size:.74rem;color:var(--cinza)}
+.molshow{margin-top:24px;background:var(--nude);border:1px solid var(--linha);border-radius:20px;padding:40px 34px;text-align:center}
+.molshow img{max-width:min(560px,100%);height:auto;display:block;margin:0 auto}
 </style>
 </head>
 <body>
@@ -950,7 +964,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <a href="#linguagem"><span class="oc">04</span><div><h5>Linguagem</h5><p>A voz e o relacionamento</p></div></a>
       <a href="#identidade"><span class="oc">05</span><div><h5>Identidade visual</h5><p>Logotipo e códigos da marca</p></div></a>
       <a href="#sistema"><span class="oc">06</span><div><h5>Sistema visual</h5><p>Cores, tipos, ícones e formas</p></div></a>
-      <a href="#grafismos"><span class="oc">★</span><div><h5>Grafismos & elementos</h5><p>Pattern, swoosh, moldura + download</p></div></a>
+      <a href="#grafismos"><span class="oc">★</span><div><h5>Grafismos & elementos</h5><p>Formas, estrela, moldura + download</p></div></a>
       <a href="#regras"><span class="oc">★</span><div><h5>Regras de uso da marca</h5><p>Aplicações certas e erradas</p></div></a>
       <a href="#foto"><span class="oc">07</span><div><h5>Fotografia</h5><p>Beleza real, em movimento</p></div></a>
       <a href="#pdv"><span class="oc">08</span><div><h5>Produto & PDV</h5><p>A escolha que acontece rápido</p></div></a>
@@ -1874,73 +1888,87 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
 <div class="band" id="grafismos">
 <section style="padding-top:20px;padding-bottom:20px">
   <div class="reveal">
-    <div class="eyebrow"><span class="num">★</span> Grafismos & elementos</div>
-    <h2 class="title">Os ativos visuais da marca, <em>e como usá-los</em></h2>
-    <p class="lead">Os elementos que vocês criaram, separados um a um — o que cada um é, como aplicar e o arquivo para baixar. Estes grafismos, junto do logo e da paleta, formam o kit da marca.</p>
+    <div class="eyebrow"><span class="num">★</span> Assets da marca · construção dos elementos</div>
+    <h2 class="title">De onde vêm os <em>elementos</em></h2>
+    <p class="lead">Os grafismos da PRONTA não são enfeite: nascem do próprio logo e dos produtos da marca. Aqui está a construção, a defesa por trás de cada forma e os arquivos oficiais para baixar.</p>
   </div>
 
+  <!-- Defesa (do brandbook oficial) -->
+  <div class="defesa reveal">
+    <p>A <b>forma-base</b> parte da <b>estrela</b> presente no logotipo. A partir dela, foram desenvolvidas variações de peso, contorno e preenchimento.</p>
+    <p>Essa geometria foi combinada a <b>círculos</b> e a formas que remetem ao <b>prendedor borboleta</b> — um dos produtos da marca — dando origem aos elementos gráficos e ao <b>pattern</b>.</p>
+    <p>Já a <b>moldura</b> se inspira no universo das penteadeiras, espelhos, bandejas, porta-joias e antigas etiquetas de produtos de beleza. Esses elementos fazem parte de um imaginário ligado ao <b>cuidado, ao ritual de se arrumar e à valorização dos detalhes</b> — aspectos que compõem o universo narrativo da PRONTA.</p>
+  </div>
+
+  <!-- 1. Universo de formas -->
+  <div class="reveal" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">1 · Universo de formas</h3>
+    <p class="muted">As quatro formas-base que geram todo o sistema visual.</p>
+  </div>
+  <div class="formrow reveal">
+    <div class="formcard"><div class="fsvg"><svg viewBox="0 0 100 100"><path d="M50 3 C54 47 53 47 97 50 C53 53 54 53 50 97 C46 53 47 53 3 50 C47 47 46 47 50 3 Z" fill="#7B3B77"/></svg></div><strong>Estrela do logotipo</strong><span>o brilho da marca</span></div>
+    <div class="formcard"><div class="fsvg"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="#7B3B77"/></svg></div><strong>Círculo</strong><span>base e respiro</span></div>
+    <div class="formcard"><div class="fsvg"><svg viewBox="0 0 100 100"><path d="M16 84 L16 16 L84 16 A68 68 0 0 1 16 84 Z" fill="#7B3B77"/></svg></div><strong>Quarto de círculo</strong><span>curva e movimento</span></div>
+    <div class="formcard"><div class="fsvg"><svg viewBox="0 0 100 100"><g fill="#7B3B77"><ellipse cx="50" cy="28" rx="13" ry="24"/><ellipse cx="50" cy="72" rx="13" ry="24"/><ellipse cx="28" cy="50" rx="24" ry="13"/><ellipse cx="72" cy="50" rx="24" ry="13"/></g></svg></div><strong>Prendedor borboleta</strong><span>o produto vira forma</span></div>
+  </div>
+
+  <!-- 2. Variações da forma-base -->
+  <div class="reveal" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">2 · Variações da forma-base</h3>
+    <p class="muted">Peso, contorno e cor — a mesma estrela em muitas presenças.</p>
+  </div>
+  <div class="formrow reveal">
+    <div class="formcard"><div class="fsvg"><svg viewBox="0 0 100 100"><path d="M50 3 C54 47 53 47 97 50 C53 53 54 53 50 97 C46 53 47 53 3 50 C47 47 46 47 50 3 Z" fill="#7B3B77"/></svg></div><strong>Preenchida</strong><span>roxo</span></div>
+    <div class="formcard"><div class="fsvg"><svg viewBox="0 0 100 100"><path d="M50 3 C54 47 53 47 97 50 C53 53 54 53 50 97 C46 53 47 53 3 50 C47 47 46 47 50 3 Z" fill="none" stroke="#C9A23C" stroke-width="2"/></svg></div><strong>Contorno</strong><span>dourado</span></div>
+    <div class="formcard"><div class="fsvg"><svg viewBox="0 0 100 100"><path d="M50 3 C54 47 53 47 97 50 C53 53 54 53 50 97 C46 53 47 53 3 50 C47 47 46 47 50 3 Z" fill="#C79EC3"/></svg></div><strong>Preenchida</strong><span>lilás</span></div>
+    <div class="formcard"><div class="fsvg"><svg viewBox="0 0 100 100"><path d="M50 3 C54 47 53 47 97 50 C53 53 54 53 50 97 C46 53 47 53 3 50 C47 47 46 47 50 3 Z" fill="none" stroke="#C79EC3" stroke-width="2"/></svg></div><strong>Contorno</strong><span>lilás</span></div>
+  </div>
+  <div class="reveal" style="text-align:center;margin-top:20px">
+    <img src="assets/grafismos/elementos-selos.png" alt="Selos da marca" style="max-width:min(680px,100%);height:auto">
+    <p class="muted" style="font-size:.84rem;margin-top:8px">Os selos oficiais — estrela e prendedor borboleta em círculo, nas combinações de cor da marca.</p>
+  </div>
+
+  <!-- 3. Moldura -->
+  <div class="reveal" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">3 · Moldura</h3>
+    <p class="muted">O fio duplo dourado com cantos côncavos — do universo das penteadeiras e etiquetas de beleza.</p>
+  </div>
+  <div class="molshow reveal"><img src="assets/grafismos/moldura-oficial.png" alt="Moldura oficial PRONTA"></div>
+
+  <!-- Downloads dos elementos -->
+  <div class="reveal" style="margin-top:56px">
+    <h3 style="font-family:var(--serif);color:var(--roxo);font-size:1.6rem;margin-bottom:4px">Baixar os elementos</h3>
+    <p class="muted">Arquivos oficiais — PNG para uso rápido e vetor (.ai) para edição.</p>
+  </div>
   <div class="gfx reveal">
     <div class="gfxc">
+      <div class="gprev" style="background:var(--roxo)"><svg viewBox="0 0 100 100" style="width:70px"><path d="M50 3 C54 47 53 47 97 50 C53 53 54 53 50 97 C46 53 47 53 3 50 C47 47 46 47 50 3 Z" fill="#C9A23C"/></svg></div>
+      <div class="gbody"><h4>Estrela / brilho</h4><div class="grole">forma-base</div><p>O brilho do logo — acento pontual que acende a presença.</p><div class="guse"><b>Como usar</b>Pontuação sutil em cantos e ao lado de frases. Com moderação.</div><div class="gdl"><a class="dl-btn solid" href="assets/grafismos/estrela-alta.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a></div></div>
+    </div>
+    <div class="gfxc">
+      <div class="gprev" style="background:var(--nude);padding:16px"><img src="assets/grafismos/moldura-oficial.png" alt="" style="max-width:100%;max-height:100%"></div>
+      <div class="gbody"><h4>Moldura</h4><div class="grole">cartela oficial</div><p>Fio duplo dourado com cantos côncavos — o acabamento premium da marca.</p><div class="guse"><b>Como usar</b>Enquadra logo, frases e destaques. Preserve o respiro interno.</div><div class="gdl"><a class="dl-btn solid" href="assets/grafismos/moldura-oficial.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a><a class="dl-btn" href="assets/grafismos/moldura.ai" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>.ai</a></div></div>
+    </div>
+    <div class="gfxc">
+      <div class="gprev" style="padding:14px"><img src="assets/grafismos/elementos-selos.png" alt="" style="max-width:100%;max-height:100%"></div>
+      <div class="gbody"><h4>Selos & elementos</h4><div class="grole">estrela + borboleta</div><p>Os grafismos em círculo, nas combinações de cor oficiais.</p><div class="guse"><b>Como usar</b>Selos, tags, patterns e pontuações. Sempre nas cores da paleta.</div><div class="gdl"><a class="dl-btn solid" href="assets/grafismos/elementos-selos.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a><a class="dl-btn" href="assets/grafismos/elementos.ai" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>.ai</a></div></div>
+    </div>
+    <div class="gfxc">
       <div class="gprev pat" style="background-size:56px 56px"></div>
-      <div class="gbody">
-        <h4>Pattern geométrico</h4><div class="grole">Grafismo principal</div>
-        <p>O mosaico de círculos e pétalas em roxo e lilás — a textura que diz "PRONTA" sem o logo.</p>
-        <div class="guse"><b>Como usar</b>Faixas (topo/rodapé), fundos de apoio, molduras e laterais. Nunca por cima de texto pequeno.</div>
-        <div class="gdl"><a class="dl-btn solid" href="assets/grafismos/pattern-pronta.svg" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>SVG</a><a class="dl-btn" href="assets/grafismos/pattern-original.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a></div>
-      </div>
-    </div>
-    <div class="gfxc">
-      <div class="gprev" style="background:var(--roxo)"><svg viewBox="0 0 200 200" style="width:120px;height:120px"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z" fill="#C9A23C"/></svg></div>
-      <div class="gbody">
-        <h4>Grafismo swoosh</h4><div class="grole">Grafismo fluido</div>
-        <p>A "asa" dourada em movimento — o gesto que dá dinamismo às superfícies sólidas.</p>
-        <div class="guse"><b>Como usar</b>Acento saindo de um canto sobre fundo roxo. Um por peça, sem girar demais.</div>
-        <div class="gdl"><a class="dl-btn solid" href="assets/grafismos/swoosh-pronta.svg" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>SVG</a></div>
-      </div>
-    </div>
-    <div class="gfxc">
-      <div class="gprev" style="background:var(--roxo)"><svg viewBox="0 0 360 220" style="width:70%"><rect x="14" y="14" width="332" height="192" rx="14" fill="none" stroke="#C9A23C" stroke-width="2"/><rect x="176" y="8" width="12" height="12" fill="#C9A23C" transform="rotate(45 182 14)"/><rect x="176" y="200" width="12" height="12" fill="#C9A23C" transform="rotate(45 182 206)"/></svg></div>
-      <div class="gbody">
-        <h4>Moldura dourada</h4><div class="grole">Keyline com brilhos</div>
-        <p>O fio dourado com os brilhos de diamante — enquadra o conteúdo e dá o acabamento premium.</p>
-        <div class="guse"><b>Como usar</b>Contorna cartelas, displays e anúncios. Mantenha o respiro entre a moldura e o conteúdo.</div>
-        <div class="gdl"><a class="dl-btn solid" href="assets/grafismos/moldura-pronta.svg" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>SVG</a></div>
-      </div>
+      <div class="gbody"><h4>Pattern geométrico</h4><div class="grole">estrela + borboleta + círculo</div><p>O mosaico que diz "PRONTA" sem o logo — nascido das formas-base.</p><div class="guse"><b>Como usar</b>Faixas, fundos de apoio, molduras e laterais.</div><div class="gdl"><a class="dl-btn solid" href="assets/grafismos/pattern-original.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a><a class="dl-btn" href="assets/grafismos/pattern-pronta.svg" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>SVG</a></div></div>
     </div>
     <div class="gfxc">
       <div class="gprev pat" style="background-size:56px 56px"><span class="cart" style="padding:9px 18px"><img src="assets/logo/pronta-dourado.png" alt="" style="height:20px"></span></div>
-      <div class="gbody">
-        <h4>Cartela do logo</h4><div class="grole">Lockup do logotipo</div>
-        <p>O logo dourado dentro do pill roxo com borda dourada — a assinatura sobre pattern ou foto.</p>
-        <div class="guse"><b>Como usar</b>Para pousar o logo sobre fundos movimentados. Preserve a proporção da borda.</div>
-        <div class="gdl"><a class="dl-btn" href="assets/downloads/pronta-logos.zip" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Logos .zip</a></div>
-      </div>
-    </div>
-    <div class="gfxc">
-      <div class="gprev" style="background:var(--roxo)"><svg viewBox="0 0 24 24" style="width:56px;height:56px"><path d="M12 1 C13 8 16 11 23 12 C16 13 13 16 12 23 C11 16 8 13 1 12 C8 11 11 8 12 1 Z" fill="#C9A23C"/></svg></div>
-      <div class="gbody">
-        <h4>Brilho / diamante</h4><div class="grole">Acento pontual</div>
-        <p>O brilho que nasce no logo (sob o P) — o detalhe que "acende a presença".</p>
-        <div class="guse"><b>Como usar</b>Pontuação sutil em cantos e ao lado de frases. Com moderação — brilho demais vira ruído.</div>
-        <div class="gdl"><a class="dl-btn solid" href="assets/grafismos/brilho-pronta.svg" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>SVG</a></div>
-      </div>
+      <div class="gbody"><h4>Cartela do logo</h4><div class="grole">lockup</div><p>O logo dourado no pill roxo com borda dourada — sobre pattern ou foto.</p><div class="guse"><b>Como usar</b>Para pousar o logo em fundos movimentados.</div><div class="gdl"><a class="dl-btn" href="assets/downloads/pronta-logos.zip" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Logos .zip</a></div></div>
     </div>
     <div class="gfxc">
       <div class="gprev" style="padding:0"><div style="display:flex;width:100%;height:100%"><span style="flex:1;background:#7B3B77"></span><span style="flex:1;background:#EFC35E"></span><span style="flex:1;background:#C79EC3"></span><span style="flex:1;background:#E3C293"></span><span style="flex:1;background:#E1CFD7"></span><span style="flex:1;background:#F1E3D3"></span></div></div>
-      <div class="gbody">
-        <h4>Paleta de cores</h4><div class="grole">6 cores oficiais</div>
-        <p>Roxo e amarelo como assinatura; lilás, dourado, rosa e creme de apoio — com HEX, RGB e CMYK.</p>
-        <div class="guse"><b>Como usar</b>Roxo domina; dourado é acento; os claros dão respiro. Não crie cores fora da paleta.</div>
-        <div class="gdl"><a class="dl-btn solid" href="assets/grafismos/paleta-original.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a><a class="dl-btn" href="assets/downloads/paleta.txt" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Códigos</a></div>
-      </div>
+      <div class="gbody"><h4>Paleta de cores</h4><div class="grole">6 cores oficiais</div><p>Roxo e amarelo de assinatura; lilás, dourado, rosa e creme de apoio.</p><div class="guse"><b>Como usar</b>Roxo domina; dourado é acento; os claros dão respiro.</div><div class="gdl"><a class="dl-btn solid" href="assets/grafismos/paleta-original.png" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>PNG</a><a class="dl-btn" href="assets/downloads/paleta.txt" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Códigos</a></div></div>
     </div>
   </div>
 
   <div class="kit-band reveal">
-    <div>
-      <h3>Todos os grafismos</h3>
-      <p>Pattern, swoosh, moldura, brilho e paleta — em um único arquivo.</p>
-    </div>
+    <div><h3>Todos os grafismos</h3><p>Estrela, moldura, selos, pattern e paleta — em um único arquivo.</p></div>
     <a class="dl-btn" href="assets/downloads/pronta-grafismos.zip" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Baixar grafismos <span class="ext">.zip</span></a>
   </div>
 </section>
@@ -2677,21 +2705,21 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
   <div class="reveal">
     <div class="eyebrow"><span class="num">★</span> Simulações visuais</div>
     <h2 class="title">A marca em <em>contexto</em></h2>
-    <p class="lead">Mockups construídos com a linha criativa oficial — pattern, moldura dourada com brilhos, cartela do logo, grafismo em swoosh e a letra manuscrita — para tangibilizar cada aplicação.</p>
+    <p class="lead">Mockups construídos com a linha criativa oficial — pattern, moldura dourada, cartela do logo, a estrela e a letra manuscrita — para tangibilizar cada aplicação.</p>
   </div>
 
   <!-- Redes sociais -->
   <div class="content-block reveal">
     <div class="clabel"><span class="cnum">1</span> Redes sociais</div>
     <h3>Post, stories e reels</h3>
-    <p class="cdesc">O sistema da marca no feed: pattern, cartela, swoosh e a frase que gruda.</p>
+    <p class="cdesc">O sistema da marca no feed: pattern, cartela, estrela e a frase que gruda.</p>
     <div class="mgrid mg3">
       <div>
         <div class="igpost">
           <div class="igtop"><span class="cart" style="padding:5px 9px"><img src="assets/logo/pronta-dourado.png" alt=""></span><span class="ighandle" style="margin-left:2px">pronta.oficial<small>Publicação</small></span><span class="igmore">···</span></div>
           <div class="creative" style="aspect-ratio:1">
             <div class="cpb top patband"></div><div class="cpb bot patband"></div>
-            <svg class="swoosh" viewBox="0 0 200 200" style="width:150px;height:150px;right:-24px;bottom:12px;opacity:.85"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
+            
             <div class="cin">
               <img class="clogo" src="assets/logo/pronta-dourado.png" alt="">
               <div class="chead">Beleza que não<br>pede pausa</div>
@@ -2710,7 +2738,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
           <div class="gframe"></div>
           <div class="sbars"><i class="on"></i><i></i><i></i></div>
           <div class="stop"><span class="cart" style="padding:4px 7px"><img src="assets/logo/pronta-dourado.png" alt="" style="height:14px"></span><b>pronta.oficial</b><small>2h</small></div>
-          <svg class="swoosh" viewBox="0 0 200 200" style="width:120px;height:120px;left:-30px;bottom:60px;opacity:.85"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
+          
           <div class="sbody"><div class="sh" style="font-family:var(--serif)">Beleza que não pede pausa</div><div class="cscript" style="color:var(--dourado-2);font-size:1.3rem;margin-top:6px">o espelho rápido antes de sair</div></div>
           <div class="scta"><span class="pill">Ver a coleção</span><span class="up">↑ arraste para cima</span></div>
         </div>
@@ -2741,7 +2769,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
       <div class="creative" style="height:96px;flex-direction:row;justify-content:flex-start;gap:0;border:1px solid var(--linha);border-radius:10px">
         <div class="patband" style="width:70px;height:100%;flex:0 0 auto"></div>
         <div class="gframe" style="inset:8px 10px"></div>
-        <svg class="swoosh" viewBox="0 0 200 200" style="width:110px;height:110px;right:120px;bottom:-30px;opacity:.7"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
+        
         <div class="cin" style="flex-direction:row;gap:18px;flex:1;justify-content:space-between;padding:0 24px 0 20px">
           <img src="assets/logo/pronta-dourado.png" alt="" style="height:26px">
           <span style="font-family:var(--serif);font-size:1.15rem;flex:1;text-align:left">Beleza que não pede pausa</span>
@@ -2755,7 +2783,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
         <span class="adlabel">Anúncio · display</span>
         <div class="creative" style="width:250px;max-width:100%;aspect-ratio:6/5;border:1px solid var(--linha);border-radius:10px">
           <div class="cpb top patband"></div>
-          <svg class="swoosh" viewBox="0 0 200 200" style="width:120px;height:120px;right:-28px;bottom:26px;opacity:.85"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
+          
           <div class="cin" style="gap:8px">
             <img class="cphoto" src="assets/fotografia/still-produto.jpg" alt="">
             <img class="clogo" src="assets/logo/pronta-dourado.png" alt="" style="height:22px">
@@ -2834,7 +2862,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
           <div class="bub promo out" style="padding:0">
             <div class="creative" style="aspect-ratio:16/9;border-radius:0">
               <div class="cpb top patband" style="height:16px"></div><div class="cpb bot patband" style="height:16px"></div>
-              <svg class="swoosh" viewBox="0 0 200 200" style="width:90px;height:90px;right:-20px;bottom:6px;opacity:.85"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
+              
               <div class="cin" style="padding:8px"><img class="clogo" src="assets/logo/pronta-dourado.png" alt="" style="height:20px"><div class="chead" style="font-size:.95rem">Kit Volta às Aulas</div></div>
             </div>
             <div class="ptxt" style="padding:9px 12px">Penteados possíveis para dias cheios. A partir de <b>R$ 14,90</b> 💜<span class="time">09:42</span></div>
@@ -2861,7 +2889,7 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <div class="creative photo ooh" style="background-image:url('assets/fotografia/arq-cuidadora.jpg')">
       <div class="cshade" style="background:linear-gradient(90deg,rgba(74,30,107,.92),rgba(74,30,107,.45) 55%,transparent)"></div>
       <div class="gframe"></div>
-      <svg class="swoosh" viewBox="0 0 200 200" style="width:200px;height:200px;right:-30px;bottom:-30px;opacity:.7"><path d="M18,182 C118,172 168,112 184,26 C120,78 60,120 18,182 Z"/></svg>
+      
       <div class="obody" style="position:absolute;left:7%;top:50%;transform:translateY(-50%);z-index:4;text-align:left;max-width:58%">
         <span class="cart" style="padding:8px 16px"><img src="assets/logo/pronta-dourado.png" alt="" style="height:22px"></span>
         <div style="font-family:var(--serif);font-size:clamp(1.3rem,3.6vw,2.4rem);line-height:1.05;margin-top:16px">Estar PRONTA para a vida real</div>
@@ -3099,7 +3127,7 @@ Penteados possíveis pra dias cheios de imaginação — feitos pra durar até o
     <div class="dcard">
       <div class="di"><svg viewBox="0 0 24 24"><circle cx="7" cy="7" r="4"/><path d="M21 7c-4 0-6 6-10 6s-4 4-4 4"/><path d="M13 4l1.5 1.5"/></svg></div>
       <h3>Grafismos</h3>
-      <p class="muted">Pattern, swoosh, moldura dourada e brilho — os elementos visuais da marca em SVG/PNG.</p>
+      <p class="muted">Estrela, moldura, selos, pattern e paleta — os elementos oficiais da marca em PNG/vetor.</p>
       <div class="dl-row" style="margin-top:16px">
         <a class="dl-btn solid" href="assets/downloads/pronta-grafismos.zip" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Baixar grafismos <span class="ext">.zip</span></a>
       </div>
