@@ -232,6 +232,9 @@ svg.icon{width:26px;height:26px;stroke:currentColor;stroke-width:1.6;fill:none;s
 .statement{max-width:none;background:var(--tinta);color:#fff;padding:120px 22px;text-align:center}
 .statement p{font-family:var(--serif);font-weight:300;font-size:clamp(1.5rem,4vw,2.6rem);line-height:1.3;color:#fff;max-width:900px;margin:0 auto}
 .statement p b{color:var(--dourado-2);font-style:italic;font-weight:500}
+.statement.st2 p{font-size:clamp(1.3rem,3vw,2.15rem);max-width:1040px;line-height:1.45;text-wrap:balance}
+.statement.st2 p span,.statement.st2 p b{display:block;white-space:nowrap}
+@media (max-width:680px){.statement.st2 p span,.statement.st2 p b{white-space:normal}}
 
 /* icon library */
 .iconlib{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:40px}
@@ -1227,8 +1230,8 @@ nav.top .menu a.active::after{content:"";position:absolute;left:0;right:0;bottom
     <p class="lead">Acessórios de cabelo seguram fios, mas também seguram momentos, humores, rotinas, vínculos e versões de quem usa. A PRONTA vive nesse intervalo entre o espelho e a rua.</p>
   </div>
 
-  <div class="statement" style="border-radius:26px;margin-top:50px;padding:80px 30px" >
-    <p class="reveal">Não vendemos apenas prendedores, elásticos ou kits.<br><b>Vendemos gestos rápidos de autoestima.</b></p>
+  <div class="statement st2" style="border-radius:26px;margin-top:50px;padding:72px 30px" >
+    <p class="reveal"><span>Não vendemos apenas prendedores, elásticos ou kits.</span><b>Vendemos gestos rápidos de autoestima.</b></p>
   </div>
 
   <div class="reveal mt">
